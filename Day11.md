@@ -59,7 +59,7 @@ $ ls -a #보여줘라 모든것을
 
 
 
-![image-20200120092646291](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120092646291.png)
+![image-20200120092646291](images\image-20200120092646291.png)
 
 
 
@@ -71,7 +71,7 @@ $ cat config
 
 
 
-![image-20200120092842461](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120092842461.png)
+![image-20200120092842461](images\image-20200120092842461.png)
 
 
 
@@ -83,7 +83,7 @@ $ rm -r .git/  #지워라 git 폴더를
 
 
 
-![image-20200120093110585](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120093110585.png)
+![image-20200120093110585](images\image-20200120093110585.png)
 
 
 
@@ -97,7 +97,7 @@ $ git status
 
 
 
-![image-20200120093435275](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120093435275.png)
+![image-20200120093435275](images\image-20200120093435275.png)
 
 ​								-> 새로운 파일이 추가된 것 (Untracked file)을 Git이 알고있고, 우리에게 알려줌
 
@@ -128,7 +128,7 @@ $ git add [파일명]
 
 
 
-![image-20200120094128772](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120094128772.png)
+![image-20200120094128772](images\image-20200120094128772.png)
 
 ​													-> add 후에 파일 추가된 것 확인 가능
 
@@ -136,7 +136,7 @@ $ git add [파일명]
 
 > Git에게 내가 누군지 알려주기
 
-![image-20200120094400439](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120094400439.png)
+![image-20200120094400439](images\image-20200120094400439.png)
 
 ​							-> 처음 commit하면 누군지 알려달라는 메시지가 뜸
 
@@ -150,7 +150,7 @@ $ git config --globall --list							   #잘 등록되어 있는지 확인
 
 
 
-![image-20200120094650680](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120094650680.png)
+![image-20200120094650680](images\image-20200120094650680.png)
 
 ​													-> git에게 config 물어보기
 
@@ -166,7 +166,7 @@ $ git commit -m "Initial commit"   # -m : message
 
 
 
-![image-20200120095140817](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120095140817.png)
+![image-20200120095140817](images\image-20200120095140817.png)
 
 
 
@@ -178,7 +178,7 @@ $ git log
 
 
 
-![image-20200120095232943](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120095232943.png)
+![image-20200120095232943](images\image-20200120095232943.png)
 
 
 
@@ -198,7 +198,7 @@ $ touch [파일명]
 
 
 
-![image-20200120101110142](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120101110142.png)
+![image-20200120101110142](images\image-20200120101110142.png)
 
 ​														-> " Add a.txt"
 
@@ -212,7 +212,7 @@ $ git log --oneline
 
 
 
-![image-20200120101233429](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120101233429.png)
+![image-20200120101233429](images\image-20200120101233429.png)
 
 
 
@@ -224,7 +224,7 @@ $ git checkout [돌아가고싶은 시점의 hexa code]
 
 
 
-![image-20200120101726117](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120101726117.png)
+![image-20200120101726117](images\image-20200120101726117.png)
 
 ​								-> 두번째 commit인 [fa98ffd (HEAD -> master) Add a.txt] 가 사라진 것 확인 가능
 
@@ -238,7 +238,7 @@ $ git checkout master
 
 
 
-![image-20200120101839287](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120101839287.png)
+![image-20200120101839287](images\image-20200120101839287.png)
 
 ​												-> 다시 a.txt 추가됨
 
@@ -254,7 +254,7 @@ $ git checkout master
 
 
 
-![image-20200120103022580](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120103022580.png)
+![image-20200120103022580](images\image-20200120103022580.png)
 
 
 
@@ -267,7 +267,7 @@ $ git remote add [저장소의 이름 (별명)] [저장소 주소]
 
 
 
-![image-20200120103501205](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120103501205.png)
+![image-20200120103501205](images\image-20200120103501205.png)
 
 ​										  -> 보통 origin이라고 함
 
@@ -281,7 +281,7 @@ $ git remote -v   # -v를 붙이면 자세한 정보 보여줌
 
 
 
-![image-20200120103733907](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120103733907.png)
+![image-20200120103733907](images\image-20200120103733907.png)
 
 
 
@@ -296,7 +296,7 @@ $ git push [저장소의 이름] [Branch 이름]
 
 
 
-![image-20200120104031002](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120104031002.png)
+![image-20200120104031002](images\image-20200120104031002.png)
 
 
 
@@ -322,7 +322,7 @@ https://drive.google.com/file/d/17S2-9BGPMkcoGAyhcPb2iUaeITYCDTBs/view
 
 > 수정 이력 
 
-![image-20200120111957364](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120111957364.png)
+![image-20200120111957364](images\image-20200120111957364.png)
 
 
 
@@ -334,7 +334,7 @@ $ git clone [repository url]
 
 
 
-![image-20200120112931551](C:\Users\multicampus\Dropbox\SSAFY\markdown\image-20200120112931551.png)
+![image-20200120112931551](images\image-20200120112931551.png)
 
 
 
