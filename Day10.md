@@ -52,7 +52,7 @@ http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtpr
 
 
 
-![image-20200117102326190](images\image-20200117102326190.png)
+![image-20200117102326190](images/image-20200117102326190.png)
 
 
 
@@ -66,7 +66,7 @@ https://api.telegram.org/bot1022560904:AAEHuDL-5UwXqnTp8DlksFlb1hUtoRVOXqc/getMe
 
 > Update 확인 - **getUpdates**
 
-![image-20200117103405354](images\image-20200117103405354.png)
+![image-20200117103405354](images/image-20200117103405354.png)
 
 
 
@@ -78,7 +78,7 @@ sendMessage?chat_id=919649466&text=점심메뉴뭐임
 
 
 
-![image-20200117103622503](images\image-20200117103622503.png)
+![image-20200117103622503](images/image-20200117103622503.png)
 
 
 
@@ -120,7 +120,7 @@ $ngrok http 5000
 
 > Flask Server port number인 5000으로 Forwarding 하게 하기
 
-![image-20200117141534654](images\image-20200117141534654.png)
+![image-20200117141534654](images/image-20200117141534654.png)
 
 
 
@@ -144,7 +144,7 @@ https://api.telegram.org/bot1022560904:AAEHuDL-5UwXqnTp8DlksFlb1hUtoRVOXqc/setWe
 
 > Telegram에 Web Hook이 잘 연결 되었으면 위의 링크로 들어갔을 때 이렇게 출력됨
 
-![image-20200117143021205](images\image-20200117143021205.png)
+![image-20200117143021205](images/image-20200117143021205.png)
 
 
 
@@ -154,13 +154,13 @@ https://api.telegram.org/bot1022560904:AAEHuDL-5UwXqnTp8DlksFlb1hUtoRVOXqc/delet
 
 
 
-![image-20200117143335006](images\image-20200117143335006.png)
+![image-20200117143335006](images/image-20200117143335006.png)
 
 
 
 > Telegram이 계속 request를 보내는 것 확인 가능
 
-![image-20200117143941054](images\image-20200117143941054.png)
+![image-20200117143941054](images/image-20200117143941054.png)
 
 
 
@@ -168,7 +168,7 @@ https://api.telegram.org/bot1022560904:AAEHuDL-5UwXqnTp8DlksFlb1hUtoRVOXqc/delet
 
 ## Papago Translation API 사용하기
 
-![image-20200117153241504](images\image-20200117153241504.png)
+![image-20200117153241504](images/image-20200117153241504.png)
 
 >내 API KEY
 
@@ -210,7 +210,7 @@ $pip install python-decouple --user
 
 >  .env file에 환경변수 등록하기
 
-![image-20200117162751790](images\image-20200117162751790.png)
+![image-20200117162751790](images/image-20200117162751790.png)
 
 
 
@@ -218,7 +218,7 @@ $pip install python-decouple --user
 
 > 적용하기
 
-![image-20200117162742406](images\image-20200117162742406.png)
+![image-20200117162742406](images/image-20200117162742406.png)
 
 
 

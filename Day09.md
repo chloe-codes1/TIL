@@ -38,7 +38,7 @@ https://git-scm.com/download/win
 
 >환경 변수 편집하기
 
-![image-20200116093359328](images\image-20200116093359328.png)
+![image-20200116093359328](images/image-20200116093359328.png)
 
 
 
@@ -50,7 +50,7 @@ https://git-scm.com/download/win
 
 > Git Bash에서 실행시키기
 
-![image-20200116094135064](images\image-20200116094135064.png)
+![image-20200116094135064](images/image-20200116094135064.png)
 
 
 
@@ -64,7 +64,7 @@ https://git-scm.com/download/win
 >
 > : is data scraping used for extracting data from websites
 
-![image-20200116102755482](images\image-20200116102755482.png)
+![image-20200116102755482](images/image-20200116102755482.png)
 
 
 
@@ -92,7 +92,7 @@ $ pip list
 
 
 
-![image-20200116104556948](images\image-20200116104556948.png)
+![image-20200116104556948](images/image-20200116104556948.png)
 
 
 
@@ -142,7 +142,7 @@ ex)
 > Copy selector를 활용하여 id 쉽게 찾기
 >
 
-![image-20200116113215390](images\image-20200116113215390.png)
+![image-20200116113215390](images/image-20200116113215390.png)
 
 
 

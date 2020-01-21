@@ -53,3 +53,21 @@ $ source ~/.bashrc
 
 ### Test-driven development
 
+
+
+
+
+
+
+
+
+## 저장
+
+- 어떻게 (연산자) : =
+
+- 무엇을 (데이터 타입 == 자료형)
+  - 숫자
+  - 글자
+  - bool
+- 
+
