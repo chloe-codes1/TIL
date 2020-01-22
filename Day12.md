@@ -11,6 +11,7 @@
 $ vi .bashrc
 ```
 
+<br/>
 
 
 ``i``로 키보드 **편집**들어가기
@@ -20,6 +21,7 @@ alias jn="jupyter notebook"
 alias slave="git push origin master git push hub master"
 ```
 
+<br/>
 
 
 ``esc`` 3번 치고  (편집모드 빠져나가기)
@@ -28,6 +30,7 @@ alias slave="git push origin master git push hub master"
 :wq
 ```
 
+<br/><br/>
 
 
 > 지금까지 bash에 친 명령어 보기
@@ -35,7 +38,7 @@ alias slave="git push origin master git push hub master"
 $ cat .bash_history
 ```
 
-
+<br/>
 
 
 > 바꾼 내용 적용 bash에 적용시키기
@@ -43,7 +46,7 @@ $ cat .bash_history
 $ source ~/.bashrc
 ```
 
-
+<br/>
 
 ``o``로 **줄 바꿈**
 
@@ -53,7 +56,9 @@ $ source ~/.bashrc
 
 ### Test-driven development
 
+> 추구해야 할 것!
 
+<br/> <br/>
 
 
 
@@ -69,6 +74,7 @@ $ source ~/.bashrc
   - 숫자
   - 글자
   - bool
+<<<<<<< HEAD
 
 
 
@@ -102,6 +108,8 @@ $ source ~/.bashrc
 
 - 세미콜론 (;) 포함
 - 
+=======
+>>>>>>> 8a82b29dd3bec574ddeb2378102dd543931f10b4
 
 
 

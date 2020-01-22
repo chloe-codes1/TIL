@@ -13,9 +13,8 @@
 
 
 - Git은 Folder 기반 관리
-- 
 
-
+<br/>
 
 #### Git을 사용하는 이유
 
@@ -35,9 +34,7 @@
 
 ​         -> 오늘부터 내가 시작 할 것!
 
-
-
-
+<br/><br/>
 
 ## Git 시작하기
 
@@ -50,6 +47,7 @@ $ git init
 ```
 
 
+<br/>
 
 > 숨김파일 보기
 
@@ -62,6 +60,7 @@ $ ls -a #보여줘라 모든것을
 ![image-20200120092646291](images/image-20200120092646291.png)
 
 
+<br/>
 
 > 숨김파일 들여다보기
 
@@ -73,7 +72,7 @@ $ cat config
 
 ![image-20200120092842461](images/image-20200120092842461.png)
 
-
+<br/>
 
 > Git File 지우기
 
@@ -86,7 +85,7 @@ $ rm -r .git/  #지워라 git 폴더를
 ![image-20200120093110585](images/image-20200120093110585.png)
 
 
-
+<br/>
 
 
 > Git 상태 확인하기
@@ -101,7 +100,7 @@ $ git status
 
 ​								-> 새로운 파일이 추가된 것 (Untracked file)을 Git이 알고있고, 우리에게 알려줌
 
-
+<br/>
 
 >  Git Version 관리
 
@@ -117,7 +116,7 @@ $ git status
 ​				-> 원래는 '하다' 인데 Git은 저장하는 도구이므로 commit이 저장하다!
 
 
-
+<br/>
 
 
 > 사진대에 파일 올려놓기
@@ -132,6 +131,7 @@ $ git add [파일명]
 
 ​													-> add 후에 파일 추가된 것 확인 가능
 
+<br/>
 
 
 > Git에게 내가 누군지 알려주기
@@ -155,7 +155,7 @@ $ git config --globall --list							   #잘 등록되어 있는지 확인
 ​													-> git에게 config 물어보기
 
 
-
+<br/>
 
 
 > Git Snapshot 찍기
@@ -169,6 +169,7 @@ $ git commit -m "Initial commit"   # -m : message
 ![image-20200120095140817](images/image-20200120095140817.png)
 
 
+<br/>
 
 > Git의 commit / snapshot들의 log 확인하기
 
@@ -180,7 +181,7 @@ $ git log
 
 ![image-20200120095232943](images/image-20200120095232943.png)
 
-
+<br/>
 
 >File 추가하기
 
@@ -189,7 +190,7 @@ $ touch [파일명]
 ```
 
 
-
+<br/>
 
 
 > Commit Message 에는 주어 없이 **동사**로 입력 
@@ -202,6 +203,7 @@ $ touch [파일명]
 
 ​														-> " Add a.txt"
 
+<br/>
 
 
 > Git log 한줄로 보기
@@ -214,7 +216,7 @@ $ git log --oneline
 
 ![image-20200120101233429](images/image-20200120101233429.png)
 
-
+<br/>
 
 > 과거로 돌아가기
 
@@ -228,6 +230,7 @@ $ git checkout [돌아가고싶은 시점의 hexa code]
 
 ​								-> 두번째 commit인 [fa98ffd (HEAD -> master) Add a.txt] 가 사라진 것 확인 가능
 
+<br/>
 
 
 > 다시 현재로 돌아오기
@@ -243,7 +246,7 @@ $ git checkout master
 ​												-> 다시 a.txt 추가됨
 
 
-
+<br/>
 
 
 #### 내 PC에서만 작업중인 Git을 원격 저장소 (GitHub)에 Upload 하기
@@ -256,6 +259,8 @@ $ git checkout master
 
 ![image-20200120103022580](images/image-20200120103022580.png)
 
+
+<br/>
 
 
 > 원격 저장소 추가하기
@@ -271,6 +276,7 @@ $ git remote add [저장소의 이름 (별명)] [저장소 주소]
 
 ​										  -> 보통 origin이라고 함
 
+<br/>
 
 
 > 원격 저장소 확인하기
@@ -284,7 +290,7 @@ $ git remote -v   # -v를 붙이면 자세한 정보 보여줌
 ![image-20200120103733907](images/image-20200120103733907.png)
 
 
-
+<br/>
 
 
 > Git Push
@@ -300,7 +306,7 @@ $ git push [저장소의 이름] [Branch 이름]
 
 
 
-
+<br/><br/>
 
 *** 과제 ***
 
@@ -311,19 +317,21 @@ https://drive.google.com/file/d/17S2-9BGPMkcoGAyhcPb2iUaeITYCDTBs/view
 ​	(a.txt는 삭제하기)
 
 
-
+<br/>
 
 
 > Staging Area
 
 - 선택적으로 File을 Commit 할 수 있게 해줌
 
-
+<br/>
 
 > 수정 이력 
 
 ![image-20200120111957364](images/image-20200120111957364.png)
 
+
+<br/>
 
 
 > Git Clone
@@ -336,7 +344,7 @@ $ git clone [repository url]
 
 ![image-20200120112931551](images/image-20200120112931551.png)
 
-
+<br/>
 
 >Pull 당기기
 
@@ -355,7 +363,7 @@ $ git pull origin master  #무조건 pull부터 하기
 - 컴퓨터 끄기 전 Push
 
 
-
+<br/>
 
 
 > **Pull Request**
@@ -363,7 +371,7 @@ $ git pull origin master  #무조건 pull부터 하기
    : 변경사항을 가져가도록 요청하기
 
 
-
+<br/>
 
 
 > Fork & Pull Request 해보기
@@ -372,7 +380,7 @@ $ git pull origin master  #무조건 pull부터 하기
 
 
 
-
+<br/><br/>
 
 
 
@@ -384,6 +392,7 @@ $ git pull origin master  #무조건 pull부터 하기
 $ git clone https://github.com/edu-john/python.git master-python #파일명 alias
 ```
 
+<br/>
 
 
 > File 복사 하기
@@ -393,7 +402,7 @@ $ cp [복사할 파일 주소] [복사할 장소]
 # cp ~/master-python/01_python_intro.ipynb . 
 ```
 
-
+<br/>
 
 
 
@@ -407,7 +416,7 @@ $ cp [복사할 파일 주소] [복사할 장소]
 $ pip install jupyter
 ```
 
-
+<br/>
 
 > Launch Jupyter Notebook
 
@@ -431,7 +440,7 @@ $ jupyter notebook
 - **E** : Enhanced
 - **P** : Proposal
 
-
+<br/>
 
 
 
@@ -440,6 +449,7 @@ $ jupyter notebook
    : dd
 
 
+<br/>
 
 > Cell 아래에
 
