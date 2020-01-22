@@ -69,5 +69,43 @@ $ source ~/.bashrc
   - 숫자
   - 글자
   - bool
+
+
+
+
+
+
+
+
+
+## 식 (Expression) & 문 (Statement)
+
+
+
+### 식 (Expression)
+
+- Value (값) & Operator (연산자)
+
+- evalutate (연산자를 통한 값의 평가가 가능하다)
+
+   ---> 변수에 할당 가능
+
+     	  = 변수에 binding 가능
+
+
+
+### 문 (Statement)
+
+- Expression으로 구성
+
+   ---> 변수에 할당 불가!!
+
+- 세미콜론 (;) 포함
 - 
+
+
+
+
+
+
 
