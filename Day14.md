@@ -120,8 +120,15 @@ func(2)
 
 ![image-20200123143158484](images/image-20200123143158484.png)
 
+#### Tips for Git
 
 
+
+> How to deal with "refusing to merge unrelated histories" error
+
+```bash
+$ git pull --allow-unrelated-histories
+```
 
 
 

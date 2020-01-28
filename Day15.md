@@ -14,6 +14,87 @@ math.floor() #반내림
 
 
 
+> abs() 와 복소수
+
+```python
+# 절대값을 구하는 abs()의 내부는 이렇게 구현되어 있을 것이다!
+
+import math
+
+def my_abs(number):
+    if type(number) == complex:
+        return math.sqrt(number.real **2 + number.imag **2)
+    else:
+        if number >=0:
+            return number
+        else:
+            return -(number)
+```
+
+
+
+<br/>
+
+
+
+> all()
+
+​	: 인자로 받는 iterable(range, list)의 모든 요소가 참이거나 비어있으면 True를 반환
+
+
+
+``` python
+# all() 함수의 내부는 이렇게 구현되어 있을 것이다!
+
+def my_all(elem):
+    # 비어있거나 모두 참이면 => True
+    # 아니면 => False
+    for e in elem:
+        if not e:
+            return False
+    return True
+        # 비어있어도 True를 return함 
+        #  -> why? 비어있어서 for문을 돌지 않아서 바로 return True
+```
+
+
+
+<br/>
+
+
+
+> any()
+
+​    : 인자로 받는 iterable(range, list)의 요소 중 하나라도 참이면 True를 반환하고, 비어있으면 False를 반환
+
+
+
+``` python
+# all() 함수의 내부는 이렇게 구현되어 있을 것이다!
+
+def my_any(elem):
+    for e in elem:
+        if e:
+            return True
+    return False
+```
+
+
+
+
+
+<br/>
+
+
+
+
+
+
+
+### 다중 조건과 중첩 조건
+
+###  
+
 > 다중 조건
 
 ```python
@@ -35,11 +116,11 @@ if
 elif
 ```
 
-  => 같은 그물에서 거른 애를 다시 거르기
+  => 같은 그물에서 거른 애를 다시 거르는 것
 
-​          -> 조건이 망라적일 때 = exhaustive
+​          -> 조건이 망라적일 때 (= exhaustive) 사요ㅏㅇ
 
-​          -> 여기를 통과하지 않는 고기는 없다!
+​          ->  "여기를 통과하지 않는 고기는 없다!"
 
 <br/>
 
@@ -81,6 +162,8 @@ elif
 
 ![image-20200128132715265](images/image-20200128132715265.png)
 
+<br/>
+
 
 
 > 방법 1) Slicing으로 새롭게 list를 만들어서 copy 하기
@@ -91,13 +174,17 @@ elif
 
 
 
-> 방법 2) list() 생성자로 copy 하기
+<br/>
+
+
+
+> 방법 2) list 생성자로 copy 하기
 
 ![image-20200128133855622](images/image-20200128133855622.png)
 
 
 
-
+<br/>
 
 
 
@@ -106,6 +193,8 @@ elif
 ![image-20200128134302288](images/image-20200128134302288.png)
 
 ​			-> 이차원 배열부분은 같은 list를 가리키고 있어서 중첩된 부분은 복사하지 못한다
+
+<br/>
 
 
 
@@ -119,7 +208,7 @@ elif
 
 
 
-
+<br/>
 
 
 
