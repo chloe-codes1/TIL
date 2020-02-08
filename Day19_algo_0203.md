@@ -84,17 +84,25 @@ sys.stdin = open('input.txt')
 
 
 
+<br/>
+
+
+
 #### Computer Science의 두 가지 중요 개념
 
-> 1.  Abstraction
+1. `Abstraction`
 
 ​	: 어떻게 하면 현실의 문제를 요약해서 컴퓨터에 넘겨줄지
 
 
 
-> 2. Reduction
+2. `Reduction`
 
 ​    : 무언가 문제를 구체화 하는 것
+
+
+
+<br/>
 
 
 

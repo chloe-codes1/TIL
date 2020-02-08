@@ -42,13 +42,9 @@ Squashing commits can be a tricky process but once you figure it out, it's reall
 
 
 
+> Cherry Picking
 
-
-
-
-
-
-Cherry Picking....    -> look it up!
+  : the action or practice of choosing and taking only the most beneficial or profitable items, opportunities, etc., from what is available
 
 
 
@@ -78,10 +74,10 @@ $ git branch chloe
 
 ### 재귀
 
-1. Base case : 정답을 찾았을 때, 못 찾았을 때
-2. Recursive Step : 계속 가야할 때
+1. `Base case` : 정답을 찾았을 때, 못 찾았을 때
+2. `Recursive Step` : 계속 가야할 때
 
-3. 재귀가 계속될 때 마다 누적되는 변수   => 재귀함수의 parameter(argument)
+3. 재귀가 계속될 때 마다 누적되는 변수   => 재귀함수의 `parameter(argument)`
 
 
 
@@ -101,13 +97,6 @@ $ git branch chloe
 
 
 
-
-
-
-
-
-
-
-
 ### 전수 나열 (Exhaustive Enumerate)
 
+> If you [describe](https://www.collinsdictionary.com/dictionary/english/describe) a study, [search](https://www.collinsdictionary.com/dictionary/english/search), or [list](https://www.collinsdictionary.com/dictionary/english/list) as **exhaustive**, you mean that it is very thorough and [complete](https://www.collinsdictionary.com/dictionary/english/complete).
