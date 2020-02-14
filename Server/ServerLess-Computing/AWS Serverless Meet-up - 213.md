@@ -6,12 +6,34 @@
 
 - 관리할 서버가 없다 (NoOps)
 - 필요할 때마다 필요한 부분만 필요한 만큼 사용할 수 있다
+- 컴퓨팅 리소스는 Lambda or Fargate
+  - Lambda의 경우 자체적으로 connection을 유지할 수 없다!
 
 
 
-### 서버리스 아키텍쳐도 리얼타임 만들 수 있다! 
+#### Fargate
 
-  -> How?   : API Gateway websocket or Pubsub 
+: a serverless compute engine for containers that works with both [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) and [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)
+
+
+
+#### Lambda
+
+: a compute service that lets you run code without provisioning or managing servers 
+
+
+
+
+
+### 서버리스 아키텍쳐도 리얼타임 기능 만들 수 있다! 
+
+### How?  
+
+: by using API Gateway websocket or Pubsub 
+
+- API Gateway 에서 websocket을 지원함
+- Connection 기반의 solution은 아니지만 PubSub Solution도 가능하기는 함
+
   -> It’s possible, but…
           => AWS AppSync 로 가능해진다!
 
