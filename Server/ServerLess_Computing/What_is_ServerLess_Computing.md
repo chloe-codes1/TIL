@@ -18,17 +18,17 @@ Serverless == you do not have a server that you are going to be managing & putti
 
 
 
-D.I.A.Y
+1. D.I.A.Y
 
-Cloud & VIrtualization
+2. Cloud & VIrtualization
 
-IaaS
+3. IaaS
 
-PaaS
+4. PaaS
 
-CaaS
+5. CaaS
 
-Serverless
+​          ---> and Serverless!!
 
 
 

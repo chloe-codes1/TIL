@@ -27,24 +27,60 @@
 
 ### 서버리스 아키텍쳐도 리얼타임 기능 만들 수 있다! 
 
-### How?  
+
+
+####  How?
 
 : by using API Gateway websocket or Pubsub 
 
 - API Gateway 에서 websocket을 지원함
 - Connection 기반의 solution은 아니지만 PubSub Solution도 가능하기는 함
 
-  -> It’s possible, but…
-          => AWS AppSync 로 가능해진다!
+<br/>
+
+#### It's possible, but ...
+
+- Front-end & Back-end 간의 통신을 위한 Data structure 정의 해야함
+- Data 주고 받을 때의 Validation 필요
+- Front & Back 양측에서 개발이 이루어져야 함
+- Back-end 신경써야 할 것이 많음
+  - High availality
+  - reliability
+  - scalability 
 
 <br/>
 
-### AWS AppSync
+####    ---> AppSync 를 사용하여 극복 가능!
 
-- Strong typing으로 인해 Validation 코드 거의 생략 가능 (GraphQL의 특징)
-- 리얼타임 통신을 위해서 백엔드에서 해야할것은 Subscription 을 스키마에 선언해두는 것 밖에 없음
+
+
+
+
+
+
+## AWS AppSync
+
+- Strong typing으로 인해 Validation 코드 거의 생략 가능 ( `GraphQL`의 특징 )
+- Real-time 통신을 위해서 Back-end에서 해야할 것은 Subscription 을 스키마에 선언해두는 것 밖에 없음
   - Schema에 해당 기능을 쓸거라고 명시만 해놓으면 된다!
-- Frontend  측에서는 AppSnc SDK나 Amplify를 사용하면 간단히 Subscription
+- Frontend  측에서는 `AppSync SDK`나 `Amplify`를 사용하면 간단히 Subscription이 가능하다!
+
+
+
+<br/>
+
+
+
+### Pros of AppSync
+
+1. GraphQL에서 빠른 prototype 생성 및 개발
+2. 실시간 협업 mobile & web app
+3. 원활한 오프라인 작업
+4. 안전한 데이터 액세스
+5. 여러 원본의 데이터 결합
+6. 데이터 충돌 감지 및 충돌 해결
+
+
 
 
 
@@ -143,10 +179,10 @@ Look it up
 
 -  gRPC
 
-- apollo gateway
+-  apollo gateway
 
-- 3factor app
-  - realtime GraphQL
+-  3factor app
+   - realtime GraphQL
 
 
 
