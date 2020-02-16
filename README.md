@@ -1,16 +1,12 @@
-# 👩🏻‍💻 TIL
+# 👩🏻‍💻 Today I Learned
 
 
 
-> Today I Learned
+> We constantly learn new things. This is a repo to share those learnings.
+
 
 
 <br/>
-
-
-We constantly learn new things. This is a repo to share those learnings.
-
-
 
 <br/><br/>
 
@@ -22,8 +18,9 @@ We constantly learn new things. This is a repo to share those learnings.
 
 ### Algorithm
 
-- [Data Structure & Algorithms in Python] (/Algorithm/Data Structure & Algorithms in Python )
-- Standford Algorithm
+- [Data Structure & Algorithms in Python](/Algorithm/Data Structure & Algorithms in Python)
+
+- [Standford Algorithm](/Algorithm/Stanford Algorithm)
 
 
 
@@ -31,6 +28,6 @@ We constantly learn new things. This is a repo to share those learnings.
 
 ### Server
 
-- Arch Linux
-- ServerLess Computing
+- [Arch Linux](/Server/Arch_Linux)
+- [ServerLess Computing](/Server/ServerLess_Computing)
 
