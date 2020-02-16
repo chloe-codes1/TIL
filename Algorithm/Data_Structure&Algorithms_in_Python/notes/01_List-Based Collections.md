@@ -35,19 +35,19 @@ Main distinction?
 
 
 
-#### Pros & Cons
+### Pros & Cons
 
 
 
-Pros
+- Pros
 
-: pretty easy to insert & delete elements
+  : pretty easy to insert & delete elements
 
 
 
-Cons
+- Cons
 
-: need to be careful not to lose references when adding or removing elements
+  : need to be careful not to lose references when adding or removing elements
 
 
 
@@ -55,7 +55,7 @@ Cons
 
 
 
-#### Linked List in Python
+### Linked List in Python
 
 >  There isn't a built-in data structure in Python that books like a linked list.
 >
