@@ -2,6 +2,7 @@
 
 > What is Arch Linux  & Why do we have to use it
 
+<br/>
 
 
 
@@ -15,7 +16,7 @@
 
   - constantly gets updates of fixes & new features
 
-- follow the Kiss principle
+- follow the KISS principle
 
     -> KISS (= Keep it Simple & Stupid)
 
