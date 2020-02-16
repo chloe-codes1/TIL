@@ -2,11 +2,20 @@
 
 
 
-## 1-1 Linked Lists in Depth
+<br/>
+
+<br/>
 
 
 
+## 1-1 Linked Lists
 
+- stores a reference to the next element in the list
+- next component is storing the memory address of the next element
+
+
+
+<br/>
 
 ### Linked List & Array
 
@@ -18,17 +27,27 @@ Main distinction?
 
 
 
-#### I. Linked List
 
-- stores a reference to the next element in the list
 
-- next component is storing the memory address of the next element
+<br/>
 
-- Pros
+<br/>
 
-  - pretty easy to insert & delete elements
 
-    -> but, need to be careful not to lose references when adding or removing elements
+
+#### Pros & Cons
+
+
+
+Pros
+
+: pretty easy to insert & delete elements
+
+
+
+Cons
+
+: need to be careful not to lose references when adding or removing elements
 
 
 
@@ -38,11 +57,13 @@ Main distinction?
 
 #### Linked List in Python
 
-There isn't a built-in data structure in Python that books like a linked list.
+>  There isn't a built-in data structure in Python that books like a linked list.
+>
+> But, it's easy to make classes that represent data structures in Python!
 
-But, it's easy to make classes that represent data structures in Python!
 
 
+<br/>
 
 ex) Linked List
 
@@ -172,9 +193,9 @@ class LinkedList(object):
 
 
 
-​    => All you need here is to look at the top element of the stack!
+​                => All you need here is to look at the top element of the stack!
 
-
+<br/>
 
 
 
@@ -184,7 +205,7 @@ class LinkedList(object):
 
 
 
-
+<br/>
 
 #### Stack in Python
 
@@ -193,13 +214,19 @@ class LinkedList(object):
 
 
 
+<br/>
 
+<br/>
 
-Make our own code instead of using `append()` since it traverses the whole list, taking O(n)
+Make your own code instead of using `append()` since it traverses the whole list, taking O(n)
 
   -> it will take a lot faster if we push/pop from the first element in a linked list!
 
 
+
+<br/>
+
+ex)
 
 ``` python
 class Element(object):
@@ -281,7 +308,7 @@ def delete_first(self):
 
 
 
-
+<br/>
 
 #### Head & Tail
 
@@ -293,7 +320,7 @@ def delete_first(self):
 
    : the last element (the newest) in element in the queue
 
-
+<br/>
 
 #### Enqueue & Dequeue 
 
