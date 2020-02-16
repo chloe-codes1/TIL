@@ -18,9 +18,9 @@
 
 ### Algorithm
 
-- [Data Structure & Algorithms in Python](/Algorithm/Data Structure & Algorithms in Python)
+- [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
 
-- [Standford Algorithm](/Algorithm/Stanford Algorithm)
+- [Standford Algorithm](/Algorithm/Stanford_Algorithm)
 
 
 
