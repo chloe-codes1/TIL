@@ -178,9 +178,9 @@ class LinkedList(object):
 
 
 
-#### L.I.F.O
+#### Stack == L.I.F.O 
 
-: Last In First Out
+: Last In First Out Structure
 
 
 
@@ -195,22 +195,192 @@ class LinkedList(object):
 
 
 
+Make our own code instead of using `append()` since it traverses the whole list, taking O(n)
+
+  -> it will take a lot faster if we push/pop from the first element in a linked list!
 
 
 
+``` python
+class Element(object):
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class LinkedList(object):
+    def __init__(self, head=None):
+        self.head = head
+    
+    def append(self, new_element):
+        current = self.head
+        if self.head:
+            while current.next:
+                current = current.next
+            current.next = new_element
+        else:
+            self.head = new_element
+    
+    # Insert new element as the head of the LinkedList
+    def insert_first(self, new_element):
+         new_element.next = self.head
+         self.head = new_element
+    
+    # Delte the fist (head) element in the LinkedList as return it
+    def delete_first(self):
+        if self.head:
+            deleted_element = self.head
+            temp = deleted_element.next
+            self.head = temp
+            return deleted_element
+        else:
+            return None
+    
+    
+class Stack(object):
+    def __init__(self, top=None):
+        self.ll = LinkedList(top)
+    
+    def push(self, new_element):
+        self.ll.insert_first(new_element)
+    
+    def pop(self):
+        return self.ll.delete_first()
+            
+```
+
+<br/>
 
 
 
+`+` alternative `delete_first()` method 
 
-
-ex) alternative delete_first method 
+ex) 
 
 ```python
 def delete_first(self):
     deleted = self.head
     if self.head:
-        self.head = slef.head.next
+        self.head = self.head.next
         deleted.next = None
     return deleted
 ```
+
+
+
+<br/><br/>
+
+
+
+## Queues
+
+
+
+#### Queues == F.I.F.O 
+
+: First In First Out Structure
+
+
+
+
+
+#### Head & Tail
+
+1. Head
+
+   : the first (the oldest) element in the queue
+
+2. Tail
+
+   : the last element (the newest) in element in the queue
+
+
+
+#### Enqueue & Dequeue 
+
+1. Enqueue
+
+   : add an element to the tail
+
+2. Dequeue
+
+   : remove the head element
+
+3. Peek
+
+   : look at the head element, but not removing it
+
+
+
+<br/><br/>
+
+
+
+### Deque
+
+: a queue that goes both ways
+
+   -> you can enqueue & dequeue from either end
+
+   -> kind of a generalized version of both stacks & queues since you could represent either of them with it!
+
+
+
+<br/>
+
+
+
+### Priority Queue
+
+- assign each element a numerical priority when you insert it into the queue
+
+- remove the element with the highest priority when you dequeue
+
+  
+
+  -> if the elements have the same priority, the oldest element is the one that gets dequeue first
+
+
+
+<br/>
+
+
+
+### Queues in Python
+
+
+
+ex)
+
+```python
+class Queue:
+    def __init__(self, head=None):
+        self.storage = [head]
+
+    def enqueue(self, new_element):
+        self.storage.append(new_element)
+
+    def peek(self):
+        return self.storage[0]
+
+    def dequeue(self):
+        self.storage.pop(0)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
