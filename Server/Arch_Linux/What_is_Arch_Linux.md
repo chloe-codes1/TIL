@@ -53,7 +53,7 @@
 
 4. Pacman Package Manager
 
-   - `Packman` is a command-line tool & the default package installer in Arch Linux
+   - `Pacman` is a command-line tool & the default package installer in Arch Linux
    - It is less wordy than the package mangers of other distros like `APT` in Ubuntu 
 
    
