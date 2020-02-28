@@ -10,8 +10,6 @@
 
 <br/><br/>
 
-
-
 ## Categories
 
 <br/>
@@ -22,12 +20,28 @@
 
 - [Standford Algorithm](/Algorithm/Stanford_Algorithm)
 
-
-
 <br/>
+
+### Java
+
+- [Lombok](/Java/Lombok.md)
+
+<br>
+
+### Linux
+
+- [Arch_Linux](/Linux/Arch_Linux)
+
+<br>
 
 ### Server
 
-- [Arch Linux](/Server/Arch_Linux)
+- [AWS](/Server/AWS)
+
 - [ServerLess Computing](/Server/ServerLess_Computing)
 
+<br>
+
+### Programming 101
+
+- [프로그래밍 용어 사전](/Programming101/프로그래밍_용어_사전.md)

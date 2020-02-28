@@ -28,21 +28,21 @@
 
 <br/>
 
-\- @Data 
+\- `@Data` 
 
-​     : 아래에 있는 모든 annotation을 한번에 생성
-\- @ToString 
+​     : 아래에 있는 모든 annotation을 한번에 생성<br/>
+\- `@ToString` 
 
-​     : 모든 field 출력하는 toString() method 생성
-\- @Getter 
+​     : 모든 field 출력하는 toString() method 생성<br/>
+\- `@Getter` 
 
-​     : Getter method 생성
-\- @Setter 
+​     : Getter method 생성<br/>
+\- `@Setter` 
 
-​     : Setter method 생성
+​     : Setter method 생성<br/>
 \- @EqualsAndHashCode 
 
-​     : equals & hashcode method 생성 
+​     : equals & hashcode method 생성 <br/>
 \- @ NoArgsConstructor
 
 ​	: argument 없는 constructor 생성
