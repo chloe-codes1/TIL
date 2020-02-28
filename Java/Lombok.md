@@ -30,26 +30,26 @@
 
 \- `@Data` 
 
-​     : 아래에 있는 모든 annotation을 한번에 생성<br/>
+​     : 아래에 있는 모든 annotation을 한번에 생성<br/><br/>
 \- `@ToString` 
 
-​     : 모든 field 출력하는 toString() method 생성<br/>
+​     : 모든 field 출력하는 toString() method 생성<br/><br/>
 \- `@Getter` 
 
-​     : Getter method 생성<br/>
+​     : Getter method 생성<br/><br/>
 \- `@Setter` 
 
-​     : Setter method 생성<br/>
+​     : Setter method 생성<br/><br/>
 \- `@EqualsAndHashCode` 
 
-​     : equals & hashcode method 생성 <br/>
+​     : equals & hashcode method 생성 <br/><br/>
 \- `@NoArgsConstructor`
 
-​	: argument 없는 constructor 생성
+​	: argument 없는 constructor 생성<br/><br/>
 
 \- `@RequiredArgsConstructor`
 
-​    : 필수 argument만 있는 constructor 생성
+​    : 필수 argument만 있는 constructor 생성<br/><br/>
 
 \- `@AllArgsConstructor`
 
