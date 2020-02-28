@@ -10,7 +10,7 @@
 
 <br>
 
-### Intro
+### 1. Intro
 
 
 
@@ -30,7 +30,7 @@
 
 <br>
 
-### 1. Arch Linux's Philosophy
+### 2. Arch Linux's Philosophy
 
 - guides you little
 
@@ -63,7 +63,7 @@
 
 <br>
 
-### 2. Four things base for Arch
+### 3. Four things base for Arch
 
 #### 1) `PKGBUILD` 
 
@@ -82,7 +82,7 @@
 
 <br>
 
-​					--> those two are the fundamentals
+​				   ----> *those two are the fundamentals*
 
 <br>
 
@@ -121,7 +121,7 @@
   
   <br>
 
-### 3. Why do we have to use Arch Linux?
+### 4. Why do we have to use Arch Linux?
 
 1. Bleeding edge
 
@@ -141,7 +141,7 @@
 
 
 
-### 4. Tips/Tricks
+### 5. Tips/Tricks
 
 1. Use `manjaro`
 
@@ -169,16 +169,15 @@
 
 1. `mosh`
    
-   - Remote terminal application that allows **roaming**, supports **intermittent connectivity**, and provides intelligent **local echo** and line editing of user keystrokes.
-   
-   - Mosh is a replacement for interactive SSH terminals. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.
-   - Mosh is free software, available for GNU/Linux, BSD, macOS, Solaris, Android, Chrome, and iOS.
+- Remote terminal application that allows **roaming**, supports **intermittent connectivity**, and provides intelligent **local echo** and line editing of user keystrokes. 
+- Mosh is a replacement for interactive SSH terminals. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.
+- Mosh is free software, available for GNU/Linux, BSD, macOS, Solaris, Android, Chrome, and iOS.
 
 <br>
 
 2.  `tmux`
-   - **tmux** is a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer) for [Unix-like](https://en.wikipedia.org/wiki/Unix-like) [operating systems](https://en.wikipedia.org/wiki/Operating_system). 
-   - allows multiple [terminal](https://en.wikipedia.org/wiki/Computer_terminal) sessions to be accessed simultaneously in a single window. 
-   - useful for running more than one [command-line](https://en.wikipedia.org/wiki/Command-line_interface) program at the same time. 
-   - It can also be used to detach [processes](https://en.wikipedia.org/wiki/Process_(computing)) from their controlling terminals, allowing [SSH](https://en.wikipedia.org/wiki/Secure_Shell) sessions to remain active without being visible.
+- **tmux** is a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer) for [Unix-like](https://en.wikipedia.org/wiki/Unix-like) [operating systems](https://en.wikipedia.org/wiki/Operating_system). 
+- allows multiple [terminal](https://en.wikipedia.org/wiki/Computer_terminal) sessions to be accessed simultaneously in a single window. 
+- useful for running more than one [command-line](https://en.wikipedia.org/wiki/Command-line_interface) program at the same time. 
+- It can also be used to detach [processes](https://en.wikipedia.org/wiki/Process_(computing)) from their controlling terminals, allowing [SSH](https://en.wikipedia.org/wiki/Secure_Shell) sessions to remain active without being visible.
 
