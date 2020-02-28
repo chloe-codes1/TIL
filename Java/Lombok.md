@@ -40,18 +40,18 @@
 \- `@Setter` 
 
 ​     : Setter method 생성<br/>
-\- @EqualsAndHashCode 
+\- `@EqualsAndHashCode` 
 
 ​     : equals & hashcode method 생성 <br/>
-\- @ NoArgsConstructor
+\- `@NoArgsConstructor`
 
 ​	: argument 없는 constructor 생성
 
-\- @ RequiredArgsConstructor
+\- `@RequiredArgsConstructor`
 
 ​    : 필수 argument만 있는 constructor 생성
 
-\- @ AllArgsConstructor
+\- `@AllArgsConstructor`
 
 ​    : 모든 argument 가진 constructor 생성
 
