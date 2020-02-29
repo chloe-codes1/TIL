@@ -24,13 +24,15 @@
 
 ### Java
 
+- [Java 101](/Java/Java101)
+
 - [Lombok](/Java/Lombok.md)
 
 <br>
 
 ### Linux
 
-- [Arch_Linux](/Linux/Arch_Linux)
+- [Arch Linux](/Linux/Arch_Linux)
 
 <br>
 
