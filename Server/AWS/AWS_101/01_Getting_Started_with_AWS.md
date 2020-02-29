@@ -1,4 +1,4 @@
-# Intro to AWS
+# 1. Intro to AWS
 
 <br>
 
@@ -96,7 +96,7 @@
 
 ## AWS (Amazon Web Service) 를 이용한 Cloud Computing
 
-<br>
+
 
 ### AWS
 
@@ -126,5 +126,97 @@
 
    - 263개의 보안, 규정 준수 및 governance service/main function을 포함하는 심층적인 cloud security set 지원
 
-9. 85개의 보안 표주과 규정 준수 인증을 지원하며, 고객 데이터를 저장하는 116개의 모든 AWS 서비스는 해당 데이터를 암호화 하는 기능 제공
+7. 85개의 보안 표주과 규정 준수 인증을 지원하며, 고객 데이터를 저장하는 116개의 모든 AWS 서비스는 해당 데이터를 암호화 하는 기능 제공
 
+8. `Machine Learning`, `AI`, `IoT`, `Serverless Computing`  과 같은 새로운 분야에서 매우 빠른 혁신을 이루었음
+
+9. AWS로 최신 기술을 활용하여 보다 빠르게 혁신하고, 차별화하고, solution을 제공할 수 있음
+
+   ex)
+
+   - 2014년 AWS Lambda를 출시하며 event 중심의 serverless computing 공간을 처음으로 선보임
+   - AWS Lambda를 통해 개발자는 server를 provisioning 하거나 관리하지 않고도 코드를 실행할 수 있고, 기본 server에 대한 provisioning, modification, patch or manage를 걱정하지 않아도 됨
+
+<br><br>
+
+<br>
+
+## AWS 주요 서비스
+
+<br>
+
+![Image result for aws main services](https://images.clickittech.com/wp-content/uploads/2018/01/17171820/why-aws-service-catalog.jpg)
+
+<br>
+
+### AWS Security
+
+: 보안, 자격 증명 및 규정 준수 제품
+
+- AWS에서 가장 높은 우선 순위 == `Cloud Security`
+- AWS 고객은 위험에 가장 민감한 조직의 요구 사항에 부합하도록 구축된 Data center & Network Architecture의 혜택을 누릴 수 있음
+
+<br>
+
+### AWS Architecture
+
+- ex) AWS 산업용 예측 유지 보수 기계 학습 모델
+  - AWS Iot SiteWise & AWS IoT Analytics를 Amazon SNS 이상 탐지 알림과 함께 사용하여 Predictive Maintenance ML model 생성 
+
+#### AWS Reference Model Architecture 
+
+1. Web Application Hosting
+
+   : 확장성과 신뢰성이 매우 높은 web or mobile application 구축
+
+2. Content & Media Serving
+
+   : 엄청난 양의 콘텐츠와 미디어를 서비스하는 신뢰성 높은 시스템을 구축
+
+3. 일괄 처리 (batch)
+
+   : 비디오 처리 pipeline 같은 자동 확장 가능한 일괄 처리 시스템을 구축
+
+4. 내결함성 및 HA
+
+   : 가용성이 뛰어나며 장애 발생 시 새 instance로 신속하게 fail over(시스템 대체 작동) 하는 system을 구축
+
+5. 대규모 컴퓨팅
+
+   : Big data를 처리하는 고성능 computing system 구축
+
+6. 광고 지원
+
+   : 확장성이 뛰어난 온라인 광고 게재 solution을 구축
+
+7. Local Application을 위한 DR (Disaster Recovery)
+
+   : On-premise application에 대해 비용 효율적인 재해 복구(DR) Solution 구축 
+
+8. 파일 동기화
+
+   : 단순한 파일 동기화 서비스를 구축
+
+9. 전자 상거래 Web Site
+
+   1.  Web Front-end
+
+      : 유연한 제품 catalog를 갖춘 전자 상거래 web site 구축
+
+   2. 결제 서비스
+
+      : 전자 상거래 web site에 안전하고 확장성이 뛰어난 결제 pipeline을 구축
+
+   3. Marketing & Recommendation
+
+      : 확장성이 뛰어난 추천 엔진을 구축
+
+10. 시계열 데이터 처리
+
+
+
+<br><br>
+
+#### Summary
+
+: Amazon Cloud Service serves services including computing, storage, database, AI, IoT, machine learning and more.
