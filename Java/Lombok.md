@@ -65,9 +65,7 @@
 
 <br/>
 
-![lombok최고](images/lombok최고.png)
-
-​     
+![](../images/lombok최고.png)
 
 
 
