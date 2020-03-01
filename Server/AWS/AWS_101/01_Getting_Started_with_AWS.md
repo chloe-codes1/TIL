@@ -1,4 +1,4 @@
-# 1. Intro to AWS
+# Intro to AWS
 
 <br>
 
