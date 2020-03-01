@@ -1,4 +1,4 @@
-# 3. Data Types in Java
+# Data Types & Variables in Java
 
 <br>
 
@@ -6,39 +6,49 @@
 
 >  데이터 그 자체가 들어가 있는 타입
 
-: 기본 데이터 형  => 딱 8개뿐! 
+- 기본 데이터 형  => 딱 8개뿐! 
 
-  -> 기억 공간에 데이터가 바로 있음
+- 기억 공간에 데이터가 바로 있음
 
-  -> `. (dot) 연산자`를 쓸 수 없음 => why? 주소가 아니라서!
+- `. (dot) 연산자`를 쓸 수 없음 => why? 주소가 아니라서!
 
-   
+<br>
 
 ### 1. 논리형  
 
-- `boolean`   -  1bit
+- `boolean`  
 
-  : (true/false) -> JAVA는 0,1 허용하지 않음
+  : 1bit
+  
+   (true/false) -> JAVA는 0,1 허용하지 않음
 
 <br>
 
 ### 2. 문자형
 
-- `char `    - 2byte
+- `char `    
+
+  : 2byte
 
   ex) ‘a’ -> 문자 하나만 가능
-
+  
    => single quotation(‘’) 사용!! -> ASCII code 값으로 저장됨
 
 <br>
 
-### 3. 정수형  `byte`     -   8bit (1 byte)  -128 ~127
+`+`   
+
+**byte**     ==  8bit (1 byte)  ==  -128 ~127
+
+<br>
+
+### 3. 정수형 
 
 - `Short` 
 
   : 16 bit (2 byte)
 
--  `Int`          
+-  `Int`  
 
   : 32bit (4 byte)  => 정수형의 기본은 Int
 
@@ -62,7 +72,7 @@
 
 
 
--> 위의 8개 제외하고는 다 Reference Type!!!!!
+-> *위의 8개 제외하고는 다 Reference Type!!!!!*
 
 <br><br>
 
@@ -113,7 +123,7 @@
 
 <br>
 
-#### Java는 연산자를 기준으로 타입을 일치시키려고 함!!
+#### Java는 연산자를 기준으로  type을 일치시키려고 함!!
 
  ex 1)
 
@@ -157,7 +167,7 @@ String c = 1 +1 + 1 + “1”  = “31”
 
 ​     : char 2 byte    <   int 4 byte
 
-
+<br>
 
 *큰 사이즈에서 작은 사이즈로 가려면 데이터 소모가 있으므로 type casting을 해라!*
 
@@ -165,7 +175,7 @@ String c = 1 +1 + 1 + “1”  = “31”
 
 <br>
 
-(정리)
+#### (정리)
 
 큰 사이즈 -> 작은 사이즈 => 데이터 소모 있음 ⇒ `Type Casting`
 
@@ -175,7 +185,7 @@ String c = 1 +1 + 1 + “1”  = “31”
 
 
 
-(Type Promotion in JAVA)
+#### (Type Promotion in JAVA)
 
 ![img](https://lh3.googleusercontent.com/KXOWKRk-kEyIoztoda2M7RfldyM5UmDQKPNULtwcq5_UduHG7bhd9DFu1aaVHlGdLSgs91bdaQiKdPpygaduHFRi5Ew2pF6_kIHPhOKqc4jXuRI0ZUsQ0vEI3fXAd05i7YOmpMEF)
 
@@ -227,9 +237,7 @@ Public Static Void main(~~~) {
 
 <br><br>
 
-
-
-#### Null Assign을 하는 이유 (from docs.oracle)
+### `Null Assign`을 하는 이유 (from docs.oracle)
 
 : **Assign null to Variables That Are No Longer Needed**
 
@@ -239,11 +247,11 @@ An application may induce memory leaks by not releasing object references. Doing
 
 One way to detect memory leaks is to employ profiling tools and take memory snapshots after each transaction. A leak-free application in steady state will show a steady active heap memory after garbage collections.
 
-
+<br>
 
 <br>
 
-*다 쓰고 난 자원은 null assign을 해야한다! *
+*다 쓰고 난 자원은 null assign을 해야한다!*
 
 -> null assign을 하지 않으면 자원을 많이 먹어서 성능이 안좋아지기 때문!
 

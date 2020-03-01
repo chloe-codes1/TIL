@@ -1,4 +1,4 @@
-# 1. Java Basics & Environment Setting
+# Java Basics & Environment Setting
 
 <br/>
 

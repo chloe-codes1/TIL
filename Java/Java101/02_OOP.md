@@ -1,4 +1,4 @@
-# 2. Java OOPs Concepts
+# Java OOPs Concepts
 
 <br>
 
