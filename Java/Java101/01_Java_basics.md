@@ -1,31 +1,43 @@
-# 1. Java Basics
+# 1. Java Basics & Environment Setting
 
 <br/>
 
-### Java의 언어적인 특징
+### Java의 언어적인 특징 (Features of Java)
 
-- C++보다 간단하다  -> 근데 느림
+- `Simple`
 
-- Object-Oriented (객체지향 프로그래밍언어)
+  : C++보다 간단하다  -> 근데 느림
 
-- Memory: Garbage Collection => GC가 메모리 관리!
+- `Object-Oriented` 
 
-- Robust
+  : (객체지향 프로그래밍언어)
+
+- `Memory`
+
+  : Garbage Collection => GC가 메모리 관리!
+
+- `Robust` (==sturdy)
 
   : 이 코드가 System을 건드리지 않고 안전하게 돌것인가.
 
-- System Independent
+- `Platform Independent`
 
   : 플랫폼이 독립적이다 (JVM) 
 
   -> OS 위에 있는 Java Virtual Machine이 동작
 
-- Multi-Thread
+- `Multi-Threaded`
 
   : 자바에서는 운영체제의 도움 없이 프로그램 언어 차원에서 구현
 
-- Dynamic (동적이다)
+- `Secured` 
 
+  : Java is pretty much "safe" unleses a third party is trying to exploit the JVM
+
+- `Dynamic` 
+
+  : 동적이다
+  
   
 
 <br>
@@ -170,7 +182,17 @@ public static void main(String[] args) {}
 
  => Main function
 
- -> 자바 애플리케이션을 구동시키는 entry point(=start point) 가 된다
+ -> Java Application을 구동시키는 entry point(=start point) 가 된다
+
+ -> method 이름 뒤에는 무조건 ( ) 가 따라다님 => 괄호가 있으면 함수, 없으면 변수!
+
+- `static` keyword: new keyword 없이 method 선언만으로도 메모리에 올려주는 keyword
+
+- `String`: 데이터 타입 -> 문자열이다
+
+- `args`: 지역변수 (변수명)
+
+-  `void`: 콜한 자리에 리턴값(반환값)이 없다는 뜻 -> 이 명령문을 실행하기만 한다는 뜻!
 
 <br>
 
@@ -189,18 +211,31 @@ public static void main(String[] args) {}
 
 <br><br>
 
+### 구분자 (Delimeter)
+
+- class, variable, method를 구분하는 이름
+
+- 중복되면 안된다
+
+- 첫 글자는 영문자, _, $ 가능
+
+- `예약어 (keyword)`는 쓸 수 없다
+
+  ex) class, import, new, public, void, etc.
+
 
 
 ### Class 안에 들어갈 수 있는 것 2가지
 
 1. Data ( = Variable 변수)
-2. 기능 (= Method 함수) -> 다른 언어에서는 Function이라고 함!        
 
+   : 명사는 Data!
 
+2. 기능 (= Method 함수)
 
-=> + 파일 이름은   이름. java가 됨
+   : 동사는 method!     => ~ 하다 붙여서 말되면 동사,,,
 
-
+    -> 다른 언어에서는 Function이라고 함!        
 
 
 
