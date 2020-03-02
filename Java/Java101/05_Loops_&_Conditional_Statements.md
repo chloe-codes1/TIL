@@ -8,7 +8,7 @@
 
 <br>
 
-### If Statement
+### if statement
 
 : An if statement tells the program that it must carry out a specific piece of code if a condition test evaluates to true
 
@@ -26,7 +26,7 @@ if( condition ) {
 
 
 
- ### Switch Statement
+ ### switch statement
 
 - a multi-way branch **statement**. 
 - provides an easy way to dispatch execution to different parts of code based on the value of the expression
@@ -79,7 +79,7 @@ break;
 
 <br>
 
-### For Loop
+### for loop
 
 - A for loop is divided into three parts, an initialization part, a conditional part and an increment part
 - You should sett all initial values in the initialization part of the loop.
@@ -87,7 +87,7 @@ break;
 - For each loop the increment part will be executed.
 
 ```java
-For (초기식 ; 조건식 ; 증감식) {
+for (초기식 ; 조건식 ; 증감식) {
 
  수행문 1;
 
@@ -105,9 +105,9 @@ For (초기식 ; 조건식 ; 증감식) {
 ### 다중 for 문
 
 ```java
-For (초기식1 ; 조건식1 ; 증감식1) {
+for (초기식1 ; 조건식1 ; 증감식1) {
 
- For (초기식 2 ; 조건식 2 ; 증감식 2) {
+ for (초기식 2 ; 조건식 2 ; 증감식 2) {
 
   명령어 2
 
@@ -124,12 +124,12 @@ For (초기식1 ; 조건식1 ; 증감식1) {
 
 <br>
 
-### 향상된 for 문 (enhanced for statement)
+### 향상된 for 문 (enhanced for loop)
 
 : The enhanced for loop can be used to loop over arrays of any type as well as any kind of Java object that implements the java.lang.Iterable interface.
 
 ```java
-For ( 타입 변수명 : 배열 or 컬렉션) {
+for ( 타입 변수명 : 배열 or 컬렉션) {
 
  //반복할 문장
 
@@ -142,14 +142,14 @@ For ( 타입 변수명 : 배열 or 컬렉션) {
 
 
 
-### While 문
+### while 문
 
 : 선 비교 후 처리
 
  -> 조건식은 생략 불가! 조건식이 항상 참이 되게 하려면 true를 넣어야함
 
 ```java
-While (조건식 ) { 
+while (조건식 ) { 
 
  수행문; -> 조건식의 연산결과가 참(true) 인 동안 반복될 문장들
 
@@ -160,12 +160,12 @@ While (조건식 ) {
 
 
 
-### Do ~ while 문
+### do ~ while 문
 
 : 조건에 맞지 않아도 일단 1번 실행 한다
 
 ```java
-Do {
+do {
 
  수행문;
 
@@ -176,7 +176,7 @@ Do {
 
 <br><br>
 
-### Break 문
+### break 문
 
 : break를 포함하고 있는 loop(반복문)를 빠져나오는 제어문
 
@@ -185,7 +185,7 @@ Do {
 ```java
 
 
-For (초기식 ; 조건식 ; 증감식) {
+for (초기식 ; 조건식 ; 증감식) {
 
 
 
@@ -193,7 +193,7 @@ For (초기식 ; 조건식 ; 증감식) {
 
   수행문;
 
-  Break;   //====>내부 for문에서 사용했으므로 내부 for문만 탈출한다
+  break;   //====>내부 for문에서 사용했으므로 내부 for문만 탈출한다
 
  }
 
@@ -206,7 +206,7 @@ For (초기식 ; 조건식 ; 증감식) {
 
 <br>
 
-### Continue 문
+### continue 문
 
 : 어느 특정 문장이나 여러 문장들을 건너뛰고자 할 때 사용
 
