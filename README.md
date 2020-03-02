@@ -32,6 +32,12 @@
 
 <br>
 
+### Python
+
+- [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
+
+<br>
+
 ### OS
 - [What is an Operating System](/OS/01_What_is_an_Operating_System.md)
 
