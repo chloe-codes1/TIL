@@ -16,7 +16,7 @@
 
 <br>
 
-#### Good to know
+#### Useful Informations
 
 1. Amazone EC2의 간단한 Web service interface를 통해 간편하게 필요한 용량을 얻고 구성 가능하다.
 2. Amazon Simple Storage Service(S3)는 어디서나 원하는 양의 data를 저장/검색 할 수 있도록 구축된 객체 storage다.
