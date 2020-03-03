@@ -101,26 +101,14 @@
 
 <br>
 
-
-
-***All the below 3 layers(including Session Layer) are integrated as a single layer in the TCP/IP model as “Application Layer”.
-**Implementation of these 3 layers is done by the network application itself. These are also known as **Upper Layers** or **Software Layers**.
-
-
-
-<br>
-![img](https://media.geeksforgeeks.org/wp-content/uploads/computer-network-osi-model-layers-session.png)
-
-<br>
-
 ### 6. Presentation Layer (Layer 6) 
 
 - Presentation layer is also called the **Translation layer**.
 - The data from the application layer is extracted here and manipulated as per the required format to transmit over the network.
 - The functions of the presentation layer are :
-  1. **Translation **
+  1. **Translation**
      - For example, ASCII to EBCDIC.
-  2. **Encryption/ Decryption ** 
+  2. **Encryption/ Decryption** 
      - Data encryption translates the data into another form or code. 
   3. **Compression** 
      - Reduces the number of bits that need to be transmitted on the network.
@@ -144,4 +132,4 @@
 
 <br>
 
-![](../images/osi-model-7-layers.svg)
+![undefined](https://www.cloudflare.com/img/learning/ddos/what-is-a-ddos-attack/osi-model-7-layers.svg)
