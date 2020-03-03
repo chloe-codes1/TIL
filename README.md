@@ -78,7 +78,7 @@
 
 ### Network
 
-- [OSI 7 Layers](OSI_7_Layers.md)
+- [OSI 7 Layers](/Network/OSI_7_Layers.md)
 
 <br>
 
