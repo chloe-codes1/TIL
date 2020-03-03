@@ -1,4 +1,4 @@
-# Java Array
+# Array in Java
 
 <br>
 
@@ -13,6 +13,9 @@
 - 위치 첨자가 따라다니는 변수 
 
   => 위치 인덱스가 반드시 따라다님
+
+- 배열 또한 Class이므로 method 쓸 수 있다
+- 배열은 한번 size가 정해지면 resizing이 안된다!
 
   <br>
 
@@ -48,68 +51,168 @@ int [] nums = new int [5];
 
 <br>
 
-\3. 초기화
+### 3. 초기화
 
    : 배열은 생성과 동시에 자동적으로 자신의 타입에 해당하는 기본값으로 초기화되므로 사용하기 전에 따로 초기화를 해주지 않아도 되지만, 원하는 값을 저장하려면 각 요소마다 값을 지정해줘야함
 
+ex)
 
+```java
+int num; 
+```
 
+- Stack영역에 num이라는 기억공간 만들어줘
+- 그리고 여기엔 정수가 들어갈꺼야
 
+<br>
 
-Int num;   -> Stack영역에 num이라는 기억공간 만들어줘
+```java
+int [] nums = new int[5] ; 
+```
 
-=> 그리고 여기엔 정수가 들어갈꺼야
+배열 선언한 순간 `참조형 (reference type)`이 된다!!!
 
+- stack영역에 nums라는 주소 만들어줘
 
+- new니까 Heap 영역에 int type으로 방 5개 만들어   
+  - heap이니까 JVM이 관리
+  - 그러면 JVM에 의해 5개방에 각각 int 니까 0으로 default 초기화가 일어남
 
-Int [] nums =new int[5] ; 
+- 한번 이렇게 만들면 resizing 안됨
 
-=> 배열 선언한 순간 참조형 (reference type)이 된다!!!
+- 연속적인 공간을 할당 받는다는 보장을 받음 
 
--> stack영역에 nums라는 주소 만들어줘
+<br>
 
--> new니까 Heap 영역에 int type으로 방 5개 만들어   => heap이니까 JVM이 관리
+```java
+int [] nums.length ; 
+```
 
-  => 그러면 JVM에 의해 5개방에 각각 int 니까 0으로 default 초기화가 일어남
+- nums라는 배열의 사이즈 어떻게 되니?
 
- -> 한번 이렇게 만들면 resizing 안됨
+<br>
 
- -> 연속적인 공간을 할당 받는다는 보장을 받음 
+```java
+String name; 
+```
 
--> 배열 또한 Class이므로 method 쓸 수 있다
+- Stack영역에 String이라는 기억 공간 만들어줘
 
+- 그리고 여기엔 주소가 들어갈꺼야
 
+<br>
 
-Int [] nums.length ;  -> nums라는 배열의 사이즈 어떻게 되니?
-
-
-
-
-
-String name;  -> Stack영역에 String이라는 기억 공간 만들어줘
-
-   => 그리고 여기엔 주소가 들어갈꺼야
-
-
-
+```java
 String[] names = new String[5];
+```
 
-=> reference type!
+- reference type!
 
-  => JVM에 의해 5개 방이 각각 null으로 default초기화 일어남
+- JVM에 의해 5개 방이 각각 null으로 default초기화 일어남
 
-  => 주소가 들어 갈 것 이라서 . 가 들어감
+<br>
+
+```java
+names[0] = “홍길동”;
+```
+
+- names의 0번째 방에 코드표 영역의 “홍길동”을 가리키는 주소가 저장됨
+
+<br>
+
+### 4. 배열 복사하기
+
+```java
+System.arraycopy(arg0, arg1, arg2, arg3, arg4);
+```
+
+**Parameters :** 
+
+- source_arr : array to be copied from  (원본 배열)
+
+- sourcePos : starting position in source array from where to copy
+
+- dest_arr : array to be copied in  (복사할 배열)
+
+- destPos : starting position in destination array, where to copy in
+
+- length : total no. of components to be copied.  (원본 배열의 크기)
+
+<br>
+
+### 5. 이차원 배열
+
+- 일차원 배열의 주소를 모아서 만든 배열
+
+- 이차원 배열은 일차원 배열이 가리키는 자료의 주소를 보관한다
+
+- 배열을 생성하면 배열의 각 요소에는 배열요소 타입의 기본값이 자동으로 저장됨
+
+- 2차원 배열은 `행(row)`과 `열(column)`으로 구성되어 있기 때문에 index도 행과 열에 각각 하나씩 존재함
+  - 행 index의 범위 = 0~행의 길이 -1
+  - 열 index의 범위 = 0~열의 길이 -1
+
+<br>
+
+#### 이차원 배열의 length
+
+```java
+int [ ] [ ] score = [5][3];
+
+score.length //==> 5       
+//-> score가 참조하고 있는 배열의 길이
+
+score[0].length //==> 3       
+//->score[0]가 참조하고 있는 배열의 길이
+```
 
 
 
-Names[0] = “홍길동”;
+<br>
 
-  => names의 0번째 방에 코드표 영역의 “홍길동”을 가리키는 주소가 저장됨
+#### String to char array
+
+: `.toCharArray();` 
+
+```java
+import java.util.Arrays;
+
+public class JavaStringToCharArray {
+
+ public static void main(String[] args) {
+  String str = "Hi Java";
+
+  // get char at specific index
+  char c = str.charAt(0);
+
+  // Character array from String
+  char[] charArray = str.toCharArray();
+
+  System.out.println(str + " String index 0 character = " + c);
+  System.out.println(str + " String converted to character array = " + Arrays.toString(charArray)); 
+
+ }
+
+}
+```
+
+<br>
+
+#### (String …) vs String[]
+
+1. (String ...) means you can add as much String param as you want
+
+2. String[] is one parameter which is an array of strings.
 
 
 
 
 
-Oracle에서 args 실행하기
+<br>
+
+#### Oracle에서 args 실행하기
 
 ![img](https://lh3.googleusercontent.com/uGqQh0xF6AbgCvfISK3_liROQRWTzf6W_F__F1W-tJnGakIAnExSAP-kiAUABWS66CIzSviOy-k6xPS-z9tXuM9kNFFn1hZ70fO3kdcDrb7NV2hxCHg_XSs6qBczN-yfYJhZsKZQ)
+
+<br>
+
