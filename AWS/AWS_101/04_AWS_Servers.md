@@ -74,7 +74,7 @@
 
 ### Virtual Private Cloud (VPC)
 
-- 사용자의 AWS 계정 전용 virtual network
+- *사용자의 AWS 계정 전용 virtual network*
 - AWS Cloud에서 다른 virtual network와 논리적으로 분리됨
 - Amazon EC2 instance와 같은 AWS resource를 VPC에서 실행할 수 있는 `cloud`와 `network` 환경
 - 다양한 resource를 시작하는 장소이며, 사용자 환경 및 resource 상호 격리에 대한 탁월한 제어 기능을 제공하도록 설계됨
@@ -122,10 +122,14 @@
      - Fixed IPv4 address for Dynamic Cloud Computing
   7. `Tag`
      - 사용자가 생성하여 Amazon EC2 resource에 할당할  수 있는 meta data
+  8. `Virtual Private Clouds(VPC)`
+     - AWS Cloud에서는 논리적으로 격리되어 있지만, 원할 때 마다 고객의 network와 간편히 연결 할 수 있는 가상 네트워크
 
   
 
   <br>
+
+
 
 ### Relational Database Service (RDS)
 
@@ -146,12 +150,40 @@
 - **3 Load Balancers in ELB**
   - ELB 에는 세 가지 Load Balancer가 존재하는데 모두 application의 내결함성에 필요한 고가용성, 자동 확장/축소, 강력한 보안 기능 제공
     1. `Application Load Balancer`
-       - Application Layer 7에서 작동함
+       - OCI 7 계층의 Layer 7에서 작동함
        - 요청 content를 기반으로 VPC 내의 대상으로 traffic routing
        - Layer 7 HTTP/HTTPS application을 Load balancing 하고 SSL/TLS 암호 및 protocol이 사용되도록하여 application의 보안을 개선
     2. `Network Load Balancer`
-    3. `Class Load Balancer`
-    4. 
+       - OCI 7 계층의 Layer 4에서 작동함
+       - IP protocol data를  기반으로 VPC 내의 대상으로 연결 routing을 함
+       - TCP traffic의 Load balancing에 적합하며 AZ당 하나의 정적 IP 주소를 사용하여 갑작스럽고 변동이 심한 traffic 처리
+    3. `Class Load Balancer`   (범용)
+       - 여러 Amazon EC2 instance에서 기본적인 load balancing을 제공하며, Layer 4 및 Layer 7 에서 작동
+       - 앞의 두 balancer보다 이전에 나온 서비스이며 EC2-classic network 내에 구축된 application용이지만 VPC에서도 사용 가능하고 비교적 설정이 간단함
 
-- d
 
+
+
+
+<br><br>
+
+### EC2 Storage
+
+<br>
+
+![       Storage options for Amazon EC2     ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/architecture_storage.png)
+
+<br>
+
+#### 1. Amazon EBS
+
+- 내구성이 있는 블록 수준 storage volume을 제공하여 실행 중인 instance에 연결하는 것이 가능
+- 세분화된 update를 자주 수행하는 data의 경우 기본 storage device로 Amazon EBS를 사용 가능
+- Instance 내에서 database를 실행 할 때 권장되는 storage option
+
+<br>
+
+#### 2. Amazon EC2 Instance Store
+
+- 여러 instance는 host computer에 물리적으로 연결된 disk의 storage에 access 가능하며, 이러한 disk storage를 `Instance Store` 라고 함
+- Instance에 블록 수준의 임시 storage를 제공하며 instance store에 저장된 data는 연관 instance의 수명 기간 동안에만 유지되고, 해당 instance를 중지하거나 종료하면 instance store volume의 data가 손실됨!

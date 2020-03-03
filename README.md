@@ -60,6 +60,7 @@
   - [AWS Main Services](/AWS/AWS_101/02_AWS_Main_Services.md)
   - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)
   - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
+  - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
 
 - #### [AWS Certification](/Server/AWS/AWS_cert)
 
