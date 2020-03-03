@@ -52,7 +52,7 @@
 
 <br>
 
-#### [AWS](/Server/AWS)
+### AWS
 
 - #### [AWS 101](/Server/AWS/AWS_101)
 
