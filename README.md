@@ -29,6 +29,7 @@
   - [Data Types](/Java/Java101/03_Data_types.md)
   - [Variables](/Java/Java101/04_Variables.md)
   - [Loops & Conditional Statements](/Java/Java101/05_Loops_&_Conditional_Statements.md)
+  - [Array](/Java/Java101/06_Array.md)
 - [Lombok](/Java/Lombok.md)
 
 <br>
