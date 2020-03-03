@@ -52,16 +52,23 @@
 
 <br>
 
+#### [AWS](/Server/AWS)
+
+- #### [AWS 101](/Server/AWS/AWS_101)
+
+  - [Getting Started with AWS](/AWS/AWS_101/01_Getting_Started_with_AWS.md)
+  - [AWS Main Services](/AWS/AWS_101/02_AWS_Main_Services.md)
+  - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)
+  - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
+
+- #### [AWS Certification](/Server/AWS/AWS_cert)
+
+  - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
+
+<br>
+
 ### Server
 
-- #### [AWS](/Server/AWS)
-  - #### [AWS 101](/Server/AWS/AWS_101)
-    - [Getting Started with AWS](/Server/AWS/AWS_101/01_Getting_Started_with_AWS.md)
-    - [AWS Main Services](/Server/AWS/AWS_101/02_AWS_Main_Services.md)
-    - [AWS Main Products](/Server/AWS/AWS_101/03_AWS_Main_Products.md)
-    - [AWS Servers](/Server/AWS/AWS_101/04_AWS_Servers.md)
-  - #### [AWS Certification](/Server/AWS/AWS_cert)
-    - [Solutions Architect](/Server/AWS/AWS_cert/Solutions_Architect.md)
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
@@ -69,6 +76,13 @@
 
 <br>
 
+### Network
+
+- [OSI 7 Layers](OSI_7_Layers.md)
+
+<br>
+
 ### Programming 101
 
 - [프로그래밍 용어 사전](/Programming101/프로그래밍_용어_사전.md)
+
