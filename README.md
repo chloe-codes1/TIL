@@ -63,9 +63,13 @@
   - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
   - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
 
-- #### [AWS Certification](/Server/AWS/AWS_cert)
+- #### [AWS Certification](/AWS/AWS_cert)
 
   - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
+  
+- #### [AWS Tips](/AWS/AWS_Tips)
+
+  - [AWS Online Cloud Clinc 01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
 
 <br>
 
