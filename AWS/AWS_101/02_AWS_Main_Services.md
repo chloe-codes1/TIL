@@ -217,4 +217,4 @@
 - 전체 machine learning work-flow를 포괄하여 data를 분류 및 준비하고, algorithm을 선택하며, model을 학습하고, 배포를 위해 조정 및 최적화하고, 예측을 수행하며, 작업을 수행하는 **완전 관리형 서비스**
 - You may execute model with less effort and cost
 
-![image-20200302013553913](../../../images/image-20200302013553913.png)
+![image-20200302013553913](../../images/image-20200302013553913.png)
