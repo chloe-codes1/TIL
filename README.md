@@ -69,7 +69,7 @@
   
 - #### [AWS Tips](/AWS/AWS_Tips)
 
-  - [AWS Online Cloud Clinc 01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
+  - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
 
 <br>
 

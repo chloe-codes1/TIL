@@ -74,7 +74,7 @@
   - Documentdb의 snapshot은 아직까지 타 region으로 복사가 되지 않음
   - Amazon DynamoDB는 global table cross과 regional replication 제공
   - Amazon Aurora도 global data service 제공
-  - 그외 db들은 global service 지원이 어려우므로 참고
+  - 그 외 db들은 global service 지원이 어려우므로 참고
 
 <br>
 
