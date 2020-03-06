@@ -57,6 +57,7 @@
 
 - #### [AWS 101](/Server/AWS/AWS_101)
 
+  - [What is Cloud Computing](/AWS/AWS_101/00_Cloud_Computing.md)
   - [Getting Started with AWS](/AWS/AWS_101/01_Getting_Started_with_AWS.md)
   - [AWS Main Services](/AWS/AWS_101/02_AWS_Main_Services.md)
   - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)

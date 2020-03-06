@@ -8,7 +8,11 @@
 
 ### 1. Run a Serverless "Hello, World!"
 
+<br>
 
+![Lambda_test01](../../images/Lambda_test01.png)
+
+<br>
 
 Step 1: Enter the Lambda Console
 
