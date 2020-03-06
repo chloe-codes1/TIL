@@ -72,6 +72,15 @@
 
 <br>
 
+### Edge Location
+
+- Amazon CDN(Content Delivery Network) service인 Cloud Front를 위한 Cache Server들의 모음
+  - `CDN`
+    - Contents (HTML 이미지, 동영상, 기타 파일)를 서버와 물리적으로 사용자들이 빠르게 받을 수 있도록 전세계 곳곳에 위치한 Cache Server에 복사해주는 서비스
+- 물리적으로 가까운 서버에 접속서버에 접속하여 다운 받는것이 속도가 훨신 빠르기 때문에 CDN 서비스는 전 세계 주요 도시에 Cache server를 구축해놓음.
+
+<br>
+
 ### Virtual Private Cloud (VPC)
 
 - *사용자의 AWS 계정 전용 virtual network*
@@ -175,7 +184,11 @@
 
 <br>
 
-#### 1. Amazon EBS
+#### 1. Amazon EBS (Elastic Block Storage)
+
+> EC2 Instance용 영구 블록 수준의 Storage Volume으로 안정적이고 지연시간이 짧음
+
+- 크기/사용 기간을 기준으로 비용 과금
 
 - 내구성이 있는 블록 수준 storage volume을 제공하여 실행 중인 instance에 연결하는 것이 가능
 - 세분화된 update를 자주 수행하는 data의 경우 기본 storage device로 Amazon EBS를 사용 가능

@@ -112,7 +112,17 @@
 
 ### Amazon EBS Snapshot
 
+> EBS Volume Data를 snapshot으로 만들어 backup 및 보관 할 수 있는 기능
+>
+> -> 컴퓨터의 하드디스크를 통째로 backup 할 수 있는 기능이라고 생각하면 됨
+
+
+
 - 지정 시간 snapshot을 만들어 Amazon S3에 Amazon EBS Volume data를 backup 할 수 있음
+- Snapshot 진행 과정 중에도 *EBS나 EC2의 서비스 중단 없이* 기존 서비스를 즉시 사용 가능
+- EBS Volume의 크기 조정에 사용될 수 있음
+- `Snapshot의 공유 기능`을 활용하여 권한이 있는 다른 사용자에게 공유 할 수 있음
+- 다른 Region으로 복사 가능
 - Snapshot은 *증분식 backup*이어서 마지막 snapshot 이후 변경된 device의 block만이 저장됨
   - 이로인해 snapshot을 만드는데 필요한 시간이 최소화되며 data를 복제하지 않으므로 storage 비용이 절약됨
 - Snapshot을 삭제하면 해당 snapshot에 고유한 data만 제거됨
@@ -125,7 +135,20 @@
   - 다중 볼륨 스냅샷을 통해 EC2 instance에 연결된 여러 EBS volume에서 특정 시점, data 조정 및 충돌 일치 snapshot을 생성 할 수 있음
   - Snapshot은 여러 EBS Volume에서 자동으로 생성되기 때문에 instance를 중지하거나 중단 일관성 유지를 위해 volume간 조정을 할 필요가 없음!
 
-<br><br>
+<br>
+
+#### Amazon EBS 성능과 보안성 높이기
+
+1. `Provisioned IOPS (I/O Operations Per Second)`
+   - EBS 생성 시EBS 유형에서 선택 가능한 option으로 Disk의 IOPS 성능을 지정할 수 있음
+   - 고성능의 서비스 제공에 적합한 EBS!
+2. `EBS-Optimized Instance`
+   - EBS의 Disk service를 위한 전용 네트워크의 대역폭을 사용하도록 구성하여, Disk 성능을 최적화 하는 기능
+3. `EBS Security`
+   - 암호화 키는 AWS의 KMS에서 직접 생성하거나 기본키를 사용할 수 있음
+   - 이렇게 암호화된 snapshot은 공유 및 타 AWS 계정에 공유되어도 사용할 수 없음
+
+<br>
 
 ## Amazon S3 Glacier
 
