@@ -93,6 +93,8 @@ Personalize에 항목 데이터를 추가하려면 먼저 스키마를 정의해
 
 ![image-20200305192051849](../../images/image-20200305192051849.png)
 
+<br>
+
 Batch inference
 
 - 확실히 비용 부담이 적은 방법

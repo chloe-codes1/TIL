@@ -63,6 +63,7 @@
   - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)
   - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
   - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
+  - [AWS Database Server](/AWS/AWS_101/06_AWS_Database_Server.md)
 
 - #### [AWS Certification](/AWS/AWS_cert)
 
@@ -71,6 +72,7 @@
 - #### [AWS Tips](/AWS/AWS_Tips)
 
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
+  - [AWS Data Science Meetup - Amazon Personalize](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
 
 <br>
 
