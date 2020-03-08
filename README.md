@@ -65,6 +65,7 @@
   - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
   - [AWS Database Server](/AWS/AWS_101/06_AWS_Database_Server.md)
   - [AWS HA Load Balancing](/AWS/AWS_101/07_AWS_HA_Load_Balancing.md)
+  - [AWS Analytics](/AWS/AWS_101/08_AWS_Analytics.md)
 
 - #### [AWS Certification](/AWS/AWS_cert)
 
