@@ -66,6 +66,9 @@
   - [AWS Database Server](/AWS/AWS_101/06_AWS_Database_Server.md)
   - [AWS HA Load Balancing](/AWS/AWS_101/07_AWS_HA_Load_Balancing.md)
   - [AWS Analytics](/AWS/AWS_101/08_AWS_Analytics.md)
+  - [AWS Blockchain](/AWS/AWS_101/09_AWS_Blockchain.md)
+  - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
+  - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
 
 - #### [AWS Certification](/AWS/AWS_cert)
 
