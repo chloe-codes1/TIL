@@ -100,8 +100,9 @@
 
 - #### [HTML](/Web/HTML)
 
-  - [HTML Basics](/Web/HTML/HTML101.md)
-
+  - [HTML Basics](/Web/HTML/01_HTML101.md)
+- [HTML Sections & Outlines](/Web/HTML/02_HTML_Sections_and_Outlines.md)
+  
   <br>
 
 ### Programming 101
