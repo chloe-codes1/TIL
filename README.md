@@ -96,6 +96,14 @@
 
 <br>
 
+### Web
+
+- #### [HTML](/Web/HTML)
+
+  - [HTML Basics](/Web/HTML/HTML101.md)
+
+  <br>
+
 ### Programming 101
 
 - [프로그래밍 용어 사전](/Programming101/프로그래밍_용어_사전.md)
