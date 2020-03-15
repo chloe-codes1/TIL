@@ -116,7 +116,8 @@
 
 - 대/소문자 구분
 
-  - variable, method, keyword
+  - variable, method, keyword등 정확히 대소문자 구분하여 입력
+  - HTML의 경우 대소문자 구분하지 않음
 
 - 구문 끝
 
@@ -138,7 +139,12 @@
 
 > 변경 불가능한 값 (immutable)
 
-
+- boolean
+- null
+- undefined
+- number  (NAN도 number type)
+- string
+- symbol (ES6)
 
 <br>
 
@@ -187,7 +193,7 @@
 
 #### 변수 유효 범위 (scope)
 
-- 함수 level scope를 가진다
+- **함수 level scope**를 가진다
 - 함수 내에서 선언된 변수는 지역변수이며, 나머지는 전역변수로 활용
 - 변수 선언 시 키워드(var)를 쓰지 않으면, 암묵적 전역으로 설정된다
   - 주의: 변수가 아닌 전역 객체 (window)의 property로 생성 
@@ -199,7 +205,7 @@
 #### 호이스팅과 let, const(ES6)
 
 - JavaScript에서는 모든 선언을 호이스팅 한다
-- ES6에서 새롭게 등장한 let과 const keyword는 이러한 내용을 방지할 수 있다
+- ES6에서 새롭게 등장한 `let`과 `const` keyword는 이러한 내용을 방지할 수 있다
   - 호이스팅 자체가 이루어 지는 것은 아니고, var는 선언과 동시에 초기화 (undefined)를 하고, 
   - let, const는 선언과 초기화 단계가 분리되어 진행된다
 - Block level scope를 가지고 있다
@@ -215,7 +221,11 @@
 #### `==` vs `===`
 
 - 동등 연산자 (==)
+  - 값 비교 및 에상치 않은 변환
 - 일치 연산자 (===)
+  - 엄격한 같음
+  - 형비교
+  - python 의 == 과 동일
 
 <br>
 
@@ -230,7 +240,16 @@
 
 - {}
 
-<br>
+<br><br>
+
+### 객체 (object) 생성 방법
+
+- 객체 literal로 생성을 하는 경우 key가 string으로 표기될 수 있다면, 암묵적 형변환이 발생한다
+- 만약, 생성자 함수를 만들어 사용하면 마치 class처럼 속성이 동일한 객체를 생성할 수 있다
 
 <br>
+
+### 속성 접근
+
+- 속성 접근은 . or [] 로 가능하다
 
