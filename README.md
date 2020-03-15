@@ -30,6 +30,7 @@
   - [Variables](/Java/Java101/04_Variables.md)
   - [Loops & Conditional Statements](/Java/Java101/05_Loops_&_Conditional_Statements.md)
   - [Array](/Java/Java101/06_Array.md)
+  - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
 - [Lombok](/Java/Lombok.md)
 
 <br>
