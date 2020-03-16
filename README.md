@@ -113,7 +113,7 @@
 - #### [JavaScript](/Web/JavaScript)
 
   - [JavaScript Basics](/Web/JavaScript/01_JavaScript101.md)
-- [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
+  - [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
   - [DOM](/Web/JavaScript/03_JavaScript_DOM.md)
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
   
