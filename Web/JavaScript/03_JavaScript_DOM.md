@@ -84,11 +84,18 @@
 - 하나의 node로 return
 - 이것 외에는 다 유사 배열 형태로 return 
 
+<br>
+
 #### querySelector()
 
+- CSS Selector를 이용하여 node를 선택하지만, 일치되는 첫 번째 node 만을 return 함
 
+<br>
 
 #### querySelectorAll()
+
+- CSS Selector를 이용하여 node를 선택함
+- 일치하는 모든 node를 array로 return
 
 <br>
 
@@ -98,12 +105,64 @@
 
 <br>
 
+#### Node의 종류에 따라 할 수 있는 것들
+
+- 요소 속성이나 CSS 속성 변경
+- 입력 폼의 값을 읽거나 변경
+- 문서 내에 새로운 HTML 요소와 content 삽입
+
+<br>
+
+#### `document.write()`
+
+- 함수 내부에 사용하여 이벤트로 호출 했을 때
+  - 기존 문서 전체를 지워버리고, content를 출력함
+
+<br>
+
+#### `appendChild()`
+
+: 특정 node의 자식으로 node를 삽입하기 위해 사용
+
+- 자식 요소들 중 기존 요소들 끝에 삽입됨
+
+<br>
+
+#### `insertBefore()`
+
+: 특정 요소 앞에 삽입하기 위해 사용
+
+- 사용 방법
+  - 부모 node.**insertBefore**(삽입할 node, reference node)
+
+<br>
+
+#### `replaceChild()`
+
+: 자식 node 중 특정 node를 새로운 node로 치환하는 역할
+
+- 사용 방법
+  - 부모 node.**replaceChild**(새로운 node, 바뀔 node)
+
+<br>
+
+#### `getAttribute()`, `setAttribute()`
+
+: node의 속성 값을 가져오고, node의 속성을 속성 값으로 설정
+
+- 사용 방법
+  - node.**getAttribute**("속성명")
+  - node.**setAttribute**("속성명", "속성값")
+
+<br>
+
 #### `innerHTML`, `insertAdjacentHTML`
 
 - DOM 조작 시 사용 가능한 method들
+- `createElement()`, `createTextNode()`, `appendChild()`를 한꺼번에 처리하는 효과
 - 사용방법
-  - element.innerHTML(text)
-  - element.insertAdjacentHTML(positon, text)
+  - element.**innerHTML**(text)
+  - element.**insertAdjacentHTML**(positon, text)
     - position으로 삽입 위치 지정도 가능함
 
 <br>
