@@ -71,7 +71,7 @@
   - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
   - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
 
-- #### [AWS Certification](/AWS/AWS_cert)
+- #### [AWS Certifications](/AWS/AWS_cert)
 
   - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
   - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
@@ -113,7 +113,10 @@
 - #### [JavaScript](/Web/JavaScript)
 
   - [JavaScript Basics](/Web/JavaScript/01_JavaScript101.md)
-
+- [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
+  - [DOM](/Web/JavaScript/03_JavaScript_DOM.md)
+  - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
+  
   <br>
 
 ### Programming 101
