@@ -6,19 +6,91 @@
 
 <br>
 
+### Array
+
+> JavaScript에서 배열은 값만 존재한다
+
+<br>
+
+- 배열 리터럴
+
+  ```javascript
+  var a = [1,2,3]
+  ```
+
+  <br>
+
+- Array 생성자 함수
+
+  ```javascript
+  var b = new Array(1,2,3)
+  ```
+
+  <br>
+
+  <br>
+
+
+
 ### Array 순회
 
 - `for`
-- `for .. of`
+
+  ```javascript
+  var a = [1,2,3]
   
-  - 안에있는 원소 값들을 하나하나씩 출력
+  for (var i=0 ; i <a.length; i++){
+      console.log(i, a[i])
+  }
+  ```
+
+  <br>
+
+- `for .. of`
+
+  : 안에 있는 원소 값들을 하나 하나씩 출력
+
+  ```javascript
+  for (var elem of a){
+      console.log(elem)
+  }
+  ```
+
+  <br>
+
 - `forEach`
   
-- 인자로 함수 자체를 받음
+  : 인자로 함수 자체를 받음
+  
+  ```javascript
+  a.forEach( function(elem, idx) {
+      console.log(idx, elem)
+  })
+  ```
+  
+  <br>
   
 - `for .. in`
+  
+  ```javascript
+  var a = [1,2,3]
+  
+  a.name = 'myarr'
+  
+  for (var i in a){
+      console.log(i, a[i])
+  }
+  
+  //0 1
+  //1 2
+  //2 3
+  //name myarr
+  ```
+  
+  
+  
   - 배열 요소만 접근하는 것이 아니라 속성까지 출력될 수 있다
-    - JavaScript에서 배열도 object라서 속성 설정이 가능하지만, 리스트의 속성이 아니라 ....
+    - JavaScript에서 배열도 object라서 속성 설정이 가능하지만, 리스트의 속성이 아니라, Object의 속성이 된다
   
   *for ... in 형태는 사용 시 주의해야함!*
 

@@ -142,7 +142,7 @@
 - boolean
 - null
 - undefined
-- number  (NAN도 number type)
+- number  (*NAN*도 number type)
 - string
 - symbol (ES6)
 
@@ -225,7 +225,7 @@
 - 일치 연산자 (===)
   - 엄격한 같음
   - 형비교
-  - python 의 == 과 동일
+  - python 의 == 과 동일!
 
 <br>
 
@@ -242,14 +242,84 @@
 
 <br><br>
 
-### 객체 (object) 생성 방법
+### JavaScript 객체 (object) 
 
-- 객체 literal로 생성을 하는 경우 key가 string으로 표기될 수 있다면, 암묵적 형변환이 발생한다
-- 만약, 생성자 함수를 만들어 사용하면 마치 class처럼 속성이 동일한 객체를 생성할 수 있다
+> 객체는 key와 value로 구성된 속성 (property)들의 모임
 
 <br>
 
-### 속성 접근
+#### 기본 객체 생성법
+
+1. 객체 리터럴
+
+   ```javascript
+   var cat1 = {}
+   var cat2 = {name:'nero', age:3}
+   ```
+
+   
+
+2. Object 생성자 함수
+
+   ```javascript
+   var dog1 = new Object()
+   dog1.name = 'cherry'
+   dog1.name = 5
+   ```
+
+   <br>
+
+#### 객체 (Object) 생성 방법
+
+- 객체 literal로 생성을 하는 경우 key가 string으로 표기될 수 있다면, 암묵적 형변환이 발생한다
+
+  - 그게 아닌 경우는 반드시 따옴표를 통해서 문자열로 만들어 줘야함!
+
+  ```javascript
+  var OBJ = {
+      name: 'chloe',
+      'e-mail': 'chloe@test.com'
+  }
+  ```
+
+  - 여기서 name 은 string으로 암묵적 형변환이 일어난다!
+
+<br>
+
+- 만약, 생성자 함수를 만들어 사용하면 마치 class처럼 속성이 동일한 객체를 생성할 수 있다
+
+  ```javascript
+  function Person(name, age){
+      this.name = name;
+      this.age = age
+  }
+  var p1 = new Person('chloe', 25)
+  ```
+
+  
+
+<br>
+
+<br>
+
+### 객체 (Object) 속성 접근
 
 - 속성 접근은 . or [] 로 가능하다
+
+  - 단, 반드시 [] 로 접근을 해야하는 경우가 있다
+
+    - ex) key 가 string으로 이루어지지 않은 경우
+
+      ```javascript
+      var OBJ = {
+          name: 'chloe',
+          'e-mail': 'chloe@test.com'
+      }
+      
+      OBJ['e-mail']
+      ```
+
+      
+
+    
 
