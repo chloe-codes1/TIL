@@ -114,8 +114,9 @@
 
   - [JavaScript Basics](/Web/JavaScript/01_JavaScript101.md)
   - [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
-  - [DOM](/Web/JavaScript/03_JavaScript_DOM.md)
+  - [JavaScript DOM](/Web/JavaScript/03_JavaScript_DOM.md)
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
+  - [JavaScript Functions.md](/Web/JavaScript/05_JavaScript_Functions.md)
   
   <br>
 
