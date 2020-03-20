@@ -51,6 +51,8 @@
 - #### [Arch Linux](/Linux/Arch_Linux)
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
+  
+- [Free Up Space on Ubuntu](/Linux/Free_Up_Space_on_Ubuntu.md)
 
 <br>
 
@@ -116,7 +118,7 @@
   - [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
   - [JavaScript DOM](/Web/JavaScript/03_JavaScript_DOM.md)
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
-  - [JavaScript Functions.md](/Web/JavaScript/05_JavaScript_Functions.md)
+  - [JavaScript Functions](/Web/JavaScript/05_JavaScript_Functions.md)
   
   <br>
 
