@@ -85,27 +85,13 @@
   - 변수에 함수를 할당 가능함
 - 위 조건은 프로그램이 언어에서의 일급 객체 (first class object / first class citizen)의 조건이다!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br>
 
 `+`
 
 #### Web 접근성
 
-- 널리 (Nuli)
+- 널리 (Nuli) 사이트 
 
 - Google Fundamentals
 

@@ -31,12 +31,6 @@
 
 <br>
 
-#### `justify-content: center`
-
-
-
-#### `align-items: center`
-
 <br>
 
 <br>
