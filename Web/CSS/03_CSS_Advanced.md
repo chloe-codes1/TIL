@@ -39,3 +39,56 @@
 
 <br>
 
+<br>
+
+### Layout 배치 Tip
+
+1. `Box model`
+
+   - 모든 요소를 네모네모로 생각해라!
+
+2. `position: absolute;`
+
+   - 어딘가의 끝에 올리고 싶으면 **absolute**
+   - Side에 놓고 싶으면 **flex**
+
+3. `flex`
+
+   - **부모 요소 (container)**
+
+     - `display: flex;` 가 적용된 것
+     - inline, block이 적용되지 않음
+
+   - **자식 요소(item)**
+
+   - **main axis**
+
+     - `justify-content`
+
+   - **cross axis**
+
+     - `align-items`
+
+       : 수직 정렬에 주로 사용
+
+
+
+<br>
+
+`rem`
+
+: 일반적인 browser는 16px
+
+
+
+`box-sizing: border-box;`
+
+margin: 상하 / 좌우
+
+
+
+
+
+<br>
+
+<br>
