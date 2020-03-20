@@ -2,40 +2,34 @@
 
 <br>
 
-### emnet
+### Emnet Tips
 
 <br>
 
-#### `+ 인접, > 자식, * 개수`
-
-- a+ul>li*3
-- a+ul.nav-items>li.nav-item*3
-
-<br>
-
-#### `link:css`
-
-- link tag 만들어줌
+- `+ 인접, > 자식, * 개수`
+  - a+ul>li*3
+  - a+ul.nav-items>li.nav-item*3
 
 <br>
 
-#### `line-height`
-
-: 한줄 text일 때 수직 가운데 정렬
+- `link:css`
+  - link tag 만들어줌
 
 <br>
 
-#### `display: flex`
+- `line-height`
+  - 한줄 text일 때 수직 가운데 정렬
 
-- container와 자식요소가 item으로 구성됨
+<br>
+
+- `display: flex`
+  - container와 자식요소가 item으로 구성됨
 
 <br>
 
 <br>
 
-<br>
-
-### Layout 배치 Tip
+### Layout Tips
 
 1. `Box model`
 
@@ -65,19 +59,13 @@
 
        : 수직 정렬에 주로 사용
 
+4. `rem`
 
+   : 일반적인 browser는 16px
 
-<br>
+5. `box-sizing: border-box;`
 
-`rem`
-
-: 일반적인 browser는 16px
-
-
-
-`box-sizing: border-box;`
-
-margin: 상하 / 좌우
+6. `margin: 상하 / 좌우;`
 
 
 
