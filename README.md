@@ -111,6 +111,7 @@
 
   - [CSS Basics](/Web/CSS/01_CSS101.md)
   - [CSS Layout](/Web/CSS/02_CSS_Layout.md)
+  - [CSS Advanced](/Web/CSS/03_CSS_Advanced.md)
 
 - #### [JavaScript](/Web/JavaScript)
 
@@ -119,6 +120,7 @@
   - [JavaScript DOM](/Web/JavaScript/03_JavaScript_DOM.md)
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
   - [JavaScript Functions](/Web/JavaScript/05_JavaScript_Functions.md)
+  - [JavaScript Object](/Web/JavaScript/06_JavaScript_Object.md)
   
   <br>
 
