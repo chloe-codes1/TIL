@@ -79,6 +79,7 @@
 
   - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
   - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
+  - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
   
 - #### [AWS Tips](/AWS/AWS_Tips)
 
