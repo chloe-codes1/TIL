@@ -52,7 +52,9 @@
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
   
-- [Free Up Space on Ubuntu](/Linux/Free_Up_Space_on_Ubuntu.md)
+- #### [Ubuntu](/Linux/Ubuntu)
+
+  - [Free Up Space on Ubuntu](/Linux/Ubuntu/Free_Up_Space_on_Ubuntu.md)
 
 <br>
 
