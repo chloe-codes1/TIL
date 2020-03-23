@@ -106,6 +106,8 @@
 - `wrap`
   - 각각의 너비만큼 가지게 되고 자리가 없으면 밑으로 내려감
   - 흘러 넘치지 않게 설정해주는 것!
+- `wrap-reverse`
+  - Items wrap round to additional lines in reverse
 
 <br>
 
@@ -117,7 +119,29 @@
 
 <br>
 
-#### 3. justify-content
+#### 3. flex-flow
+
+> Shorthand property for `flex-direction` and `flex-wrap`
+
+- 기본값 `row wrap`
+
+  ![image-20200323132416926](../../images/image-20200323132416926.png)
+
+- `row-reverse nowrap`
+
+  ![image-20200323132522691](../../images/image-20200323132522691.png)
+
+- `column wrap-reverse`
+
+  ![image-20200323132557885](../../images/image-20200323132557885.png)
+
+- `column wrap`
+
+  ![image-20200323132931108](../../images/image-20200323132931108.png)
+
+<br>
+
+#### 4. justify-content
 
 > main 축을 기준으로 정렬한다
 
@@ -131,19 +155,61 @@
 
 <br>
 
-#### 4. align-items
+#### 5. align-items
 
 > crosss 축을 기준으로 정렬한다
 
-- 기본값: `stretch`
+-  `stretch`
+
+  : 기본값
+
 - `flex-start`
+
+  : 상단 정렬
+
 - `flex-end`
+
+  : 하단 정렬
+
 - `baseline`
+
+  : items are aligned such as their baselines
+
 - `center`
+
+  : 중앙 정렬
+
+  ![image-20200323135424441](../../images/image-20200323135424441.png)
 
 <br>
 
-#### 5. order
+#### 6. align-content
+
+> Sets the distribution of space between and around content items along a flexbox's cross-axis or a gird's block axis
+
+<br>
+
+*`align-content` has no effect when there is onlyl one line of flex items!*
+
+<br>
+
+- 기본값: `stretch`
+
+- `flex-start`
+
+- `flex-end`
+
+- `center`
+
+- `space-between`
+
+- `space-around`
+
+  ![image-20200323135336671](../../images/image-20200323135336671.png)
+
+<br>
+
+#### 7. order
 
 > item의 순서를 정의할 수 있다
 
@@ -152,24 +218,30 @@
 
 <br>
 
-#### 6.  align-self
+#### 8.  align-self
 
 > item에 직접 align을 지정할 수 있음
 
 <br>
 
+
+
 <br>
 
 *flex는 `margin-top: auto`가 가능하다!*
 
+<br>
 
+<br>
 
-justify -main 축
+#### Wrap-up
 
-align - cross 축
+- justify - main 축
 
-content - 여러축
+- align - cross 축
 
-items - 한 줄
+- content - 여러축
 
-self - 개별요소
+- items - 한 줄
+
+- self - 개별요소
