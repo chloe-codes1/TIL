@@ -2,16 +2,6 @@
 
 > An open source toolkit for developing with HTML, CSS, and JS. 
 
-<br>
-
-<br>
-
-초기화 확인
-
-: bootstrap.reboot
-
-
-
 <br><br>
 
 ### Bootstrap CDN 사용하기
@@ -49,7 +39,7 @@
 
 <br>
 
-### Utility
+## Utility
 
 <br>
 
@@ -121,7 +111,7 @@ ex)
 
 <br>
 
-### Component
+## Component
 
 > [Bootstrap Documentation](https://getbootstrap.com/docs/4.4/components/alerts/) 참고!
 
@@ -140,8 +130,6 @@ ex)
 
 <br>
 
-<br>
-
 #### 2. Badge
 
 ​    : 쇼핑몰에서 자주 사용
@@ -149,8 +137,6 @@ ex)
 ```html
 <h1>Example heading <span class="badge badge-secondary">New</span></h1>
 ```
-
-<br>
 
 <br>
 
@@ -166,7 +152,7 @@ ex)
 </nav>
 ```
 
-<br>
+
 
 <br>
 
@@ -211,8 +197,6 @@ ex)
 
 <br>
 
-<br>
-
 #### 5. Carousel
 
  : 계속 transition 일어나는 것
@@ -241,7 +225,7 @@ ex)
       </div>
 ```
 
-<br>
+
 
 <br>
 
@@ -266,7 +250,7 @@ ex)
 </form>
 ```
 
-<br>
+
 
 <br>
 
@@ -304,7 +288,7 @@ ex)
 </div>
 ```
 
-<br>
+
 
 <br>
 
@@ -338,8 +322,6 @@ ex)
   </div>
 </nav>
 ```
-
-<br>
 
 <br>
 
@@ -379,15 +361,9 @@ ex)
 
 <br>
 
-github.io 등 이용 시 
+github pages 등 이용 시 index.html이 있어야 거기를 첫 페이지로 html을 만들어준다!
 
-
-
-
-
-
-
-
+<br><br>
 
 
 
