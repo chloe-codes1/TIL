@@ -8,9 +8,13 @@
 
 - 배치 핵심 
 
-  : 왼쪽 위에 쌓인다
+  : 왼쪽 위에 쌓인다 (박스모델)
 
-- 배치
+  - 어떻게?
+    - block
+    - inline
+
+- 배치 흐름을 바꾸는 방법
   - float
   - position
     - flex: flexible box
