@@ -143,7 +143,7 @@
 
 ### Git
 
-- [Github 101](Git/Github101.md)
+- [Git Basics](/Git/Git101.md)
 
 - [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
 
