@@ -31,13 +31,21 @@
   - [Loops & Conditional Statements](/Java/Java101/05_Loops_&_Conditional_Statements.md)
   - [Array](/Java/Java101/06_Array.md)
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
-- [Lombok](/Java/Lombok.md)
+- #### [Java Advanced](/Java/Java_Advanced)
+
+  - [Lombok](/Java/Java_Advanced/Lombok.md)
 
 <br>
 
 ### Python
 
 - [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
+
+<br>
+
+### Django
+
+- [Django Basics](/Django/Django101.md)
 
 <br>
 
