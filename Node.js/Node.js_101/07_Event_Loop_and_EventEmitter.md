@@ -208,7 +208,7 @@ console.log("Program Ended.");
 
 > Result
 
-```javascript
+```shell
 $ node EventEmitter.js 
 2 Listner(s) listening to connection event
 listner1 executed.
