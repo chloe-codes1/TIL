@@ -2,6 +2,8 @@
 
 > An open source toolkit for developing with HTML, CSS, and JS. 
 
+- 반응형, 모바일 대을을 위한 front-end component
+
 <br><br>
 
 ### Bootstrap CDN 사용하기
@@ -39,7 +41,18 @@
 
 <br>
 
-## Utility
+## Utilities
+
+<br>
+
+- position
+- display
+- spacing - `margin`, `padding`
+- border
+- color
+- flex
+
+
 
 <br>
 
@@ -117,6 +130,22 @@ ex)
 
 <br>
 
+- alert
+- badge
+- breadcrumb
+- button
+- card
+- carousel
+  - JS 기반
+- Form /input
+- modal
+  - JS
+- Navbar
+  - JS
+- Pagination
+
+<br>
+
 #### 1. Alerts
 
 ```html
@@ -143,6 +172,8 @@ ex)
 #### 3. Breadcrumb
 
    : 사이트 이동 경로 표시
+
+​	ex) 쇼핑몰 - Home/남성/아우터/자켓
 
 ```html
 <nav aria-label="breadcrumb">
@@ -199,7 +230,9 @@ ex)
 
 #### 5. Carousel
 
- : 계속 transition 일어나는 것
+-  계속 transition 일어나는 것
+
+- 회전목마 처럼 계속 component가 돈다
 
 ```html
       <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
