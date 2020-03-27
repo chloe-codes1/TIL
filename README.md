@@ -46,6 +46,7 @@
 ### Django
 
 - [Django Basics](/Django/Django101.md)
+- [Variable Routing & DTL](/Django/Variable_Routing_&_DTL.md)
 
 <br>
 
