@@ -127,7 +127,7 @@ Request for /showmeerror received!
 
 > http://127.0.0.1:8081/index.html 접속
 
-![image-20200328144715931](/home/chloe/SSAFY/TIL/images/image-20200328144715931.png)
+![image-20200328144715931](../../images/image-20200328144715931.png)
 
 ```shell
 Request for /index.html received!
