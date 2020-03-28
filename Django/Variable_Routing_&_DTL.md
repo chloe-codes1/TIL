@@ -105,6 +105,7 @@ USE_TZ = True
 #### 1. urls.py
 
 ```python
+# django_intro/urls.py
 path('hi/<str:name>/', views.hi),
 path('add/<int:a>/<int:b>/', views.add),
 ```
@@ -114,6 +115,7 @@ path('add/<int:a>/<int:b>/', views.add),
 #### 2. views.py
 
 ```python
+# pages/views.py
 def hi(request, name):
     context = {
         'name':name
@@ -126,6 +128,7 @@ def hi(request, name):
 #### 3. template
 
 ```html
+<!-- pages/templates/hi.html -->
 <h1>
 	Hi, {{name}}
 </h1>
@@ -134,6 +137,10 @@ def hi(request, name):
 <br><br>
 
 ## DTL (Django Template Language)
+
+> Template file (HTML) 은 django template language를 통해 구성할 수 있다!
+
+<br>
 
 - Django’s template language is designed to strike a balance between power and ease. 
 - It’s designed to feel comfortable to those used to working with HTML.
@@ -146,6 +153,7 @@ def hi(request, name):
 
 ```html
 {{ name }}
+{{ menu.0 }}
 ```
 
 <br>
@@ -158,3 +166,4 @@ def hi(request, name):
 {% endfor %}
 ```
 
+<br>
