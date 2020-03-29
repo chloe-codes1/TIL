@@ -148,6 +148,7 @@
   - [NPM](/Node.js/Node.js_101/05_NPM.md)
   - [Callbacks Concept](/Node.js/Node.js_101/06_Callbacks_Concept.md)
   - [Event Loop and EventEmitter](/Node.js/Node.js_101/07_Event_Loop_and_EventEmitter.md)
+  - [Buffers](/Node.js/Node.js_101/08_Buffers.md)
   - [Web Module](/Node.js/Node.js_101/13_Web_Module.md)
 
 <br>
