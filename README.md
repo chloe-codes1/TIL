@@ -156,8 +156,8 @@
 ### Git
 
 - [Git Basics](/Git/Git101.md)
-
 - [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
+- [Create a gitignore](/Git/Create_a_gitignore.md)
 
 <br>
 
