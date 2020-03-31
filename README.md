@@ -48,6 +48,7 @@
 - [Django Basics](/Django/01_Django101.md)
 - [Variable Routing & DTL](/Django/02_Variable_Routing_&_DTL.md)
 - [Templates](/Django/03_Templates.md)
+- [Model](/Django/04_Model.md)
 
 <br>
 
