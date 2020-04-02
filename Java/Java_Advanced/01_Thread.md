@@ -102,8 +102,56 @@
 
 - Thread class
 
-  ```java
+  ex)
   
+  ```java
+package virus;
+  
+  public class CoronaThread extends Thread{
+  	int num;
+  	
+  	public CoronaThread() {}
+  	public CoronaThread(int num) {
+  		this.num = num;
+  	}
+  	
+  	@Override
+  	public void run() {
+  		for (int i = 0 ; i < 10000 ; i++) {
+  			int j = i*100;
+  		}
+  		System.out.println(num);
+  	}
+  }
+  ```
+  
+  <br>
+  
+- Test
+
+  ```java
+  import virus.CoronaRunnable;
+  import virus.CoronaThread;
+  
+  public class CoronaThreadTest {
+  	public static void main(String[] args) {
+  		for (int i = 0 ; i <1000 ; i++) {
+  			CoronaThread ct = new CoronaThread(i);
+  			ct.start();
+  		}
+  	}
+  }
   ```
 
-  
+  <br>
+
+  <br>
+
+  ### Thread 실행 시 memory 구조
+
+  ![](../../images/thread.jpg)
+
+<br>
+
+<br>
+
