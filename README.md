@@ -155,12 +155,8 @@
   
 - #### [Express.js](/Node.js/Express.js)
 
-<<<<<<< HEAD
-  - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
-  - [EJS](/Node.js/Express.js/02_EJS.md)
-=======
-  - [Express Basics.md](/Node.js/Express.js/01_Express_Basics.md)
->>>>>>> 4f8e30927a1c56589e5f22309aa9b633df381778
+    - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
+    - [EJS](/Node.js/Express.js/02_EJS.md)
 
 <br>
 
