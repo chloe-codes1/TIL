@@ -49,6 +49,7 @@
 - [Variable Routing & DTL](/Django/02_Variable_Routing_&_DTL.md)
 - [Templates](/Django/03_Templates.md)
 - [Model](/Django/04_Model.md)
+- [URL name](/Django/05_URL_name.md)
 
 <br>
 

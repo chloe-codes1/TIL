@@ -242,7 +242,14 @@ class Article(models.Model):
     - `auto_now_add` : (선택) 생성시에만 자동으로 해당 시간 값 설정
     - `auto_now` : (선택) 수정시마다 자동으로 해당 시간 값 설정
 
+  
   - 이외의 필드는 https://docs.djangoproject.com/ko/2.1/ref/models/fields/#field-types 링크에서 확인!
+
+<br>
+
+#### `CharField` vs `TextField()`
+
+: 실제로 `<form>` tag로 data를 받을때 `<input>`으로 받을 지 `<textarea>` 로 받을지에 따라 선택하기
 
 <br>
 
