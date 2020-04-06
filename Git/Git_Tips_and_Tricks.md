@@ -83,6 +83,12 @@ $ git config --global user.name "Chloe Kim"
 $ git config --global user.email "juhyun.kim@lindsey.edu"
 ```
 
+- Undo `git add` before commit
+
+```bash
+$ git reset
+```
+
 
 
 <br><br>
