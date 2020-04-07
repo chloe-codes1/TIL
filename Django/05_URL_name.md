@@ -86,10 +86,42 @@ $ python manage.py migrate
 
 - GET
   - data를 가져오다
+  - 특정 리소스의 **표시**
+  - `<a>` tag `<form>` tag 및 브라우저에서 주소창을 보내는 요청 등
+  - `URL`을 활용 (querystring) 하여 data를 전송함
+    - 크기 제한 & 보안 이슈가 있음
 - POST
   - data를 게시하다
+  - 특정 리소스에 **제출** (서버의 상태 변화)
+  - 보통 HTML `Form을` 통해 서버에 전송하며, 서버의 변경사항을 만듦
+  - HTTP 요청 메시지의 `body`에 data를 전송함
 
+<br>
 
+#### HTTP (Hyper Text Markup Language)
+
+- Resource를 가져올 수 있도록 해주는 protocol
+- 웹에서 이루어지는 모든 교환의 기초
+
+<br>
+
+#### Request
+
+![PPT - HTTP Request PowerPoint Presentation, free download - ID:3523512](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0vjerfzxxgRhdy1lP_bRD_x_6lomhp2OCVbnLWpsX17YaOe96&usqp=CAU)
+
+- URL (Uniform Resource Locators)
+  - Web에서 정해진 유일한 자원의 주소
+- 프로토콜 :// 도메인: 포트/ 경로(path)/?파라미터#앵커
+
+<br>
+
+#### Response
+
+![HTTP_RequestMessageExample](https://documentation.help/DogeTool-HTTP-Requests-vt/http_requestmessageexample.png)
+
+<br>
+
+![img](https://miro.medium.com/max/2024/1*w_iicbG7L3xEQTArjHUS6g.jpeg)
 
 <br>
 

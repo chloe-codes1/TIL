@@ -50,6 +50,7 @@
 - [Templates](/Django/03_Templates.md)
 - [Model](/Django/04_Model.md)
 - [URL name](/Django/05_URL_name.md)
+- [Form & ModelForm](/Django/06_Form_&_ModelForm.md)
 
 <br>
 
