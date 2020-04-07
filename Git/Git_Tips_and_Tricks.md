@@ -172,3 +172,63 @@ $ git log --oneline --graph
 
 
 
+<br>
+
+<br>
+
+## 4. 특정 시점으로 돌아가기
+
+<br>
+
+> 특정 commit을 기준으로 돌아가기
+
+```bash
+$ git checkout f008d8f
+```
+
+<br>
+
+> test branch 만들면서 이동하기
+
+```bash
+$ git checkout -b test
+$ git log --oneline
+f008d8f (HEAD -> test) 05 | Article Index
+c2be3bc 04 | Article Model
+0d28d53 03 | startapp articles
+5afc6a9 02 | settings
+a046911 01 | startproject
+```
+
+<br>
+
+> reference log 확인
+
+```bash
+$ git reflog
+```
+
+<br>
+
+> 어디에 head 있는지 확인
+
+```bash
+$ git log --oneline
+fc58709 (HEAD -> master, origin/master, origin/HEAD) README.md 추가
+fd2e992 06 | Article C with ModelForm
+f008d8f (test) 05 | Article Index
+c2be3bc 04 | Article Model
+0d28d53 03 | startapp articles
+5afc6a9 02 | settings
+a046911 01 | startproject
+```
+
+<br>
+
+> 다시 test branch로 돌아가기
+
+```bash
+$ git checkout test
+Switched to branch 'test'
+```
+
