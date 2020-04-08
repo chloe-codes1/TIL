@@ -107,6 +107,10 @@
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
+  
+- #### [Deployment](/Server/Deployment)
+
+  - [Deploying a Django project on PythonAnywhere](/Server/Deployment/Deploying_a_Django_project_on_PythonAnywhere.md)
 
 <br>
 
@@ -167,6 +171,7 @@
 
 - [Git Basics](/Git/Git101.md)
 - [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
+- [Git Branch](/Git/Git_Branch.md)
 - [Create a gitignore](/Git/Create_a_gitignore.md)
 
 <br>
