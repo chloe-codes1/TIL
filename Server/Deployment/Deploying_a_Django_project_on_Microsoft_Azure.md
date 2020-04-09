@@ -18,7 +18,7 @@
 
 ![image-20200409045517987](../../images/image-20200409045517987.png)
 
-- I chose `Ubuntu Sever 18.04 LTS` because I personally like **Ubuntu** and I'm currently using it.
+- I chose `Ubuntu Sever 18.04 LTS` because I personally like **Ubuntu** and I'm currently using `Ubuntu 18.04.4 LTS`.
 - Other options are totally up-to your app's condition
 
 <br>
