@@ -19,7 +19,7 @@
 ![image-20200409045517987](../../images/image-20200409045517987.png)
 
 - I chose `Ubuntu Sever 18.04 LTS` because I personally like **Ubuntu** and I'm currently using it.
-- Other options are totally up-to our app's condition
+- Other options are totally up-to your app's condition
 
 <br>
 
@@ -59,7 +59,7 @@ import json
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# deploy.json파일을 불러와 envs변수에 저장합니다.
+# deploy.json파일을 불러와 envs변수에 저장하긔
 with open(os.path.join(PROJECT_DIR, "deploy.json")) as f:
     envs = json.loads(f.read())
 
@@ -180,6 +180,7 @@ def _update_virtualenv():
     run('%s/bin/pip install "django==3.0.4"' % (
         virtualenv_folder
     ))
+    # 내 app INSTALLED_APPS에 bootstrap4가 있어서 (bootstrap4를 사용해서) VM에도 설치하지 않으면 error가 남!
     run('%s/bin/pip install "django-bootstrap4" ' %(
         virtualenv_folder
     ))
@@ -236,7 +237,7 @@ def _restart_apache2():
 
 <br>
 
-> deploy.json
+> deploy.json - edit it!
 
 ```json
 {
@@ -251,7 +252,7 @@ def _restart_apache2():
 ```
 
 - I had to modify `fabfile.py` several times because of the errors
-- Check the error message & google it!
+- Check the error messages & google it!
   - It could take some time, but I'm pretty sure that is worth it
 
 <br>
@@ -272,7 +273,7 @@ $ fab new_server
 $ fab deploy
 ```
 
-- Fetch latest code on your github repo and migrate db
+- **Fetch** latest code on your github repo and **migrate** db
 
 <br>
 
