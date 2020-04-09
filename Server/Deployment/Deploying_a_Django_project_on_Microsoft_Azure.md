@@ -25,7 +25,7 @@
 
 #### 1-3. When your server deployment is finished, go to `overviews`
 
-![image-20200409045620299](../../images/image-20200409045620299.png)
+![image-20200409215409918](../../images/image-20200409215409918.png)
 
 - Copy your server's `IP address` (you'll need it when you edit `deploy.json`)
 
