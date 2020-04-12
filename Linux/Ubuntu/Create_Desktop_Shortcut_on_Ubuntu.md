@@ -29,7 +29,7 @@ Exec=/home/chloe/sts-4.4.1.RELEASE/SpringToolSuite4
 
 ### Result
 
-![](../../images/Screenshot from 2020-04-13 02-06-54.png)
+![](../../images/desktop-shortcut.png)
 
 <br>
 
