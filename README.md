@@ -68,6 +68,7 @@
 - #### [Ubuntu](/Linux/Ubuntu)
 
   - [Free Up Space on Ubuntu](/Linux/Ubuntu/Free_Up_Space_on_Ubuntu.md)
+  - [Customize Your Ununtu Terminal](/Linux/Ubuntu/Customize_Your_Ununtu_Terminal.md)
 
 <br>
 
