@@ -232,3 +232,11 @@ $ git checkout test
 Switched to branch 'test'
 ```
 
+<br>
+
+<br>
+
+`+`
+
+- `master` branch에 있는 내용은 자동으로 배포가 됨
+  - `master`는 배포 가능한 상태
