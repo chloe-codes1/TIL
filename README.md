@@ -128,6 +128,7 @@
 ### DB
 
 - [DB_Basics](/DB/01_DB_Basics.md)
+- [SQL and Django ORM](/DB/02_SQL_and_Django_ORM.md)
 
 <br>
 

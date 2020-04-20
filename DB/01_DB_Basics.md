@@ -115,13 +115,15 @@ CREATE TABLE contacts (
 - `LIKE`
 
   - 와일드 카드
-    - % : 문자열이 있을 수도 있다
-    - _ : 반드시 한 개의 문자가 있다
+    - `%` : 문자열이 있을 수도 있다
+    - `_` : 반드시 한 개의 문자가 있다
 
 - `LIMIT ... OFFSET`
 
-  - ex)
+  - 개수 제한 .... 몇 번째까지
 
+  - ex)
+  
     ```sql
     -- 처음 10개의 Row를 반환
     SELECT * FROM test LIMIT 10;
@@ -156,6 +158,25 @@ sqlite> CREATE TABLE flights(
    ...> price INTEGER NOT NULL
    ...> );
 ```
+
+<br>
+
+#### IF NOT EXISTS
+
+- 해당 table이 존재하지 않을 때에만 생성하기
+
+```sqlite
+sqlite> CREATE TABLE IF NOT EXISTS flights(
+   ...> id INTEGER PRIMARY KEY AUTOINCREMENT,
+   ...> flight_num TEXT NOT NULL,
+   ...> departure TEXT NOT NULL,
+   ...> waypoint TEXT NOT NULL,
+   ...> arrival TEXT NOT NULL,
+   ...> price INTEGER NOT NULL
+   ...> );
+```
+
+
 
 <br>
 
@@ -297,6 +318,26 @@ id          flight_num
 ----------  ----------
 3           SQ0972    
 ```
+
+<br>
+
+### .read
+
+```sqlite
+sqlite> .read hello_user.sql
+1,"정호","유",40,"전라북도",016-7280-2855,370
+2,"경희","이",36,"경상남도",011-9854-5133,5900
+3,"정자","구",37,"전라남도",011-4177-8170,3100
+4,"미경","장",40,"충청남도",011-9079-4419,250000
+5,"영환","차",30,"충청북도",011-2921-4284,220
+6,"서준","이",26,"충청북도",02-8601-7361,530
+7,"주원","민",18,"경기도",011-2525-1976,390
+8,"예진","김",33,"충청북도",010-5123-9107,3700
+9,"서현","김",23,"제주특별자치도",016-6839-1106,43000
+10,"서윤","오",22,"충청남도",011-9693-6452,49000
+```
+
+
 
 
 
