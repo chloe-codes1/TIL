@@ -51,7 +51,7 @@
 - [Model](/Django/04_Model.md)
 - [URL name](/Django/05_URL_name.md)
 - [Form & ModelForm](/Django/06_Form_&_ModelForm.md)
-- [Authentication](Django/07_Authentication.md)
+- [Authentication](/Django/07_Authentication.md)
 
 <br>
 
@@ -122,6 +122,12 @@
 ### Network
 
 - [OSI 7 Layers](/Network/OSI_7_Layers.md)
+
+<br>
+
+### Database
+
+- [Database_Basics](/DB/01_DB_Basics.md)
 
 <br>
 
