@@ -15,11 +15,17 @@
 
 <br>
 
-### 관계형 데이터베이스
+### 관계형 데이터베이스 (RDBMS)
 
 - 관계를 열과 행으로 이루어진 테이블 집합으로 구성
 - 각 열에 특정 종류의 데이터를 기록
 - 테이블의 행은 각 객체/entity와 관련된 값의 모음
+
+<br>
+
+### RDBMS vs NOSQL
+
+![Difference between SQL and NOSQL ](https://www.agiratech.com/wp-content/uploads/2018/01/Difference-between-SQL-and-NOSQL-2.png)
 
 <br>
 
@@ -79,6 +85,19 @@ CREATE TABLE contacts (
 	phone TEXT NOT NULL UNIQUE
 );
 ```
+
+<br>
+
+<br>
+
+### Rename Table
+
+```sqlite
+ALTER TABLE table_name
+	RENAME TO new_table_name;
+```
+
+
 
 <br>
 

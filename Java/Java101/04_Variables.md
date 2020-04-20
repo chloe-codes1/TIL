@@ -2,7 +2,9 @@
 
 <br>
 
-### 1. Member variable
+### 1. Member variable (Instance variable)
+
+> Declared in a class, but outside a method
 
 ```
 Class A {
@@ -12,13 +14,19 @@ Class A {
 }                  
 ```
 
-- Class의 일원
+- `Class`의 일원
 
-- class 안에서 선언된 변수
+- Class 안에서 선언된 변수
+
+- `Instance`가 생성될 때 생성됨
+
+- Instance 변수의 값을 읽어오거나, 저장하려면 Instance를 먼저 생성해야 함!
 
 - 초기값을 설정하지 않으면 자동 default 초기화가 됨  
 
   ex) String name = null;  할 필요 없음!
+  
+  
 
 <br>
 
@@ -36,9 +44,26 @@ Public Static Void main(~~~) {
 
 - method(함수) 안에서 선언된 변수
 
+  - method 내에서만 사용 가능
+
+- method가 실행 될 때 memory를 할당 받으며, 끝나면 소멸되어 사용할 수 없다
+
 - default 초기화가 안됨  
 
   ex) String name = null; 해줘야 함
+
+<br>
+
+### 3. Class variable (Static variable)
+
+> Declared with the `static keyword` in a class, but outside a method, constructor, or block
+
+- Instance variable에 `static`만 붙이면 됨
+- 인스턴스 변수는 각각 고유한 값을 가지지만, 클래스 변수는 모든 인스턴스가 공통된 값을 공유하게 됨
+  - 한 클래스의 모든 인스턴스들이 공통적인 값을 가져야할 때 클래스 변수로 선언한다!
+- 클래스가 로딩될 때 생성되어(= **메모리에 딱 한번만 올라감**) 종료 될 때 까지 유지된다
+- `public` 을 붙이면 같은 프로그램 내에서 어디서든 접근할 수 있는 **전역 변수**가 됨
+- 인스턴스 변수의 접근법과 다르게 인스턴스를 생성하지 않고 클래스이름 & 클래스변수명을 통해서 접근
 
 
 
