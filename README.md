@@ -125,9 +125,9 @@
 
 <br>
 
-### Database
+### DB
 
-- [Database_Basics](/DB/01_DB_Basics.md)
+- [DB_Basics](/DB/01_DB_Basics.md)
 
 <br>
 
