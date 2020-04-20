@@ -31,6 +31,7 @@
   - [Loops & Conditional Statements](/Java/Java101/05_Loops_&_Conditional_Statements.md)
   - [Array](/Java/Java101/06_Array.md)
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
+  - [Inheritance](/Java/Java101/08_Inheritance.md)
 - #### [Java Advanced](/Java/Java_Advanced)
 
   - [Lombok](/Java/Java_Advanced/Lombok.md)
