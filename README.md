@@ -194,6 +194,8 @@
 ### Programming 101
 
 - [프로그래밍 용어 사전](/Programming101/프로그래밍_용어_사전.md)
+- [Discrete Mathematics](/Programming101/Discrete_Mathematics.md)
+- [Computational Thinking](/Programming101/Computational_Thinking.md)
 
 
 
