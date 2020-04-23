@@ -266,14 +266,14 @@
 
 <br>
 
-![Image from iOS](../images/Image from iOS.jpg)
+![Image from iOS](../images/0424_01.jpg)
 
 <br>
 
-![Image from iOS (../images/Image from iOS (1).jpg)](/home/chloe/Downloads/Image from iOS (1).jpg)
+![Image from iOS](../images/0424_02.jpg)
 
 <br>
 
-![Image from iOS (../images/Image from iOS (2).jpg)](/home/chloe/Downloads/Image from iOS (2).jpg)
+![Image from iOS](../images/0424_03.jpg)
 
 <br>

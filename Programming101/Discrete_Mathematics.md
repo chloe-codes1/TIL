@@ -122,11 +122,11 @@
 
 <br>
 
-![image-20200424040719609](../images/image-20200424040719609.png)
+<img src="../images/image-20200424040719609.png" alt="image-20200424040719609" style="zoom:40%;" />
 
 <br>
 
-- **조건 명제 (`Conditional Proposition`)**에서 사용함
+- **조건 명제** (`Conditional Proposition`)에서 사용함
 - 하나의 명제를 변형해 표헌함
 - 증명에 도움을 준다
 - 증명하기 어려운 명제는 **대우**를 이용해 증명할 수 있음
