@@ -53,7 +53,7 @@
 
 <br>
 
-<img src="../images/image-20200423194638742.png" alt="image-20200423194638742" style="zoom:50%;" />
+<img src="../images/image-20200423194638742.png" alt="image-20200423194638742" style="zoom:30%;" />
 
 <br>
 
@@ -120,7 +120,9 @@
 
 ### 역, 이, 대우
 
-![examples of conditional statements](https://calcworkshop.com/wp-content/uploads/examples-conditional-statements.png)
+<br>
+
+![image-20200424040719609](../images/image-20200424040719609.png)
 
 <br>
 
