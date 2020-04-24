@@ -102,6 +102,7 @@
 - #### [AWS Tips](/AWS/AWS_Tips)
 
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
+  - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
   - [AWS Data Science Meetup - Amazon Personalize](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
 
 <br>
