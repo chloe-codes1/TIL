@@ -537,6 +537,117 @@ https://github.com/django/django/blob/master/django/conf/global_settings.py
 
 <br>
 
+## Excercises
+
+<br>
+
+### 준비
+
+> `onetomany`  app 생성
+
+```python
+# models.py
+class User(models.Model):
+    username = models.CharField(max_length=10)
+    
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class Comment(models.Model):
+    content = models.TextField()
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+```
+
+
+
+```python
+from onetomany.models import User, Article, Comment
+
+# objects
+u1 = User.objects.create(username='Kim')
+u2 = User.objects.create(username='Lee')
+
+a1 = Article.objects.create(title='1글', user=u1)
+a2 = Article.objects.create(title='2글', user=u2)
+a3 = Article.objects.create(title='3글', user=u2)
+a4 = Article.objects.create(title='4글', user=u2)
+
+c1 = Comment.objects.create(content='1글1댓', article=a1, user=u2)
+c2 = Comment.objects.create(content='1글2댓', article=a1, user=u2)
+c3 = Comment.objects.create(content='2글1댓', article=a2, user=u1)
+c4 = Comment.objects.create(content='4글1댓', article=a4, user=u1)
+c5 = Comment.objects.create(content='3글1댓', article=a3, user=u2)
+c6 = Comment.objects.create(content='3글2댓', article=a3, user=u1)
+```
+
+<br>
+
+### 문제
+
+1. 1번 유저가 작성한 글들
+
+   ```python
+   u1.article_set.all()
+   ```
+
+2. 2번 유저가 작성한 댓글의 내용을 모두 출력
+
+   ```python
+   for comment in u2.comment_set.all():
+       print(comment.content)
+   ```
+
+3. 3번 글의 작성된 댓글의 내용을 모두 출력
+
+   ```python
+   for comment in a3.comment_set.all():
+       print(comment.content)
+   ```
+
+   ```html
+   {% for comment in article.comment_set.all %}
+      {{ comment.content }}
+   {% endfor %}
+   ```
+
+4. 1글이라는 제목인 게시글들
+
+   ```python
+   Article.objects.filter(title='1글')
+   ```
+
+5. 글이라는 단어가 들어간 게시글들
+
+   ```python
+   Article.objects.filter(title__contains='글')
+   ```
+
+6. 댓글(N)들 중에 해당되는 글(1)의 제목이 1글인 것
+
+   ```python
+   Comment.objects.filter(article__title='1글')
+   print(Comment.objects.filter(article__title='1글').query)
+   ```
+
+   * 1:N 관계에서 1의 열에 따라서,  필터링
+
+     ```sql
+     SELECT "onetomany_comment"."id", "onetomany_comment"."content", "onetomany_comment"."article_id", "onetomany_comment"."user_id" FROM "onetomany_comment" INNER JOIN "onetomany_article" ON ("onetomany_comment"."article_id" = "onetomany_article"."id") WHERE "onetomany_article"."title" = 1글
+     ```
+
+## 
+
+
+
+
+
+<br>
+
+<br>
+
 `+`
 
 ### Django 에게 맡겨서 `sqlite` 열기

@@ -132,7 +132,8 @@
 
 - [DB Basics](/DB/01_DB_Basics.md)
 - [SQL and Django ORM](/DB/02_SQL_and_Django_ORM.md)
-- [One To Many Relationship](/DB/03_One_To_Many_Relationship.md)
+- [One to Many Relationship](/DB/03_One_To_Many_Relationship.md)
+- [Many to Many Relationship](/DB/04_Many_To_Many_Relationship.md)
 
 <br>
 
