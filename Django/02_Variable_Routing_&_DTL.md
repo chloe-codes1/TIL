@@ -63,7 +63,7 @@ USE_TZ = True
 
 <br>
 
-#### `management.py`
+#### `manage.py`
 
 - 명령어를 실행 할 수 있도록 도와주는 파일
 - 수정하지 말것!
