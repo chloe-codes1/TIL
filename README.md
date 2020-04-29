@@ -14,6 +14,10 @@
 
 ### Algorithm
 
+- #### [Algorithm Basics](/Algorithm/Algorithm101)
+
+  - [Algorithm101.md](/Algorithm/Algorithm101/Algorithm101.md)
+
 - #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
