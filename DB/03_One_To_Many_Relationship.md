@@ -319,7 +319,7 @@ AttributeError                            Traceback (most recent call last)
 AttributeError: 'Comment' object has no attribute 'article_pk'
 ```
 
-- 무조건 article_id이다
+- 무조건 `article_id`이다
   - 별명 사용 불가!
 
 <br>
@@ -638,7 +638,7 @@ c6 = Comment.objects.create(content='3글2댓', article=a3, user=u1)
      SELECT "onetomany_comment"."id", "onetomany_comment"."content", "onetomany_comment"."article_id", "onetomany_comment"."user_id" FROM "onetomany_comment" INNER JOIN "onetomany_article" ON ("onetomany_comment"."article_id" = "onetomany_article"."id") WHERE "onetomany_article"."title" = 1글
      ```
 
-## 
+
 
 
 
