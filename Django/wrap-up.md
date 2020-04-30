@@ -28,7 +28,7 @@ $ django-admin startproject [project name]
 ###  App 만들기
 
 ```bash
-$ python manage.py startap [app name]
+$ python manage.py startapp [app name]
 ```
 
 <br>
