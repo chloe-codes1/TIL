@@ -308,6 +308,40 @@ Running migrations:
 
 <br>
 
+<br>
+
+### Migration Flow
+
+- 마이그레이션 생성
+
+  ```bash
+  $ python manage.py makemigrations
+  ```
+
+- 마이그레이션 DB 반영 여부 확인
+
+  ```bash
+  $ python manage.py showmigratons
+  ```
+
+- 마이그레이션에 대응되는 SQL문 출력
+
+  ```bash
+  $ python manage.py sqlmigrate app_label migration_name
+  ```
+
+- 마이그레이션 파일의 내용을 DB에 최종 반영
+
+  ```bash
+  $ python manage.py migrate
+  ```
+
+<br>
+
+<br>
+
+
+
 `+`
 
 #### admin 등록

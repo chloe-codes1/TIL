@@ -176,9 +176,13 @@
      ```
 
       ```sqlite
-   -- sql
-   
+     -- sql
+      ```
+
    SELECT * FROM users_user WHERE id = 100;
+
+      ```
+   
       ```
 
 4. 해당 user 레코드 수정

@@ -59,6 +59,7 @@
 - [Authentication](/Django/07_Authentication.md)
 - [Request and Response Objects](/Django/08_Request_and_Response_Objects.md)
 - [ImageField](/Django/09_Image_Upload.md)
+- [Optimization](/Django/10_Optimization.md)
 
 <br>
 
