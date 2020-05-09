@@ -18,10 +18,18 @@
 
   - [Algorithm101](/Algorithm/Algorithm101/00_Algorithm101.md)
   - [Brute-Force](/Algorithm/Algorithm101/01_Brute-Force.md)
+  - [Greedy Algorithm](/Algorithm/02_Greedy_Algorithm.md)
+
+- #### [Sorting Methods](/Algorithm/Sorting_Methods)
+
+  - [Insertion_Sort](/Algorithm/Sorting_Methods/Insertion_Sort.md)
+  - [Selection Sort](/Algorithm/Sorting_Methods/Selection_Sort.md)
+  - [Merge_Sort](/Algorithm/Sorting_Methods/Merge_Sort.md)
 
 - #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
+  
 - #### [Standford Algorithm](/Algorithm/Stanford_Algorithm)
 
 <br/>
