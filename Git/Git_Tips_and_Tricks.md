@@ -236,6 +236,59 @@ Switched to branch 'test'
 
 <br>
 
+## 5. 원격 저장소에 올라간 커밋 되돌리기
+
+<br>
+
+### 방법 1) Local에서 commit 되돌린 후 강제 Push 하기
+
+> `$ git reset` 으로 commit 되돌리기
+
+```bash
+$ git reset --hard HEAD       (going back to HEAD)
+
+$ git reset --hard HEAD^      (going back to the commit before HEAD)
+
+$ git reset --hard HEAD~2     (going back two commits before HEAD)
+```
+
+<br>
+
+> `-f`  or  `--force` 명령어로 강제로 Push 하기
+
+```bash
+$ git push -f origin master
+
+$ git push --force origin master
+```
+
+<br>
+
+<br>
+
+### 방법 2) `git revert` 사용하기
+
+- 방법 1은 원격 저장소 commit history를 강제로 조작한다는 문제점이 있음
+- but, `git revert`를 사용하면 commit을 되돌리는 작업도 하나의 commit으로 간주하여 commit history에 추가하게 됨
+
+<br>
+
+>특정 commit에서의 변경 사항을 제거하는 또 다른 commit 생성하기
+
+```bash
+$ git revert --no-commit [되돌리고 싶은 commit의 hash]     
+
+$ git revert --no-commmit [되돌리고 싶은 커밋의 범위]
+
+$ git revert --no-commit Head~3
+```
+
+<br>
+
+<br>
+
+
+
 `+`
 
 - `master` branch에 있는 내용은 자동으로 배포가 됨
