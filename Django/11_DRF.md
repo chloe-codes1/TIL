@@ -281,11 +281,207 @@ def article_create(request):
 
 <br>
 
+## yasg
+
+- API 관련 문서를 자동으로 생성
+- 
+
 ### DRF yasg 설치하기
 
 > https://drf-yasg.readthedocs.io/en/stable/readme.html
 
 ```bash
 $ pip install drf-yasg
+```
+
+<br>
+
+<br>
+
+## Dummy data JSON 으로 불러오기
+
+<br>
+
+### fixtures 폴더에 `dummy.json` 넣기
+
+```
+├── api
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── db.sqlite3
+├── manage.py
+└── musics
+    ├── admin.py
+    ├── apps.py
+    ├── fixtures
+    │   └── dummy.json
+    ├── __init__.py
+    ├── migrations
+    ├── models.py
+    ├── serializers.py
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+7 directories, 29 files
+```
+
+<br>
+
+### `loaddata` 로 dummy.json 을 DB에 넣기
+
+```bash
+$ python manage.py loaddata dummy.json
+Installed 14 object(s) from 1 fixture(s)
+```
+
+<br>
+
+### `dumpdata` 로 DB에 있는 data dumping 하기
+
+```json
+$ python manage.py dumpdata musics
+[{"model": "musics.artist", "pk": 1, "fields": {"name": "Coldplay"}}, {"model": "musics.artist", "pk": 2, "fields": {"name": "Maroon5"}}, {"model": "musics.music", "pk": 1, "fields": {"artist": 2, "title": "Girls Like You"}}, {"model": "musics.music", "pk": 2, "fields": {"artist": 2, "title": "Sunday Morning"}}, {"model": "musics.music", "pk": 3, "fields": {"artist": 1, "title": "viva la vida"}}, {"model": "musics.music", "pk": 4, "fields": {"artist": 1, "title": "paradise"}}, {"model": "musics.comment", "pk": 1, "fields": {"music": 1, "content": "\uac78\uc2a4 \ub77c\uc78c \uc720!!!"}}, {"model": "musics.comment", "pk": 2, "fields": {"music": 1, "content": "\ub9c8\ub8ec \ud30c\uc774\ube0c \uc9f1\uc9f1!"}}, {"model": "musics.comment", "pk": 3, "fields": {"music": 2, "content": "\uc77c\uc694\uc77c \ubaa8\ub2dd~~~"}}, {"model": "musics.comment", "pk": 4, "fields": {"music": 2, "content": "\ud558\uc9c0\ub9cc \ub0b4\uc77c\uc740 \uc6d4\uc694\uc77c"}}, {"model": "musics.comment", "pk": 5, "fields": {"music": 3, "content": "10\ub144\uc774 \uc9c0\ub098\ub3c4 \uc88b\uc544"}}, {"model": "musics.comment", "pk": 6, "fields": {"music": 3, "content": "\ub9c8\uce58 \ub0b4\uac00 \uc655\uc774 \ub41c \uac83 \uac19\uc544!"}}, {"model": "musics.comment", "pk": 7, "fields": {"music": 4, "content": "\ud30c\ub77c\ub2e4\uc774\uc2a4 \ud30c\ub77c\ud30c\ub77c\ud30c\ub77c\ub2e4\uc774\uc2a4~"}}, {"model": "musics.comment", "pk": 8, "fields": {"music": 4, "content": "\uc228\uaca8\uc9c4 \uba85\uace1!!!"}}]
+```
+
+<br>
+
+### `dumpdata`로 dumping 한 data를 JSON file로 만들기
+
+> 이렇게 하면 다닥다닥 붙어있음
+
+```bash
+$ python manage.py dumpdata musics > dump.json
+```
+
+<br>
+
+### indenting 줘서 예쁘게 만들기
+
+> `--indent 2`  -> indenting을 2 줘라
+
+```bash
+$ python manage.py dumpdata musics --indent 2 > dump2.json
+```
+
+<br>
+
+> result
+
+```json
+[
+{
+  "model": "musics.artist",
+  "pk": 1,
+  "fields": {
+    "name": "Coldplay"
+  }
+},
+{
+  "model": "musics.artist",
+  "pk": 2,
+  "fields": {
+    "name": "Maroon5"
+  }
+},
+{
+  "model": "musics.music",
+  "pk": 1,
+  "fields": {
+    "artist": 2,
+    "title": "Girls Like You"
+  }
+},
+{
+  "model": "musics.music",
+  "pk": 2,
+  "fields": {
+    "artist": 2,
+    "title": "Sunday Morning"
+  }
+},
+{
+  "model": "musics.music",
+  "pk": 3,
+  "fields": {
+    "artist": 1,
+    "title": "viva la vida"
+  }
+},
+{
+  "model": "musics.music",
+  "pk": 4,
+  "fields": {
+    "artist": 1,
+    "title": "paradise"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 1,
+  "fields": {
+    "music": 1,
+    "content": "\uac78\uc2a4 \ub77c\uc78c \uc720!!!"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 2,
+  "fields": {
+    "music": 1,
+    "content": "\ub9c8\ub8ec \ud30c\uc774\ube0c \uc9f1\uc9f1!"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 3,
+  "fields": {
+    "music": 2,
+    "content": "\uc77c\uc694\uc77c \ubaa8\ub2dd~~~"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 4,
+  "fields": {
+    "music": 2,
+    "content": "\ud558\uc9c0\ub9cc \ub0b4\uc77c\uc740 \uc6d4\uc694\uc77c"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 5,
+  "fields": {
+    "music": 3,
+    "content": "10\ub144\uc774 \uc9c0\ub098\ub3c4 \uc88b\uc544"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 6,
+  "fields": {
+    "music": 3,
+    "content": "\ub9c8\uce58 \ub0b4\uac00 \uc655\uc774 \ub41c \uac83 \uac19\uc544!"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 7,
+  "fields": {
+    "music": 4,
+    "content": "\ud30c\ub77c\ub2e4\uc774\uc2a4 \ud30c\ub77c\ud30c\ub77c\ud30c\ub77c\ub2e4\uc774\uc2a4~"
+  }
+},
+{
+  "model": "musics.comment",
+  "pk": 8,
+  "fields": {
+    "music": 4,
+    "content": "\uc228\uaca8\uc9c4 \uba85\uace1!!!"
+  }
+}
+]
 ```
 
