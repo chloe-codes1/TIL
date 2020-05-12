@@ -176,6 +176,7 @@
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
   - [JavaScript Functions](/Web/JavaScript/05_JavaScript_Functions.md)
   - [JavaScript Object](/Web/JavaScript/06_JavaScript_Object.md)
+  - [JavaScript Syntax](/Web/JavaScript/07_JavaScript_Syntax.md)
   
   <br>
 
@@ -213,6 +214,7 @@
 ### Programming 101
 
 - [프로그래밍 용어 사전](/Programming101/프로그래밍_용어_사전.md)
+- [새로운 언어를 학습하는 방법](/Programming101/새로운_언어를_학습하는_방법.md)
 - [Discrete Mathematics](/Programming101/Discrete_Mathematics.md)
 - [Computational Thinking](/Programming101/Computational_Thinking.md)
 
