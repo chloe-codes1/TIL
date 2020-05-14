@@ -25,6 +25,7 @@
   - [Insertion Sort](/Algorithm/Sorting_Methods/Insertion_Sort.md)
   - [Selection Sort](/Algorithm/Sorting_Methods/Selection_Sort.md)
   - [Merge Sort](/Algorithm/Sorting_Methods/Merge_Sort.md)
+  - [Quick Sort](/Algorithm/Sorting_Methods/Quick_Sort.md)
 
 - #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
