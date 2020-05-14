@@ -19,6 +19,7 @@
   - [Algorithm101](/Algorithm/Algorithm101/00_Algorithm101.md)
   - [Brute-Force](/Algorithm/Algorithm101/01_Brute-Force.md)
   - [Greedy Algorithm](/Algorithm/Algorithm101/02_Greedy_Algorithm.md)
+  - [Divide and Conquer](/Algorithm/Algorithm101/03_Divide_and_Conquer.md)
 
 - #### [Sorting Methods](/Algorithm/Sorting_Methods)
 
