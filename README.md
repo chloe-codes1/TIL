@@ -138,6 +138,7 @@
 
   - [Deploying a Django project on PythonAnywhere](/Server/Deployment/Deploying_a_Django_project_on_PythonAnywhere.md)
   - [Deploying a Django project on Microsoft Azure](/Server/Deployment/Deploying_a_Django_project_on_Microsoft_Azure.md)
+  - [Deploying a Django project on Heroku](/Server/Deployment/Deploying_a_Django_project_on_Heroku.md)
 
 <br>
 

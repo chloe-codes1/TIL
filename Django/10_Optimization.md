@@ -28,7 +28,7 @@
 #### installation
 
 ```bash
-$ pip install django-deug-toolbar
+$ pip install django-debug-toolbar
 ```
 
 <br>
@@ -57,7 +57,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 if settings.DEBUG:
-    import debug_toobar
+    import debug_toolbar
     urlpatterns = [
         path('__debug__/', include(debug_toobar.urls)),
         path('admin/', admin.site.urls),
