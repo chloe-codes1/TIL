@@ -192,9 +192,11 @@ myP.classList.add('wow') // object는 가능
 
 ## I. Scope
 
-> 중괄호가 있을 경우, Scope를 만든다!!
+> 중2변 히키코모리 막내동생 법칙
 
-- function일 경우, if / while / switch (control) 일 경우
+- 중괄호가 있을 경우, Scope를 만든다!!
+  1. function일 경우
+  2. 제어문 (if / while / switch (control)) 등5 일 경우
 - `var`  function에서만 scope로 묶였음
 - `let` 은 중괄호가 있을 경우 (scope) 동일하게 작동
 
@@ -279,7 +281,7 @@ const c = -Infinity
 - 합체 (concatenation)
   - `+`
 - 수술 (interpolation)
-  - `\`
+  - `template literal ${}`
 
 <br>
 
@@ -307,6 +309,9 @@ const greeting = `Hello ${middleName}`
 
 > Falsy 가 아닌 모든 값들
 
+- `[]` - emptyArray
+- `{}` - emptyObject
+
 <br>
 
 #### 2. Falsy
@@ -315,6 +320,10 @@ const greeting = `Hello ${middleName}`
 
 - `null`
 - `undefined`
+- `""`
+- `0`
+- `[] == true`
+- `![]`
 
 <br>
 
@@ -322,9 +331,10 @@ const greeting = `Hello ${middleName}`
 
 ## VI. 자료구조
 
-> 어떻게 저장하고, 조작하는지 (CRUD)
+> 어떻게 저장하고, 조작하는지 (CRUD)  => method를 보자
 
 - Array (`list`)
+  - array helper method
 - Object (`dict`)
 
 <br>
@@ -405,8 +415,11 @@ const arrow = name => `hello!!!! ${name}`
 
 <br>
 
+- 매우 유연한 객체를 통한 OOP
+
 - Class를 잠시 잊어라!
   - Prototypal Inheritance
+- ES6+ 부터 `class` 도입
 
 ex)
 
