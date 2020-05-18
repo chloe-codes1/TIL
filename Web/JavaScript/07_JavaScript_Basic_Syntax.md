@@ -1,4 +1,4 @@
-# JavaScript Syntax
+# JavaScript Basic Syntax
 
 <br>
 

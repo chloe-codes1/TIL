@@ -180,7 +180,9 @@
   - [JavaScript Events](/Web/JavaScript/04_JavaScript_Event.md)
   - [JavaScript Functions](/Web/JavaScript/05_JavaScript_Functions.md)
   - [JavaScript Object](/Web/JavaScript/06_JavaScript_Object.md)
-  - [JavaScript Syntax](/Web/JavaScript/07_JavaScript_Syntax.md)
+  - [JavaScript Basic Syntax](/Web/JavaScript/07_JavaScript_Basic_Syntax.md)
+  - [Array Helper Methods in ES6](/Web/JavaScript/08_Array_Helper_Methods_in_ES6.md)
+  - [Hoisting in JavaScript](/Web/JavaScript/09_Hoisting_in_JavaScript.md)
   
   <br>
 
