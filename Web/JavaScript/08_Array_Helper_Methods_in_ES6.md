@@ -2,6 +2,24 @@
 
 <br>
 
+
+
+## Callback function
+
+<br>            
+
+### Callback function 이란? - MDN
+
+: A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of rotine or action.
+
+<br>
+
+콜백 함수(A)는 다른 함수(B)의 인자로 넘겨지는 함수로,
+
+다른 함수(B)의 내부에서 실행되는 함수(A)를 말한다.
+
+<br>
+
 <br>
 
 ### 1. map()
