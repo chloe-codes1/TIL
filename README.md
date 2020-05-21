@@ -21,6 +21,7 @@
   - [Greedy Algorithm](/Algorithm/Algorithm101/02_Greedy_Algorithm.md)
   - [Divide and Conquer](/Algorithm/Algorithm101/03_Divide_and_Conquer.md)
   - [Backtracking](/Algorithm/Algorithm101/04_Backtracking.md)
+  - [Graph](/Algorithm/05_Graph.md)
 
 - #### [Sorting Methods](/Algorithm/Sorting_Methods)
 
