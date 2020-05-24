@@ -208,7 +208,7 @@ $ heroku open
 
 <br>
 
-### Disable collectstatic
+### 1. Disable collectstatic
 
 ```bash
 $ heroku config:set DISABLE_COLLECTSTATIC=1
@@ -218,7 +218,7 @@ $ heroku config:set DISABLE_COLLECTSTATIC=1
 
 <br>
 
-### [Download backup](https://devcenter.heroku.com/articles/heroku-postgres-import-export#download-backup)
+### 2. [Download backup](https://devcenter.heroku.com/articles/heroku-postgres-import-export#download-backup)
 
 To export the data from your Heroku Postgres database, create a new backup and download it.
 
@@ -231,7 +231,7 @@ $ heroku pg:backups:download
 
 <br>
 
-### Maintenance Mode
+### 3. Maintenance Mode
 
 <br>
 
@@ -259,3 +259,27 @@ Disabling maintenance mode for myapp... done
 $ heroku maintenance
 off
 ```
+
+<br>
+
+<br>
+
+### 4. Restart
+
+```bash
+$ heroku restart
+```
+
+- run this when  you see this message
+  - "Your account has reached its concurrent builds limit"
+
+<br>
+
+<br>
+
+### 4. Loaddata
+
+```bash
+$ heroku run python manage.py loaddata [YOUR_JSON_FILE_NAME]
+```
+
