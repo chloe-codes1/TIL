@@ -52,6 +52,18 @@ $ git remote add origin [github 원격 저장소 주소]
 
 <br>
 
+### (5) 로컬 저장소로 코드 불러오기 `git pull`
+
+- Github 원격 저장소에 있은 코드를 불러오고 각 `branch`에 해당되는 `commit`들을 적용한다.
+
+```bash
+$ git pull
+
+$ git pull [원격 저장소 이름] (specify a remote to pull from)
+```
+
+<br>
+
 ### (5) 원격 저장소로 코드 `git push`
 
 - 최종적으로 Github 원격 저장소에 push 한다.
@@ -250,6 +262,7 @@ $ git reset --hard HEAD       (going back to HEAD)
 $ git reset --hard HEAD^      (going back to the commit before HEAD)
 
 $ git reset --hard HEAD~2     (going back two commits before HEAD)
+$ git reset --hard HEAD^^    (another syntax for going back two commits)
 ```
 
 <br>
