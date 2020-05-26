@@ -201,6 +201,7 @@
 
 - #### [Node.js 101](/Node.js/Node.js_101)
 
+  - [Installing Node.js using NVM](/Node.js/Node.js_101/00_Installing_Node.js_Using_NVM.md)
   - [Intro to Node.js](/Node.js/Node.js_101/01_Intro_to_Node.js.md)
   - [Environment Setup](/Node.js/Node.js_101/02_Environment_Setup.md)
   - [First Application with Node.js](/Node.js/Node.js_101/03_First_Application_with_Node.js.md)
