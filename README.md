@@ -194,6 +194,7 @@
 ### Vue.js
 
 - [Intro to Vue.js](/Vue.js/01_Vue101.md)
+- [Vue Intermediate](/Vue.js/02_Vue_intermediate.md)
 
 <br>
 

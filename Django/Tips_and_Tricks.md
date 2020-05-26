@@ -13,3 +13,7 @@ https://www.djangoproject.com/weblog/2008/apr/12/spring/
 the last bit (`spring`) is the slug.
 
 <br>
+
+### CORS headers
+
+<br>

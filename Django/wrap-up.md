@@ -137,11 +137,102 @@ $ django-admin startproject django_additional .
 
 ## Social Login
 
+> Installation
+
 ```bash
 $ pip install django-allauth
 ```
 
 <br>
+
+### Google
+
+> settings.py
+
+```python
+
+...
+
+INSTALLED_APPS = [
+    # pip
+    'django_extensions',
+    'bootstrap4',
+    'bootstrap_pagination',
+    'mathfilters',
+
+    # django original
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites', #new
+    'storages',
+
+    # my apps
+    'articles',
+    'accounts',
+
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
+]
+
+...
+
+# allauth setting
+AUTHENTICATOIN_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID =1
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    },
+        'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    }
+}
+```
+
+<br>
+
+> urls.py
+
+```python
+urlpatterns = [
+ 	...
+    path('accounts/', include('accounts.urls')),
+    # 우리가 정의한 accounts.url 아래에
+    path('accounts/', include('allauth.urls')),
+    ...
+]
+```
+
+
+
+
+
+<br>
+
+
 
 ### GitHub
 
