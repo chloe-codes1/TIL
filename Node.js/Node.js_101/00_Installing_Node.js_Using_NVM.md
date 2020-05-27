@@ -70,9 +70,19 @@ $ nvm ls-remote
 
 ### 5. Install 
 
+> Install specific version
+
 ```bash
 $ nvm install 12.14.0
 ```
+
+> Install the most recent LTS release
+
+```bash
+$ nvm install --lts
+```
+
+
 
 <br>
 
@@ -113,6 +123,35 @@ lts/erbium -> v12.16.3 (-> N/A)
 
 <br>
 
+### 8. Switch Node.js versions
+
+> Switch to Node.js version `12.14.0`
+
+```bash
+$ nvm use 12.14.0
+Now using node v12.14.0 (npm v6.13.4)
+```
+
+> Switch to the latest Node.js version
+
+```bash
+$ nvm use node
+```
+
+> Switch to the latest LTS version
+
+```bash
+$ nvm use --lts
+```
+
+
+
+
+
+
+
+<br>
+
 <br>
 
 `+`
@@ -122,4 +161,8 @@ lts/erbium -> v12.16.3 (-> N/A)
 ```bash
 $ nvm uninstall [NODE_VERSION]
 ```
+
+
+
+
 
