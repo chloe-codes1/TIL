@@ -18,12 +18,13 @@ $ bash install_nvm.sh
 
 <br>
 
-### 3. Source the `~/.profile` file to gain access to the `nvm` functionality
+### 3. Restart your terminal
 
 ```bash
 $ source ~/.profile
 ```
 
+- Source the `~/.profile` file to gain access to the `nvm` functionality
 - or you can just logout & login
 
 <br>
@@ -144,7 +145,21 @@ $ nvm use node
 $ nvm use --lts
 ```
 
+<br>
 
+### 9. Set the default version of node when starting a new shell
+
+> Specific version 
+
+```bash
+$ nvm alias default 12.14.0
+```
+
+> Latest Node.js version
+
+```bash
+$ nvm alias default node
+```
 
 
 
