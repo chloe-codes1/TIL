@@ -239,6 +239,7 @@
 - [배포란 무엇인가](/Programming101/배포란_무엇인가.md)
 - [Discrete Mathematics](/Programming101/Discrete_Mathematics.md)
 - [Computational Thinking](/Programming101/Computational_Thinking.md)
+- [Technical Interview Prep](/Programming101/Technical_Interview_Prep.md)
 
 
 
