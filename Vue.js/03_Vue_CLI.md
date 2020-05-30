@@ -24,7 +24,7 @@ $ vue create [PROJECT_NAME]
 
 <br>
 
-### Run it
+### Compiles and hot-reloads for development
 
 ```bash
 $ npm run serve
@@ -53,17 +53,25 @@ $ npm i axios
 
 <br>
 
-### Build
+### Compiles and minifies for production
 
 ```bash
-$ npm build
+$ npm run build
+```
+
+<br>
+
+### Lints and fixes files
+
+```bash
+$ npm run lint
 ```
 
 <br>
 
 <br>
 
-ex)
+`+`
 
 ### Component 를 만들었을 때 해야 할 틀 (에 박힌) 일
 
