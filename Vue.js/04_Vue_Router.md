@@ -73,3 +73,166 @@ back in production) Yes
 
 <br>
 
+ex)
+
+### `App.vue`
+
+```vue
+<template>
+  <div id="app">
+    <div id="nav">
+      <!-- 이렇게 a tag 쓰면 page reload 됨 -->
+      <a href="/">Home</a> &nbsp;
+      <a href="/about">About</a>
+      <br>
+
+      <!-- 그래서 router-link 를 써야 함! page reload 되면 우리가 vue를 쓸 이유가 없음! -->
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+  </div>
+</template>
+```
+
+<br>
+
+### router > `index.js`
+
+> router 안에 있는 `index.js` 는 Django 에서 `urls.py` 같은 것!
+
+```javascript
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+
+Vue.use(VueRouter)
+
+  // Django 에서 urls.py 같은 것!
+  const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+
+export default router
+
+```
+
+<br>
+
+### `views/` directory
+
+-  URL(/) 과 mapping 될 **component**들이 들어가는 directory
+  - URL을 하사 받을 애들~!
+- `views/` 에 있는 Component들은, router/index.js 로 가서 import 한다!
+
+<br>
+
+<br>
+
+## variable routing
+
+<br>
+
+```vue
+<template>
+  <div>
+      <h1>Hello, {{ name }}</h1>
+  </div>
+</template>
+
+<script>
+export default {
+    name: 'HelloName',
+    data: function() {
+        return {
+            name: this.$route.params.name,
+        }
+    }
+}
+</script>
+```
+
+<br>
+
+### Ping - Pong 만들기
+
+#### `Ping.vue`
+
+```vue
+<template>
+  <div>
+      <h1>Ping</h1>
+      <input type="text" @keyup.enter="sendToPong" v-model="inputText"/>
+
+  </div>
+</template>
+
+<script>
+export default {
+    name: 'Ping',
+    data() {
+        return {
+            inputText: '',
+        }
+    },
+    methods: {
+        sendToPong: function() {
+            // $router
+            // ver1)
+            // this.$router.push(`pong?message=${this.inputText}`)
+            // ver2)
+            this.$router.push({ name: 'Pong', query: {message: this.inputText}})
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
+```
+
+<br>
+
+### `Pong.vue`
+
+```vue
+<template>
+  <div>
+      <h1>Pong</h1>
+      <h3>{{messageFromPing}}</h3>
+  </div>
+</template>
+
+<script>
+export default {
+    name: 'Pong',
+    data(){
+        return {
+            messageFromPing: this.$route.query.message
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
+```
+

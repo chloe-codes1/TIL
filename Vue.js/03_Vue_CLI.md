@@ -62,3 +62,31 @@ $ npm build
 <br>
 
 <br>
+
+ex)
+
+### Component 를 만들었을 때 해야 할 틀 (에 박힌) 일
+
+```vue
+<template>
+  <div>
+
+  </div>
+</template>
+
+<script>
+export default {
+    name: 'HelloName',
+    data: function() {
+        return {
+            
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
+```
+
