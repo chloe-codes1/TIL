@@ -210,12 +210,6 @@ print(result) # 175
 
 <br>
 
-*2부 시작...*
-
-<br>
-
-<br>
-
 ## KRUSKAL Algorithm
 
 : **간선**을 하나씩 선택해서 MST를 찾는 알고리즘 
@@ -224,9 +218,195 @@ print(result) # 175
 2. 가중치가 가장 낮은 간선부터 선택하면서 트리를 증가시킴
    - 사이클이 존재하면 다음으로 가중치가 낮은 간선 선택
      - 사이클은 선택하지 않는다!
+       - 사이클이 있다는 것은 최단거리로 가는 것이 아니라 돌아서 가는 것을 의미하기 때문
+   - 사이클이 존재하는지 확인하는 법
+     - 정점의 대표자가 같으면 사이클이 있다는 것!
 3. `n-1`개의 간선이 선택될 때 까지 2를 반복
 
 <br>
 
+ex)
 
+> kruskal
+
+```python
+"""
+예제
+
+7 11
+0 5 60
+0 1 32
+0 2 31
+0 6 51
+1 2 21
+2 4 46
+2 6 25
+3 4 34
+3 5 18
+4 5 40
+4 6 51
+
+"""
+
+def make_set(x):
+    p[x] = x
+
+def find_set(x):
+    if p[x] == x:
+        return x
+    else:
+        p[x] = find_set(p[x])
+        return p[x]
+
+def union(x,y):
+    px = find_set(x)
+    py = find_set(y)
+    if rank[px] > rank[py]:
+        p[py] = px
+    else:
+        p[px] = py
+        if rank[px] == rank[py]:
+            rank[py] += 1
+
+V, E = map(int, input().split())
+edges = [ list(map(int, input().split()))for _ in range(E)]
+
+# 간선을 간선 가중치를 기준으로 정렬
+edges.sort(key=lambda x: x[2]) # () 암에 기준이 들어감
+
+# make_set : 모든 정점에 대해 집합 생성
+p = [0] * V
+rank = [0] * V
+for i in range(V):
+    make_set(i)
+
+cnt = 0
+result = 0
+mst = []
+# 모든 간선에 대해서 반복 -> V-1개의 간선이 선택될 때 까지
+for i in range(E):
+    s, e, c = edges[i][0], edges[i][1], edges[i][2]
+    # 사이클이면 skip : 채택하려는 두 정점이 ㅅ로 같은 집합이면 skip  => find_set 이용
+    if find_set(s) == find_set(e):
+        continue
+    # 간선 선택
+    result += c
+    mst.append(edges[i])
+    # => mst에 간선 정보 더하기 / 두 정점을 합친다  => Union
+    union(s,e)
+    cnt +=1
+    if cnt == V-1:
+        break
+
+print(result) # 175
+print(mst) #[[3, 5, 18], [1, 2, 21], [2, 6, 25], [0, 2, 31], [3, 4, 34], [2, 4, 46]]
+```
+
+
+
+<br>
+
+## 최단 경로
+
+<br>
+
+### 최단 경로 정의
+
+: 간선의 가중치가 있는 그래프에서 두 정점 사이의 경로들 중에 간선의 가중치의 합이 최소인 경로
+
+<br>
+
+### 하나의 시작 정점에서 끝 정점까지의 최단 경로 (one to all)
+
+- #### 다익스트라 (dijkstra) 알고리즘
+
+  - 음의 가중치를 허용하지 않음
+
+- #### 벨만-포드 (Bellman-Ford) 알고리즘
+
+  - 음의 가중치 허용
+
+<br>
+
+### 모든 정점들에 대한 최단 경로
+
+- #### 플로이드-워샬 (Floyd-Warshall) 알고리즘
+
+<br>
+
+<br>
+
+## Dijkstra Algorithm
+
+>  시작 정점에서 거리가 최소인 정점을 선택해 나가면서 최단 경로를 구하는 방식
+
+- 시작 정점 (s)에서 끝 정점 (t) 까지의 최단 경로에 정점 x가 존재한다
+- 이때, 최단 경로는 s에서 x까지의 최단 경로와 x 에서 t 까지의 최단 경로로 구성된다
+- 탐욕 (greedy) 기법을 사용한 알고리즘으로 MST의 `Prim Algorithm`과 유사하다
+
+<br>
+
+ex)
+
+> Dijkstra
+
+```python
+"""
+Dijstra + 인접리스트
+
+6 11
+0 1 3
+0 2 5
+1 2 2
+1 3 6
+2 1 1
+2 3 4
+2 4 6
+3 4 2
+3 5 3
+4 0 3
+4 5 6
+
+결과
+[0, 3, 5, 9, 11, 12]
+"""
+
+# dist, selected 배열 준비
+# 시작점 선택
+# 모든 정점이 선택될 때 까지
+# 아직 선택되지 않고 dist의 값이 최소인 정점 : u
+# 정점 u의 최단거리 결정
+# 정점 u에 인접한 정점에 대해서 간선 완화
+
+V, E = map(int, input().split())
+adj = {i:[] for i in range(V)}
+
+for i in range(E):
+    s, e, c = map(int, input().split())
+    adj[s].append([e,c]) #방향 그래프라서
+
+INF = float('inf')
+dist = [INF]*V
+selected = [False]*V
+
+dist[0] = 0
+cnt = 0
+while cnt <V:
+    # dist가 최소인 정점 찾기
+    MIN = INF
+    for i in range(V):
+        if not selected[i] and dist[i] < MIN:
+            MIN = dist[i]
+            u = i
+    # 결정
+    selected[u] = True
+    cnt += 1
+
+    # 간선 완화
+    for w, cost in adj[u]: # 도착정점, 가증치
+        if dist[w] > dist[u] + cost:
+            dist[w] = dist[u] + cost
+    
+print(dist) # [0, 3, 5, 9, 11, 12]
+```
 
