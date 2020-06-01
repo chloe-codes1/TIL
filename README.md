@@ -197,6 +197,7 @@
 - [Vue Intermediate](/Vue.js/02_Vue_intermediate.md)
 - [Vue CLI](/Vue.js/03_Vue_CLI.md)
 - [Vue Router](/Vue.js/04_Vue_Router.md)
+- [Props_and_Emit](/Vue.js/05_Props_and_Emit.md)
 
 <br>
 
