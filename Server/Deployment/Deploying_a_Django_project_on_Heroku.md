@@ -277,9 +277,14 @@ $ heroku restart
 
 <br>
 
-### 4. Loaddata
+### 5. Loaddata
 
 ```bash
 $ heroku run python manage.py loaddata [YOUR_JSON_FILE_NAME]
 ```
 
+<br>
+
+<br>
+
+### 6. [Using AWS S3 to Store Static Assets on Heroku](https://github.com/chloe-codes1/TIL/blob/master/Server/Deployment/Using_AWS_S3_to_Store_Static_Assets_on_Heroku.md)
