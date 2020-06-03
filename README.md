@@ -142,6 +142,7 @@
   - [Deploying a Django project on PythonAnywhere](/Server/Deployment/Deploying_a_Django_project_on_PythonAnywhere.md)
   - [Deploying a Django project on Microsoft Azure](/Server/Deployment/Deploying_a_Django_project_on_Microsoft_Azure.md)
   - [Deploying a Django project on Heroku](/Server/Deployment/Deploying_a_Django_project_on_Heroku.md)
+  - [Using AWS S3 to Store Static Assets on Heroku](/Server/Deployment/Using_AWS_S3_to_Store_Static_Assets_on_Heroku.md)
   - [Deploying a Vue project on Netlify](/Server/Deployment/Deploying_a_Vue_project_on_Netlify.md)
 
 <br>

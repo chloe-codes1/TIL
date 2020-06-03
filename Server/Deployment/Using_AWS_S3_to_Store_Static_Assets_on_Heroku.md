@@ -63,6 +63,7 @@ STATICFILES_STORAGE = 'YOUR_APP_NAME.storages.StaticStorage'
 MEDIAFILES_LOCATION = 'media'
 STATICFILES_LOCATION = 'static'
 
+# Make sure delete from here before commit
 AWS_ACCESS_KEY_ID = 'YOUR_AWS_ACCESS_KEY_ID'
 AWS_SECRET_ACCESS_KEY = '************'
 AWS_STORAGE_BUCKET_NAME = 'YOUR_AWS_STORAGE_BUCKET_NAME'
@@ -115,17 +116,75 @@ $ python manage.py collectstatic
 
 <br>
 
+## 2. Heroku settings
+
+<br>
+
+### 2-1. Config Vars
+
+```bash
+$ heroku config:set AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_AcCESS_KEY
+
+$ heroku config:set S3_BUCKET_NAME=YOUR_AWS_S3_BUCKET_NAME
+```
+
+ <br>
+
+### 2-2. Back to `settings.py` & modify
+
+```python
+# Delete 
+
+"""
+AWS_ACCESS_KEY_ID = 'YOUR_AWS_ACCESS_KEY_ID'
+AWS_SECRET_ACCESS_KEY = '************'
+AWS_STORAGE_BUCKET_NAME = 'YOUR_AWS_STORAGE_BUCKET_NAME'
+"""
+
+# Add
+AWS_S3_REGION_NAME = "ap-northeast-2"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+```
+
+<br>
+
+<br>
+
+## 3. Deploy
+
+<br>
+
+### 3-1. `requirements.txt`
+
+```bash
+$ pip freeze > requirements.txt
+```
+
+<br>
+
+### 3-2. Disable collectstatic
+
+```bash
+$ heroku config:set DISABLE_COLLECTSTATIC=1
+```
+
+<br>
+
+### 3-3. Push to heroku
+
+```bash
+$ git push heroku master
+```
+
+<br>
+
+### DONE!!
 
 
 
 
 
-
-
-
-
-
-
+<br>
 
 <br>
 
