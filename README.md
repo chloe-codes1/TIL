@@ -23,6 +23,7 @@
   - [Backtracking](/Algorithm/Algorithm101/04_Backtracking.md)
   - [Graph](/Algorithm/Algorithm101/05_Graph.md)
   - [Minimum Spanning Tree](/Algorithm/Algorithm101/06_Minimum_Spanning_Tree.md)
+  - [Dijkstra Algorithm](/Algorithm/Algorithm101/07_Dijkstra_Algorithm.md)
 
 - #### [Sorting Methods](/Algorithm/Sorting_Methods)
 
