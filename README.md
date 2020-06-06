@@ -201,6 +201,7 @@
 - [Vue CLI](/Vue.js/03_Vue_CLI.md)
 - [Vue Router](/Vue.js/04_Vue_Router.md)
 - [Props and Emit](/Vue.js/05_Props_and_Emit.md)
+- [Vue Loader](/Vue.js/06_Vue_Loader.md)
 
 <br>
 
