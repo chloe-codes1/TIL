@@ -164,6 +164,12 @@
 
 <br>
 
+### GraphQL
+
+- [Intro to GraphQL](/GraphQL/01_GraphQL101.md)
+
+<br>
+
 ### Web
 
 - #### [HTML](/Web/HTML)
