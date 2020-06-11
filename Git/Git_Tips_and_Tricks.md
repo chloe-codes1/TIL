@@ -306,3 +306,46 @@ $ git revert --no-commit Head~3
 
 - `master` branch에 있는 내용은 자동으로 배포가 됨
   - `master`는 배포 가능한 상태
+
+<br>
+
+### 특정  branch 만 clone 하기
+
+```bash
+$ git clone -b {branch_name} --single-branch {저장소 URL}
+```
+
+<br>
+
+### 원격 저장소의 특정 branch 가져오기
+
+> 우선 원격 저장소에 어떤 branch 있는지 확인
+
+```bash
+$ git branch -r
+```
+
+<br>
+
+> 원격저장소 + 로컬 branch 확인
+
+```bash
+$ git branch -a
+```
+
+<br>
+
+#### 원격 저장소의 branch를 **동일한 이름으로** 가져오기
+
+```bash
+$ git checkout -t [원격 저장소의 branch 이름]
+```
+
+<br>
+
+#### 원격 저장소의 branch를 이름을 변경하여 가져오기
+
+``` bash
+$ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch 이름]
+```
+
