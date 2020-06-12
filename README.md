@@ -161,6 +161,8 @@
 - [SQL and Django ORM](/DB/02_SQL_and_Django_ORM.md)
 - [One to Many Relationship](/DB/03_One_To_Many_Relationship.md)
 - [Many to Many Relationship](/DB/04_Many_To_Many_Relationship.md)
+- [Dump and Load Data](/DB/05_Dump_and_Load_Data.md)
+- [MySQL with Django](/DB/06_MySQL_with_Django.md)
 
 <br>
 
