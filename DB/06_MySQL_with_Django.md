@@ -64,6 +64,58 @@ mysql> use [database 이름];
 
 <br>
 
+### Database 언어설정
+
+> DB 에 Insert 시 오류가 발생함  -> 언어설정으로 인한 문제
+
+```bash
+OperationalError: (1366, "Incorrect string value: '\\xEB\\xA1\\x9C\\xEA\\xB1\\xB4' for column 'title' at row 1")
+```
+
+<br>
+
+#### 해결 방법
+
+1. `my.cnf` 파일 수정
+
+   ```bash
+   sudo vi /etc/mysql/my.cnf
+   ```
+
+   ```
+   ...
+   
+   [client]
+   default-character-set=utf8
+   
+   [mysql]
+   default-character-set=utf8
+   
+   [mysqld]
+   collation-server = utf8_unicode_ci
+   init-connect='SET NAMES utf8'
+   character-set-server = utf8
+   ...
+   ```
+
+   - 위의 설정 추가 후 재시작
+
+     ```bash
+     $ sudo /etc/init.d/mysql restart
+     ```
+
+     
+
+2. `table` character set 설정
+
+   ```mysql
+   mysql> ALTER TABLE table_name convert to charset utf8;
+   ```
+
+   
+
+
+
 <br>
 
 ## 2. Django 연동
