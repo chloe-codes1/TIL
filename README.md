@@ -168,7 +168,12 @@
 
 ### GraphQL
 
-- [Intro to GraphQL](/GraphQL/01_GraphQL101.md)
+- #### [GraphQL 101](/GraphQL/GraphQL101)
+  - [Intro to GraphQL](/GraphQL/GraphQL101/01_GraphQL101.md)
+
+- #### [GraphQL Korea Meet-up](/GraphQL/GraphQL_Korea_Meetup)
+
+  - [GraphQL Korea Meetup (06/13/2020)](/GraphQL/GraphQL_Korea_Meetup/GraphQL_Korea_Meetup_0613.md)
 
 <br>
 

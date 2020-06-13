@@ -3,12 +3,16 @@
 > GraphQL 시작하기!
 >
 > https://tech.kakao.com/2019/08/01/graphql-basic/
+>
+> https://www.slideshare.net/shilpe34/typescript-200-graphql-179690400
 
 <br>
 
 <br>
 
 ## GraphQL 이란?
+
+> API를 위한 Query Language!
 
 - SQL (Structured Query Language) 와 마찬가지로 Query Language
   - but, 언어적 구조 차이가 크다
@@ -19,6 +23,9 @@
     - **호출**
       - `sql` : **Backend** system 에서 작성하고 호출
       - `gql` : **Client** system 에서 작성하고 후출
+- 단일 요청으로 많은 데이터를 불러 올 수 있다
+- 타입 시스템
+- 강력한 개발자 도구 제공
 
 <br>
 
@@ -27,6 +34,7 @@
 ### Serverside GraphQL application
 
 - `gql` 로 작성된 쿼리를 입력으로 받아, 쿼리를 처리한 결과를 다시 **client** 로 돌려줌
+- GraphQL 서버
 
 <br>
 
@@ -44,6 +52,10 @@
   - 단 하나의 Endpoint가 존재
   - 불러오는 데이터의 종류를 쿼리의 조합을 통해 결정
     - **gql schema type** 마다 Database SQL query가 달라짐
+
+<br>
+
+*구성된 인프라, 비즈니스 모델, 사용하는 목적에 따라 각각의 장단점이 바뀐다!*
 
 <br>
 
