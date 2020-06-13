@@ -112,6 +112,12 @@ OperationalError: (1366, "Incorrect string value: '\\xEB\\xA1\\x9C\\xEA\\xB1\\xB
    mysql> ALTER TABLE table_name convert to charset utf8;
    ```
 
+3. `database` character set 설정
+
+   ``` mysql
+   mysql> alter database DB_NAME default character set utf8 collate utf8_general_ci;
+   ```
+
    
 
 
@@ -195,4 +201,46 @@ DATABASES = {
 ```
 
 <br>
+
+<br>
+
+<br>
+
+`+`
+
+### How to handle `Django : Table doesn't exist` error
+
+<br>
+
+#### 1.  Drop tables
+
+#### 2. Comment-out the model in model.py
+
+#### 3. fake migration
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate --fake
+```
+
+#### 4. Comment-in the model
+
+#### 5.  migration
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate 
+```
+
+<br>
+
+<br>
+
+### DROP TABLE foreign key
+
+```mysql
+SET FOREIGN_KEY_CHECKS = 0;
+drop table if exists [TABLE_NAME];
+SET FOREIGN_KEY_CHECKS = 1;
+```
 
