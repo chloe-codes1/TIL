@@ -349,3 +349,16 @@ $ git checkout -t [원격 저장소의 branch 이름]
 $ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch 이름]
 ```
 
+<br>
+
+<br>
+
+### `git fetch`
+
+> remote branch 가 어디까지 가있는지 확인 가능
+
+- git pull == git fetch && merge
+
+<br>
+
+### `git rebase`
