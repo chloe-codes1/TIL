@@ -61,7 +61,7 @@
 
 - [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
 - [Python Virtual Environment](/Python/Python_Virtual_Environment.md)
-- [@property in Python](/Python/@property in Python.md)
+- [@property in Python](/Python/@property_in_Python.md)
 
 <br>
 
