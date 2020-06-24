@@ -338,7 +338,7 @@ $ git branch -a
 #### 원격 저장소의 branch를 **동일한 이름으로** 가져오기
 
 ```bash
-$ git checkout -t [원격 저장소의 branch 이름]
+$ git checkout -t [origin/가져올 원격 저장소 branch 이름]
 ```
 
 <br>
