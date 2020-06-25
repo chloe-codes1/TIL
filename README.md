@@ -78,6 +78,7 @@
 - [ImageField](/Django/09_Image_Upload.md)
 - [Optimization](/Django/10_Optimization.md)
 - [Django RESTful Framework](/Django/11_DRF.md)
+- [Class Based View](/Django/12_Class_Based_View.md)
 - [DRF with JWT](/Django/13.DRF_with_JWT.md)
 
 <br>
