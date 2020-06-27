@@ -137,6 +137,10 @@
 
 ### Server
 
+- #### [Server 101](/Server/Server101)
+
+  - [What is NGINX](/Server/Server101/What_is_NGINX.md)
+
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
