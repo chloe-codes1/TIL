@@ -57,6 +57,14 @@
 
 <br>
 
+### Go
+
+- #### [Go 101](/Go/Go101)
+
+  - [Go Basics](/Go/Go101/01_Go_basics.md)
+
+
+
 ### Python
 
 - [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
