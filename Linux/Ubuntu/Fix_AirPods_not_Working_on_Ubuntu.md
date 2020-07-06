@@ -1,4 +1,4 @@
-# Fix AirPots not Working on Ubuntu
+# Fix AirPods not Working on Ubuntu
 
 > 에어팟 프로를 샀다!!!! but, 연결이 안되어서 헤메다가 찾은 해결책 공유
 
