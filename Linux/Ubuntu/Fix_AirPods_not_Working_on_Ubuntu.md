@@ -16,6 +16,8 @@
 $ sudo vi /etc/bluetooth/main.conf
 ```
 
+`main.conf`
+
 <br>
 
 ### 1-2. Move to the last line and append the following in it
