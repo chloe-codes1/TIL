@@ -30,7 +30,7 @@
 
         : Debian, Ubuntu, Linspire, Xandros
 
-      - Red 계열
+      - Redhat 계열
 
         : Fedora, CentOS, RHEL, openSUSE, Mandirva
 
