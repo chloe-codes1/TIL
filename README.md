@@ -105,6 +105,7 @@
   
 - #### [Ubuntu](/Linux/Ubuntu)
 
+  - [Using apt-get Commands in Ubuntu](/Linux/Ubuntu/Using_apt-get_Commands_in_Ubuntu.md)
   - [Free Up Space on Ubuntu](/Linux/Ubuntu/Free_Up_Space_on_Ubuntu.md)
   - [Customize Your Ununtu Terminal](/Linux/Ubuntu/Customize_Your_Ununtu_Terminal.md)
   - [Create Desktop Shortcut on Ubuntu](/Linux/Ubuntu/Create_Desktop_Shortcut_on_Ubuntu.md)
