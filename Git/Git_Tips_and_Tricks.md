@@ -69,8 +69,14 @@ $ git pull [원격 저장소 이름] (specify a remote to pull from)
 - 최종적으로 Github 원격 저장소에 push 한다.
 
 ```bash
+$ git push
+
 $ git push origin master
 ```
+
+#### Tip
+
+: 만약 현재 branch가 push 하려는 repo의 branch 이면 `$ git push` 명령어만 입력해도 된다!
 
 <br>
 
@@ -362,3 +368,54 @@ $ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch �
 <br>
 
 ### `git rebase`
+
+> 재 배치하기
+
+- 뒤에 `-i` 를 붙이면 interactive 하게 (대화형으로) 실행 가능
+
+<br>
+
+<br>
+
+## 6. Submodule 사용하기
+
+<br>
+
+### Submodule 이란?
+
+- Git main repo 안에 다른 sub repo가 있는 것
+  - main repo에서는 sub repo를 관리하지 않는다!
+
+- **Submodule**을 사용하면 프로젝트 간에 공통으로 사용되는 logic을 공유 할 수 있다!
+
+<br>
+
+### Add Submodule 
+
+```bash
+$ git submoduel add [repo 주소]
+```
+
+- 이후에 따로 `git add` 없이 commit 할 수 있음
+
+<br>
+
+### Update Submodule
+
+#### Update main repo
+
+```,
+$ git pull
+```
+
+- main repo root에서 다음 명령어를 실행하면 main repo 가 update 됨
+
+<br>
+
+#### Update sub repo
+
+```bash
+$ git submodule update --remote --merge
+```
+
+- main repo의 root에서 위의 명령어를 실행하면 update된 main repo와 sub repo의 관계에 따라 sub repo를 업데이트 해야한다
