@@ -144,6 +144,7 @@
   - [AWS Data Science Meetup - Amazon Personalize](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
   - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
+  - [Amazon RDS](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
 
 <br>
 
