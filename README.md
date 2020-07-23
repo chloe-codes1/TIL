@@ -141,7 +141,8 @@
 
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
   - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
-  - [AWS Data Science Meetup - Amazon Personalize](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
+  - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
+  - [AWS Security Meetup (07/23/2020)](/AWS/AWS_Tips/AWS_Security_Meetup_07232020.md)
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
   - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
   - [Amazon RDS](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
