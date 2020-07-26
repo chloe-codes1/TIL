@@ -43,6 +43,7 @@
 ### Java
 
 - #### [Java 101](/Java/Java101)
+
   - [Java Basics](/Java/Java101/01_Java_basics.md)
   - [OOP](/Java/Java101/02_OOP.md)
   - [Data Types](/Java/Java101/03_Data_types.md)
@@ -51,6 +52,7 @@
   - [Array](/Java/Java101/06_Array.md)
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
   - [Inheritance](/Java/Java101/08_Inheritance.md)
+
 - #### [Java Advanced](/Java/Java_Advanced)
 
   - [Lombok](/Java/Java_Advanced/Lombok.md)
@@ -120,6 +122,7 @@
   - [Create Desktop Shortcut on Ubuntu](/Linux/Ubuntu/Create_Desktop_Shortcut_on_Ubuntu.md)
   - [Settings for XDG user dirs](/Linux/Ubuntu/Settings_for_XDG_user_dirs.md)
   - [Fix AirPods not Working on Ubuntu](/Linux/Ubuntu/Fix_AirPods_not_Working_on_Ubuntu.md)
+  - [Setting a JAVA HOME Path in Ubuntu](/Linux/Ubuntu/Setting_a_JAVA_HOME_Path_in_Ubuntu.md)
 
 <br>
 
