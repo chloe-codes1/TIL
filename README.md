@@ -187,6 +187,7 @@
   - [Using AWS S3 to Store Static Assets on Heroku](/Server/Deployment/Using_AWS_S3_to_Store_Static_Assets_on_Heroku.md)
   - [Deploying a Vue project on Netlify](/Server/Deployment/Deploying_a_Vue_project_on_Netlify.md)
   - [Deploying a Django-Vue application on AWS EC2 using NGINX](/Server/Deployment/Deploying_a_Django-Vue_application_on_AWS_EC2_using_NGINX.md)
+  - [Deploying a SpringBoot-React project on AWS EC2](/Server/Deployment/Deploying_a_SpringBoot-React_project_on_AWS_EC2.md)
 
 <br>
 
