@@ -78,12 +78,15 @@ $ ./mvnw clean package
 > `target` directory 안으로 들어가서 아래의 명령어를 실행한다
 
 ```  bash
-$ java -jar [생성된 jar 파일 이름] &
+$ nohup java -jar [생성된 jar 파일 이름] &
 ```
 
+- `nohup`
+  - Linux, Unix에서 shell script 파일 (*.sh)을 demon 형태로 실행시키는 프로그램
+    - terminal session이 끊겨도 계속 동작하게 함
 - 명령어 뒤에 `&`를 붙이면 현재의 명령과 다른 명령을 분리한다는 의미!
   -  jar 파일로 서버를 실행하고도 다른 명령어들을 수행할 수 있다
-    - background 에서 jar 파일이 실행된다!
+    - **background** 에서 jar 파일이 실행된다!
 
 <br>
 
