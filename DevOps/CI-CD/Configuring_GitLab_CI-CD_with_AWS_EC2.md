@@ -14,12 +14,12 @@
 
 <br>
 
-![GitLab CI/CD 흐름~](/home/chloe/SSAFY/TIL/images/image-20200802144417101.png)
+![GitLab CI/CD 흐름~](../../images/image-20200802144417101.png)
 
 ### GitLab CI/CD 란?
 
 - GitLab CI/CD는 Docker container위에서 작동되고, 연결된 Kubernetes 에 배포된다
-- Project root에 `gitlab-ci.yml` 파일이 있는 상태에서 push가 들어오면, 해당 파일에 명시된 **Pipeline (task 묶음)**이 실행된다
+- Project root에 `gitlab-ci.yml` 파일이 있는 상태에서 push가 들어오면, 해당 파일에 명시된 **Pipeline** (task 묶음)이 실행된다
 
 <br>
 
@@ -77,7 +77,7 @@ $ sudo apt-get install gitlab-runner
 
 ### 1-3. Registering Runners
 
-> root 계정에서 바로 실행하려면 1 ~ 3 번 건너뛰기!
+> root 계정에서 바로 실행하려면 1 ~ 2 번 건너뛰기!
 
 #### 1. 계정 생성
 
