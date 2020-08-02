@@ -304,6 +304,18 @@
 
 <br>
 
+### DevOps
+
+- #### [DevOps 101](/DevOps/DevOps101)
+
+  - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
+
+- #### [CI/CD](/DevOps/CI-CD)
+
+  - [Configuring GitLab CI-CD with AWS EC2](/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
+
+<br>
+
 ### Docker
 
 - [Docker Basics](/Docker/Docker101.md)

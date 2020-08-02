@@ -109,6 +109,8 @@ mysql> FLUSH PRIVILEGES;
 ## 재배포
 
 > 지난번 배포 기록에서도 적었지만 매우 비효율적이다!!! CI/CD 적용할 예정!!!
+>
+> -> [적용 했다!](https://github.com/chloe-codes1/TIL/blob/master/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
 
 <br>
 
