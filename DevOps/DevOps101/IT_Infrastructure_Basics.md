@@ -1,12 +1,12 @@
 # Infra Structure Basics
 
-> IT 인프라에 대해 알아보다가 너무 정리가 잘 되어있는 글을 찾아서 공부하며 다시 정리
+> IT 인프라에 대해 알아보다가 너무 정리가 잘 되어있는 글을 찾아서 공부하며 다시 정리!
 >
 > References: [futurecreator.github.io](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)
 
 <br>
 
-## What is IT Infrastructure?
+## 1. What is IT Infrastructure?
 
 <br>
 
@@ -56,11 +56,11 @@
 
 <br>
 
-## On-premises vs Cloud
+## 2. On-premises vs Cloud
 
 <br>
 
-### On-premises
+### 2-1. On-premises
 
 - Data center나 server실에 server 를 두고 **직접 관리**하는 전통적인 방식
 - Server, Network 장비, OS, Storage, 각종 solution 등을 직접 사서 설치하고 관리해야 했음
@@ -72,7 +72,7 @@
 
 <br>
 
-### Public Cloud
+### 2-2. Public Cloud
 
 - 인터넷을 통해 불특정 다수에게 **서비스 형태**로 제공되는 시스템
   - `서비스 형태` 란?
@@ -82,14 +82,14 @@
 
 <br>
 
-### Private Cloud
+### 2-3. Private Cloud
 
 - Public cloud에서 이용자를 한정한 형태
 - ex) 기업 내 서비스 - 보안이 좋고, 독자적 기능 or 서비스를 추가하기 쉽다
 
 <br>
 
-### Pros of Cloud
+### 2-4. Pros of Cloud
 
 - Traffic의 변동이 많은 시스템은 Cloud 가 유리하다
   - why?
@@ -105,7 +105,7 @@
 
 <br>
 
-### Pros of On-premises
+### 2-5. Pros of On-premises
 
 - On-premises와 Cloud 모두 **가용성**을 보장하지만 개념에서 차이가 있다
   - `On-premises`
@@ -124,4 +124,49 @@
 
 <br>
 
-*계속 공부중...*
+### 2-5. Hybrid Cloud
+
+- On-premises와 Cloud 각각 장단점이 있기 때문에 **두 가지를 함께 사용**하기도 함
+  - 각 system의 특성에 맞게 두 가지를 함께 사용하는 것!
+- Cloud provider들도 각각의 장단점이 달라서 여러 클라우드를 함께 사용하기도 함
+- 이것을 잘 결정하기 위해 각각의 특성을 잘 알고 있어야 하고, 선택의 기준이 명확해야 함!
+
+<br>
+
+<br>
+
+## 3. Infra 관련 개념들
+
+<br>
+
+### 3-1. 하드웨어
+
+- Infra에서 가장 low-level을 맡고 있는 것이 **하드웨어**와 **네트워크**이다
+- **On-premise** system에서는 여러 대의 server 장비로 구성된다
+- **Cloud**에서는 instance의 하드웨어 성능을 필요에 따라 선택하게 된다
+
+<br>
+
+### 3-2. CPU
+
+- CPU의 성능은 **Core**와 **Cache**의 영향을 받는다
+  - **Core**가 많을 수록 동시에 처리하는 연산이 늘어나고,
+  - 메모리와 처리속도를 완화하기 위한 **Cache** 는 크기가 클수록 성능이 좋다
+- **GPU**
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+*계속  공부중...*
+
