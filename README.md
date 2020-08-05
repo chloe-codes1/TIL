@@ -168,7 +168,8 @@
   - [AWS Security Meetup (07/23/2020)](/AWS/AWS_Tips/AWS_Security_Meetup_07232020.md)
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
   - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
-  - [Amazon RDS](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
+  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Tips/Amazon_S3-Creating_a_Bucket.md)
+  - [Amazon RDS for MySQL](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
   - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
 
 <br>
