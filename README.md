@@ -212,6 +212,7 @@
 - [Many to Many Relationship](/DB/04_Many_To_Many_Relationship.md)
 - [Dump and Load Data](/DB/05_Dump_and_Load_Data.md)
 - [MySQL with Django](/DB/06_MySQL_with_Django.md)
+- [Create MySQL Users Accounts and Grant Privileges](/DB/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
 
 <br>
 
