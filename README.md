@@ -169,6 +169,7 @@
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
   - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
   - [Amazon S3 - Creating a Bucket](/AWS/AWS_Tips/Amazon_S3-Creating_a_Bucket.md)
+  - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Tips/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
   - [Amazon RDS for MySQL](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
   - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
 
