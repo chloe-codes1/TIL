@@ -60,3 +60,130 @@
         - 개발자는 자신이 원하는 형태로 application을 container 형태의 package로 만들고, 
         - 이를 수평적으로나 수직적으로 확장하기 위해 다양한 platform에 container를 배포하는 작업은 IT팀이 전담하게 할 수 있다
 
+<br>
+
+<br>
+
+### OS Container vs Application Container
+
+| OS Container                             | Application  Container                  |
+| :--------------------------------------- | --------------------------------------- |
+| 하나의 OS Container에 여러 서비스를 구동 | 하나의 Container에 하나의 서비스를 구동 |
+| 레이어드 파일 시스템을 사용하지 않음     | 레이어드 파일 시스템 기반               |
+| ex) LXC, OpenVZ, BSD 재일                | ex) Docker, 로켓                        |
+
+<br>
+
+<br>
+
+### Docker 자세히 알아보기
+
+- 도커는 다양한 Linux Kernel 기능을 파일시스템과 엮어서 image를 **module** 방식으로 구성한다
+- 구성한 image를 통해 
+  - application 가상 환경을 마음껏 설정할 수 있으며,
+  - **WORA (Write-Once-Run-Anywhere)** 원칙을 실현할 수 있다
+-  Application을 하나의 process 를 구동하는 수준으로 간략하게 만들 수 있으므로
+  - 여러 process가 협업하는 **분산 시스템**을 쉽게 구축할 수 있으며,
+  - 높은 **확장성**도 지원할 수 있다
+- 도커는 application 개발에 있어서 중요한 네 가지 특징을 제공한다
+  1. 자율성 (autonomy)
+  2. 분산화 (decentralization)
+  3. 병렬성 (parallelism)
+  4. 격리성 (isolation)
+
+- 도커 컨테이너는 개발 머신이나 베어메탈 서버, 가상 머신, 데이터센터 등 어디서나 자신과 똑같은 동작을 재현할 수 있다
+  - Application 설계자의 입장에서 운영에 관한 사항은 모두 **DevOps**팀에 맡기고, 온전히 개발에만 집중할 수 있다..!
+    - 이로 인해 팀의 workflow를 모듈화 할 수 있어서 생산성과 효율성을 높일 수 있다
+
+<br>
+
+#### Docker와 VM
+
+- Docker는 OS를 공유하는 방식으로 Container에서 구동하는 application 수준의 격리와 보안 기능을 제공한다
+  - 이처럼 OS 계층을 완벽히 **추상화**해 강력한 **격리**와 **보안 기능**을 제공함에도 불구하고 Docker의 리소스 사용량은 VM에 비해 상당히 적어서 성능과 효율이 뛰어나다!
+
+<br>
+
+<br>
+
+### Benefits of Docker
+
+Microservice Architecture에서 Docker Container를 사용하면 다음과 같은 장점이 있다
+
+- **빠른 application 배포**
+  - Container는 application에 관련된 부분만 담고 있어서 크기가 작기 때문에 최소한의 런타임으로 **빠르게 배포** 할 수 있다
+- **이식성**
+  - `Application`과 `운영 환경` (application에서 사용하는 library를 비롯한 dependency 정보) 을 하나의 Docker Container로 묶을 수 있는데, 이렇게 구성한 container는 OS 버전이나 배포 모델과 **독립적**이다
+  - Docker Container는 호환성에 관련된 문제를 신경 쓰지 않고도 docker를 운영할 수 있는 머신에 전송해 곧바로 실행할 수 있따
+- **쉬운 공유**
+  - 미리 제작된 container image는 공용 repo나 내부 전용 사설 repo에 올려두고 쉽게 공유할 수 있다
+- **적은 자원 사용량**
+  - Docker image는 크기가 작으며 새로운application을 배포할 때 다른 container를 활용하기 때문에 자원 사용량도 적다
+- **재사용성**
+  - Docker container의 버전을 지속적으로 이어나가기 쉬울 뿐만 아니라 원할 때 언제든지 이전 버전으로 되돌아가기도 쉽다
+  - 기존에 사용하는 layer에 담긴 component들을 재사용할 수 있기 때문에 엄청난 **경량화**가 가능하다
+
+<br>
+
+<br>
+
+### Lifecycle of Docker Container
+
+<br>
+
+#### 1. Build
+
+- Container를 package로 만드는 데 필요한 모든 명령을 `Dockerfile`에 작성하고, 이를 이용해 Docker image를 **build** 한다
+
+  ```bash
+  $ docker build
+  ```
+
+- Image에 tag를 달려면 **-t** option을 준다
+
+  ``` bash
+  $ docker build -t 사용자 이름/이미지 이름
+  ```
+
+- `Dockerfile`이 현재 directory가 아닌 다른 경로에 존재할 때는 **-f** option으로 Dockerfile의 경로를 지정한다
+
+  ``` bash
+  $ docker build -t 사용자 이름/이미지 이름 -f /경로/Dockerfile
+  ```
+
+<br>
+
+#### 2. Run
+
+- Image를 생성한 후에 Container를 배치할 때는 **docker run** 명령을 실행한다
+
+  ``` bash
+  $ docker run
+  ```
+
+- 구동한 container의 상태를 확인하려면 **docker ps** 명령을 실행한다. 
+
+  ```bash
+  $ docker ps
+  ```
+
+  - 이 명령을 실행하면 현재 active 상태에 있는 container 목록이 나타난다
+
+- 모든 프로세스를 일시정지 할 때는 **docker pauge** 명령을 실행한다
+
+  ```bash
+  $ docker pause
+  ```
+
+  - 이 명령은 `cgroups freezer` 를 이용해 현재 container에서 구동 중인 모든 process를 일시 정지한다
+    - 내부적으로 SIGSTOP signal을 보낸다
+  - 이 명령을 이용하면 언제든지 process를 일시정지 했따가 resume 할 수 있다
+
+- 한 개 이상의 stop 상태에 있는 container를 실행 시킬때는 **docker start** 명령어를 사용한다
+
+  ```bash
+  $ docker start
+  ```
+
+  
+
