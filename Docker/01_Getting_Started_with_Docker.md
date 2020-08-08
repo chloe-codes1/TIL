@@ -131,6 +131,10 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 
 <br>
 
+![image-20200809005844880](../images/image-20200809005844880.png)
+
+<br>
+
 #### 1. Build
 
 - Container를 package로 만드는 데 필요한 모든 명령을 `Dockerfile`에 작성하고, 이를 이용해 Docker image를 **build** 한다
@@ -176,7 +180,7 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
   ```
 
   - 이 명령은 `cgroups freezer` 를 이용해 현재 container에서 구동 중인 모든 process를 일시 정지한다
-    - 내부적으로 SIGSTOP signal을 보낸다
+    - 내부적으로 **SIGSTOP** signal을 보낸다
   - 이 명령을 이용하면 언제든지 process를 일시정지 했따가 resume 할 수 있다
 
 - 한 개 이상의 stop 상태에 있는 container를 실행 시킬때는 **docker start** 명령어를 사용한다
@@ -185,5 +189,69 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
   $ docker start
   ```
 
-  
+<br>
+
+#### 3. Stop / Kill
+
+- Docker를 다 사용했다면 멈추거나(Stop) 종료(Kill)한다
+
+  ```bash
+  $ docker stop
+  ```
+
+  - **docker stop** 명령을 사용하면 현재 구동중인 container에 **SIGTERM** signal을 보낸 후 **SIGKILL** signal을 보내서 자연~스럽게 멈추게 한다
+  - 이 명령으로 멈춘 후에도 **docker ps -a** 명령을 실행하면 목록에 container가 나타난다
+
+  ```bash
+  $ docker kill
+  ```
+
+  - **docker kill** 명령을 실행하면 현재 구동중인 container의 main process에 **SIGKILL** signal을 보낸다
+
+<br>
+
+#### 4. Commit
+
+- Container를 실행 주엥 변경한 사항을 저장하려면 먼저 container를 멈춘 (Stop) 후에 **docker commit** 명령을 실행한다
+
+  ```bash
+  $ docker commit
+  ```
+
+  - 이 명령어를 실행하면 변경된 부분이 Image에 반영된다!
+
+<br><br>
+
+<br>
+
+`+`
+
+## 유니커널 (Unikernel)
+
+- 유니커널은 불필요한 코드를 제거하고 단일 주소 공간 machine image를 생성하도록 application logic 에 필요한 기능만 포함하도록 **Custom OS** 로 compile 한 것
+- 유니커널은 라이브러리 OS 를 이용해 build 한다
+
+<br>
+
+### Benefits of Unikernel
+
+1. **빠른 부팅 시간**
+   - 유니커널은 provisioning 작업을 매우 동적인 방식으로 처리하며 부팅 시간도 1초 이내다
+2. **적은 메모리 사용량**
+   - 유니커널의 코드베이스는 기존 OS에 비해 작으며 관리하기도 쉽다
+3. **향상된 보안**
+   - 불필요한 코드가 담겨 있지 않기 때문에 공격에 노출될 가능성을 크게 줄일 수 있다
+4. **세밀한 최적화**
+   - 유니커널은 compile tool chain을 통해 생성되며, device driver와 application logic에 최적화된다
+
+<br>
+
+- 유니커널은 source code와 그로부터 생성된 binary에 대한 버전 관리를 쉽게 할 수 있다
+  - 다시 빌드하는 과정도 간단하기 때문에 **Microservice architecture**와 잘 어울린다
+- 유니커널 활용 예
+  - ex) 디스크 접근과 화면 출력 기능을 사용하지 않는 application을 제작할 때, 해당 디바이스 드라이버와 화면 출력 기능을 kernel에서 제거해 유니커널로 만들 수 있다
+    - `Application`과 `runtime 환경`, `OS 기능` 만 담아서 실전에 배치할 시스템을 최소한으로 만들 수 있다
+    - 이는 실전에 배치한 서버에서 application을 변경할 필요가 있을 때 새로운 Image를 생성하는 불변형 애플리케이션 배포 (immutable application deployment) 방식의 핵심 개념이다
+- 컨테이너와 유니커널을 서로 궁합이 잘 맞는다
+  - 유니커널이라는 또 다른 추상화 계층을 도입하면, docker 개발자는 기존 방식으로 docker container를 사용할 수도 있고, 실전 환경을 위한 유니커널 container 방식으로 활용할 수도 있다
 
