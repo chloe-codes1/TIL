@@ -152,11 +152,42 @@
 - CPU의 성능은 **Core**와 **Cache**의 영향을 받는다
   - **Core**가 많을 수록 동시에 처리하는 연산이 늘어나고,
   - 메모리와 처리속도를 완화하기 위한 **Cache** 는 크기가 클수록 성능이 좋다
+  
 - **GPU**
 
+  - Graphic을 처리하는데 특화된 Processor
 
+  - `CPU`가 **직렬 처리**에 최적화된 몇 개의 코어로 구성된 반면,
 
+    - `GPU`는 **병렬 처리**에 최적화된 작고 많은 코어로 이루어져 있다
 
+    ![CPU vs GPU](../../images/image-20200809235005629.png)
+
+  - Deep learning이나 수치 해석 등 대량의 Data를 고속으로 처리해야하는 분야에서는 CPU와 GPU를 함께 사용해서 처리 성능을 높이는 **GPU Computing** 방식이 사용된다
+
+    - 이 방식은 연산이 많이 필요한 부분을 GPU에게 넘기고, 나머지 코드만을 CPU에서 처리하는 방식이다!  오호..
+
+    ![How GPU Acceleration Works](../../images/image-20200809235316059.png)
+
+<br>
+
+### 3-3. Memory
+
+- 주 기억장치인 메모리는 data 용량이 크거나 전송 속도가 고속일수록 고성능이다
+- Server용으로는 전력 소모가 적고 **오류 처리**가 탑재되어 있는 것을 주로 선정한다
+
+<br>
+
+### 3-4. Data Storage
+
+- Data를  저장하는 Device
+- 보통 Storage의 속도가 제일 느리기 때문에 Storage의 용량이나 Read, Write 속도가 system 전체의 속도에 영향을 주는 경우가 많다
+- `하드디스크`나 `SSD (Solid-State Drive)`등으로 이루어져 있다
+
+#### Data 관리
+
+- IT에서 가장 중요한 것은 data라고 할 수 있다
+- 이러한 data가 손실되면 안되기 때문에 대부분 **고가용성**(High Availability, HA, 오랜 기간동안 지속적으로 운영될 수 있음)을 위해 **이중화(redundancy)** or **다중화**로 구성한다
 
 
 
