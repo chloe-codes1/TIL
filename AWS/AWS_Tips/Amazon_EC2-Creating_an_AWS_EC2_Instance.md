@@ -22,6 +22,51 @@
 
 <br>
 
+<br>
+
+### Cloud Computing 의 개념
+
+<br>
+
+#### Cloud Service Provider (CSP)
+
+- Computing 자원 (VM, Container)를 서비스로 제공하는 사업자
+  - ex) Amazon (Amazon Web Service), Microsoft (Azure), Google (Google Cloud Platform)
+
+<br>
+
+#### Virtual Machine (VM)
+
+- 클라우드 상에 존재하는 컴퓨터
+
+<br>
+
+#### VM Image
+
+- 가상머신의 상태 정보를 담고 있는 파일
+
+<br>
+
+#### Security Group
+
+- 방화벽과 같이 네트워크 접근을 통제 / 제어하는 서비스
+
+<br>
+
+#### Secure Shell (SSH)
+
+- 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하는 응용 프로그램 or protocol
+
+<br>
+
+#### Key Pair
+
+- RSA 알고리즘 기반의 공개키와 개인키로 이뤄진 키의 쌍으로 VM Instance에 접근하는데 사용
+
+<br>
+
+<br>
+
 ### Amazon EC2 Basics
 
 - Amazon EC2 (Elasitc Compute Cloud) 인프라를 사용하면 **AMI(Amazon Machine Instance)** 를 실행하는 **서버 인스턴스**를 가동할 수 있다
