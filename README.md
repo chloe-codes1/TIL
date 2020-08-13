@@ -312,6 +312,7 @@
 - #### [DevOps 101](/DevOps/DevOps101)
 
   - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
+  - [What is DevOps](/DevOps/DevOps101/What_is_DevOps.md)
 
 - #### [CI/CD](/DevOps/CI-CD)
 
