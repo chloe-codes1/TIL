@@ -305,6 +305,7 @@
 - [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
 - [Git Branch](/Git/Git_Branch.md)
 - [Create a gitignore](/Git/Create_a_gitignore.md)
+- [Caching your GitHub credentials in Git](/Git/Caching_your_GitHub_credentials_in_Git.md)
 
 <br>
 
