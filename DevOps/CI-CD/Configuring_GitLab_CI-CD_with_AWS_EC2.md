@@ -6,7 +6,7 @@
 >
 > 그래서 CI/CD 를 알아보던 중, SSAFY에서 Github이 아닌 GitLab을 활용하고 있는 만큼 GitLab이 만든 Gitlab CI/CD를 활용해서 배포 자동화를 해보기로 했다!
 >
-> References: [namioto.ip.or.kr]([https://namioto.ip.or.kr/2018/07/16/gitlab-ci%EB%A1%9C-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0/](https://namioto.ip.or.kr/2018/07/16/gitlab-ci로-자동배포하기/))
+> References: [namioto.ip.or.kr](https://namioto.ip.or.kr/2018/07/16/gitlab-ci%EB%A1%9C-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0/)
 
 <br>
 
@@ -154,7 +154,7 @@ $ sudo gitlab-runner register
 ex)
 
 ```yaml
-deploy-to-server: 
+deploy-to-server:
   stage: deploy
   only:
     - master
@@ -162,12 +162,15 @@ deploy-to-server:
     - echo 'start deployment'
     - whoami
   script:
-    - cd /home/ubuntu/s03p12a112/backend/
+    - cd /home/ubuntu/s03p12a112/
+    - git pull origin master
+    - cd backend
+    - kill $(lsof -t -i:8000)
     - sudo mvn package
     - cd /home/ubuntu/s03p12a112/backend/target/
-    - kill $(lsof -t -i:8000)
     - setsid nohup java -jar backend-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
     - cd /home/ubuntu/s03p12a112/frontend/
+    - sudo npm install
     - sudo npm run build
     - sudo service nginx restart
   after_script:
