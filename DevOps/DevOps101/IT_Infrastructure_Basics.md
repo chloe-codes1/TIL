@@ -245,7 +245,26 @@
   - 그래서 **IPv6**는 **128 bit**의  IP 주소를 사용하고 있다!!
 -  사내 네트워크에서는 임의의 주소를 할당하는 **프라이빗 주소**를 사용하고 인터넷과의 경계에서 글로벌 주소로 변환하는 **NAT 장비**를 사용한다
 
+<br>
 
+<br>
+
+### 4-2. OSI Model
+
+- 통신을 할 때 서로 1) 어떻게 메시지를 주고 받고 2) 어떤 언어를 사용할지 등 **규칙**이 필요하다
+  - 이런 규약을 **통신 프로토콜**이라고 한다
+
+- `OSI (Open Systems Interconnection) Model` 은 국제 표준화 기구 (International Organization for Standarization, IOS) 에서 만든 컴퓨터의 **통신 기능**을 **계층 구조**로 나눈 모델이다
+- OSI Model을 이용하면 특정 Networking System에서 일어나는 일을 계층을 활용해 시각적으로 이해할 수 있다
+- OSI 계층은 총 **7계층**으로 이루어져 있다
+  - 데이터 -> 네트워크로 **나갈 때**는 위층에서부터
+  - 네트워크 -> 데이터를 **받을 때**는 아래층에서부터 들어온다
+
+<br>
+
+#### OSI Model vs TCP/IP Model
+
+![OSI Model vs TCP/IP Model](../../images/image-20200817235730918.png)
 
 <br>
 
