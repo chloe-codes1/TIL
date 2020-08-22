@@ -471,9 +471,68 @@
 
 <br>
 
+#### 7. 리눅스 배포판 (Linux Distribution)
 
+- 보통 Linux는 Kernel 위에 각종 command, library, application을 포함해 **배포판**이라는 패키지 형태로 배포된다
+- 다양한 배포판이 있는데, 그 이유는 사람마다 원하는 프로그램이 다르고 Linux는 open source라서 개인 또는 기업이 직접 수정해서 사용할 수 있기 때문이다
 
+- 배포판 종류
 
+  - **Debian 계열**
+
+    - Debian
+
+      : GNU/Linux 커뮤니티에서 개발한 리눅스
+
+    - KNOPPIX
+
+      : CD 부팅으로 이용할 수 있는 리눅스
+
+    - Ubuntu
+
+      : 풍부한 Desktop 환경을 제공하는 리눅스   *우분투 쵝오*
+
+  - **Red Hat 계열**
+
+    - Fedora
+
+      : Red Hat이 지원하는 커뮤니티 `Fedora Project` 의 리눅스
+
+    - Red Hat Enterprise Linux (RHEL)
+
+      : Red Hat이 제공하는 상용 리눅스
+
+    - CentOS
+
+      : RHEL과 완전한 호환을 지향하는 리눅스
+
+    - Vine Linux
+
+      : 일본에서 개발된 리눅스
+
+  - **Slackware 계열**
+
+    - `openSUSE`
+
+      : Novell이 지원하는 커뮤니티에서 개발된 리눅스
+
+    - `SUSE Linux Enterprise`
+
+      : openSUSE를 기반으로 한 안정화된 상용 리눅스
+
+  - **기타 배포판**
+
+    - `Arch Linux`
+
+      : 패키지 관리 시스템에 Pacman을 사용하는 Linux
+
+    - `Gentoo Linux`
+
+      : Portage라는 패키지 관리 시스템을 사용하는 Linux
+
+  
+
+<br>
 
 <br>
 
