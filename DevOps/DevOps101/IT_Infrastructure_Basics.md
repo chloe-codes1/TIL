@@ -392,7 +392,7 @@
 
   | Shell 이름 | 특징                                                         |
   | ---------- | ------------------------------------------------------------ |
-  | bash       | - **명령 이력**, **Directory stack**, 명령이나 파일명의 **자동 완성 기능**을 지원한다<br>- 대부분의 Linux system이나 macOS(OS X)에 표준으로 탑재되어 있따 |
+  | bash       | - **명령 이력**, **Directory stack**, 명령이나 파일명의 **자동 완성 기능**을 지원한다<br>- 대부분의 Linux system이나 macOS(OS X)에 표준으로 탑재되어 있다 |
   | csh        | - C언어와 비슷한 Shell <br>- BSD 계열 OS에서 주로 사용한다   |
   | tsch       | csh 를 개선한 버전으로 명령이나 파일명 등의 **자동 완성 기능** 지원 |
   | zsh        | bash와 호환성이 있고 고속으로 동작하는 Shell                 |
@@ -429,7 +429,47 @@
 - `NFS`
   - Unix에서 이용하는 분산 파일 시스템 및 protocol
 
+<br>
 
+#### 5. Directory 구성
+
+- Linux의 directory 목록은 **FHS (Filesystem Hierachy Standard)** 라는 규격으로 **표준화** 되어 있다
+  - 대부분의 주요 배포판은 **FHS**를 기반으로 directory를 구성한다
+
+| Directory | 설명                                                         |
+| --------- | ------------------------------------------------------------ |
+| `/`       | root directory                                               |
+| `/bin`    | `ls`, `cp` 같은 기본 command를 저장하는 directory            |
+| `/boot`   | Linux Kernel 등 OS 부팅에 필요한 파일을 저장하는 directory   |
+| `/dev`    | 하드디스크, 키보드, 디바이스 파일을 저장하는 directory       |
+| `/etc`    | OS나 application의 설정 파일을 저장하는 directory            |
+| `/home`   | - 일반 사용자의 home directory<br> - root사용자는 `/root` 를 home directory로 사용한다! |
+| `/proc`   | - Kernel이나 process에 대한 정보를 저장하는 directory<br>- `/proc` 하위에 있는 숫자 폴더는 **process ID**를 의미한다! |
+| `/sbin`   | System 관리용 mount를 저장하는 directory                     |
+| `/tmp`    | - 일시적으로 사용하는 파일을 저장하는 directory<br>- 서버를 재시작하면 사라진다 |
+| `/usr`    | 각종 프로그램이나 Kernel source를 저장하는 directory         |
+| `/var`    | System 가동과 함께 변하는 파일을 저장하는 directory          |
+
+<br>
+
+#### 6. 보안 기능
+
+- **계정에 대한 권한 설정**
+  - Linux는 사용자 계정에 권한을 설정할 수 있다
+  - System 전체를 관리하는 `root` 사용자와 그 외 일반 사용자가 있다
+    - Middleware와 같은 demon을 작동시키기 위한 system 계정도 있다
+  - 계정은 그룹으로 묶을 수도 있다!
+  - 계정과 그룹을 바탕으로 파일이나 directory에 대한 **액세스 권한 (Access permission)**을 설정할 수 있다
+- **네트워크 필터링**
+  - Linux는 원래 Network쌍에서 여러 사용자가 이용하는 것을 전제로 만든 OS이므로 Network관련 기능이 많다
+  - `iptables` 는 Linux에 내장된 **패킷 필터링** 및 **NAT**를 설정할 수 있는 기능이다
+- **SELinux (Security-Enhanced Linux)**
+  - SELinux는 미국 국가안전보장국이 제공하는, Linux Kernel에 강제 access 제어 기능을 추가한 것이다
+  - Linux는 root 사용자가 permission에 상관없이 모든 access가 가능해서 root 계정이 도난당하면 system에 치명적인 영향을 줄 수 있는 단점이 있따
+    - SELinux는 process마다 access 제한을 거는 `TE (Type Enforcement)` 와 root를 포함한 모든 사용자에게 제어를 거는 `RBAC(Role-based Access Control)`  등으로 root에게 권한이 집중되는 것을 막아준다
+      - 오호!!
+
+<br>
 
 
 
