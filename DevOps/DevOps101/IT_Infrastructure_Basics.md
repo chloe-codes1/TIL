@@ -356,8 +356,6 @@
 
 <br>
 
-<br>
-
 ### 리눅스 커널 (Linux Kernel)
 
 - Kernel이란 OS의 코어가 되는 부분을 말한다
@@ -530,7 +528,70 @@
 
       : Portage라는 패키지 관리 시스템을 사용하는 Linux
 
-  
+<br>
+
+<br>
+
+## 6. 미들웨어 (Middleware)
+
+- 미들웨어 OS와 비즈니스를 처리하는 application 사이에 들어가는 각종 Software를 말한다
+  - ex) Web Server, DBMS, System monitoring 등이 있다
+
+<br>
+
+### 6-1. 웹 서버 (Web Server)
+
+- Web Server는 Client가 보낸 HTTP 요청을 받아 Web Content를 응답으로 반환하거나, sever-side application을 호출하는 기능을 가진 server이다
+
+| 이름                              | 설명                                                         |
+| --------------------------------- | ------------------------------------------------------------ |
+| **Apache HTTP Server**            | 폭 넓게 사용되는 전통적인 open source web server             |
+| **Internet Information Services** | - Microsoft 에서 제공하는 web server<br>- Window Server 시리즈와 같은 OS 제품에 들어 있음 |
+| **Nginx**                         | 소비 메모리가 적으며                                         |
+
+<br>
+
+### 6-2. DBMS
+
+- 데이터 베이스 관리 시스템 (Database Management System, DBMS) 은 **데이터베이스**를 관리하는 **미들웨어**이다
+- 데이터의 CRUD (Create, Read, Update, Delete) 와 같은 기본 기능과 Transaction 처리 등 많은 기능을 포함한다
+- 다양한 종류의 DBMS가 있다
+- 벤더마다 구문이 상당히 다르기 때문에 `ANSI SQL` 이라는 표준이 있다
+- DBMS 마다 지원하는 기능, 성능, 가격이 천차만별이므로 필요한 용도에 따라 선택하면 된다!
+
+<br>
+
+#### RDBMS
+
+| 이름                     | 설명                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| **Oracle Database**      | - Oracle이 제공하는 상용 RDBMS<br>- 주로 기업에서 많이 사용되는 데이터베이스로 글로벌 DB 시장 점유율 1위<br>- 상당히 고가인만큼 많은 기능을 제공 |
+| **MySQL**                | - Oracle이 제공하는 오픈 소스 관계형 (Relational) DBMS<br>- 가장 많이 사용되는 오픈소스 RDBMS<br>- `MySQL AB`라는 제작사를 썬이 인수하고, 이후 오라클이 썬을 인수하면서 오라클이 소유주가 됨<br>- 무료인 **커뮤니티 버전**과 유료인 **상용 버전**으로 나뉘어져 있다<br>- 이후 오픈 소스 진영에서 MySQL을 기반으로 한 `MariaDB`를 만들었다 |
+| **Microsoft SQL Server** | - Microsoft에서 제공하는 상용 RDBMS<br>- Windows에 특화되어 있다 |
+| **PostgreSQL**           | Oracle, MySQL, SQL Server에 이어 글로벌 점유율 4위인 오픈 소스 RDBMS |
+
+<br>
+
+#### NoSQL
+
+- NoSQL은 SQL만을 사용하지 않는 DBMS를 말한다
+- 데이터를 저장할 때 table 대신 다른 형태로 저장하는 방식이다
+- RDB와 비교해서 어느 것이 더 좋다기 보다 용도에 맞게 사용하는 것이 중요하다!
+
+| 형태                   | 설명                                                         | 종류                                                         |
+| ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Key-value**          | - 단순한 형태의 NoSQL<br>- 간단해서 속도가 빠르고 익히기 쉽다<br>- 값의 내용을 사용한 쿼리가 불가능해서 application level 에서 처리가 필요하다 | [Redis](https://redis.io/)<br/>[Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/)<br/>[Memcached](https://memcached.org/) |
+| **Document**           | - Key-Value와 비슷하나 단순한 Value가 아닌 계층규조인 document로 저장된다<br>- 쿼리를 사용할 순 있으나 일반 SQL과는 다르다 | [MongoDB](https://www.mongodb.com/)<br/>[Couchbase](https://www.couchbase.com/) |
+| **Wide column stores** | - table, row, column을 사용하지만 RDB와는 달리 column의 이름과 포맷은 같은 row라도 다를 수 있다<br>- 2차원 Key-value 형태이다 | [Cassandra](http://cassandra.apache.org/)<br/>[HBase](https://hbase.apache.org/) |
+| **Graph**              | - Data를 graph처럼 연속적인 node, edge, property의 형태로 저장<br>- SNS나 추천 엔진, 패턴 인식 등 데이터 간의 간계를 위주로 할 때 적합 | [ Neo4j](https://neo4j.com/)                                 |
+
+<br>
+
+
+
+
+
+
 
 <br>
 
