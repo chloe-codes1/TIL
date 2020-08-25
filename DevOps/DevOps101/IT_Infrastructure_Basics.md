@@ -587,7 +587,16 @@
 
 <br>
 
+### 6-3. 시스템 모니터링 (System Monitoring)
 
+- 시스템 운영을 위해서는 여러 상태를 지속적으로 감시해야 한다
+- Network, Server, Cloud, Application, Service, Transaction 등 다양한 레벨에서 모니터링을 하면서 이상 여부를 확인하고 원인을 분석한다
+
+| 이름                                  | 설명                                                         |
+| ------------------------------------- | ------------------------------------------------------------ |
+| [Zabbix](https://www.zabbix.com/)     | - `Zabbix SIA`가 개발한 오픈 소스 모니터링 툴<br>- 다양한 서버의 상태를 모니터링 할 수 있다 |
+| [Datadog](https://www.datadoghq.com/) | - `Datadog` 가 개발한 서버 모니터링 SaaS<br>- 따로 서버를 도입할 필요 없이 web broser에서 모니터링 가능<br>- **멀티 클라우드** 환경에서도 손쉽게 모니터링 가능 |
+| [Mackerel](https://mackerel.io/)      | - `Hatena` 가 개발한 서버 모니터링 Saas<br>- 클라우드 서버 모니터링에 유용 |
 
 
 
