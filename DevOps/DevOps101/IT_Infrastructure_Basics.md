@@ -598,7 +598,27 @@
 | [Datadog](https://www.datadoghq.com/) | - `Datadog` 가 개발한 서버 모니터링 SaaS<br>- 따로 서버를 도입할 필요 없이 web broser에서 모니터링 가능<br>- **멀티 클라우드** 환경에서도 손쉽게 모니터링 가능 |
 | [Mackerel](https://mackerel.io/)      | - `Hatena` 가 개발한 서버 모니터링 Saas<br>- 클라우드 서버 모니터링에 유용 |
 
+<br>
 
+<br>
+
+## 7. 인프라 구성 관리
+
+> 인프라 구성 관리란 인프라를 구성하는 하드웨어, 네트워크, OS, 미들웨어, 어플리케이션 등의 **구성 정보**를 **관리**하고, 적절한 상태로 **유지**하는 작업을 의미한다
+
+<br>
+
+### Immutable Infrastructure
+
+- On-premise 환경에서는 인프라 환경을 구축하는 것도 큰 일이고, 일단 구축하면 변경 이력을 정리하면서 상당히 오랜 기간 사용한다
+  - but, 클라우드는 가상 환경이기 때문에 필요하면 구축하고 불필요하면 바로 폐기해도 상관 없다!
+    - 즉, 서비스가 업데이트되면 **기존 운영 환경**을 **변경**하는 대신 `image`를 새로 생성해 배포한다
+      - 이를 변하지 않는다는 뜻인 **Immutable Infrastructure** 라고 한다
+
+![immutable_infrastructure](https://www.oreilly.com/radar/wp-content/uploads/sites/3/2019/06/immutable_infrastructure-8346d81e892e98c1308f707a037f4040.gif)
+
+- Immutable Infra는 `image` 하나로 서버를 쉽게 찍어낼 수 있고, 해당 `image` 만 관리하면 되기 때문에 **관리**도 **용이**하다!
+- **환경 자체를 배포**하는 것이기 때문에 **동일한 환경**에서 테스트도 쉽다
 
 
 
