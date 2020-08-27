@@ -18,8 +18,8 @@
 
 #### Useful Informations
 
-1. Amazone EC2의 간단한 Web service interface를 통해 간편하게 필요한 용량을 얻고 구성 가능하다.
-2. Amazon Simple Storage Service(S3)는 어디서나 원하는 양의 data를 저장/검색 할 수 있도록 구축된 객체 storage다.
+1. Amazon EC2의 간단한 **Web service interface**를 통해 **간편**하게 필요한 용량을 얻고 **구성** 가능하다.
+2. Amazon Simple Storage Service(S3)는 어디서나 **원하는 양의 data**를 저장/검색 할 수 있도록 구축된 **객체 storage**다.
 
 <br>
 
@@ -29,13 +29,73 @@
 
 > Cloud's virtual server
 
-안전하고 크기 조정이 가능한 computing power를 cloud에서 제공하는 web service
+<br>
+
+### Amazon EC2 란?
+
+: **안전**하고 **크기 조정이 가능**한 computing power를 cloud에서 제공하는 web service
 
 - 개발자가 더 쉽게 web 규모의 cloud computing 작업을 할 수 있도록 설계
-- Amazon EC2의 간단한 web service interface를 통해 간편하게 필요한 용량을 얻고 구성 가능
-- Computing resource에 대한 포괄적인 제어권을 제공, Amazon의 검증된 computing infra에서 실행 가능
-- Amazon EC2는 새로운 `Server Instance`를 획득하고 부팅하는데 필요한 시간을 단 몇 분으로 단축하므로 computing 요구 사항의 변화에 따라 신속하게 용량을 확장하거나 축소 가능
-- 개발자가 장애에 대한 복원력이 뛰어나고 일반적인 오류 상황에 영향을 받지 않는 application을 구축할 수 있도록 도구를 제공
+- Amazon EC2의 간단한 **web service interface**를 통해 간편하게 필요한 용량을 얻고 구성 가능
+  - EC2를 사용하면 단 몇 분만에 새로운 서버를 생성하고 서비스를 위한 Infra를 구축할 수 있다!
+- **Computing resource**에 대한 포괄적인 **제어권**을 제공, Amazon의 검증된 computing infra에서 실행 가능
+- 가상화 서버 (Virtual Server)를 `Instance`라 부른다
+- Amazon EC2는 새로운 `Server Instance`를 획득하고 부팅하는데 필요한 시간을 단 몇 분으로 단축하므로 **computing 요구 사항**의 **변화**에 따라 **신속**하게 용량을 **확장**하거나 **축소** 가능
+  - 한 개에서 수천 개의 Instance로 확장 가능하다
+- 모든 공개된 AWS Region에서 사용 가능하다
+- 필요에 따라 Instance의 **생성**, **시작**, **수정**, **중단**, **삭제**가 가능하다
+- 개발자가 **장애**에 대한 **복원력**이 뛰어나고 일반적인 **오류 상황**에 영향을 받지 않는 application을 구축할 수 있도록 **도구를 제공**한다
+- 다양한 비용 모델 (`On-demand`, `Spot`, `예약`)을 선택할 수 있다
+
+<br>
+
+<br>
+
+### Amazon EC2의 주요 특징
+
+: Amazon EC2 Instance는 **사용 목적**과 **비용을 지불하는 방식**에 사용자가 원하는 유형을 선택하여 사용할 수 있도록 구성되어 있다
+
+<br>
+
+#### 1. Amazon EC2 Instance 유형
+
+- Instance 유형은 크게 아래의 다섯가지로 나뉘어진다
+  - **범용 (M 시리즈)**
+  - **컴퓨팅 최적화 (C 시리즈)**
+  - **스토리지 최적화 (I 시리즈, D 시리즈)**
+  - **GPU 최적화 (G 시리즈)**
+  - **메모리 최적화 (R 시리즈)**
+
+- Instance 유형은 EC2를 **이용하는 목적**에 따라 인스턴스의 유형을 선택함으로써 **최적화된 컴퓨팅 파워**를 사용할 수 있도록 해준다!
+
+<br>
+
+![Amazon EC2 인스턴스 유형 및 표기법 인스턴스 패밀리 인스턴스 세대 인스턴스 크기 c4.large 애플리케이션 요구에 따라 인스턴스 패밀리, 세대 및 크기 결정: ① 인스턴스 패밀리 • M, T, C, X, R,...](https://image.slidesharecdn.com/amazonec2deepdive-170830022453/95/amazon-ec2-deep-dive-aws-8-7-638.jpg?cb=1504060127)
+
+- 위의 그림과 같이 본인이 선택하는 EC2 Instance와 유형의 사이즈에 따라 최종으로 사용하게 될 
+  - **Instance Type**
+  - **CPU Core 수**
+  - **메모리 용량**
+  - **네트워크 인터페이스의 속도** 
+    - 등을 필요에 따라 선택할 수 있다
+
+<br>
+
+#### 2. Amazon EC2 Instance 구매 옵션
+
+: Amazon EC2는 사용자의 요구사항에 따라 **비용을 최적화** 할 수 있도록 다음과 같은 구매 옵션을 제공한다
+
+| 구분                              | 유형                                                         |
+| --------------------------------- | ------------------------------------------------------------ |
+| **온디멘드 인스턴스 (On-Demand)** | - 필요할 때 바로 생성해서 사용하는 방식으로 인스턴스에 대해 초 단위 비용을 지불한다<br>- **증감하는 부하**에 적합하다! |
+| **예약 인스턴스 (Reserved)**      | - 1년 또는 3년의 기간에 대한 약정을 통해 On-Demand 보다 최대 75% **저렴**한 비용을 지불한다<br>- **확정된 사용률**에 적합하다! |
+| **스팟 인스턴스 (Spot)**          | - **경매 방식**의 인스턴스로 사용되지 않는 EC2 용량에 대하여 **비용**을 **입찰**하여, 높은 가격을 입력한 사용자에게 인스턴스가 할당된다<br>- **시간 무관한 부하**에 적합하다! |
+| **전용 인스턴스 (Dedicated)**     | - 고객 전용의 하드웨어상의 `VPC` 에 인스턴스를 런치한다<br>- **매우 민감한 부하**에 적합하다! |
+
+- 이러한 EC2 구매 옵션은 서비스의 유형에 따라 본인에게 가장 적절한 구매 옵션을 선택할 수 있다
+  - EC2 서비스의 목적에 맞는 구매 옵션을 선택함으로써 **비요에 대한 최적화**가 가능하다!
+
+
 
 <br>
 
