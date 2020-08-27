@@ -4,7 +4,7 @@
 
 <br>
 
-![image-20200827161039232](/home/chloe/SSAFY/TIL/images/image-20200827161039232.png)
+![image-20200827161039232](../images/image-20200827161039232.png)
 
 <br>
 
