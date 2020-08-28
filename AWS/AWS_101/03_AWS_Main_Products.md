@@ -52,7 +52,7 @@ The [Transit Gateway](https://aws.amazon.com/transit-gateway/) is an AWS network
 
 - #### Elastic Load Balancing
 
-[EBS](https://www.whizlabs.com/blog/how-elastic-load-balancing-works/) is a helpful product for the automatic distribution of incoming application traffic among multiple targets.
+[ELB](https://www.whizlabs.com/blog/how-elastic-load-balancing-works/) is a helpful product for the automatic distribution of incoming application traffic among multiple targets.
 
 <br><br>
 

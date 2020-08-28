@@ -68,7 +68,23 @@
   - Internet을 통해 모든 유형의 data를 저장하고 access 할 수 있도록 설계된 object storage
   - 안전하고, 99.9999999%의 내구성을 제공하며, 수십조의 객체로 확장 가능
 
-  
+<br>
+
+### Amazon EBS (Elastic Block Store)
+
+> : EC2 에 연결되는 **Block Level**의 Storage service
+>
+> Server에 장착하는 **Server용 하드디스크** 라고 생각하면 됨!
+
+- EC2 Instance용 영구 블록 수준의 Storage Volume
+- **안정적**이고, **지연 시간**이 **짧다**
+- 크기는 1GB 단위로 1GB ~ 1TB까지 선택 가능하다
+- **크기**/**사용 기간**을 기준으로 비용이 과금된다
+  - `마그네틱` 의 경우 발생하는 **I/O 횟수**에도 비용이 과금된다!
+- EC2 Instance와 독립적으로 사용 가능하며, 다른 EC2 Instance에 교체 가능하다
+- 데이터는 영구적으로 저장되며, 원하는 가용 영역 (Availability Zone, AZ)에 생성 가능하다
+- 백업된 Snapshot에서 EBS volume을 **생성/복원** 가능하다
+  - 다른 AZ에도 생성 가능하다!
 
 <br>
 
