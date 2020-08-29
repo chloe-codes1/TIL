@@ -115,7 +115,107 @@ HTTP가 SSL 위에서 동작하면 HTTPS가 되는 것이다!
 
 <br>
 
-### 대칭키 방식... 부터 공부하면 됨!
+### 대칭키 방식 (Symmetric-key algorithm)
+
+- **동일한 키**로 `암호화`와 `복호화`를 같이 할 수 있는 방식의 암호화 기법
+  - `암호화`를 하는 쪽과 `복호화`를 하는 쪽이 동일한 Key를 가지고 있다!
+
+<br>
+
+#### 실습) 대칭키로 암호화 해보기
+
+> 실습에 사용할 txt 파일 생성
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ echo 'this is a plain text' > plaintext.txt;
+
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ ls
+plaintext.txt
+
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat plaintext.txt 
+this is a plain text
+```
+
+<br>
+
+> 대칭키로 암호화 하기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl enc -e -des3 -salt -in plaintext.txt -out ciphertext.bin
+enter des-ede3-cbc encryption password:
+Verifying - enter des-ede3-cbc encryption password:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+```
+
+- 명령어 설명
+  - `enc -e -des3` 
+    - **des3** 방식으로 암호화 하기
+  - `-in plaintext.txt -out ciphertext.bin`
+    - plaintext.txt 파일을 암호화 한 결과를 ciphertext.bin 파일에 저장하기
+
+<br>
+
+> 암호화 된 파일 확인
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat ciphertext.bin 
+7�x�w1������q�˴.!{�ՙ����e
+```
+
+<br>
+
+> 대칭키로 복호화 하기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl enc -d -des3 -in ciphertext.bin -out plaintext2.txt;
+enter des-ede3-cbc decryption password:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+```
+
+- 명렁어 설명
+  - `enc -d` 
+    - 위의 옵션으로 ciphertext.bin 파일을 plaintext2.txt 파일로 복호화 하기
+
+<br>
+
+> 복호화 결과 확인
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat plaintext2.txt 
+this is a plain text
+```
+
+- 공개키만 입력하면 그대로 복호화가 가능하다!
+  - 이것이 대칭키의 문제
+    - 공개키가 노출되면 보안 위협을 받는다
+
+<br>
+
+#### 대칭키 방식의 문제점
+
+- 암호를 주고 받는 사람들 사이에 대칭키를 전달하는 것이 어렵다
+  - 대칭키가 **유출**되면 키를 획득한 공격자는 암호의 내용을 **복호화** 할 수 있기 때문에 암호가 무용지물이 된다...!
+
+<br>
+
+<br>
+
+### 공개키 방식
+
+- 대칭키 방식의 문제점을 극복하기 위해 등장한 암호화 방식
+
+
+
+
 
 <br>
 
