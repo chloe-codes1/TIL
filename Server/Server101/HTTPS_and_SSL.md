@@ -2,7 +2,7 @@
 
 > 헷갈리는 개념들을 정리해요
 >
-> Reference: [생활코딩 강좌](https://opentutorials.org/course/228/4894)
+> Reference: [생활코딩 강좌](https://opentutorials.org/course/228/4894), [minix.tstory.com](https://minix.tistory.com/395)
 
 <br>
 
@@ -209,7 +209,7 @@ this is a plain text
 
 <br>
 
-### 공개키 방식
+### 공개키 방식 (Public-key cryptography)
 
 - 대칭키 방식의 단점을 개선하기 위해 등장한 암호화 방식
 - 대칭키와는 다르게 Key가 두 개 있다
@@ -241,21 +241,181 @@ this is a plain text
      - but, 이런 위험에도 불구하고 비공개키를 이용해서 암호화를 하는 이유는 이것이 **데이터를 보호하는 목적이 아니기 때문이다**!
        - 암호화된 데이터를 `공개키`를 가지고 **복호화** 할 수 있다는 것은 그 데이터가 공개키와 쌍을 이루는 `비공개키`에 의해 **암호화** 되었다는 것을 의미한다!
          - 즉, `공개키`가 데이터를 제공한 사람의 **신원**을 **보장**해주게 되는 것이다!
-           - 이러한 것을 **전자 서명**이라고 부른다!
+           - Why?
+             - `공개키`를 이용하여 **복호화**에 성공했다는 것은 `비밀키`를 가지고 있는 사람이 전송한 정보라는 것을 **보증**하는 것이기 때문!
+               - 이것이 바로 인증서의 원리이다!
+           - 이러한 것을 **전자 서명**이라고 부른다
 
 <br>
 
+#### 실습) `RSA` 방식의 공개키 사용해보기
 
+> `private.pem` 이라는 이름의 key 생성
 
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl genrsa -out private.pem 1024;
+Generating RSA private key, 1024 bit long modulus (2 primes)
+......+++++
+................................+++++
+e is 65537 (0x010001)
+```
 
+- 명령어 설명
+  - `openssl`
+    - openssl로
+  - `genrsa`
+    - **RSA** 방식으로 된 private key를 생성하라
+  - `1024`
+    - 암호의 **복잡도**를 의미
+      - 숫자가 커질수록 **안전**해지지만 더 많은 **컴퓨팅 파워**를 필요로 한다!
+
+<br>
+
+> 생성된 **private key** 확인
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ ls -al
+total 24
+drwxr-xr-x  2 chloe chloe 4096  8월 31 01:16 .
+drwxr-xr-x 12 chloe chloe 4096  8월 29 16:07 ..
+-rw-r--r--  1 chloe chloe   40  8월 29 16:13 ciphertext.bin
+-rw-r--r--  1 chloe chloe   21  8월 29 16:22 plaintext2.txt
+-rw-r--r--  1 chloe chloe   21  8월 29 16:08 plaintext.txt
+-rw-------  1 chloe chloe  887  8월 31 01:16 private.pem
+
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat private.pem 
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQDCOq2X1U25ME8Pk8T5hAKTxNCHt1VOJY9oIPdPMEJM6OseJ/VX
+fybsXxU8+17WXsgNBYkT0LlNhuGpEDvxoaydMeAC7aPNlyewLVxHC11vP7GS6ccJ
+/ARF6DjjM6zm465/sSpE5FPz+1Mkce5jgbeXqYb4L3nVLzlfMpaK/v8/LwIDAQAB
+AoGBALqnc03XogLXBxN8Oa5kC6oAWTojmGoqNF+oVqKWSRDqQZFQazlzq286jQl2
+tJQkr/G7oRkW3A1CEzjKriCu81bMf07a+X8wPvOEXxT6iaZ9GnVSHAadGdHXFPq3
+wvgNz8IBp7AZUbaDilZEPf1dHStGwd5L6f2ObDgkICEaqmURAkEA6tj0PH09OPfH
+h4chH36qrjgSCxPhb4B8XjRvxGTydTrsC3n+ECA95o6AVBfsALFVj1Tu5ovngN15
+AX2TBezXeQJBANO5KOJGf/B61riXySVOYHOBc8d7ExUk+2W5aK41T4n3YD9HfT9Q
+8w8aPqzTSzsNXrCV2nO72WV+6hi5cVmuGecCQDBD6GYqIxP7MIG1DuSnJrLpiSPH
+sTQ2Rtkhk7rcOExJkMuHBeUQi0hADzW5OOKnj3sGrJarOCfu3Him8zlrhJkCQEtw
+AuA0zGsr6YvWEUZombcuHcmq0Y7MIYMKQAEqX4/CA5ooZ7kCp8fuyvwbQQfmaKG0
+kyR/fyNJyDFNCdUxUmsCQQDSAIPLDrZr1fvykKX9CLr9HJLYSrHD36T3y26Kq+ci
+bN/NFuaYjq9g6kkVqH7usaY28Ro+BQUHINyUB92S08SJ
+-----END RSA PRIVATE KEY-----
+```
+
+<br>
+
+> 생성한 **비공개키**에 대한 **공개키** 생성
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl rsa -in private.pem -out public.pem -outform PEM -pubout;
+writing RSA key
+```
+
+- 명령어 설명
+  - `-in private.pem` 
+    - private.pem 이라는 파일을 가져와서
+  - `-out public.pem`
+    - public.pem 이라는 파일을 만들어라
+- 결과 설명
+  - `writing RSA key`
+    - RSA 방식의 Key를 생성했다는 뜻
+
+<br>
+
+> 암호화 할 파일 생성
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ echo 'studying public key' > file.txt
+
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat file.txt 
+studying public key
+```
+
+<br>
+
+> 생성한 **공개키**로 **암호화**하기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl rsautl -encrypt -inkey public.pem -pubin -in file.txt -out file.ssl;
+```
+
+- 명령어 설명
+  - `openssl`
+    - openssl을 이용해서
+  - `-encrypt`
+    - 암호화 해라
+  - `-inkey public.pem`
+    - key로 public.pem을 사용하겠다
+      - 공개키를 가지고있는 사람이 암호화를 한다는 뜻
+        - 즉, 비공개키를 가지고 있는 사람에게 은밀하게 어떤 정보를 전송할 때 사용하는 명령!
+  - `-in file.txt`
+    - file.txt 파일을 암호화 하겠다
+  - `-out file.ssl`
+    - 암호화 된 파일을 file.ssl로 export 하겠다
+
+<br>
+
+> **공개키**로 **암호화** 한 파일 확인하기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat file.ssl 
+�
+ ��b1�T�:�P��NU�0PwU'��� ����D�K�Y�7���������q5�p�����FA\��}�qĴ/=��i�!�s����S@ݪE����l�B��tJv�
+                      ~,
+��]�V����>7
+```
+
+- 이를 통해 `공개키`로 **암호화** 된 파일을 `비공개키`를 가지고 있는 사람에게 전송하는 과정에서 누군가가 암호화 된 파일을 열어보려고 했을 때, 내용을 읽어볼 수 없다는 것, 즉 암호화 되어있는 것을 확인 할 수 있다!
+
+<br>
+
+> **비공개 키** 로 **복호화** 하기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ openssl rsautl -decrypt -inkey private.pem -in file.ssl -out decrypted.txt
+```
+
+- 명령어 설명
+  - ` openssl`
+    - openssl을 사용하여
+  - `-decrypt`
+    - 암호를 복호화 하겠다
+  - `-inkey private.pem`
+    - private.pem 파일을 사용하여 복호화 하겠다
+  - `-in file.ssl`
+    - file.ssl 파일을
+  - `-out decrypted.txt`
+    - 복호화 된 파일을 decrypted.txt로 export 하겠다
+
+<br>
+
+> 비공개키로 **복호화** 된 파일 확인
+
+```bash
+chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
+$ cat decrypted.txt 
+studying public key
+```
+
+<br>
+
+<br>
+
+## SSL 인증서 ... 부터 공부하면 됨
 
 <br>
 
 <br>
 
 *계속 공부중....*
-
-
 
 
 
