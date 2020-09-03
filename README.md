@@ -168,6 +168,7 @@
   - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
   - [AWS Security Meetup (07/23/2020)](/AWS/AWS_Tips/AWS_Security_Meetup_07232020.md)
   - [DevAx Connect-CDK로 EKS Cluster Fullstack 관리하기 (09/01/2020)](/AWS/AWS_Tips/DevAx_Connect-CDK로_EKS_Cluster_Fullstack_관리하기.md)
+  - [AWS CDK Workshop](/AWS/AWS_Tips/AWS_CDK_Workshop.md)
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
   - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
   - [Amazon S3 - Creating a Bucket](/AWS/AWS_Tips/Amazon_S3-Creating_a_Bucket.md)
