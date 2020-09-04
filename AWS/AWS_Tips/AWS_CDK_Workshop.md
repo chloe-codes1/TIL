@@ -6,6 +6,39 @@
 
 <br>
 
+## Before getting started
+
+> Workshop을 시작하기 전에 AWS CDK가 뭔지 간단히 알아봅시당
+
+<br>
+
+### AWS CDK란?
+
+- AWS CDK (Cloud Development Kit)는 현대적 프로그래밍 언어를 사용하여 Cloud Infra를 **code로 정의**하고, `AWS CloudFormation` 을 통해 배포하는 opensource software 개발 프레임워크
+
+<br>
+
+### AWS CDK CLI로 무엇을 할 수 있을까?
+
+: AWS CDK CLI를 사용하여 CDK application과 상호 작용할 수 있다
+
+- **CDK CLI**를 사용하면 
+  - CDK 앱에 정의된 stack을 나열하고, 
+  - Stack을 `CloudFormation` 템플릿에 합성하고,
+  - 실행중인 stack instance와 CDK code에 정의된 stack 간의 CDK code 에 정의된 stack 간의 차이점을 확인하고,
+  - 원하는 Public AWS Region 에 stack을 배포 할 수 있다
+
+<br>
+
+### AWS CDK는 어떻게 작동할까?
+
+- AWS CDK 프레임워크를 사용하여 AWS CDK 프로젝트를 작성할 수 있으며, 이 프로젝트가 실행되어 `CloudFormation` 템플릿을 생성하게 된다.
+- AWS CDK 프로젝트는 AWS CDK CLI 나 CD system에서 실행될 수 있다
+
+<br>
+
+<br>
+
 ## 0. Install AWS CDK
 
 <br>
@@ -122,9 +155,84 @@ $ npm run watch
   ![image-20200903225530137](../../images/image-20200903225530137.png)
 
 - 이 script는 TypeScript Compiler (`tsc`) 를 **watch** 모드로 시작해서, 프로젝트 디렉토리를 monitoring 하여 `.ts` 파일의 **변경분**을 `.js` 파일로 자동 complie 해준다!
+  
   - 넘나 신기
 
 <br>
 
 <br>
 
+## 3. 프로젝트 구조
+
+ <br>
+
+### Project Directory 탐색
+
+![image-20200905031542724](../../images/image-20200905031542724.png)
+
+- `lib/cdk-workshop-stack.ts`
+  - CDK application의 **main stack**이 저장되는 곳
+- `bin/cdk-workshop.ts` 
+  - CDK application의 **entry point**
+  - `lib/cdk-workshop-stack.ts` 에 정의된 stack을 load 한다
+- `cdk.json`
+  - toolkit이 어떻게 app을 실행해야 하는지 알려주는 파일
+    - 이 프로젝트의 경우 "npx ts-node bin/cdk-workshop.ts" 가 들어간다!
+
+<br>
+
+<br>
+
+### Entry Point
+
+> Entry point인 `bin/cdk-workshop.ts` 파일 살펴보기
+
+```typescript
+#!/usr/bin/env node
+import * as cdk from '@aws-cdk/core';
+import { CdkWorkshopStack } from '../lib/cdk-workshop-stack';
+
+const app = new cdk.App();
+new CdkWorkshopStack(app, 'CdkWorkshopStack');
+```
+
+- 이 코드는 `CdkWorkshopStack` 을 **load**하고 **initiate** 한다
+  - 어떤 stack을 load할 것인지만 정의되고 나면 더 이상 볼 일이 없는 파일
+
+<br>
+
+<br>
+
+### Main Stack
+
+> 중요한 부분이 정의되는 `lib/cdk-workshop-stack.ts` 파일 살펴보기
+
+```typescript
+import * as cdk from '@aws-cdk/core';
+import * as sns from '@aws-cdk/aws-sns';
+import * as sqs from '@aws-cdk/aws-sqs';
+import * as subs from '@aws-cdk/aws-sns-subscriptions';
+
+export class CdkWorkshopStack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    const queue = new sqs.Queue(this, 'CdkWorkshopQueue', {
+      visibilityTimeout: cdk.Duration.seconds(300)
+    });
+
+    const topic = new sns.Topic(this, 'CdkWorkshopTopic');
+
+    topic.addSubscription(new subs.SqsSubscription(queue));
+  }
+}
+```
+
+- Application이 sample CDK stack (`CdkWorkshopStack`) 으로 이루어진 것 확인 가능
+- 이 stack에는 아래의 세 가지 서비스 생성이 포함된다
+  1. **SQS Queue**
+     - `new sqs.Queue`
+  2. **SNS Topoic**
+     - `new sns.Topic`
+  3. SNS Topic에서 발생하는 모든 **message**를 **수신**하도록 Queue 설정 
+     - `topic.addSubscription`
