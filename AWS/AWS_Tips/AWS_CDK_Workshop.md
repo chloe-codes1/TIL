@@ -236,3 +236,169 @@ export class CdkWorkshopStack extends cdk.Stack {
      - `new sns.Topic`
   3. SNS Topic에서 발생하는 모든 **message**를 **수신**하도록 Queue 설정 
      - `topic.addSubscription`
+
+<br>
+
+<br>
+
+## 4. CDK SYNTH
+
+<br>
+
+### CDK 앱에서 `CloudFormation` Template 산출하기
+
+- AWS CDK 앱은 **code**를 이용해서 **Infra**를 효과적으로 **정의**하도록 도와주는 도구이다
+- CDK 앱이 실제로 실행될 때는 `AWS CloudFormation` template을 stack마다 생성하여 실제 **배포**를 한다
+- CDK 앱에서 template을 산출하기 위해서는 `cdk synth` 명령어를 사용할 수 있다
+  - **CDK CLI**는 `cdk.json` 파일이 있는 directory에서만 실행될 수 있는 점 유의하기!
+
+<br>
+
+#### Sample app에서 추출된 template 살펴보기
+
+```bash
+chloe@chloe-XPS-15-9570 ~/Workspace/aws-test/cdk-workshop
+$ cdk synth
+**************************************************
+*** Newer version of CDK is available [1.62.0] ***
+*** Upgrade recommended                        ***
+**************************************************
+Resources:
+  CdkWorkshopQueue50D9D426:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 300
+    Metadata:
+      aws:cdk:path: CdkWorkshopStack/CdkWorkshopQueue/Resource
+  CdkWorkshopQueuePolicyAF2494A5:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: sqs:SendMessage
+            Condition:
+              ArnEquals:
+                aws:SourceArn:
+                  Ref: CdkWorkshopTopicD368A42F
+            Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Resource:
+              Fn::GetAtt:
+                - CdkWorkshopQueue50D9D426
+                - Arn
+        Version: "2012-10-17"
+      Queues:
+        - Ref: CdkWorkshopQueue50D9D426
+    Metadata:
+      aws:cdk:path: CdkWorkshopStack/CdkWorkshopQueue/Policy/Resource
+  CdkWorkshopQueueCdkWorkshopStackCdkWorkshopTopicD7BE96438B5AD106:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Protocol: sqs
+      TopicArn:
+        Ref: CdkWorkshopTopicD368A42F
+      Endpoint:
+        Fn::GetAtt:
+          - CdkWorkshopQueue50D9D426
+          - Arn
+    Metadata:
+      aws:cdk:path: CdkWorkshopStack/CdkWorkshopQueue/CdkWorkshopStackCdkWorkshopTopicD7BE9643/Resource
+  CdkWorkshopTopicD368A42F:
+    Type: AWS::SNS::Topic
+    Metadata:
+      aws:cdk:path: CdkWorkshopStack/CdkWorkshopTopic/Resource
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Modules: aws-cdk=1.61.1,@aws-cdk/aws-cloudwatch=1.61.1,@aws-cdk/aws-iam=1.61.1,@aws-cdk/aws-kms=1.61.1,@aws-cdk/aws-sns=1.61.1,@aws-cdk/aws-sns-subscriptions=1.61.1,@aws-cdk/aws-sqs=1.61.1,@aws-cdk/cloud-assembly-schema=1.61.1,@aws-cdk/core=1.61.1,@aws-cdk/cx-api=1.61.1,@aws-cdk/region-info=1.61.1,jsii-runtime=node.js/v12.17.0
+    Condition: CDKMetadataAvailable
+Conditions:
+  CDKMetadataAvailable:
+    Fn::Or:
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ca-central-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-northwest-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-central-1
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-3
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - me-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - sa-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-2
+```
+
+- `cdk synth` 명령어를 `cdk.json` 파일이 있는 directory에서 실행하면 위와 같이 **CloudFormation template**이 출력된다
+
+- 이 template은 아래의 4가지 자원을 생성한다
+
+  1. #### AWS::SQS::Queue 
+
+     - SQS 큐
+
+  2. #### AWS::SNS::Topic
+
+     - SNS 토픽
+
+  3. #### AWS::SNS::Subscription
+
+     - 큐와 토픽 사이의 subscription 정의
+
+  4. #### AWS::SQS::QueuePolicy 
+
+     - 토픽에서 큐로 `메시지`를 보낼 수 있는 **IAM** 정책
+
+- **AWS::CDK::Metadata** 는 `CDK toolkit` 에 의해 모든 stack에 자동으로 생성되는 자원이다
+  - CDK 팀이 보안 issue 파악 및 분석을 하는데에 사용된다고 함!
