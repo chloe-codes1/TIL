@@ -241,7 +241,7 @@ export class CdkWorkshopStack extends cdk.Stack {
 
 <br>
 
-## 4. CDK SYNTH
+## 4. CDK Synth
 
 <br>
 
@@ -401,4 +401,109 @@ Conditions:
      - 토픽에서 큐로 `메시지`를 보낼 수 있는 **IAM** 정책
 
 - **AWS::CDK::Metadata** 는 `CDK toolkit` 에 의해 모든 stack에 자동으로 생성되는 자원이다
+  
   - CDK 팀이 보안 issue 파악 및 분석을 하는데에 사용된다고 함!
+
+<br>
+
+<br>
+
+## 5. CDK Deploy
+
+<br>
+
+### 환경 Bootstrap
+
+- AWS CDK 앱을 환경 (계졍/region)에 배포하기 위해서는 먼저 `bootstrap stack` 을 설치해야 한다
+  - **bootstrap stack**에는 toolkit의 운영을 위해 필요한 자원들이 포함되어 있다
+    - ex) `CFN` teamplate을 보관하고, 배포 process 동안 생성되는 asset들을 저장하는 **S3 bucket** 
+- `cdk bootstrap` 명령어를 이용해서 하나의 환경에 대한 bootstrap stack을 설치할 수 있다
+
+```bash
+chloe@chloe-XPS-15-9570 ~/Workspace/aws-test/cdk-workshop
+$ cdk bootstrap
+ ⏳  Bootstrapping environment aws://213888382832/us-west-2...
+CDKToolkit: creating CloudFormation changeset...
+[██████████████████████████████████████████████████████████] (3/3)
+
+
+
+ ✅  Environment aws://213888382832/us-west-2 bootstrapped.
+**************************************************
+*** Newer version of CDK is available [1.62.0] ***
+*** Upgrade recommended                        ***
+**************************************************
+```
+
+- 만약 여기에서 **Access Denied** error가 발생하면, 
+  1. AWS CLI 가 제대로 설정되지 않았거나
+  2. 사용중인 **AWS profile** 이 `cloudformation:CreateChangeSet` 작업을 수행할 권한이 없는 것
+- 위의 명령어가 성공정으로 수행되고 나면 CDK 앱을 배포할 수 있다!
+
+<br>
+
+### 배포하기
+
+- `cdk deploy` 명령어를 이용해서 CDK 앱을 배포한다
+
+```bash
+chloe@chloe-XPS-15-9570 ~/Workspace/aws-test/cdk-workshop
+$ cdk deploy
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
+
+IAM Statement Changes
+┌───┬─────────────────────────┬────────┬─────────────────┬─────────────────────────┬─────────────────────────┐
+│   │ Resource                │ Effect │ Action          │ Principal               │ Condition               │
+├───┼─────────────────────────┼────────┼─────────────────┼─────────────────────────┼─────────────────────────┤
+│ + │ ${CdkWorkshopQueue.Arn} │ Allow  │ sqs:SendMessage │ Service:sns.amazonaws.c │ "ArnEquals": {          │
+│   │                         │        │                 │ om                      │   "aws:SourceArn": "${C │
+│   │                         │        │                 │                         │ dkWorkshopTopic}"       │
+│   │                         │        │                 │                         │ }                       │
+└───┴─────────────────────────┴────────┴─────────────────┴─────────────────────────┴─────────────────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Do you wish to deploy these changes (y/n)?
+```
+
+- 위와 같은 경고는 배포하려는 앱에 **보안 점검**이 필요한 항목이 동반되는 경우 출력된다
+  - Topic에서 Queue로 message를 보내줘야 하므로 **y**를 입력하여 stack을 배포하고 자원을 생성하자!
+
+```bash
+CdkWorkshopStack: deploying...
+CdkWorkshopStack: creating CloudFormation changeset...
+[██████████████████████████████████████████████████████████] (6/6)
+
+
+
+
+
+
+ ✅  CdkWorkshopStack
+
+Stack ARN:
+arn:aws:cloudformation:us-west-2:213888382832:stack/CdkWorkshopStack/fa564140-f078-11ea-b665-0a050e07f862
+```
+
+- 실행 결과 설명 
+  - `us-west-2` 는 app을 생성한 **region** 이고,
+  -  `213888382832` 는 **account ID**이고, 
+  - `fa564140-f078-11ea-b665-0a050e07f862` 는 **stack ID** 이다
+
+<br>
+
+### CloudFormation Console
+
+- CDK 앱은 AWS `CloudFormation` 을 통해 배포된다
+- CDK stack은 `CloudFormation` stack과 1:1 로 매핑된다
+  - 즉, Stack 을 관리하기 위해 CloudFormation을 이용할 수 있다!
+
+> CloudFormation console
+
+![image-20200907050327196](../../images/image-20200907050327196.png)
+
+- `CdkWorkshopStack` 을 선택하고 **리소스** 탭을 클릭하면, 생성한 자원의 물리적 ID를 확인할 수 있다
+
+> 물리적 ID 확인하기
+
+![image-20200907050258865](../../images/image-20200907050258865.png)
