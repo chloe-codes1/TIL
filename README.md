@@ -323,6 +323,10 @@
 - #### [CI/CD](/DevOps/CI-CD)
 
   - [Configuring GitLab CI-CD with AWS EC2](/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
+  
+- #### [ELK](/DevOps/ELK)
+
+  - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
 
 <br>
 
