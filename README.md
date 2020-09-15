@@ -332,6 +332,10 @@
 - #### [ELK](/DevOps/ELK)
 
   - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
+  
+- #### [Terraform](/Terraform)
+
+  - [Terraform 101](/Terraform/Terraform101.md)
 
 <br>
 
