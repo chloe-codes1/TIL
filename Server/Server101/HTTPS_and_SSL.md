@@ -2,7 +2,8 @@
 
 > 헷갈리는 개념들을 정리해요
 >
-> Reference: [생활코딩 강좌](https://opentutorials.org/course/228/4894), [minix.tstory.com](https://minix.tistory.com/395)
+> Reference: [생활코딩 강좌](https://opentutorials.org/course/228/4894), [minix.tstory.com](https://minix.tistory.com/395),
+> [Bill Buchanan 교수님 웹사이트](https://asecuritysite.com/encryption/)
 
 <br>
 
@@ -204,14 +205,15 @@ this is a plain text
 
 - 암호를 주고 받는 사람들 사이에 대칭키를 전달하는 것이 어렵다
   - 대칭키가 **유출**되면 키를 획득한 공격자는 암호의 내용을 **복호화** 할 수 있기 때문에 암호가 무용지물이 된다...!
+  - 이러한 문제를 "key distribution problem"이라고 한다.
 
 <br>
 
 <br>
 
-### 공개키 방식 (Public-key cryptography)
+### 공개키/비대칭키 방식 (Public-key/asymmetric cryptography)
 
-- 대칭키 방식의 단점을 개선하기 위해 등장한 암호화 방식
+- 대칭키가 가지고 있는 "key distribution problem"을 개선하기 위해 등장한 암호화 방식
 - 대칭키와는 다르게 Key가 두 개 있다
   - `A` key로 암호화를 하면 `B` key로 복호화 할 수 있고,
   - `B` key로 암호화하면 `A` key로 복호화 할 수 있는 방식
@@ -404,6 +406,18 @@ chloe@chloe-XPS-15-9570 ~/SSAFY/TIL-codes/ssl
 $ cat decrypted.txt 
 studying public key
 ```
+
+#### 공개키/비대칭키 방식의 단점
+
+- 비대칭키는 대칭키보다 속도가 느리다...
+  - 속도를 중요시하는 상황에서는 쓰기가 힘들다...(화상채팅, 메신저, 등등)
+
+- 이 때문에 속도를 중요시하는 대부분의 암호화 프로토콜에서는 대칭키와 비대칭키를 섞어서 쓴다.
+
+#### 대칭키/비대칭키 프로토콜들
+
+- 대표로써 리눅스 커널에 내장된 [wireguard Section 5.2](https://www.wireguard.com/papers/wireguard.pdf), 메신저
+  앱인 [signal의 X3DH (whatsapp에서도 이가 사용된다!)](https://signal.org/docs/specifications/x3dh/)가 있다.
 
 <br>
 
