@@ -339,6 +339,7 @@
 
 - [Docker Commands](/Docker/00_Docker_Commands.md)
 - [Getting Started with Docker](/Docker/01_Getting_Started_with_Docker.md)
+- [Docker Tags](/Docker/02_Docker_Tags.md)
 
 <br>
 
