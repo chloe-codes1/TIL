@@ -56,6 +56,8 @@
 - #### [Java Advanced](/Java/Java_Advanced)
 
   - [Lombok](/Java/Java_Advanced/Lombok.md)
+  - [Java Thread](/Java/Java_Advanced/01_Thread.md)
+  - [JMX and Jolokia](/Java/Java_Advanced/02_JMX_and_Jolokia.md)
 
 <br>
 
@@ -191,6 +193,7 @@
 
   - [HTTPS and SSL](/Server/Server101/HTTPS_and_SSL.md)
   - [What is NGINX](/Server/Server101/What_is_NGINX.md)
+  - [Scale Up and Scale Out](/Server/Server101/Scale_Up_and_Scale_Out.md)
 
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
