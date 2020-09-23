@@ -337,9 +337,13 @@
 
   - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
   
-- #### [Terraform](/Terraform)
+- #### [Terraform](/DevOps/Terraform)
 
   - [Terraform 101](/Terraform/Terraform101.md)
+  
+- #### [Kubernetes](/DevOps/Kubernetes)
+
+  - [Kubernetes Basics](/DevOps/Kubernetes/01_Kubernetes_Basics.md)
 
 <br>
 
