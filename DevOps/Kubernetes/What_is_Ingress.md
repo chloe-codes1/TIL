@@ -60,7 +60,64 @@
   - Resource만 생성하는 것은 효과가 없다! controller 가 필요하다
 - `ingress-nginx` 같은 **ingress controller** 를 배포해야 하는데, ingress controller의 종류는 다양하다
 
+<br>
+
+### The Ingress resource
+
+> A minimal Ingress resource example
+
+```yaml
+# service/networking/minimal-ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /testpath
+        pathType: Prefix
+        backend:
+          service:
+            name: test
+            port:
+              number: 80
+```
+
+- 다른 모든 Kubernetes resource와 마찬가지로 ingress에는 `apiVersion`, `kind`, `metadata` field가 필요하다
+- Ingress object의 이름은 유효안 **DNS subdomain name** 이어야 한다
+- Ingress는 종종 annotation을 이용해서 ingress controller에 따라 몇 가지 option을 구성하는데, **rewrite-target annotation** 을 얘로 들 수 있다
+
+- 서로 다른 ingress controller는 각각 다른 annotation을 지원한다
+- `Ingress spec` 에는 Load Balancer 또는 proxy server를 구성하는데 필요한 모든 정보가 있다
+  - 가장 중요한 것은, 들어오는 request와 일치하는 규칙 목록을 포함하는 것이다
+    - Ingress resource는 **HTTP(S) traffic** 을 지시하는 규칙만 지원한다
+
+<br>
+
+### Ingress rules
+
+: 각 HTTP 규칙에는 다음의 정보가 포함된다
+
+- **선택적 host**
+  - 만약 host가 제공되면, 규칙이 해당 host에 적용된다
+- **경로 목록**
+  - 경로 목록에는 각각 `service.name`, `service.port.name` or `service.port.number` 가 정의되어 있는, 관련 backend를 가지고 있다
+    -  Load balancer가 traffic이 참조된 서비스로 보내기 전에 **host**와 **path** 는 incoming request와 내용이 match 되어야 한다
+- **Backend**
+  - Backend는 service docs 또는 사용자 정의 resource backend에 설명된 것 처럼 **service** 와 port 이름의 조합이다.
+    - Host와 규칙 경로가 일치하는 ingress에 대한 HTTP(S) 요청은 backend 목록으로 전송된다
 
 
 
+
+
+
+
+- Kubernetes의 서비스는 `L4 layer` 로 `TCP` 단에서 **Pods** 를 balancing 한다
+- 
 
