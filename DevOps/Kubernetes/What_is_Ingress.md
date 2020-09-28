@@ -112,12 +112,81 @@ spec:
   - Backend는 service docs 또는 사용자 정의 resource backend에 설명된 것 처럼 **service** 와 port 이름의 조합이다.
     - Host와 규칙 경로가 일치하는 ingress에 대한 HTTP(S) 요청은 backend 목록으로 전송된다
 
+<br>
+
+### DefaultBackend
+
+- 규칙이 없는 ingress는 모든 traffic을 하나의 **default backend**로 전송한다
+- DefaultBackend는 `ingress controller` 의 구성 option이고,  `ingress resource` 에 지정되어 있지 않다
+- 만약 `ingress object` 의 HTTP 요청과 일치하는 host or path가 없으면, traffic은 **default backend**로 **routing** 된다
+
+<br>
+
+### Resource Backend
+
+- `Resource backend` 는 ingresss object의 동일한 namespace 내에 있는 다른 Kubernets resource에 대한 **ObjectRef** 이다
+- `Resource` 는 **service**와 **상호 배타적**인 설정이며, 둘 다 지정하게 되면 **유효성 검사** 를 통과 할 수 없다
+  - 유효성 검사에 실패한다
+- `Resource backend` 의 일반적인 용도는 static asset이 있는 **object storage backend**로 data를 수신하는 것 이다
+
+<br>
+
+> Resource backend example
+
+```yaml
+# service/networking/ingress-resource-backend.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-resource-backend
+spec:
+  defaultBackend:
+    resource:
+      apiGroup: k8s.example.com
+      kind: StorageBucket
+      name: static-assets
+  rules:
+    - http:
+        paths:
+          - path: /icons
+            pathType: ImplementationSpecific
+            backend:
+              resource:
+                apiGroup: k8s.example.com
+                kind: StorageBucket
+                name: icon-assets
+```
+
+- 위의 yaml file 처럼 ingress 를 생성하고, 아래의 명렁으로 생성된 ingress를 확인 할 수 있다
+
+  ```bash
+  $ kubectl describe ingress ingress-resource-backend
+  ```
+
+  - 결과
+
+    ```bash
+    Name:             ingress-resource-backend
+    Namespace:        default
+    Address:
+    Default backend:  APIGroup: k8s.example.com, Kind: StorageBucket, Name: static-assets
+    Rules:
+      Host        Path  Backends
+      ----        ----  --------
+      *
+                  /icons   APIGroup: k8s.example.com, Kind: StorageBucket, Name: icon-assets
+    Annotations:  <none>
+    Events:       <none>
+    ```
+
+    
 
 
 
+<br>
 
-
+<br>`+`
 
 - Kubernetes의 서비스는 `L4 layer` 로 `TCP` 단에서 **Pods** 를 balancing 한다
-- 
 
