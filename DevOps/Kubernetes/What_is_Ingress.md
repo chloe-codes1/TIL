@@ -158,7 +158,7 @@ spec:
                 name: icon-assets
 ```
 
-- 위의 yaml file 처럼 ingress 를 생성하고, 아래의 명렁으로 생성된 ingress를 확인 할 수 있다
+- 위의 yaml file 처럼 ingress 를 생성하고, 아래의 명령으로 생성된 ingress를 확인 할 수 있다
 
   ```bash
   $ kubectl describe ingress ingress-resource-backend
@@ -180,7 +180,61 @@ spec:
     Events:       <none>
     ```
 
-    
+<br>
+
+### Path types
+
+- Ingress 의 각 경로에는 해당 경로의 **유형**이 있어야 한다
+  - 명시적 `pathType` 을 포함하지 않는 경로는 **유효성 검사** 를 통과하지 못한다!
+- 지원되는 경로 유형은 아래의 3가지가 있다
+  1. `ImplementationSpecific`
+     - 이 경로 유형의 일치 여부는 **IngressClass** 에 따라 달라진다
+       - 이것을 구현할 때 별도 `pathType` 으로 처리하거나,
+       - `Prefix` 또는 `Exact` 경로 유형처럼 처리할 수 있다
+  2. `Exact`
+     - URL 경로의 대소문자를 엄격하게 일치시킨다
+  3. `Prefix`
+     - URL 경로의 접두사를 `/` 를 기준으로 분리한 값과 일치시킨다
+       - 대소문자를 구분하고,
+       - Element basis로 **path element**를 일치시킨다
+     - Request path의 모든 element별 접두사가 *p* 인 경우 요청은 *p* 경로에 일치하는 것이다
+       - 단, 경로의 마지막 요소가 request path에 있는 마지막 element의 하위 문자열인 경우에는 일치하지 않는다
+         - ex)
+           - `/foo/bar` 와 `/foo/bar/baz` 는 일치하지만,
+           - `/foo/bar` 와 `/foo/barbaz` 는 일치하지 않는다!
+
+<br>
+
+### Examples
+
+| 종류   | 경로                            | 요청 경로       | 일치 여부                           |
+| ------ | ------------------------------- | --------------- | ----------------------------------- |
+| Prefix | `/`                             | (모든 경로)     | 예                                  |
+| Exact  | `/foo`                          | `/foo`          | 예                                  |
+| Exact  | `/foo`                          | `/bar`          | 아니오                              |
+| Exact  | `/foo`                          | `/foo/`         | 아니오                              |
+| Exact  | `/foo/`                         | `/foo`          | 아니오                              |
+| Prefix | `/foo`                          | `/foo`, `/foo/` | 예                                  |
+| Prefix | `/foo/`                         | `/foo`, `/foo/` | 예                                  |
+| Prefix | `/aaa/bb`                       | `/aaa/bbb`      | 아니오                              |
+| Prefix | `/aaa/bbb`                      | `/aaa/bbb`      | 예                                  |
+| Prefix | `/aaa/bbb/`                     | `/aaa/bbb`      | 예, 마지막 슬래시 무시함            |
+| Prefix | `/aaa/bbb`                      | `/aaa/bbb/`     | 예, 마지막 슬래시 일치함            |
+| Prefix | `/aaa/bbb`                      | `/aaa/bbb/ccc`  | 예, 하위 경로 일치함                |
+| Prefix | `/aaa/bbb`                      | `/aaa/bbbxyz`   | 아니오, 문자열 접두사 일치하지 않음 |
+| Prefix | `/`, `/aaa`                     | `/aaa/ccc`      | 예, `/aaa` 접두사 일치함            |
+| Prefix | `/`, `/aaa`, `/aaa/bbb`         | `/aaa/bbb`      | 예, `/aaa/bbb` 접두사 일치함        |
+| Prefix | `/`, `/aaa`, `/aaa/bbb`         | `/ccc`          | 예, `/` 접두사 일치함               |
+| Prefix | `/aaa`                          | `/ccc`          | 아니오, 기본 백엔드 사용함          |
+| Mixed  | `/foo` (Prefix), `/foo` (Exact) | `/foo`          | 예, Exact 선호함                    |
+
+<br>
+
+#### Multiple matches
+
+- 경우에 따라 Ingress의 여러 경로가 request와 일치할 수 있다
+  - 이 경우 일치하는 경로 중 가장 긴 경로가 우선순위를 갖는다
+    - 두 개의 경로의 길이가 동일한 경우, `Prefix` 경로 유형보다 `Exact` 경로 유형을 가진 경로가 사용된다! 
 
 
 
