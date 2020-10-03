@@ -157,12 +157,15 @@
   - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
   - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
 
-- #### [AWS Certifications](/AWS/AWS_cert)
+- #### [AWS Services](/AWS/AWS_Services)
 
-  - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
-  - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
-  - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
-  
+  - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
+  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md) 
+  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)                    
+  - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
+  - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
+  - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
+
 - #### [AWS Tips](/AWS/AWS_Tips)
 
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
@@ -172,15 +175,15 @@
   - [DevAx Connect-CDK로 EKS Cluster Fullstack 관리하기 (09/01/2020)](/AWS/AWS_Tips/DevAx_Connect-CDK로_EKS_Cluster_Fullstack_관리하기.md)
   - [AWS CDK Workshop](/AWS/AWS_Tips/AWS_CDK_Workshop.md)
   - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
-  - [AWS CLI](/AWS/AWS_Tips/AWS_CLI.md)
-  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Tips/Amazon_S3-Creating_a_Bucket.md)
-  - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Tips/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
-  - [Amazon RDS for MySQL](/AWS/AWS_Tips/Amazon_RDS_for_MySQL.md)
   - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
   - [Amazon Security Group](/AWS/AWS_Tips/Amazon_Security_Group.md)
-  - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Tips/Amazon_ECR.md)
   - [AWS Well-architected Framework - Security Pillar](/AWS/AWS_Tips/AWS_Well-architected_Framework_Security_Pillar.md)
-  - [Amazon ElastiCache](/AWS/AWS_Tips/Amazon_ElastiCache.md)
+
+- #### [AWS Certifications]()
+
+  - [Solutions Architect]()
+  - [SAA Prep Workshop]()
+  - [AWS 10,000 Foot Overview]()
 
 - #### [AWS Builders Series](/AWS/AWS_Builders)
 
@@ -230,6 +233,50 @@
 - [Dump and Load Data](/DB/05_Dump_and_Load_Data.md)
 - [MySQL with Django](/DB/06_MySQL_with_Django.md)
 - [Create MySQL Users Accounts and Grant Privileges](/DB/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
+
+<br>
+
+### Git
+
+- [Git Basics](/Git/Git101.md)
+- [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
+- [Git Branch](/Git/Git_Branch.md)
+- [Create a gitignore](/Git/Create_a_gitignore.md)
+- [Caching your GitHub credentials in Git](/Git/Caching_your_GitHub_credentials_in_Git.md)
+
+<br>
+
+### DevOps
+
+- #### [DevOps 101](/DevOps/DevOps101)
+
+  - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
+  - [What is DevOps](/DevOps/DevOps101/What_is_DevOps.md)
+
+- #### [CI/CD](/DevOps/CI-CD)
+
+  - [Configuring GitLab CI-CD with AWS EC2](/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
+
+- #### [ELK](/DevOps/ELK)
+
+  - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
+
+- #### [Terraform](/DevOps/Terraform)
+
+  - [Terraform 101](/Terraform/Terraform101.md)
+
+- #### [Kubernetes](/DevOps/Kubernetes)
+
+  - [Kubernetes Basics](/DevOps/Kubernetes/01_Kubernetes_Basics.md)
+  - [What is Ingress](/DevOps/Kubernetes/What_is_Ingress.md)
+
+<br>
+
+### Docker
+
+- [Docker Commands](/Docker/00_Docker_Commands.md)
+- [Getting Started with Docker](/Docker/01_Getting_Started_with_Docker.md)
+- [Docker Tags](/Docker/02_Docker_Tags.md)
 
 <br>
 
@@ -311,50 +358,6 @@
     - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
     - [EJS](/Node.js/Express.js/02_EJS.md)
     - [RESTful API](/Node.js/Express.js/03_RESTful_API.md)
-
-<br>
-
-### Git
-
-- [Git Basics](/Git/Git101.md)
-- [Git Tips and Tricks](/Git/Git_Tips_and_Tricks.md)
-- [Git Branch](/Git/Git_Branch.md)
-- [Create a gitignore](/Git/Create_a_gitignore.md)
-- [Caching your GitHub credentials in Git](/Git/Caching_your_GitHub_credentials_in_Git.md)
-
-<br>
-
-### DevOps
-
-- #### [DevOps 101](/DevOps/DevOps101)
-
-  - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
-  - [What is DevOps](/DevOps/DevOps101/What_is_DevOps.md)
-
-- #### [CI/CD](/DevOps/CI-CD)
-
-  - [Configuring GitLab CI-CD with AWS EC2](/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
-  
-- #### [ELK](/DevOps/ELK)
-
-  - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
-  
-- #### [Terraform](/DevOps/Terraform)
-
-  - [Terraform 101](/Terraform/Terraform101.md)
-  
-- #### [Kubernetes](/DevOps/Kubernetes)
-
-  - [Kubernetes Basics](/DevOps/Kubernetes/01_Kubernetes_Basics.md)
-  - [What is Ingress](/DevOps/Kubernetes/What_is_Ingress.md)
-
-<br>
-
-### Docker
-
-- [Docker Commands](/Docker/00_Docker_Commands.md)
-- [Getting Started with Docker](/Docker/01_Getting_Started_with_Docker.md)
-- [Docker Tags](/Docker/02_Docker_Tags.md)
 
 <br>
 
