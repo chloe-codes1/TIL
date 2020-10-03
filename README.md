@@ -165,6 +165,7 @@
   - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
   - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
+  - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
 
 - #### [AWS Tips](/AWS/AWS_Tips)
 
