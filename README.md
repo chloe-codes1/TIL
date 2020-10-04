@@ -166,6 +166,7 @@
   - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
   - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
+  - [Amazon Athena](/AWS/AWS_Services/Amazon_Athena.md)
 
 - #### [AWS Tips](/AWS/AWS_Tips)
 
