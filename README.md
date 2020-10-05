@@ -253,7 +253,8 @@
 - #### [DevOps 101](/DevOps/DevOps101)
 
   - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
-  - [What is DevOps](/DevOps/DevOps101/00_What_is_DevOps.md)
+  - [What is DevOps](/DevOps/DevOps101/01_What_is_DevOps.md)
+  - [DevOps Engineer Roles and Responsibilities](/DevOps/DevOps101/02_DevOps_Engineer_Roles_and_Responsibilities.md)
 
 - #### [CI/CD](/DevOps/CI-CD)
 
