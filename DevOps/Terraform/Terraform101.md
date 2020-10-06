@@ -1,12 +1,209 @@
 #  Introduction to Terraform
 
-> Reference: [Terraform docs](https://www.terraform.io/intro/index.html), [blog.naver.com/alice_k106](https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221489260596&parentCategoryNo=&categoryNo=24&viewDate=&isShowPopularPosts=false&from=postView)
+> Reference: [Terraform docs](https://www.terraform.io/intro/index.html), [blog.naver.com/alice_k106](https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221489260596&parentCategoryNo=&categoryNo=24&viewDate=&isShowPopularPosts=false&from=postView), [인프런] DevOps : Infrastructure as Code with Terraform and AWS 강좌 by 송주영님
+
+<br>
+
+<br>
+
+## Before getting started
+
+> 인프런 강좌를 듣고 추가한 내용
+
+<br>
+
+### IaC (Infrastructure as code)
+
+- 인프라를 이루는 서버, 미들웨어, 서비스 등 인프라 구성요소들을 코드를 통해 구축하는 것
+  - IaC는 코드로써의 장점
+    - 작성용이성
+      - 작성하는 것이 빨라진다!
+    - 재사용성
+    - 유지보수 등의 장점을 가진다
+
+<br>
+
+### Terraform by Hashicorp
+
+> Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently
+
+- Terraform은 인프라를 만들고, 변경하고 기록하는 IaC를 위해 만들어진 도구로써
+  - 문법이 쉬워 비교적 다루기 쉽고, 사용자가 매우 많아 참고할 수 있는 예제가 많다
+- `.tf` 형식의 파일 확장자를 갖는다
+- AWS, Azure, GCP 같은 Public Cloud 뿐만이 아닌 다양한 Provider를 지원한다
+
+<br>
+
+### Terraform 기본 구성 요소
+
+- **provider**
+
+  - Terraform으로 생성할 Infra의 종류
+
+  - 보통 `provider.tf` 로 파일을 생성한다
+
+  - ex)
+
+    ```yaml
+    provider "aws" {
+    	region = "ap-northeast-2"
+    	version = "~> 3.0"
+    }
+    ```
+
+    - Provider 안에서 다양한 argument를 가진다
+    - AWS resource를 다루기 위한 파일들을 다운로드하는 역할을 한다
+
+<br>
+
+- **resource**
+
+  - Terraform으로 실제로 생성할 인프라 자원
+
+  - 원하는 형태로 파일 이름을 사용한다
+
+  -  ex)
+
+    ```yaml
+    resource "aws_vpc" "example" {
+    	cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
+    }
+    ```
+
+    - Terraform으로 VPC를 생성하는 코드이다
+    - VPC 역시 다양한 argument와 다른 구성요소가 존재한다
+
+<br>
+
+- **state**
+
+  - Terrafrom을 통해 생성한 자원의 상태
+
+    - 실제로 Terraform 코드를 실행한 결과물
+    - `terraform.tfstate` 라는 파일명을 가짐
+      - 실제로는 코드가 굉장히 길어질 수 있음
+
+  - ex)
+
+    ```yaml
+    {
+    	"version": 4,
+    	"terraform_version": "0.12.24",
+    	"serial": 3,
+    	"lineage": "3c77xxxx-2de4-7736-1447-038974a3c187",
+    	"outputs": {},
+    	"resources": [
+    		{...},
+    		{...}
+    	]
+    }
+    ```
+
+    - Terraform의 state이다
+      - 현재 인프라의 상태를 의미하는 것은 아님!!
+        - Terraform 명령어를 사용해서 생성한 resource들의 결과물이고, 인프라의 실제 상태는 아님!!
+          - 그래서 **state 파일**과 **현재 인프라의 상태**를 동일하게 유지하는 것이 중요하다!
+    - state는 원격 저장소의 **backend**에 저장 될 수 있다
+      - 현재 현업에서는 대부분 backend를 사용한다
+
+<br>
+
+- **output**
+
+  - Terraform으로 만든 자원을 변수 형태로 state 파일에 저장하는 것
+
+  - ex)
+
+    ```yaml
+    resource "aws_vpc" "default" {
+    	cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
+    }
+    
+    output "vpc_id" {
+    	value = aws_vpc.default.id
+    }
+    
+    output "cidr_block" {
+    	value = aws_vpc.default.cidr_block
+    }
+    ```
+
+    - vpc id 나 cidr값을 참조해서 `vpc_id` 라는 변수를 **state** 파일로 저장하는 것
+    - remote를 활용해서 재사용 할 수 있다
+
+<br>
+
+- **module**
+
+  - 공통적으로 활용할 수 있는 code를 말그대로 module 형태로 정의하는 것
+
+    - 재사용 하는데 강점이 있다
+
+  - ex)
+
+    ```yaml
+    module "vpc" {
+    	source = ":./_modulesvpc"
+    	
+    	cidr_block = "1.0.0.0/16"
+    }
+    ```
+
+    - 한 번 만들어진 Terraform 코드로 같은 형태를 반복적으로 만들어낼 때 주로 사용
+
+<br>
+
+- **remote**
+
+  - 다른 경로의 state를 참조하는 것
+
+    - 원격 참조 개념
+    - `output`  변수를 불러올 때 주로 사용
+
+  - ex)
+
+    ```yaml
+    data "terraform_remote_state" "vpc"{
+    	backend = "remote"
+    	
+    	config = {
+    		bucket		= "terraform-s3-bucket"
+    		region		= "ap-northeast-2"
+    		key				= "terraform/vpc/terraform.tfstate"
+    	}
+    }
+    ```
+
+    - remote state 는  key 값에 명시한 **state** 에서 output을 통해 생성된 변수를 가져온다
+
+<br>
+
+### Terraform  기본 명령어
+
+- **init**
+  - Terraform 명령어 사용을 위한 각종 설정을 진행
+- **plan**
+  - Terraform으로 작성한 코드가 실제로 어떻게 만들어질지에 대한 예측 결과를 보여줌
+- **apply**
+  - Terraform 코드로 인프라를 생성하는 명령어
+    - 실제 인프라에 영향을 끼치는 명령어이기때문에 주의깊게 실행해야함!
+      - 그래서 `apply` 전에 꼭 `plan` 을 해야함!
+- **import**
+  - 이미 만들어진 자원을 Terraform state 파일로 옮겨주는 명령어
+    - 이미 만들어진 자원을 code로 옮기고 싶을 때 사용
+- **state**
+  - Terraform state를 다루는 명령어
+    - 하위 명령어로 mv, push 같은 명령어가 있음
+- **destroy**
+  - 생성된 자원들을 state 파일 기준으로 모두 삭제하는 방법
 
 <br>
 
 <br>
 
 ## What is Terraform?
+
+> Terraform docs와 블로그를 참고하여 정리한 내용
 
 <br>
 
