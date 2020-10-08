@@ -40,6 +40,8 @@
 
   - Terraform으로 생성할 Infra의 종류
 
+    - Terraform 은 정말 다양한 provider를 지원한다!
+
   - 보통 `provider.tf` 로 파일을 생성한다
 
   - ex)
@@ -129,9 +131,15 @@
     ```
 
     - vpc id 나 cidr값을 참조해서 `vpc_id` 라는 변수를 **state** 파일로 저장하는 것
-    - remote를 활용해서 재사용 할 수 있다
+    - output으로 추출된 부분은 이후에 `remote state` 를 활용해서 재사용 할 수 있다
 
 <br>
+
+- **backend**
+  - terraform 상태를 저장할 공간을 지정하는 부분
+    - 생성된 **output**, 즉 variable로 생성된 **state file**을 저장하는 **공간**
+  - backend를 사용하면 현재 배포된 최신 상태를 외부에 저장하기 때문에 다른 사람과의 **협업**이 가능하다!
+    - 대표적으로 AWS S3가 있다
 
 - **module**
 
@@ -139,63 +147,137 @@
 
     - 재사용 하는데 강점이 있다
 
-  - ex)
+  - 일종의 **함수**라고 생각하면 편하다
 
+    - 여러 terraform code를 **변수**만 바꾸어서 **하나의 module**로 생성하는 것을 의미
+  
+  - ex)
+  
     ```yaml
     module "vpc" {
     	source = ":./_modulesvpc"
-    	
+  	
     	cidr_block = "1.0.0.0/16"
     }
     ```
-
+  
     - 한 번 만들어진 Terraform 코드로 같은 형태를 반복적으로 만들어낼 때 주로 사용
 
 <br>
 
-- **remote**
+- **remote state**
 
   - 다른 경로의 state를 참조하는 것
 
     - 원격 참조 개념
     - `output`  변수를 불러올 때 주로 사용
 
-  - ex)
+  - remote state를 사용하면 `VPC`, `IAM` 등과 같은 공용 service를 다른 service 에서 참조할 수 있다
 
+    - **tfstate 파일 (최신 terraform 상태 정보)** 이 저장되어 있는 backend 정보를 명시하면, 
+      - 해당 backend에서 output 정보들을 가져온다
+  
+  - ex)
+  
     ```yaml
     data "terraform_remote_state" "vpc"{
     	backend = "remote"
     	
     	config = {
     		bucket		= "terraform-s3-bucket"
-    		region		= "ap-northeast-2"
+  		region		= "ap-northeast-2"
     		key				= "terraform/vpc/terraform.tfstate"
     	}
     }
     ```
-
+  
     - remote state 는  key 값에 명시한 **state** 에서 output을 통해 생성된 변수를 가져온다
 
 <br>
 
-### Terraform  기본 명령어
+### Terraform 작동 원리
 
-- **init**
-  - Terraform 명령어 사용을 위한 각종 설정을 진행
-- **plan**
-  - Terraform으로 작성한 코드가 실제로 어떻게 만들어질지에 대한 예측 결과를 보여줌
-- **apply**
-  - Terraform 코드로 인프라를 생성하는 명령어
-    - 실제 인프라에 영향을 끼치는 명령어이기때문에 주의깊게 실행해야함!
-      - 그래서 `apply` 전에 꼭 `plan` 을 해야함!
-- **import**
-  - 이미 만들어진 자원을 Terraform state 파일로 옮겨주는 명령어
-    - 이미 만들어진 자원을 code로 옮기고 싶을 때 사용
-- **state**
-  - Terraform state를 다루는 명령어
-    - 하위 명령어로 mv, push 같은 명령어가 있음
-- **destroy**
-  - 생성된 자원들을 state 파일 기준으로 모두 삭제하는 방법
+- Terraform에는 3가지 형상이 존재한다
+  1. **Local code**
+     - 현재 개발자가 작성/수정하고 있는 code
+  2. **AWS 실제 인프라**
+     - 실제로 AWS에 배포되어 있는 인프라
+  3. **Backend에 저장된 상태**
+     - 가장 최근에 배포한 terraform code 형상
+       - `tfstate` 파일
+- 여기서 가장 중요한 것은 `AWS 실제 인프라` 와 `Backend에 저장된 상태` 가 **100% 일치하도록 만드는 것** 이다!!!
+  - Terraform을 운영하면서 최대한 이 두가지가 100% 동일하도록 유지하는 것이 중요한데, 
+    - Terraform에서는 이를 위해 **import**, **state** 등 여러 명령어를 제공한다
+- 인프라 정의는 먼저 `Local code` 에서 시작한다
+  - 개발자는 local에서 terraform code를 정의한 후에
+  - 해당 코드를 실제 인프라로 프로비전한다
+    - 이 때, backend를 구성하여 최신 코드를 저장한다
+
+<br>
+
+### Terraform 기본 명령어
+
+#### init
+
+- Terraform 명령어 사용을 위한 각종 설정을 진행
+  - 지정한 backend에 상태 저장을 위한 `.tfstate` 파일을 생성한다
+    - 여기에는 가장 마지막에 적용한 terraform 내역이 저장된다
+  - init 작업을 완료하면, local에는 `.tfstate`  에 정의된 내용을 담은 `.terraform` 파일이 생성된다
+  - 기존에 다른 개발자가 이미 `.tfstate` 에 인프라를 정의해 놓은 것이 있다면, 다른 개발자는 **init** 작업을 통해서 local에 **sync**를 맞출 수 있다
+
+#### plan
+
+- Terraform으로 작성한 코드가 실제로 어떻게 만들어질지에 대한 예측 결과를 보여줌
+  - 단, plan을 한 내용에 error가 없어도, 실제 적용되었을 때는 error가 발생 할 수 있으므로 유의해야 한다!
+  - **Plan 명령어는 어떠한 형상에도 변화를 주지 않는다**
+
+#### apply
+
+- Terraform 코드를 바탕으로 실제로 인프라를 생성하는 명령어
+  - **apply**를 완료하면 AWS 상에 실제로 해당 인프라가 생성되고, 
+    - 작업 결과가 backend의 `.tfstate` 파일에 저장된다
+      - 해당 결과는 local의 `.terraform` 파일에도 저장된다
+  - 실제 인프라에 영향을 끼치는 명령어이기때문에 주의깊게 실행해야함!
+    - 그래서 `apply` 전에 꼭 `plan` 을 해야함!
+
+#### import
+
+- 이미 만들어진 자원을 `terraform state` 파일로 옮겨주는 명령어
+
+  - 이미 만들어진 자원을 code로 옮기고 싶을 때 사용
+
+  - local의 `.terraform` 에 해당 resource의 **상태 정보**를 저장해주는 역할을 한다
+
+    - 단, **code를 생성해주지 않는다!!**
+      - apply 전까지는 backend에 저장되지 않는다
+      - import 이후에 plan 을 하면 **local에 해당 코드가 없기 때문에** resource가 삭제 또는 변경된다는 결과를 보여준다
+        - 이 결과를 바탕으로 code를 작성할 수 있다 
+
+  - ex)
+
+    ```bash
+    $ terraform import [options] ADDRESS ID
+    ```
+
+    
+
+#### state
+
+- Terraform state를 다루는 명령어
+
+  - 실제로 생성된 인프라를 볼 수 있다
+
+    - ex)
+
+      ```bash
+      $ terraform state list
+      ```
+
+  - 하위 명령어로 mv, push 같은 명령어가 있음
+
+#### destroy
+
+- 생성된 자원들을 state 파일 기준으로 모두 삭제하는 방법
 
 <br>
 
