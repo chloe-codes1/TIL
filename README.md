@@ -167,6 +167,7 @@
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
   - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
   - [Amazon Athena](/AWS/AWS_Services/Amazon_Athena.md)
+  - [Amazon VPC](/AWS/AWS_Services/Amazon_VPC.md)
 
 - #### [AWS Tips](/AWS/AWS_Tips)
 
