@@ -57,3 +57,62 @@
   - Shell, command, file module은 보장되지 않는다
 - Ansible을 실행하면 Task를 수행하기 전에 module의 상태를 먼저 체크하고, 
   - Task를 수행 할때도 추가된 것과 변화된 부분에 대한 정보들을 제공하여 **일관성**있는 결과를 제공할 수 있다
+
+<br>
+
+<br>
+
+## Ansible Architecture
+
+<br>
+
+![ansible-architecture](../../images/ansible-architecture.png)
+
+### Control Node
+
+- 중앙 제어 node이며, Ansible이 설치되는 node
+  - Windows는 설치가 불가능하므로 `winrm` 을 사용해야 한다
+
+<br>
+
+### Managed Node
+
+- Ansible **Control Node**에 의해 관리되는 서버
+  - **hosts** 에 등록된 대상
+- Ansible **Control Node**에서 **SSH**를 통해 **Managed Node**에 배포한다
+
+<br>
+
+### Inventory
+
+- **Managed Node** 가 등록되어 있는 목록
+  - 작업할 node 혹은 server들의 접속 정보를 가지고 있는 파일
+  - Remote server에 대한 meta data를 기술하는 파일
+- 기본 파일은 `/etc/ansible/hosts` 를 읽게 하거나, 따로 **Inventory** 파일을 만들고 option을 주어 동작하게 할 수 있다
+  - 만약 고정 IP를 가지고 있고, **hosts** 파일 안에 들어가 있지 않는 server가 있다면 설정 파일을 만들 수 있고, 테스트 환경을 만들 때 유용하다
+
+<br>
+
+### Modules
+
+- Ansible에서 실행되면서 작업하는 하나하나의 단위
+- 다음과 같은 작업을 간단히 수행할 수 있게 도와줌
+  - Package, service 설치
+  - File에 대한 권한 설정
+  - Database 작업
+  - Cloud 작업
+  - Network 작업
+
+<br>
+
+### Tasks
+
+- Module의 집합
+- 작업 단위
+
+<br>
+
+### Playbooks
+
+- 계획된 작업을 순서대로 실행하기 위해 작성되는 YAML file
+
