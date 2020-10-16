@@ -207,6 +207,7 @@
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
+  - [Serverless Framework Setup for AWS Lambda](/Server/ServerLess_Computing/Serverless_Framework_Setup_for_AWS_Lambda.md)
   
 - #### [Deployment](/Server/Deployment)
 
