@@ -155,4 +155,140 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU
 
 <br>
 
-*계속 정리중...*
+### 6. iostat -xz 1
+
+```bash
+$ iostat -xz 1
+Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          73.96    0.00    3.73    0.03    0.06   22.21
+
+Device:   rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+xvda        0.00     0.23    0.21    0.18     4.52     2.08    34.37     0.00    9.98   13.80    5.42   2.44   0.09
+xvdb        0.01     0.00    1.02    8.94   127.97   598.53   145.79     0.00    0.43    1.78    0.28   0.25   0.25
+xvdc        0.01     0.00    1.02    8.86   127.79   595.94   146.50     0.00    0.45    1.82    0.30   0.27   0.26
+dm-0        0.00     0.00    0.69    2.32    10.47    31.69    28.01     0.01    3.23    0.71    3.98   0.13   0.04
+dm-1        0.00     0.00    0.00    0.94     0.01     3.78     8.00     0.33  345.84    0.04  346.81   0.01   0.00
+dm-2        0.00     0.00    0.09    0.07     1.35     0.36    22.50     0.00    2.55    0.23    5.62   1.78   0.03
+[...]
+```
+
+- `block device(HDD, SSD, …)`가 어떻게 동작하는지 이해하기 좋은 툴이다
+  - **확인해봐야할 항목**
+    - **r/s, w/s rkB/s, wkB/s**
+      - read 요청과 write 요청, read kB/s, write kB/s를 나타낸다
+      - 어떤 요청이 가장 많이 들어오는지 확인해볼 수 있는 중요한 지표다
+        - 성능 문제는 생각보다 과도한 요청때문에 발생하는 경우도 있기 때문이다.
+    - **await**
+      - I/O처리 평균 시간을 밀리초로 표현한 값이다
+      - application한테는 I/O요청을 queue하고 서비스를 받는데 걸리는 시간이기 때문에 application이 이 시간동안 대기하게 된다
+      - 일반적인 장치의 요청 처리 시간보다 긴 경우에는 block장치 자체의 문제가 있거나, 장치가 포화된 상태임을 알 수 있다
+
+<br>
+
+### 7. free -m
+
+```bash
+$ free -m
+             total       used       free     shared    buffers     cached
+Mem:        245998      24545     221453         83         59        541
+-/+ buffers/cache:      23944     222053
+Swap:            0          0          0
+```
+
+- **확인해봐야할 항목**
+  - buffers: Block 장치 I/O의 buffer 캐시, 사용량
+  - cached: 파일 시스템에서 사용되는 [page cache](https://brunch.co.kr/@alden/25)의 양
+    - 위 값들이 0에 가까워 지면 안된다
+      - 이는 곧 높은 Disk I/O가 발생하고 있음을 의미한다 (`iostat`으로 확인 가능)
+        - 위 예제는 각각 59MB, 541MB로 괜찮은 정도에 속한다
+
+<br>
+
+### 8. sar -n DEV 1
+
+``` bash
+$ sar -n DEV 1
+Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015     _x86_64_    (32 CPU)
+
+12:16:48 AM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s   %ifutil
+12:16:49 AM      eth0  18763.00   5032.00  20686.42    478.30      0.00      0.00      0.00      0.00
+12:16:49 AM        lo     14.00     14.00      1.36      1.36      0.00      0.00      0.00      0.00
+12:16:49 AM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+12:16:49 AM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s   %ifutil
+12:16:50 AM      eth0  19763.00   5101.00  21999.10    482.56      0.00      0.00      0.00      0.00
+12:16:50 AM        lo     20.00     20.00      3.25      3.25      0.00      0.00      0.00      0.00
+12:16:50 AM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+```
+
+- 이 툴을 사용하면 **network throughput(Rx, Tx KB/s)**을 측정할수 있다
+  - 위 예제에서는 `eth0`의 수신량이 약 22Mbytes/s(21999.10rxkB/s)이다
+    - 이것은 176Mbits/s인데 한계인 1Gbit/s에 아직 많이 못 미치는 값이다
+  - 위 값중 `%ifutil`은 [nicstat](https://github.com/scotte/nicstat)로도 측정 가능한 네트워크 장치 사용률이다
+    - but, nicstat에서도 그렇듯 정확한 값을 가져오는게 어려워서 위 예제에서도 잘 작동하지 않는다
+
+<br>
+
+### 9. sar -n TCP,ETCP 1
+
+```bash
+$ sar -n TCP,ETCP 1
+Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU)
+
+12:17:19 AM  active/s passive/s    iseg/s    oseg/s
+12:17:20 AM      1.00      0.00  10233.00  18846.00
+
+12:17:19 AM  atmptf/s  estres/s retrans/s isegerr/s   orsts/s
+12:17:20 AM      0.00      0.00      0.00      0.00      0.00
+
+12:17:20 AM  active/s passive/s    iseg/s    oseg/s
+12:17:21 AM      1.00      0.00   8359.00   6039.00
+
+12:17:20 AM  atmptf/s  estres/s retrans/s isegerr/s   orsts/s
+12:17:21 AM      0.00      0.00      0.00      0.00      0.00
+```
+
+- TCP 통신량을 요약해서 보여준다.
+  - active/s: 로컬에서부터 요청한 초당 TCP 커넥션 수를 보여준다 (예를들어, connect()를 통한 연결).
+  - passive/s: 원격으로부터 요청된 초당 TCP 커넥션 수를 보여준다 (예를들어, accept()를 통한 연결).
+  - retrans/s: 초당 TCP 재연결 수를 보여준다.
+- `active`와 `passive` 수를 보는것은 서버의 부하를 대략적으로 측정하는데에 편리하다
+  - 위 설명을 보면 active를 outbound passive를 inbound 연결로 판단할 수 있는데, 꼭 그렇지만은 않다. 
+    - ex) localhost에서 localhost로 연결같은 connection
+- `retransmits`은 **네트워크**나 **서버**의 **issue**가 있음을 이야기한다
+  - **신뢰성이 떨어지는 네트워크 환경**이나(공용인터넷), **서버가 처리할 수 있는 용량 이상의 커넥션**이 붙어서 패킷이 drop되는것을 이야기한다
+    - 위 예제에서는 초당 하나의 TCP 서버가 들어오는것을 알 수 있다.
+
+<br>
+
+### 10. top
+
+```bash
+$ top
+top - 00:15:40 up 21:56,  1 user,  load average: 31.09, 29.87, 29.92
+Tasks: 871 total,   1 running, 868 sleeping,   0 stopped,   2 zombie
+%Cpu(s): 96.8 us,  0.4 sy,  0.0 ni,  2.7 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:  25190241+total, 24921688 used, 22698073+free,    60448 buffers
+KiB Swap:        0 total,        0 used,        0 free.   554208 cached Mem
+
+   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 20248 root      20   0  0.227t 0.012t  18748 S  3090  5.2  29812:58 java
+  4213 root      20   0 2722544  64640  44232 S  23.5  0.0 233:35.37 mesos-slave
+ 66128 titancl+  20   0   24344   2332   1172 R   1.0  0.0   0:00.07 top
+  5235 root      20   0 38.227g 547004  49996 S   0.7  0.2   2:02.74 java
+  4299 root      20   0 20.015g 2.682g  16836 S   0.3  1.1  33:14.42 java
+     1 root      20   0   33620   2920   1496 S   0.0  0.0   0:03.82 init
+     2 root      20   0       0      0      0 S   0.0  0.0   0:00.02 kthreadd
+     3 root      20   0       0      0      0 S   0.0  0.0   0:05.35 ksoftirqd/0
+     5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H
+     6 root      20   0       0      0      0 S   0.0  0.0   0:06.94 kworker/u256:0
+     8 root      20   0       0      0      0 S   0.0  0.0   2:38.05 rcu_sched
+```
+
+- `top` 명령어는 위에서 체크해본 다양한 측정치를 쉽게 체크할 수 있다.
+  - 시스템 전반적으로 값을 확인하기 쉽다는 장점이 있다
+    - but, 화면이 지속적으로 바뀌는 점 떄문에 패턴을 찾는것이 어렵다
+      - 일시적으로 멈추는 현상을 잡기 위해서도 화면을 주기적으로 빠르게 멈춰주지 않으면 찾기 힘들다
+        - ex) ctrl+S는 업데이트를 중지시키고, Ctrl+Q는 다시 시작시킨다. 그리고 화면이 지워져버린다
