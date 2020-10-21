@@ -1,6 +1,6 @@
-# Find EC2 by Domain Name
+# Find EC2 Instance by Domain Name
 
-> 해당 Domain 이 어떤 EC2 인지 모를 때 찾는 방법을 공유해요
+> 해당 Domain 이 어떤 EC2 Instance 인지 모를 때 찾는 방법을 공유해요
 
 <br>
 
