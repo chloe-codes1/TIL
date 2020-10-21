@@ -182,12 +182,13 @@
   - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
   - [Amazon Security Group](/AWS/AWS_Tips/Amazon_Security_Group.md)
   - [AWS Well-architected Framework - Security Pillar](/AWS/AWS_Tips/AWS_Well-architected_Framework_Security_Pillar.md)
+  - [Find EC2 by Domain Name](/AWS/AWS_Tips/Find_EC2_by_Domain_Name.md)
 
-- #### [AWS Certifications]()
+- #### [AWS Certifications](/AWS/AWS_cert)
 
-  - [Solutions Architect]()
-  - [SAA Prep Workshop]()
-  - [AWS 10,000 Foot Overview]()
+  - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
+  - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
+  - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
 
 - #### [AWS Builders Series](/AWS/AWS_Builders)
 
