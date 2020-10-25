@@ -204,6 +204,7 @@
   - [HTTPS and SSL](/Server/Server101/HTTPS_and_SSL.md)
   - [What is NGINX](/Server/Server101/What_is_NGINX.md)
   - [Scale Up and Scale Out](/Server/Server101/Scale_Up_and_Scale_Out.md)
+  - [What is Cache?](/Server/Server101/What_is_Cache.md)
 
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
@@ -232,14 +233,13 @@
 
 ### DB
 
-- #### [RDBMS](/RDBMS)
-  - [DB Basics](/DB/RDBMS/01_DB_Basics.md)
-  - [SQL and Django ORM](/DB/RDBMS/02_SQL_and_Django_ORM.md)
-  - [One to Many Relationship](/DB/RDBMS/03_One_To_Many_Relationship.md)
-  - [Many to Many Relationship](/DB/RDBMS/04_Many_To_Many_Relationship.md)
-  - [Dump and Load Data](/DB/RDBMS/05_Dump_and_Load_Data.md)
-  - [MySQL with Django](/DB/RDBMS/06_MySQL_with_Django.md)
-  - [Create MySQL Users Accounts and Grant Privileges](/DB/RDBMS/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
+- [DB Basics](/DB/01_DB_Basics.md)
+- [SQL and Django ORM](/DB/02_SQL_and_Django_ORM.md)
+- [One to Many Relationship](/DB/03_One_To_Many_Relationship.md)
+- [Many to Many Relationship](/DB/04_Many_To_Many_Relationship.md)
+- [Dump and Load Data](/DB/05_Dump_and_Load_Data.md)
+- [MySQL with Django](/DB/06_MySQL_with_Django.md)
+- [Create MySQL Users Accounts and Grant Privileges](/DB/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
 
 <br>
 
@@ -285,6 +285,10 @@
 - #### [Ansible](/DevOps/Ansible)
 
   - [Ansible 101](/DevOps/Ansible/Ansible101.md)
+  
+- #### [Redis](/DevOps/Redis)
+
+  - [Redis 101](/DevOps/Redis/Redis101.md)
 
 <br>
 
