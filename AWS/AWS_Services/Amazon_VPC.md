@@ -43,6 +43,8 @@
 
 ### Subnet
 
+> 특정 Availability Zone 에 속한 네트워크 그룹으로 VPC 내에서도 나눠진 독립적인 네트워크 구역
+
 ![image-20201011020622952](../../images/image-20201011020622952.png)
 
 - VPC의 IP address 범위
