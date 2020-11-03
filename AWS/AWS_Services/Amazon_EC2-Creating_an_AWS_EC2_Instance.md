@@ -220,3 +220,22 @@
 <br>
 
 *EC2 생성 및 접속 끝!*
+
+<br>
+
+<br>
+
+<br>
+
+`+`
+
+## EC2 설정 관련 Tips
+
+<br>
+
+### 1. Burstable instances 
+
+- **Amazon burstable instances** 란 CPU의 순간적인 load에서 필요한 만큼 성능을 높이는 `burst` 기능을 제공한다
+- 지원되는 instance family는 **T2** 와 **T3**, **T4** 이다
+  - T3, T4 는 default가 Unlimited 이고,
+  - T2 는 default가 Standard 이다
