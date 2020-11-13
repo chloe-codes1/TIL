@@ -85,6 +85,7 @@
 - [Generators in Python](/Python/Generators_in_Python.md)
 - [Type Hints in Python](/Python/Type_Hints_in_Python.md)
 - [Unit Testing in Python](/Python/Unit_Testing_in_Python.md)
+- [Handling Encoding Issues Using Redis with Python](/Python/Handling_Encoding_Issues_Using_Redis_with_Python.md)
 
 <br>
 
