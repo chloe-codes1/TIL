@@ -186,6 +186,7 @@
   - [AWS Well-architected Framework - Security Pillar](/AWS/AWS_Tips/AWS_Well-architected_Framework_Security_Pillar.md)
   - [Find EC2 Instance by Domain Name](/AWS/AWS_Tips/Find_EC2_Instance_by_Domain_Name.md)
   - [Resizing an Amazon EBS Volume](/AWS/AWS_Tips/Resizing_an_Amazon_EBS_Volume.md)
+  - [What Are AWS Elasitc Network Interfaces](/AWS/AWS_Tips/What_Are_AWS_Elasitc_Network_Interfaces.md)
 
 - #### [AWS Certifications](/AWS/AWS_cert)
 
