@@ -34,5 +34,12 @@
 4. **Networking**
    - HTTP request와 같은 network 호출에 사용됨
 5. **UI Backend**
+   - 기본적인 장치를 그린다
+   - Platform에서 명시하지 않은 일반적인 interface로서, OS user interface 체계를 사용한다
 6. **JavaScript Interpreter**
+   - JS code를 해석하고 실행한다
 7. **Data Persistence**
+   - 자료를 저장하는 계층이다
+   - Cookie를 저장하는 것과 같이 모든 종류의 자원을 하드 디스크에 저장할 피룡가 있다
+     - HTML5 명세에는 browser가 지원하는 `web database` 가 정의되어 있다
+
