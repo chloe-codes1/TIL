@@ -43,3 +43,43 @@
    - Cookie를 저장하는 것과 같이 모든 종류의 자원을 하드 디스크에 저장할 피룡가 있다
      - HTML5 명세에는 browser가 지원하는 `web database` 가 정의되어 있다
 
+<br>
+
+<br>
+
+## The Rendering Engine
+
+- Rendering Engine의 역할은 request를 browser 화면에 표시하는 것이다
+- Rendering Engine은 `HTML`, `XML` 문서와 `image`를 표시할 수 있다
+  - Plug-in이나 browser 확장 기능을 이용해서 `PDF` 와 같은 다른 유형도 표시할 수 있다
+
+<br>
+
+### Rendering Engines
+
+이 글에서 다루는 Browser인 **Firefox**, **Chrome**, **Safari**는 두 종류의 Rendering Engine으로 제작되었다
+
+- **Firefox**는 Mozilla에서 직접 만든 `Gecko` Engine을 사용하고,
+- **Safari**와 **Chrome**은 `Webkit`  Engine을 사용한다
+  - **Webkit**은 최초 Linux Platform에서 동작하기 위해 제작된 open source engine인데,
+    - Apple이 Mac과 Windows에서 Safari browser를 지원하기 위해 수정을 가했다. 
+
+<br>
+
+### The main flow
+
+Rendering Engine은 **Network layer**로부터 요청한 contents를 얻는 것으로 시작하는데, 문서의 내용은 보통 8kb 단위로 전송된다
+
+![image-20201124005119156](../../images/image-20201124005119156.png)
+
+- Rendering Engine은 HTML 문서를 **parsing**하고, "**content tree**" 내부에서 `tag`를 **DOM node**로 변환한다
+  - 그 다음 외부 CSS file과 함께 in-line style 요소도 parsing 한다
+    - Style 정보와 HTML 표시 규칙은 "**Render tree**" 라고 부르는 또 다른 tree를 생성한다
+- **Render tree**는 색상 또는 면적과 같은 **시각적 속성**이 있는 사각형을 포함하고 있는데,  
+  - 이들은 **정해진 순서대로** 화면에 표시된다
+    - Render tree 생성이 끝나면 **batch**가 시작되는데, 이것은 각 node가 화면의 정확한 위치에 표시되는 것을 의미한다
+- 일련의 과정들이 **점진적**으로 진행된다는 것을 아는 것이 중요하다!
+  - Rendering engine은 좀 더 나은 사용자 경험을 위해 가능하면 **빠르게** 내용을 표시하는데, 모든 HTML을 parsing 할 때까지 기다리지 않고, **batch**와 **그리기** 과정을 시작한다
+    - Network로부터 나머지 content가 전송되기를 기다리면서 받은 내용의 일부를 **먼저** 화면에 표시하는 것이다
+
+![image-20201124005950727](../../images/image-20201124005950727.png)
