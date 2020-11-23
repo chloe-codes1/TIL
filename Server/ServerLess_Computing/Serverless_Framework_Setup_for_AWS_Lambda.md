@@ -9,11 +9,9 @@
 - serverless.yml 파일은 project의 root경로에 생성한다
 - 해당 파일을 기준으로 Serverless Framework는 배포한다
 
+<br>
 
-
-ex)
-
-
+### ex1)
 
 ![serverless-example](../../images/serverless-example.png)
 
@@ -117,7 +115,34 @@ ex)
 - npm으로 설치한 serverless plugin 중 사용할 plugin을 기재한다
   - 해당 프로젝트의 root 에 external plugin이 설치되어 있어야만 정상 작동한다 
 
+<br>
 
+<br>
+
+### ex2)
+
+![serverless-vpc](../../images/serverless-vpc.png)
+
+<br>
+
+### provider
+
+- **vpc**
+  - Lambda 함수의 VPC에 대한 정보를 기재한다
+- **securityGroupIds**
+  - 해당  lambda 함수의 Security group ID를 기재한다
+- **subnetIds**
+  - 해당 lambda 함수의 subnet ID를 기재한다
+
+<br>
+
+`+`
+
+#### 주의!
+
+VPC 정보를 `serverless.yml`에 기재하지 않으면 lambda 함수만 배포 하는것이 아닌 전체 배포 시, VPC 정보가 **초기화** 되고 AWS Console에서 재 설정 해야한다! 
+
+꼭 Serverless.yml에  VPC 정보를 기재하자! 
 
 <br>
 
