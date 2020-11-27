@@ -293,7 +293,8 @@
   
 - #### [Redis](/DevOps/Redis)
 
-  - [Redis 101](/DevOps/Redis/Redis101.md)
+  - [Redis 101](/DevOps/Redis/01_Redis101.md)
+  - [Redis Commands](/DevOps/Redis/02_Redis_Commands.md)
 
 <br>
 
