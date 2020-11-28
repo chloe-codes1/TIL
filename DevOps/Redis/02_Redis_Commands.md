@@ -6,7 +6,7 @@
 
 <br>
 
-### 1. GET
+### 1. GET key
 
 - Key의 Value를 가져오는 명령어
 - 만약 Key가 존재하지 않으면, **nil**을 return 한다
@@ -15,7 +15,7 @@
 
 <br>
 
-### 2. SET
+### 2. SET key value
 
 - String value를 갖는 Key를 SET 하는 명령어
 
@@ -52,8 +52,6 @@ SET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]
 
 - Key가 정상적으로 SET되면 **OK** 를 return
 
-<br>
-
 #### Examples
 
 ```bash
@@ -67,6 +65,33 @@ hoho
 
 <br>
 
-### 3. GETSET
+### 3. GETSET key value
 
-- 
+- Key에 value를 SET하고, 기존에 저장되어 있던 value를 return 한다
+- Key만 있고 저장된 string value가 없으면 **Error** 를 return 한다
+
+<br>
+
+#### Examples
+
+```bash
+redis> del haha
+1
+redis> SET haha "hoho"
+OK
+redis> GETSET haha "yay"
+hoho
+redis> GET haha
+yay
+```
+
+<br>
+
+<br>
+
+### 4. EXPIRE key seconds
+
+<br>
+
+*계속 추가 중*
+
