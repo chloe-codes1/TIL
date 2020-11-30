@@ -142,7 +142,15 @@ redis> TTL haha
 -1
 ```
 
+<br>
 
+<br>
+
+### 5. TTL key
+
+- Key에 설정된 timeout의 TTL (Time To Live)을 return 한다
+  - 만약 key가 없으면 **-2**를 return 한다
+  - key는 존재하지만 expire가 설정되어 있지 않으면 **-1**을 return 한다
 
 <br>
 
