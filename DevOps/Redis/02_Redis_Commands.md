@@ -121,7 +121,7 @@ yay
 
 <br>
 
-### Examples
+#### Examples
 
 ```
 redis> EXPIRE haha 10
@@ -151,6 +151,70 @@ redis> TTL haha
 - Key에 설정된 timeout의 TTL (Time To Live)을 return 한다
   - 만약 key가 없으면 **-2**를 return 한다
   - key는 존재하지만 expire가 설정되어 있지 않으면 **-1**을 return 한다
+
+<br>
+
+<br>
+
+### 6. INCRYBY key increment
+
+- Key에 저장된 숫자를 증가시킨다
+- 만약 key가 존재하지 않으면, **0**을 설정한 후에 increment를 실행한다
+
+<br>
+
+#### Return value
+
+- 증가된 value 값을 return 한다 
+
+- 만약 key가 integer로 바꿀 수 있는 string이 아닌 잘못된 type의 value를 갖고있으면, **Error**를 return한다
+
+<br>
+
+#### Examples
+
+```bash
+redis> SET num 10
+OK
+redis> INCRBY num 25
+35
+redis> SET string "10"
+OK
+redis> INCRBY string 5
+15
+redis> SET wrong "wrong value"
+OK
+redis> INCRBY wrong 10
+ERR value is not an integer or out of range
+```
+
+<br>
+
+<br>
+
+### 7. DECRBY key decrement
+
+- Key에 저장된 숫자를 감소시킨다
+- 만약 key가 존재하지 않으면, **0**을 설정한 후에 값을 decrement를 실행한다
+
+<br>
+
+#### Return value
+
+- 감소된 value 값을 return 한다 
+
+- 만약 key가 integer로 바꿀 수 있는 string이 아닌 잘못된 type의 value를 갖고있으면, **Error**를 return한다
+
+<br>
+
+#### Examples
+
+```bash
+redis> SET num "10"
+OK
+redis> DECRBY num 4
+6
+```
 
 <br>
 
