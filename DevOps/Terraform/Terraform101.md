@@ -259,7 +259,6 @@
     $ terraform import [options] ADDRESS ID
     ```
 
-    
 
 #### state
 
@@ -278,6 +277,39 @@
 #### destroy
 
 - 생성된 자원들을 state 파일 기준으로 모두 삭제하는 방법
+
+#### workspace
+
+- workspace를 관리할 때 쓰이는 명령어
+
+  - ex1)
+
+    ```bash
+    $ terraform workspace list
+      default
+    * product
+    ```
+
+    - workspace 목록을 보여준다
+    - 현재 사용중인 workspace는 asterisk(`*`)로 표시된다 
+
+  - ex2)
+
+    ```bash
+    $ terraform workspace select [NAME]
+    ```
+
+    -  다른 workspace로 이동 할 때 사용한다
+
+  - ex3)
+
+    ```bash
+    $ terraform workspace new [NAME]
+    ```
+
+    - 새로운 workspace를 생성할 때 사용한다
+
+
 
 <br>
 
