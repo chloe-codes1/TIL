@@ -47,3 +47,22 @@
 
 ![logstash](../../images/image-20201203132913092.png)
 
+<br>
+
+<br>
+
+## Logstash Loves Data
+
+- 더 많은 data를 수집할수록 더 많이 알 수 있다
+- Logstash는 모든 형태 및 규모의 data를 다룰 수 있다
+
+<br>
+
+### Logs and Metrics
+
+모든것이 시작되는 곳
+
+- 모든 유형의 logging data 처리 가능
+  - 다양한 web log (ex. Apache)  및 appliction log (ex. log4j for Java) 를 수집한다
+  - syslog, networking과 firewall log 등 여러 형식의 log를 수집한다
+- [Filebeat](https://www.elastic.co/products/beats/filebeat)와 연계하여 보안을 유지하며 log를 전달할 수 있다
