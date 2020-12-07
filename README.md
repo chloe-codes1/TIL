@@ -277,7 +277,7 @@
 - #### [ELK](/DevOps/ELK)
 
   - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
-  - [Logstash_Basics](/DevOps/ELK/Logstash_Basics.md)
+  - [Logstash Basics](/DevOps/ELK/Logstash_Basics.md)
   - [How Logstash Works](/DevOps/ELK/How_Logstash_Works.md)
 
 - #### [Terraform](/DevOps/Terraform)
