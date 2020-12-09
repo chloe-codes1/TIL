@@ -8,67 +8,10 @@
 
 <br>
 
-## Install Go on Ubuntu
-
-<br>
-
-### 1. Go 1.14 설치하기
-
-- `longsleep/golang-backports` PPA 를 사용하여 설치
-
-  ``` bash
-  $ sudo add-apt-repository ppa:longsleep/golang-backports
-  $ sudo apt update
-  $ sudo apt install golang-go
-  ```
-
-<br>
-
-### 2. environment variable 설정
-
-- Go는 2개의 environment variable을 갖고 있다 - `GOPATH` & `GOROOT` 
-- `GOROOT`
-  - **Go** binaries가 위치한 곳
-  - `sudo apt install golang-go`로 설치하면 **Go** 를 default path에 설치하므로 따로 수정할 필요 없다!
-- `GOPATH`
-  - user **go** envirionment path
-  - project file들이 위치한 곳을 설정해야 함
-  - `go import` 로 package들을 import 할 때 `GOPATH` 로 불러옴
-  - 일반적으로 `$HOME/go` 에 `GOPATH` 를 설정함
-    - `go install` 이나 `go import` 를 할 때 **go** 는 `GOPATH` 를 찾게 되므로 중요하다!
-
-<br>
-
-> GOPATH 설정
-
-``` bash
-$ export GOPATH=$HOME/go
-```
-
-> PATH 설정
-
-```bash
-$ export PATH=$PATH:$GOPATH/bin
-```
-
-<br>
-
-### 4. Go version 확인하기
-
-```bash
-chloe@chloe-XPS-15-9570 ~
-$ go version
-go version go1.14.2 linux/amd64
-```
-
-<br>
-
-<br>
-
 ## What is Go Language?
 
 - Google이 개발한 programming language
-- 문법은 C언어와 유사하지만, 동시성 (Concurrency) programming을 다루기 편하도록 설계됨
+- 문법은 C언어와 유사하지만, **동시성 (Concurrency) programming**을 다루기 편하도록 설계됨
   - `동시성 프로그래밍`
     - web service와 같이  DB요청이나 Network 통신과 같이 비교적 시간이 많이 걸리는 연산을 하는 동안 프로그램이 다른 이를 먼저할 수 있도록 함을 의미
 - 비교적 최근에 등장한 프로그래밍 언어이지만 비교적 **복잡하지 않고 실용적인 언어**임
@@ -94,6 +37,204 @@ go version go1.14.2 linux/amd64
     - 그래서 dependency를 관리하기 좋다!
       - **Go module**은 import 시에 url을 hash 할 수 있게 해준다
         - 다른 build system에서 .lock file 을 import 하는 것과 유사함!
+
+<br>
+
+<br>
+
+## Install Go on Ubuntu/Mac
+
+<br>
+
+### 1. Go 1.14 설치하기
+
+#### Ubuntu
+
+- `longsleep/golang-backports` PPA 를 사용하여 설치
+
+  ``` bash
+  $ sudo add-apt-repository ppa:longsleep/golang-backports
+  $ sudo apt update
+  $ sudo apt install golang-go
+  ```
+
+#### MacOS
+
+- [golang.org](https://golang.org/doc/install) 에서 package download & install 
+
+<br>
+
+### 2. Go version 확인하기
+
+#### Ubuntu
+
+```bash
+chloe@chloe-XPS-15-9570 ~
+$ go version
+go version go1.14.2 linux/amd64
+```
+
+#### MacOS
+
+```bash
+~ via ⬢ v14.15.1
+➜ go version
+go version go1.15.6 darwin/amd64
+```
+
+<br>
+
+### 3. Workspace 설정
+
+- Go project를 진행할 directory를 생성한다
+  - ex) `/Users/chloe/workspace/go`
+- 해당 directory 내에 아래와 같이 directory 3개를 생성한다
+  - **bin**
+    - source code가 compile된 후 OS별로 실행 가능한 binary file이 저장되는 곳
+  - **pkg**
+    - project에 필요한 package가 compile되어 library file들이 저장되는 곳
+  - **src**
+    - 작성한 source code 및 open source code들을 저장하는 곳
+
+
+
+<br>
+
+### 4. environment variable 설정
+
+- Go는 2개의 environment variable을 갖고 있다 - `GOPATH` & `GOROOT` 
+- `GOROOT`
+  - **Go** binaries가 위치한 곳
+  - `sudo apt install golang-go`로 설치하면 **Go** 를 default path에 설치하므로 따로 수정할 필요 없다!
+    - mac에서는 `/usr/local/go` 에 설치된다
+- `GOPATH`
+  - user **go** envirionment path
+  - project file들이 위치한 곳을 설정해야 함
+  - `go import` 로 package들을 import 할 때 `GOPATH` 로 불러옴
+  - 일반적으로 `$HOME/go` 에 `GOPATH` 를 설정함
+    - `go install` 이나 `go import` 를 할 때 **go** 는 `GOPATH` 를 찾게 되므로 중요하다!
+
+<br>
+
+#### 4-1. Ubuntu $GOPATH 설정
+
+> GOPATH 설정
+
+``` bash
+$ export GOPATH=$HOME/go
+```
+
+> PATH 설정
+
+```bash
+$ export PATH=$PATH:$GOPATH/bin
+```
+
+<br>
+
+#### 4-2. MacOS $GOPATH 설정
+
+> `~/.zshrc`에 다음을 추가한다
+
+```bash
+export GOPATH="/Users/chloe/workspace/go"
+export PATH="$GOPATH:$PATH"
+```
+
+<br>
+
+`+` 
+
+**$GOPATH**설정 후에 `go env` 명령어를 활용하여 제대로 적용되었는지 확인할 수 있다!
+
+<br>
+
+### 5. `src` in $GOPATH
+
+- Go는 download한 code들을 `$GOPATH/src` 에 download한 **domain**을 기준으로 **분류**해서 저장한다
+  -  ex) github.com, golang.org, google-golang.org, etc.
+    - 내가 작성한 source code는 github.com 내에 github user name으로 directory를 만들어서 추가할 것이다
+
+<br>
+
+<br>
+
+## Getting started with Go
+
+<br>
+
+### 1. Main package
+
+- package 이름을 **main.go** 로 한다는 것은 이 project를 **complie** 하고, 그것을 사용할 것이라는 뜻이다
+
+  - 즉, **main.go** 를 제외한 모든 package들은 compile 되지 않는다!
+
+- **main**이 진입점이라서 compiler는 package 이름이 main인 것 부터 찾는다 
+
+  - ex) `package main`
+
+- Go는 **func main() {}** 이라는 함수를 찾는다
+
+  - 여기가 Go program의 **entrypoint**이다!
+
+- 자동적으로 compiler는 **main package** 와 그 안에 있는 **main function** 을 먼저 찾고 실행시킨다
+
+  - ex)
+
+    > main.go
+
+    ```go
+    package main
+    
+    import "fmt"
+    
+    func main() {
+    	fmt.Println("Hello World")
+    }
+    ```
+
+<br>
+
+### 2. Packages and imports
+
+- Go에서 function을 **export** 하고 싶으면, **upper-case** 로 작성하면 된다
+
+  - ex) 
+
+    > something.go
+
+    ```go
+    package something
+    
+    import "fmt"
+    
+    func saySeeya() {
+    	fmt.Println("See ya!")
+    }
+    
+    func SayHello() {
+    	fmt.Println("Hello!")
+    }
+    ```
+
+    > main.go
+
+    ```go
+    package main
+    
+    import (
+    	"fmt"
+    
+    	"github.com/chloe-codes1/go101/something"
+    )
+    
+    func main() {
+    	fmt.Println("Hello World")
+    	something.SayHello()
+    }
+    ```
+
+    
 
 <br>
 
