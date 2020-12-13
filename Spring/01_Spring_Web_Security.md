@@ -2,7 +2,7 @@
 
 > 오랜만에 SpringBoot로 개발하게 된 기념으로(?) 다시 정리하기!
 >
-> References: [bamdule.tistory.com/]([https://bamdule.tistory.com/52#:~:text=Spring%20Security%EB%8A%94%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EA%B8%B0%EB%B0%98,%EC%99%80%20%EB%B6%84%EB%A6%AC%EB%90%98%EC%96%B4%20%EB%8F%99%EC%9E%91%ED%95%9C%EB%8B%A4.](https://bamdule.tistory.com/52#:~:text=Spring Security는 스프링 기반,와 분리되어 동작한다.)), [책] 코드로 배우는 스프링 웹 프로젝트
+> References: [bamdule.tistory.com](https://bamdule.tistory.com/52#:~:text=Spring%20Security%EB%8A%94%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EA%B8%B0%EB%B0%98,%EC%99%80%20%EB%B6%84%EB%A6%AC%EB%90%98%EC%96%B4%20%EB%8F%99%EC%9E%91%ED%95%9C%EB%8B%A4), [책] 코드로 배우는 스프링 웹 프로젝트
 
 <br>
 
