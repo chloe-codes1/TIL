@@ -115,4 +115,64 @@
     }
     ```
 
+<br>
+
+### Naked returns
+
+- 함수의 return type을 명시할 때 return할 값을 **미리 선언**하고, 비어있는 return을 하는 것
+
+  - 선언 할 때 초기화 되므로 함수 내부에서는 해당 variable을 update 하는 것이다!
+
+    - return할 value를 명시하지 않고 **return** 할 수 있다
+
+  - ex)
+
+    ```go
+    package main
     
+    import (
+    	"fmt"
+    	"strings"
+    )
+    
+    func lenAndLower(name string) (length int, lowercase string) {
+    	length = len(name)
+    	lowercase = strings.ToLower(name)
+    	return
+    }
+    
+    func main() {
+    	length, name := lenAndLower("CHLOE")
+    	fmt.Println(length, name)
+    }
+    ```
+
+- 확실하게 어떤 값이 return 되는지 명시하고 싶으면 사용하지 않는 것이 좋다
+
+<br>
+
+### defer
+
+- functino이 끝난 후 실행되는 코드
+
+  - 함수가 종료되었을 때 **defer**를 통해 추가적으로 무언가 동작할 수 있도록 설정할 수 있다
+
+    - return 값이 있는 함수라면 return 된 후에 **defer** 가 실행된다
+
+  - ex)
+
+    ```go
+    func lenAndLower(name string) (length int, lowercase string) {
+      // defer
+    	defer fmt.Println("Done!")
+      
+    	length = len(name)
+    	lowercase = strings.ToLower(name)
+    	return
+    }
+    ```
+
+- defer를 함수 종료 후 image나 file을 닫거나 삭제하고, API request 보내는 것에 활용할 수 있다!
+
+  
+
