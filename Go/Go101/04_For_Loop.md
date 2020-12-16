@@ -8,7 +8,7 @@
 
 ### For
 
-- Go는 loop는 오직 **for** loop 하나만 가능하다
+- Go의 looping은 오직 **for** loop 하나만 가능하다
 
 <br>
 
