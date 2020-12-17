@@ -144,6 +144,10 @@
   - [Settings for XDG user dirs](/Linux/Ubuntu/Settings_for_XDG_user_dirs.md)
   - [Fix AirPods not Working on Ubuntu](/Linux/Ubuntu/Fix_AirPods_not_Working_on_Ubuntu.md)
   - [Setting a JAVA HOME Path in Ubuntu](/Linux/Ubuntu/Setting_a_JAVA_HOME_Path_in_Ubuntu.md)
+  
+- #### [RedHat](/Linux/RedHat)
+
+  - [RPM Options for RedHat Fedora Centos Installs](/Linux/RedHat/RPM_Options_for_RedHat_Fedora_Centos_Installs.md)
 
 <br>
 
