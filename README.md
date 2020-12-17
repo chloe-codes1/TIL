@@ -76,6 +76,7 @@
   - [Functions](/Go/Go101/03_Functions.md)
   - [For Loop](/Go/Go101/04_For_Loop.md)
   - [If Else](/Go/Go101/05_If_Else.md)
+  - [Switch](/Go/Go101/06_Switch.md)
 
 <br>
 
