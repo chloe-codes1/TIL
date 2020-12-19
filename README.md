@@ -239,6 +239,7 @@
 
 ### Network
 
+- [네트워크 용어 사전](/Network/네트워크_용어_사전.md)
 - [OSI 7 Layers](/Network/OSI_7_Layers.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
