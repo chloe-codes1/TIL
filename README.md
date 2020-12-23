@@ -79,6 +79,7 @@
   - [Switch](/Go/Go101/06_Switch.md)
   - [Pointers](/Go/Go101/07_Pointers.md)
   - [Arrays and Slices](/Go/Go101/08_Arrays_and_Slices.md)
+  - [Maps](/Go/Go101/09_Maps.md)
 
 <br>
 
