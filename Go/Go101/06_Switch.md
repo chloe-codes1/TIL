@@ -30,7 +30,6 @@ func canIDrink(age int) bool {
 func main() {
 	fmt.Println(canIDrink(19))
 }
-
 ```
 
 <br>
@@ -60,7 +59,6 @@ func canIDrive(age int) bool {
 func main() {
 	fmt.Println(canIDrive(18))
 }
-
 ```
 
 <br>
@@ -90,6 +88,5 @@ func canIVote(age int) bool {
 func main() {
 	fmt.Println(canIVote(29))
 }
-
 ```
 
