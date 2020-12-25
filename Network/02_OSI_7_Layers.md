@@ -75,6 +75,8 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 ![img](https://media.geeksforgeeks.org/wp-content/uploads/computer-network-osi-model-layers-bits.png)
 
+<br>
+
 - **물리적 연결**과 관련된 정보를 정의
 - 주로 **전기 신호** 를 **전달**하는데 초점이 맞추어져 있음
   - 들어온 전기 신호를 **그대로 잘 전달**하는 것이 목적이므로 전기 신호가 `1계층 장비` 에 들어오면 이 전기 신호를 **재생성**하여 내보낸다
@@ -84,7 +86,7 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 <br>
 
-
+<br>
 
 ### 2. Data Link Layer (DLL) (Layer 2) 
 
@@ -100,7 +102,9 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 - The Receiver’s MAC address is obtained by placing an `ARP(Address Resolution Protocol)` request onto the wire asking *“Who has that IP address?”* and the destination host will reply with its MAC address.
   <img src="https://media.geeksforgeeks.org/wp-content/uploads/computer-network-osi-model-layers-framing.png" alt="img" style="zoom:110%; " />
 
-- 전기 신호를 모아 우리가 알아볼 수 있는 data 형태로 처리한다
+<br>
+
+- 전기 신호를 모아 우리가 알아볼 수 있는 **data 형태**로 **처리**한다
 - 1계층과는 다르게 전기 신호를 정확히 **전달**하기 보다는 `주소 정보`를 **정의**하고 `정확한 주소`로 **통신**하는데 초점이 맞추어져 있다
 - `출발지` 와 `도착지` 주소를 확인하고 내게 보낸 것이 맞는지 or 내가 처리해야 하는지에 대해 **검사**한 후에 **data 처리**를 수행한다
 
@@ -130,6 +134,8 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
  <br>
 
+<br>
+
 ### 3. Network Layer (Layer 3) 
 
 - Network layer works for the transmission of data from one host to the other located in different networks. 
@@ -150,17 +156,53 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 <br>
 
+- 3계층에서는 `IP 주소`와 같은 **논리적인 주소**가 정의된다
+  - data 통신을 할 때에는 두 가지 주소가 사용된다
+    1. 2계층의 **물리적인 MAC 주소**
+    2. 3계층의 **논리적인 IP 주소**
+  - MAC 주소와 달리 IP 주소는 사용자가 환경에 맞게 **변경**해 사용할 수 있다
+  - IP주소는 `네트워크 주소 부분`과 `호스트 주소 부분`으로 나뉜다
+    - 3계층을 이해할 수 있는 장비나 단말은 **네트워크 주소 정보**를 이용해서 
+      1. `자신이 속한 네트워크`와 `원격지 네트워크`를 구분할 수 있고
+      2. 원격지 네트워크를 가려면 어디로 가야하는지 **경로**를 지정할 수 있다
+- 3계층에서 동작하는 장비는 **Router**다
+  - Router는 3계층에서 정의한 IP 주소를 이해할 수 있다
+  - Router는 IP 주소를 사용해 **최적의 경로**를 찾아주고, 해당 경로로 `packet`을 전송하는 역할을 한다
+
+<br>
+
+<br>
+
 ### 4. Transport Layer (Layer 4) 
 
 - Transport layer provides services to application layer and takes services from network layer.
 - The data in the transport layer is referred to as *`Segments`*. 
-- It is responsible for the End to End Delivery of the complete message. 
+  - It is responsible for the End to End Delivery of the complete message. 
 - The transport layer also provides the acknowledgement of the successful data transmission and re-transmits the data if an error is found.
-- Data in the Transport Layer is called as  `Segment`.
 - Transport layer is operated by the `Operating System`. 
-- It is a part of the OS and communicates with the Application Layer by making system calls.
+  - It is a part of the OS and communicates with the Application Layer (Layer 7) by making system calls.
 - Transport Layer is called as **Heart of OSI** model.
   
+
+<br>
+
+- 4계층은 1~3계층과는 다른 역할을 한다
+  - 하위 계층 (Layer 1~4)은 data를 쪼개 정보를 붙여 목적지까지 잘 전달하는 역할을 하는데, 
+    - 1~3계층은 신호와 data를 **올바른 위치**로 보내고, 실제 신호를 **잘 만들어 보내는데 집중**한다
+    - 반면 4계층은 실제로 해당 data들이 정상적으로 잘 보내지도록 **확인하는 역할**을 한다
+-  `Packet network` 는 data를 **분할**해 packet에 **실어보내**다 보니 중간에 packet이 **유실**되거나 **순서가 뒤바뀌는** 경우가 생길 수 있다
+  - 이럴 때 바로 잡아주는 역할을 4계층에서 담당한다
+    - 4계층에서 packet을 분할할 때 `packet header`에 **보내는 순서**와 **받는 순서**를 적어 통신하므로 
+      - packet이 유실되면 재전송을 요청할 수 있고,
+      - 순서가 뒤바뀌더라도 바로 잡을 수 있다
+    - Packet에 **보내는 순서**를 명시한 것이 `시퀀스 번호(Sequence Number)`이고,
+    - Packet에 **받는 순서**를 명시한 것이 `ACK 번호(Acknowledgement Number)`이다
+    - 장치 내의 많은 application을 구분할 수 있도록 `포트 번호(Port Number)`를 사용해 상위 application을 구분한다
+- 4계층에서 동장하는 장비는 **Load Balancer**와 **방화벽**이다
+  - 이 장비들은 4계층에서 볼 수 있는 application 구분자 (`Port Number`)와 `Sequence`, `ASK number` 정보를 이용해서 
+    - **부하를 분산**하거나 **보안 정책을 수립**해 packet을 **통과**, **차단**하는 기능을 수행한다
+
+<br>
 
 <br>
 
@@ -178,6 +220,17 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 <br>
 
+- 5계층인 **세션 계층(Session Layer)**은 양 끝단의 응용 프로세스가 
+  - **연결**을 성립하도록 도와주고, 
+  - 연결이 **안정적으로 유지**되도록 관리하고, 
+  - 작업 완료 후에는 연결을 **끊는** 역할을 한다
+- `Session`을 **관리**하는 것이 주 역할인 session layer는 **TCP/IP session**을 만들고 없애는 역할을 한다
+- **Error**로 **중단**된 통신에 대한 **복구**와 **재전송**도 수행한다
+
+<br>
+
+<br>
+
 ### 6. Presentation Layer (Layer 6) 
 
 - Presentation layer is also called the **Translation layer**.
@@ -192,14 +245,28 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 <br>
 
+- 6계층인 presentation layer는 **표현 방식이 다른** application이나 system 간의 통신을 돕기 위해 하나의 **통일된 구문 형식**으로 **변환**시키는 기능을 수행한다
+  - 일종의 `번역기`나 `변환기` 역할을 수행하는 계층이고,
+  - 이러한 기능은 사용자 system의 응용 계층에서 data의 **형식상의 차이**를 다루는 부담을 덜어준다
+  - `MIME encoding`이나 `암호화`, `압축`, `코드 변환`과 같은 동작이 이 계층에서 이루어진다
+
+<br>
+
+<br>
+
 ### 7. Application Layer (Layer 7) 
 
 - At the very top of the OSI Reference Model stack of layers, we find Application layer which is implemented by the network applications. 
 - These applications produce the data, which has to be transferred over the network. 
 - This layer also serves as a window for the application services to access the network and for displaying the received information to the user.
   - Ex: Application – Browsers, Skype Messenger etc.
-
 - Application Layer is also called as Desktop Layer.
+
+<br>
+
+- OSI 7 Layers의 최상위 7계층인 application layer는 application process를 정의하고 application service를 수행한다
+  - Network software의 **UI 부분**이나 **사용자 I/O 부분**을 **정의**하는 것이 application layer의 역할이다
+  -  application layer의 protocol은 엄청나게 많은 종류가 있지만 대표적인 Protocol로는 `FTP`, `SMTP`, `HTTP` `TELNET`이 있다
 
 <br>
 
@@ -210,3 +277,18 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 <br>
 
 ![undefined](https://www.cloudflare.com/img/learning/ddos/what-is-a-ddos-attack/osi-model-7-layers.svg)
+
+<br>
+
+### 계층별 주요 프로토콜 및 장비
+
+| Layer              | Protocol                                            | 장비                |
+| ------------------ | --------------------------------------------------- | ------------------- |
+| Application Layer  | HTTP, SMP, SMTP, STUN, TFTP, TELNET                 | ADC, NGFW, WAF      |
+| Presentation Layer | TLS, AFP, SSH                                       |                     |
+| Session Layer      | L2TP, PPTP, NFS, RPC, RTCP, SIP, SSH                |                     |
+| Transport Layer    | TCP, UDP, SCTP, DCCP, AH, AEP                       | LB, Firewall        |
+| Network Layer      | ARP, IPv4, IPv6, NAT, IPSec, VRRP, Routing protocol | Router, L3 Switch   |
+| Datalink Layer     | IEEE 802.2, FDDI                                    | Switch, Bridge, NIC |
+| Physical Layer     | RS-232, RS-449, V.35, S 등의 cable                  | Cable, Hub, TAP     |
+
