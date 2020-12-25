@@ -1,5 +1,9 @@
 # Layers of OSI Model
 
+> 영어로 된 부분은 처음에 공부한 내용 & 한글로 된 부분은 책보며 다시 공부한 내용
+>
+> Reference: [책] IT 엔지니어를 위한 네트워크 입문
+
 <br>
 
 <br>
@@ -71,6 +75,13 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 
 ![img](https://media.geeksforgeeks.org/wp-content/uploads/computer-network-osi-model-layers-bits.png)
 
+- **물리적 연결**과 관련된 정보를 정의
+- 주로 **전기 신호** 를 **전달**하는데 초점이 맞추어져 있음
+  - 들어온 전기 신호를 **그대로 잘 전달**하는 것이 목적이므로 전기 신호가 `1계층 장비` 에 들어오면 이 전기 신호를 **재생성**하여 내보낸다
+- 1계층 장비는 **주소의 개념이 없다**!
+  - 신호가 들어온 port를 제외하고 **모든 port**에 **같은 전기 신호**를 전송한다
+    - 즉, 출발지와 목적지를 구분 할 수 없다
+
 <br>
 
 
@@ -88,6 +99,36 @@ OSI 7 Layers는 계층의 **역할**과 **목표**에 따라 두 가지 계층�
 - DLL encapsulates Sender and Receiver’s MAC address in the header.
 - The Receiver’s MAC address is obtained by placing an `ARP(Address Resolution Protocol)` request onto the wire asking *“Who has that IP address?”* and the destination host will reply with its MAC address.
   <img src="https://media.geeksforgeeks.org/wp-content/uploads/computer-network-osi-model-layers-framing.png" alt="img" style="zoom:110%; " />
+
+- 전기 신호를 모아 우리가 알아볼 수 있는 data 형태로 처리한다
+- 1계층과는 다르게 전기 신호를 정확히 **전달**하기 보다는 `주소 정보`를 **정의**하고 `정확한 주소`로 **통신**하는데 초점이 맞추어져 있다
+- `출발지` 와 `도착지` 주소를 확인하고 내게 보낸 것이 맞는지 or 내가 처리해야 하는지에 대해 **검사**한 후에 **data 처리**를 수행한다
+
+- 2계층에서는 `주소 체계` 가 생기면서 여러 통신이 한꺼번에 이루어지는 것을 **구분**하기 위한 기능이 주로 정의된다
+- `전기 신호`를 모아 data 형태로 처리하므로 data에 대한 **error**를 **탐지**하거나 **고치는** 역할을 수행할 수 있다
+  - Ethernet 기반 network의 2계층에서는 error를 탐지하는 역할만 수행한다
+- 주소 체계가 생긴다는 것은 한 명과 통신하는 것이 아니라 동시에 **여러 명**과 **통신**할 수 있다는 것이므로 무작정 data를 던지는 것이 아니라 **받는 사람이 현재 data를 받을 수 있는지 확인** 하는 작업부터 해야 한다
+  - 이 역할을  `Flow Control` 이라고 부른다
+    - **Flow Control**
+      1. 서버에서 스위치로 data 전송
+      2. 스위치 혼잡 상황 발생. 스위치는 서버로 Pause frame 전송
+      3. 서버는 Pause frame 수신 수 대기
+- 2계층의 network 구성 요소는 `Network Interface Card`와 `Switch`이다
+- 2계층의 가장 중요한 특징은 **MAC 주소**라는 주소 체계가 있다는 것이다
+  - 2계층에서 동작하는 `Network Interface Card`와 `Switch` 모두 **MAC 주소**를 이해할 수 있고, `Switch`는 MAC 주소를 보고 통신해야 할 port를 지정해 내보내는 능력이 있다
+    - **Network Interface Card 동작 방식**
+      1. 전기 신호를 data 형태로 만든다
+      2. 목적지 MAC 주소와 출발지 MAC 주소를 확인한다
+      3. Network Interface Card의 MAC 주소를 확인한다
+      4. 목적지 MAC 주소와 Network Interface Card가 갖고 있는 MAC 주소가 **맞으면** data를 **처리**하고, **다르면** data를 **폐기**한다  
+    - **Switch 동작 방식**
+      - Swtich는 단말이 어떤 MAC 주소인지, 연결된 port는 어느 것인지 **주소 습득 (Address learning)** 과정에서 알 수 있다
+        - 이 data를 기반으로 단말들이 통신할 때 port를 적절히 **filtering** 하고, 정확한 port로 **forwarding** 해준다
+      - Switch의 적절한 filtering과 forwarding 기능으로 통신이 필요한 port만 사용하고, network 전체에 불필요한 처리가 감소하면서
+        - Ethernet network 효율성이 크게 향상되었고,
+        - Ethernet 기반 network가 급증하는 계기가 되었다!
+
+ <br>
 
 ### 3. Network Layer (Layer 3) 
 
