@@ -248,6 +248,7 @@
 - [OSI 7 Layers](/Network/OSI_7_Layers.md)
 - [TCP/IP](/Network/03_TCP_IP.md)
 - [Encapsulation and Decapsulation](/Network/04_Encapsulation_and_Decapsulation.md)
+- [05_Types_of_Computer_Network.md](05_Types_of_Computer_Network.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
 <br>
