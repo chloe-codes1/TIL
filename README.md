@@ -250,6 +250,7 @@
 - [Encapsulation and Decapsulation](/Network/04_Encapsulation_and_Decapsulation.md)
 - [Types of Computer Network](/Network/05_Types_of_Computer_Network.md)
 - [Network Lines](/Network/06_Network_Lines.md)
+- [Network Components](/Network/07_Network_Components.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
 <br>
