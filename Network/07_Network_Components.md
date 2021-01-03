@@ -149,15 +149,43 @@
 
 ### 2-7. Transceiver
 
-- transceiver는 **외부 신호**를 computer 내부의 **전기 신호**로 **바꾸어**준다
-- tranceiver가 별도로 구분되지 않던 과거에는 다양한 `Ethernet 표준`과 cable을 만족하기 위해 network 장비나 NIC를 별도로 구매해야 했다
+- Transceiver는 **외부 신호**를 computer 내부의 **전기 신호**로 **바꾸어**준다
+- Tranceiver가 별도로 구분되지 않던 과거에는 다양한 `Ethernet 표준`과 cable을 만족하기 위해 network 장비나 NIC를 별도로 구매해야 했다
   - cable이 변경되면 network 장비와 NIC도 함께 변경해야 하는 문제를 해결하고 서로 다른 **다양한 network 표준**을 **혼용**해 사용할 수 있도록 transceiver를 사용한다
-- tranceiver 중 하나인 **GBIC (지빅)**은 초기 개발된 module 이름이고 이후 **SPF**나 **SPF+**와 같은 **상위 표준**이 나왔지만
+- Tranceiver 중 하나인 **GBIC (지빅)**은 초기 개발된 module 이름이고 이후 **SPF**나 **SPF+**와 같은 **상위 표준**이 나왔지만
   - 일반적으로 tranceiver 전체를 **GIBC**으로 통칭해 부르기도 한다
 - 정확히 구분하자면,
   - **GBIC (GigaBit Interface Converter)**은 **SC type** connector 를 연결할 수 있는 interface이다
     - SC type connector는 광케이블에 주로 사용되는 connector이다
   - **SFP (Small Form-Factor Pluggable**는 **LC type**  connector를 연결 할 수 있다 
 
-- **transceiver 없이** 전용 interface를 사용하면 길이나 속도마다 다른 network 장비나 NIC를 별도로 구매해야 하지만,
-  - **transceiver만 변경**하면 **통신 길이**와** 속도**를 조절할 수 있어 최근 생상되는 대부분의 network 장비와 NIC는 transceiver를 지원하고 있다
+- **Transceiver 없이** 전용 interface를 사용하면 길이나 속도마다 다른 network 장비나 NIC를 별도로 구매해야 하지만,
+  - **Transceiver만 변경**하면 **통신 길이**와** 속도**를 조절할 수 있어 최근 생상되는 대부분의 network 장비와 NIC는 transceiver를 지원하고 있다
+
+<br>
+
+<br>
+
+## 3. Hub
+
+- Hub는 cable과 동일한 **1계층**에서 동작하는 장비이다
+- Hub는 거리가 멀어질수록 줄어드는 전기 신호를 **재생성**해주고, HUB라는 용어 그대로 여러대의 장비를 **연결**할 목저으로 상요된다
+- Hub는 단순히 **들어온 신호를 모든 port로 내보내** netowrk에 접속된 모든 단말이 **경쟁**하게 되므로 전체 network 성능이 줄어드는 문제가 있고,
+  - `packet`이 **무한 순환**해 network 전체를 마비시키는 **loop**와 같은 다양한 **장애 원인**이 되어 hub는 현재 **거의 사용되지 않고** 있다
+
+<br>
+
+<br>
+
+## 4. Switch
+
+- Switch는 Hub와 동일하게 **여러 장비를 연결**하고 **통신을 중재**하는 **2계층 장비**이다
+- Switch는 **Hub의 역할**과 **통신을 중재**하는 2가지 역할을 모두 수행하므로 **Switching Hub**라고도 불린다
+- Hub는 **단순히 전기신호를 재생성**해 출발지를 제외한 모든 port에 전기 신호를 내보내지만,
+  - Switch는 Hub와 달리 **MAC 주소를 이해**할 수 있어 **목적지 MAC 주소의 위치를 파악**하고 정확한 목적지가 연결된 port로만 전기 신호를 보낸다
+    - ex) A, B, C, D server가 있을 때 A에서 C로 통신해야 하는 상황에서
+      -  `Hub`는 A가 전기신호를 보내면 출발지 Port를 제외한 HUB에 있는 모든 port인 B, C, D에 전기 신호를 흘리지만,
+      - `Switch`는 C로만 전기신호를 보낸다
+        - B, D는 이번 통신의 영향을 전혀 받지 않아 그 사이 다른 통신을 **동시에** 수행할 수 있게 된다
+- `Hub`는 **무전기**처럼 송수신을 동시에 할 수 없고 **한쪽 방향으로만 동작**하지만,
+- `Switch`는 **전화기**처럼 송수신을 **동시에** 할 수 있다 
