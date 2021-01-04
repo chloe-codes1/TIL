@@ -168,7 +168,7 @@
 
 ## 3. Hub
 
-- Hub는 cable과 동일한 **1계층**에서 동작하는 장비이다
+- Hub는 cable과 동일한 **1계층 (Physical Layer)**에서 동작하는 장비이다
 - Hub는 거리가 멀어질수록 줄어드는 전기 신호를 **재생성**해주고, HUB라는 용어 그대로 여러대의 장비를 **연결**할 목저으로 상요된다
 - Hub는 단순히 **들어온 신호를 모든 port로 내보내** netowrk에 접속된 모든 단말이 **경쟁**하게 되므로 전체 network 성능이 줄어드는 문제가 있고,
   - `packet`이 **무한 순환**해 network 전체를 마비시키는 **loop**와 같은 다양한 **장애 원인**이 되어 hub는 현재 **거의 사용되지 않고** 있다
@@ -179,7 +179,7 @@
 
 ## 4. Switch
 
-- Switch는 Hub와 동일하게 **여러 장비를 연결**하고 **통신을 중재**하는 **2계층 장비**이다
+- Switch는 Hub와 동일하게 **여러 장비를 연결**하고 **통신을 중재**하는 **2계층(Data Link Layer) 장비**이다
 - Switch는 **Hub의 역할**과 **통신을 중재**하는 2가지 역할을 모두 수행하므로 **Switching Hub**라고도 불린다
 - Hub는 **단순히 전기신호를 재생성**해 출발지를 제외한 모든 port에 전기 신호를 내보내지만,
   - Switch는 Hub와 달리 **MAC 주소를 이해**할 수 있어 **목적지 MAC 주소의 위치를 파악**하고 정확한 목적지가 연결된 port로만 전기 신호를 보낸다
@@ -188,4 +188,35 @@
       - `Switch`는 C로만 전기신호를 보낸다
         - B, D는 이번 통신의 영향을 전혀 받지 않아 그 사이 다른 통신을 **동시에** 수행할 수 있게 된다
 - `Hub`는 **무전기**처럼 송수신을 동시에 할 수 없고 **한쪽 방향으로만 동작**하지만,
-- `Switch`는 **전화기**처럼 송수신을 **동시에** 할 수 있다 
+- `Switch`는 **전화기**처럼 송수신을 **동시에** 할 수 있다
+
+<br>
+
+<br>
+
+## 5. Router
+
+- Network 크기가 점점 커지면서 **먼 지역**에 위치한 network와 통신해야 하는 요구사항이 늘어나면서 router가 필요해졌다
+- Router는 OSI 7계층 중 **3계층 (Network Layer)**에서 동작하면서 **먼 거리**로 통신할 수 있는 protocol로 변환한다
+- Router는 원격지로 쓸데없는 packet이 전송되지 않도록 **broadcast**와 **multicast**를 control하고, **불분명한 주소**로 통신을 시도할 경우 이를 버린다
+  - **정확한 방향**으로 packet이 전송되도록 **경로를 지정**하고 **최적의 경로**로 packet을 **forwarding** 한다
+    - 즉, router의 역할은 **network 주소 확인** 후 **경로 지정**이다
+- 최근 일반 사용자가 Router 장비를 접하기는 어렵지만, router와 유사한 역할을 하는 `L3 Switch`와 `공유기`는 쉽게 찾아볼 수 있다
+
+<br>
+
+<br>
+
+## 6. Load Balancer
+
+- 일반적으로 Load Balancer는 OSI 7계층 중 **4계층 (Transport Layer)**에서 동작한다
+- `application layer`에서 application protocol의 특징을 이해하고 동작하는 `7계층 Load Balancer`를 별도로 **ADC (Application Delivery Controller)**라고 부른다
+- **L4 Switch**라고 부르는 network 장비도 load balancer의 한 종류로, `switch`처럼 **여러 port**를 가지고 있으면서 **load balancer 역할**을 하는 장비를 지칭한다
+- Load Balancer는 **4계층 port 주소를 확인**하는 동시에 **IP 주소를 변경**할 수 있다
+- Load Balancer가 가장 많이 사용되는 service는 **Web**이다
+  - Web server 를 **증설**하고싶을 때 load balancer를 web server 앞에 두고 web server를 여러 대로 늘려준다
+    - **대표 IP**는 load balancer가 갖고, load balancer가 각 web server로 **packet의 목적지 IP 주소**를 **변경**해 보내준다
+  - 이런 원리를 이용해 여러 대의 web server가 동시에 동작해 서비스 **성능**을 높여주는 동시에 
+  - 일부 web server에 문제가 발생하더라도 빠른 시간안에 서비스가 **복구**되도록 도와준다
+    - 이런 기능을 위해 load balancer는 IP 변환 외에도 **service health check** 기능이나 **대용량 session 처리 기능**이 있다!
+
