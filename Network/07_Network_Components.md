@@ -220,3 +220,40 @@
   - 일부 web server에 문제가 발생하더라도 빠른 시간안에 서비스가 **복구**되도록 도와준다
     - 이런 기능을 위해 load balancer는 IP 변환 외에도 **service health check** 기능이나 **대용량 session 처리 기능**이 있다!
 
+<br>
+
+<br>
+
+## 7. 보안 장비 (방화벽/IPS)
+
+- 대부분의 network 장비는 **정확한 정보 전달**에 초점이 맞추어져 있지만, 
+  - 보안 장비는 정보를 잘 **제어**하고 **공격을 방어**하는데 초점이 맞추어져 있다
+- **방어 목적**과 보안 장비가 **설치되는 위치**에 맞추어 다양한 보안 장비가 사용된다
+- 일반적으로 가장 유명한 보안 장비는 **방화벽**이다
+  - `방화벽`은 OSI 7계층 중 **4계층 (Transport Layer)**에서 동작해 방화벽을 통과하는 **packet의 3, 4게층 정보**를 확인하고, 
+  - packet을 **정책과 비교**해 버리거나 forwarding 한다
+
+<br>
+
+<br>
+
+## 8. 기타 (모뎀/공유기)
+
+### 8-1. 공유기
+
+- 거의 모든 가정이나 작은 회사에서 사용하는 `공유기`는 **2계층 switch**, **3계층 router**, **4계층 NAT와 방화벽** 기능을 한곳에 모아놓은 장비이다
+- 공유기 내부는 `Switch 부분`, `무선 부분`, `Router 부분` 회로로 나뉜다
+  - 겉으로는 하나의 장비처럼 보이자만 내부저긍로는 크게 **switch**와 **무선 AP**, **Router** 로 구분되는 복잡한 장비이다
+
+<br>
+
+### 8-2. Modem
+
+- `Modem`은 **짧은 거리를 통신하는 기술**과 **먼 거리를 통실하는 기술**이 달라 이 기술들을 **변환**해 주는 장비이다
+- 공유기의 `LAN (Local Area Network)` port와 `WAN (Wide Area Network)` port는 모두 일반 Ethernet에서 100m 이상 먼 거리로 data를 보내지 못하므로 **먼 거리 통신이 가능한 기술**로 **변환**해주는 modem이 별도로 필요하다
+- 통신사업자 netowrk 종류와 쓰이는 기술에 따라 여러 종류의 modem이 사용된다
+  - `기가 인터넷`의 경우 대부분 **FTTH (Fiber To THe Home) modem**을 사용하고,
+  - `동축 케이블 인터넷`은 **Cable modem**,
+  - `전화선`을 사용할 경우 **ADSL (Asymmetric Digital Subscriber Line) modem**, **VDSL (Very high bit-rate Digital Subscriber Line) modem** 을 사용한다
+
+<br>
