@@ -251,6 +251,7 @@
 - [Types of Computer Network](/Network/05_Types_of_Computer_Network.md)
 - [Network Lines](/Network/06_Network_Lines.md)
 - [Network Components](/Network/07_Network_Components.md)
+- [Network Address Types](/Network/08_Network_Address_Types.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
 <br>
