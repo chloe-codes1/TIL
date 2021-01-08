@@ -64,15 +64,15 @@
 
 #### Pod 란?
 
-- Application의 최소 실행 단위
-- Application container (하나 혹은 다수), storage, network 드으이 정보를 포함
+- Application의 **최소 실행 단위**
+- Application container (하나 혹은 다수), storage, network 등의 정보를 포함
 
 <br>
 
 #### Pod의 특징
 
 - Pod 에는 각각 고유한 private IP 할당
-- Pod 안에 있는 container는 pod 의 IP를 local host 로 공유
+- Pod 안에 있는 **container**는 pod 의 **IP**를 **local host** 로 공유
 - Pod 는 사실상 Pod를 가지고 있는 virtual machine이라고 할 수 있음
 
 <br>
@@ -82,7 +82,7 @@
 ### 2. Deployments
 
 - `ReplicaSet` 보다 상위에 해당하는 resource
-- Application 배포의 기본 단위
+- **Application 배포**의 **기본 단위**
 
 <br>
 
