@@ -173,12 +173,12 @@ ex)
 - Data 통신은 data 전송의 **신뢰성**이 핵심이다
   - application에서 걱정하지 않고 data를 만들고 사용하는 것이 data 통신의 목적이지만,
   - UDP는 **data 전송을 보장하지 않는 protocol** 이므로 제한된 용도로만 사용된다
-- UDP는 음성 data나 실시간 streamnig과 같이 **시간에 민감한** protocol이나application을 사용하는 경우나 사내 방송이나 증권 시세 데이터 전송에 사용되는 `multicast` 처럼 단방향으로 다수의 단말과 통신에 응답을 받기 어려운 환경에서 주로 사용된다
-  - Data를 전송하는데 **신뢰성**보다 일부 data가 유실되더라도 시간에 맞추어 계쏙 전송하는 것이 중요한 화상회의 시스템과 같은 서비스의 경우 UDP를 사용한다
-    - UDP는 중간에 data가 일부 유실되더라도 유실된 상태로 data를 처리한다
+- UDP는 음성 data나 실시간 streamnig과 같이 **시간에 민감한** protocol이나 application을 사용하는 경우나 사내 방송이나 증권 시세 데이터 전송에 사용되는 `multicast` 처럼 **단방향**으로 **다수의 단말**과 통신에 응답을 받기 어려운 환경에서 주로 사용된다
+  - Data를 전송하는데 **신뢰성**보다 일부 data가 유실되더라도 시간에 맞추어 계속 전송하는 것이 중요한 화상회의 시스템과 같은 서비스의 경우 UDP를 사용한다
+    - UDP는 중간에 data가 일부 유실되더라도 유실된 상태로 data를 처리한다!
 - UDP는 TCP와 달리 통신 시작 전 `3-Way Handshake`와 같이 사전에 연결을 확립하는 절차가 없다
   - 그 대신 UDP에서 **첫 data**는 resource 확보를 위해 **Interrupt**를 거는 용도로  사용되고 유실된다
-    - 그래서 UDP protocol을 사용하는 application이 대부분 이런 상황을 인지하고 동작하거나
+    - 그래서 UDP protocol을 사용하는 application이 대부분 이런 상황을 인지하고 동작하거나,
     - 연결 확립은 TCP protocol을 사용하고, application 끼리 모든 준비를 마친 후 실제 data만 UDP를 이용하는 경우가 대부분이다
 - ex)
   - Netflix나 Youtube와 같이 **시간에 민감하지 않은** 단일 시청자를 위한 연결은 TCP를 사용한다
@@ -197,3 +197,16 @@ ex)
 | 전이중 (Full Duplex)            | 반이중 (Half Duplex)          |
 | Data 전송                       | 실시간 traffic 전송           |
 
+<br>
+
+`+`
+
+- 단방향 통신(simplex) 
+  - 단방향 전송
+  - ex) TV, Radio
+- 반이중 통신(half-duplex)
+  - 양방향으로 전송이 가능하지만, 동시에 양쪽에서는 전송할 수 없다
+  - ex) 무전기
+- 전이중 통신(full-duplex) 
+  - 동시에 양방향 전송이 가능하다
+  - ex) 전화기
