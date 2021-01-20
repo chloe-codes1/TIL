@@ -201,12 +201,15 @@ ex)
 
 `+`
 
-- 단방향 통신(simplex) 
+#### Communication channels in telecommunications
+
+- 단방향 통신(**simplex** communication) 
   - 단방향 전송
   - ex) TV, Radio
-- 반이중 통신(half-duplex)
+- 반이중 통신(**half-duplex** communication)
   - 양방향으로 전송이 가능하지만, 동시에 양쪽에서는 전송할 수 없다
   - ex) 무전기
-- 전이중 통신(full-duplex) 
+- 전이중 통신(**full-duplex** communication) 
   - 동시에 양방향 전송이 가능하다
   - ex) 전화기
+
