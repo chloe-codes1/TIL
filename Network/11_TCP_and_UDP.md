@@ -153,3 +153,47 @@ ex)
     - `PSH`
       - Server측에서 전송할 data가 없거나 data를 buffering 없이 응용 프로그램으로 즉시 전달할 것을 지시할 때 사용된다
 
+<br>
+
+<br>
+
+## 3. UDP
+
+- TCP와 달리 UDP는 Layer 4 protocol이 가져야 할 특징이 거의 없다
+  - 4계층에서는 **신뢰성 있는 통신**을 위해 아래와 같은 작업을 수행했다
+    - **연결을 미리 확립 (3-Way Handshake)** 
+    - Data를 잘 **분할**하고 **조립**하기 위해 `packet 번호`를 부여하고 수신된 data에 대해 응답
+    - Data를 특정 단위(`Window Size`)로 보내고 memory에 유지하다가 `ACK Number`를 받은 후 통신이 잘 된 상황을 파악하고나서야 memory에서 이 data들을 제거
+    - 만약 중간에 **유실**이 있으면 `Sequence Number`와 `ACK Number`를 비교해가며 이를 파악하고, memory에 유지해놓은 data를 이용해 **재전송**
+      - 이 기능을 이용해 data 유실이 발생하거나 순서가 바뀌더라도 바로 잡을 수 있음
+  - UDP에는 위의 TCP와 같은 기능이 전혀 없다
+- UDP header는 TCP와 비교하면 내용이 거의 없다
+  - UDP에는 4계층의 특징인 **신뢰 통신**을 위한 내용 (`Sequence Number`,`ACK Number`, `Flag`, `Window Size`) 이 없다
+
+- Data 통신은 data 전송의 **신뢰성**이 핵심이다
+  - application에서 걱정하지 않고 data를 만들고 사용하는 것이 data 통신의 목적이지만,
+  - UDP는 **data 전송을 보장하지 않는 protocol** 이므로 제한된 용도로만 사용된다
+- UDP는 음성 data나 실시간 streamnig과 같이 **시간에 민감한** protocol이나application을 사용하는 경우나 사내 방송이나 증권 시세 데이터 전송에 사용되는 `multicast` 처럼 단방향으로 다수의 단말과 통신에 응답을 받기 어려운 환경에서 주로 사용된다
+  - Data를 전송하는데 **신뢰성**보다 일부 data가 유실되더라도 시간에 맞추어 계쏙 전송하는 것이 중요한 화상회의 시스템과 같은 서비스의 경우 UDP를 사용한다
+    - UDP는 중간에 data가 일부 유실되더라도 유실된 상태로 data를 처리한다
+- UDP는 TCP와 달리 통신 시작 전 `3-Way Handshake`와 같이 사전에 연결을 확립하는 절차가 없다
+  - 그 대신 UDP에서 **첫 data**는 resource 확보를 위해 **Interrupt**를 거는 용도로  사용되고 유실된다
+    - 그래서 UDP protocol을 사용하는 application이 대부분 이런 상황을 인지하고 동작하거나
+    - 연결 확립은 TCP protocol을 사용하고, application 끼리 모든 준비를 마친 후 실제 data만 UDP를 이용하는 경우가 대부분이다
+- ex)
+  - Netflix나 Youtube와 같이 **시간에 민감하지 않은** 단일 시청자를 위한 연결은 TCP를 사용한다
+  - 실시간 화상회의 솔루션은 data 전송이 양방향으로 일어나고 **시간에 매우 민감**하게 반응하므로 TCP 이용 환경에서 data 유실이 발생하면 사용자는 network 품질이 나쁘다고 생각할 수 있으므로 UDP를 사용한다
+
+<br>
+
+### TCP vs UDP
+
+| TCP                             | UDP                           |
+| ------------------------------- | ----------------------------- |
+| 연결 지향 (Connection Oriented) | 비연결형 (Connectionless)     |
+| 오류 제어 수행 O                | 오류 제어 수행 X              |
+| 흐름 제어 수행 O                | 흐름 제어 수행 X              |
+| Unicast                         | Unicast, Multicast, Broadcast |
+| 전이중 (Full Duplex)            | 반이중 (Half Duplex)          |
+| Data 전송                       | 실시간 traffic 전송           |
+
