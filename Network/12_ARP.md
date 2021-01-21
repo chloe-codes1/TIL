@@ -30,3 +30,33 @@
 - `Packet Network`에서는 **큰 데이터**를 **잘라 전송**하므로 **여러 개의 packet**을 전송해야 한다
   - Packet을 보낼 때마다 `ARP Broadcast`를 수행하면 network 통신의 **효율성**이 크게 **저하**되므로 **memory에 정보를 저장**해두고 **재사용**한다
     - 성능 유지를 위해서는 `ARP Table`을 오래 유지하는 것이 좋지만, 논리 주소(IP)는 언제든 바뀔 수 있으므로 **일정 시간 동안 통신이 없으면** 이 table은 **삭제**된다
+
+<br>
+
+<br>
+
+## 2. ARP 동작
+
+- ARP Packet은 여러 가지 field 중 ARP data에 사용되는 아래의 4개 field가 중요하게 사용된다
+  1. 송신자 hardware MAC 주소
+  2. 송신자 IP Protocol 주소
+  3. 대상자 MAC 주소
+  4. 대상자 IP Protocol 주소
+- ARP는 위의 4개의 field를 이용해 아래와 같이 동작한다
+  - ex) Server A (`1.1.1.1`)  -------- Server B (`1.1.1.2`)
+    - Server A에서 server B로 ping을 보내려고 할 때, server A에서는 3계층의 IP주소까지 캡슐화 할 수 있지만, 목적지 MAC 주소를 모르기 때문에 정상적으로 packet을 만들 수 없다
+    - Server A는 목적지 server B의 MAC 주소를 알아내기 위해 ARP 요청을 network에 **broadcast**한다
+      - ARP packet을 network에 broadcast할 때 2계층 MAC 주소는 출발지를 자신의 MAC 주소로, 도착지는 broadcast (FF-FF-FF-FF-FF-FF)로 채우고, 
+      - ARP protocol field의 전송자 MAC과 IP에는 자신의 주소로, 대상자 IP 주소는 `10.1.1.2`, 대상자 MAC 주소는 `00-00-00-00-00-00`으로 채워 network에 뿌린다
+    - 2계층 목적지 주소가 broadcast 주소이므로 이 ARP packet은 **같은 network** 안에 있는 **모든 단말**에 보내지고 모든 단말은 ARP protocol 내용을 확인한다
+      - 확인해서 ARP protocol의 대상자 IP가 자신이 맞는지 확인해 **자신이 아니면** ARP packet을 **버린다**
+    - Server B에서는 ARP 요청의 대상자 IP 주소가 자신의 IP이므로 **ARP 요청을 처리**하고 그에 대한 **응답**을 보낸다
+      - 이때는 송신자와 대상자의 위치가 바뀐다
+    - ARP 요청을 처음 보냈던 server A와 달리 server B에서는 ARP 요청을 수신하면서 이미 ARP 요청을 보낸 sever A의 IP 주소와 MAC 주소를 알고 있어 **모든 ARP field를 채워 응답** 할 수 있다
+      - ARP 요청에서 받은 server A의 정보를 이용해 대상자 MAC, IP 주소를 채우고 자신의 MAC, IP 주소를 송신자 MAC, IP 주소로 채워 응답한다
+        - ARP **요청**을 처음 보낼 때는 **broadcast**인 반면, (2계층 목적지 MAC 주소가 broadcast이므로)
+        - ARP **응답**을 보낼 때는 출발지와 도착지 MAC 주소가 명시되어 있는 **unicast**이다
+    - Server A는 server B부터 ARP 응답을 받아 자신의 **ARP cache table**을 **갱신**한다
+      - 이 ARP cache table은 정해진 시간동안 **server B와의 통신이 없을 때**까지 유지된다
+        - 해당 시간 안에 통신이 다시 이루어지면 그 시간은 다시 **초기화**된다
+    - ARP cache table이 **갱신**된 후에는 **상대방의 MAC 주소**를 알고 있으므로 도착지 MAC 주소 field를 완성해 **ping packet**을 보낼 수 있다
