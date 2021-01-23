@@ -60,3 +60,39 @@
       - 이 ARP cache table은 정해진 시간동안 **server B와의 통신이 없을 때**까지 유지된다
         - 해당 시간 안에 통신이 다시 이루어지면 그 시간은 다시 **초기화**된다
     - ARP cache table이 **갱신**된 후에는 **상대방의 MAC 주소**를 알고 있으므로 도착지 MAC 주소 field를 완성해 **ping packet**을 보낼 수 있다
+
+<br>
+
+<br>
+
+## 3. GARP
+
+- 일반적인 ARP 외에도 ARP protocol field를 그대로 사용하지만 **내용을 변경**해 **원래 ARP protocol의 목적과 다른 용도로 사용**하는 `GARP`. `RARP`와 같은 protocol 이 있다
+- `GARP`는 Gratuitous ARP의 약자로, **대상자 IP field**에 **자신의 IP 주소**를 채워 ARP 요청을 보낸다
+  - ARP가 상대방의 MAC 주소를 알아내기 위해 사용되는 반면, `GARP`는 **자신의 IP와 MAC 주소를 알릴 목적**으로 사용된다
+    - 그렇기 때문에 GARP의 목적지 MAC 주소 (2계층 destination MAC)는 **broadcast MAC 주소**를 사용한다
+- `GARP`의 packet을 살펴보면 
+  - 송신자 MAC (Sender MAC)은 자신의 MAC 주소, 
+  - 송신자 IP (Sender IP) 주소는 자신의 IP주소, 
+  - 대상자 MAC (Target MAC) 주소는 모두 **0**으로 표기해 `00:00:00:00:00:00`,
+  - 대상자 IP (Target IP)  주소도 자신의 IP 주소로 넣어 network에 **broadcast** 한다 
+
+<br>
+
+### 3-1. 다른 ARP 요청 vs GARP
+
+- 같은점
+  - 대상자 MAC 주소가 `00:00:00:00:00:00` 으로 채워진 것이고
+- 다른점
+  - 송신자와 대상자 IP 주소가 자신으로 동일하다
+
+<br>
+
+### 3-2. GARP를 사용해 동일 Network에 자신의 IP 주소와 MAC 주소를 알려주는 이유
+
+1. IP 주소 충돌 감지
+2. 상대방 (동일 subnet 상의 다른 상대방)의 ARP Table 갱신
+3. HA (High Availability) 용도의 Clustering, `VRRP (Virtual Router Redundancy Protocol)`, `HSRP (Hot Standby Router Protocol)`
+
+<br>
+
