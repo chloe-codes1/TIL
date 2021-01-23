@@ -391,6 +391,7 @@
 ### React.js
 
 - [React Hooks](./React/React_Hooks.md)
+- [Caret vs Tilde in package.json](/React/Caret_vs_Tilde_in_package.json.md)
 
 <br>
 
