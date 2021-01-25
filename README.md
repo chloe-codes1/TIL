@@ -393,6 +393,7 @@
 - [React Hooks](./React/React_Hooks.md)
 - [Caret vs Tilde in package.json](/React/Caret_vs_Tilde_in_package.json.md)
 - [Yarn vs npm](/React/Yarn_vs_npm.md)
+- [Redux](/React/Redux.md)
 
 <br>
 
