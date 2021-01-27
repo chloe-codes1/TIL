@@ -433,6 +433,9 @@
 - [Microservices Architecture Style](/Programming101/Microservices_Architecture_Style.md)
 - [Sync vs Async and Blocking vs Non-Blocking](/Programming101/Sync_vs_Async_and_Blocking_vs_Non-Blocking.md)
 
-
-
 <br>
+
+### Troubleshooting
+
+- [xcrun error occurred after macOS update](/Troubleshooting/xcrun_error_occurred_after_macOS_update.md)
+
