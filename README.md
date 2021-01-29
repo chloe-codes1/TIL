@@ -438,4 +438,5 @@
 ### Troubleshooting
 
 - [xcrun error occurred after macOS update](/Troubleshooting/xcrun_error_occurred_after_macOS_update.md)
+- [Resetting the permission in /usr/local](/Troubleshooting/Resetting_the_permission_in_/usr/local.md)
 
