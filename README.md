@@ -262,6 +262,7 @@
 - [Subnet and Gateway](/Network/13_Subnet_and_Gateway.md)
 - [Switch](/Network/14_Switch.md)
 - [VLAN](/Network/15_VLAN.md)
+- [STP](/Network/16_STP.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
 <br>
