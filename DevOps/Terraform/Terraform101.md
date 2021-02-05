@@ -487,8 +487,37 @@
 
 <br>
 
-### tf apply
+### 4. tf apply
 
 - 마찬가지로 프로젝트 root 경로에서 실행한다
 - Terraform project directory 내의 모든 `.tf` 파일의 내용대로 resource를 **생성**, **수정**, **삭제** 하는일을 **적용**이라고 한다
 - 이 명령어를 실행하기 전에 변경 예정 사항은 위의 **plan** 명령어를 사용해 확인할 수 있다
+
+<br>
+
+### 5. tf force-unlock [ID]
+
+- terraform state lock 걸렸을 때 사용
+
+- 아래의 error message 출력 시 ID 값을 tf force-unlock 뒤에 입력한다
+
+  ```bash
+  Error: Error locking state: Error acquiring the state lock: ConditionalCheckFailedException: The conditional request failed
+  Lock Info:
+    ID:        ID 값
+    Path:      PATH
+    Operation: OperationTypePlan
+    Who:       chloe@Chloes-MacBookPro.local
+    Version:   0.12.26
+    Created:   2021-02-05 03:26:02.065859 +0000 UTC
+    Info:      
+  
+  
+  Terraform acquires a state lock to protect the state from being written
+  by multiple users at the same time. Please resolve the issue above and try
+  again. For most commands, you can disable locking with the "-lock=false"
+  flag, but this is not recommended.
+  ```
+
+  
+
