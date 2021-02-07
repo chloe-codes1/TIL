@@ -81,6 +81,7 @@
   - [Arrays and Slices](/Go/Go101/08_Arrays_and_Slices.md)
   - [Maps](/Go/Go101/09_Maps.md)
   - [Structs](/Go/Go101/10_Structs.md)
+  - [Go Routine](/Go/Go101/11_Go_Routine.md)
 
 <br>
 
