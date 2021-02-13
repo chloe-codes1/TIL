@@ -449,4 +449,5 @@
 - [xcrun error occurred after macOS update](/Troubleshooting/xcrun_error_occurred_after_macOS_update.md)
 - [Resetting the permission in /usr/local](/Troubleshooting/Resetting_the_permission_in_/usr/local.md)
 - [Brew error - compinit:503: no such file or directory](/Troubleshooting/Brew_error_compinit-503-no_such_file_or_directory.md)
+- [Scouter_client_JVM_error_after_macOS_Bigsur_update.md](/Troubleshooting/Scouter_client_JVM_error_after_macOS_Bigsur_update.md)
 
