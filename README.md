@@ -219,6 +219,7 @@
 - #### [Practical AWS](/AWS/Practical_AWS)
 
   - [VPC](/AWS/Practical_AWS/01_VPC.md)
+  - [Subnet](/AWS/Practical_AWS/02_Subnet.md)
 
 <br>
 
