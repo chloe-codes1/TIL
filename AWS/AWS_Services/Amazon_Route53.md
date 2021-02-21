@@ -51,7 +51,7 @@
 
 <br>
 
-Web server나 `Amazon S3` bucket 같은 resource로 traffic을 routing gㅏ도록 **Amazon Route 53** 을 구성한 후, 누군가 www.example.com의 content를 요청하면 몇 밀리초 안에 아래와 같은 로직이 실행된다
+Web server나 `Amazon S3` bucket 같은 resource로 traffic을 routing 하도록 **Amazon Route 53** 을 구성한 후, 누군가 www.example.com의 content를 요청하면 몇 밀리초 안에 아래와 같은 로직이 실행된다
 
 ![image-20201005010348780](../../images/image-20201005010348780.png)
 

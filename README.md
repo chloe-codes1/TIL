@@ -220,6 +220,7 @@
 
   - [VPC](/AWS/Practical_AWS/01_VPC.md)
   - [Subnet](/AWS/Practical_AWS/02_Subnet.md)
+  - [Route 53](/AWS/Practical_AWS/03_Route_53.md)
 
 <br>
 
