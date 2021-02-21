@@ -33,7 +33,7 @@
   - Cluster에 방화벽 정책을 적용하는 router
     - Cloud provider or physical hardware의 일부에서 관리하는 `Gateway` 일 수 있다
 - **Cluster Network**
-  - Kubernetes networking model에 따라 cluster 내부에서 통신을 용이하게 하는 논리적 또는 물맂거 링크의 집합
+  - Kubernetes networking model에 따라 cluster 내부에서 통신을 용이하게 하는 논리적 또는 물리적 링크의 집합
 - **Service**
   - `Label selecter`를 사용해서 `pod` 집합을 식별하는 Kubernetes service
     - 달리 언급하지 않으면 service는 `Cluster network` 내에서만 routing 가능한 가상 IP를 가지고 있다고 가정한다
@@ -47,7 +47,7 @@
 
 ![image-20200929010831268](../../images/image-20200929010831268.png)
 
-- Ingress는 외부에서 service로 접속이가능한 **URL**, **Load balance traffic**, **SSL/TSL** 종료, 그리고 이름 기반의 virtual hosting service를 제공하도록 구성할 수 있다
+- Ingress는 외부에서 service로 접속 가능한 **URL**, **Load balance traffic**, **SSL/TSL** 종료, 그리고 이름 기반의 virtual hosting service를 제공하도록 구성할 수 있다
   - `Ingress controller` 는 일반적으로 load balancer를 사용해서 ingress를 수행할 책임이 있으며, traffic을 처리하는데 도움이 되도록 **edge router** 나 **additional frontend** 를 구성할 수 있다
 - Ingress는 임의의 port 또는 protocol 을 노출시키지 않는다
   - HTTP와 HTTPS 이외의 service를 인터넷에 노출하려면 일반적으로 `Service.Type=NodePort` 또는 `Service.Type=LoadBalancer`를 사용한다
@@ -90,7 +90,7 @@ spec:
 
 - 다른 모든 Kubernetes resource와 마찬가지로 ingress에는 `apiVersion`, `kind`, `metadata` field가 필요하다
 - Ingress object의 이름은 유효안 **DNS subdomain name** 이어야 한다
-- Ingress는 종종 annotation을 이용해서 ingress controller에 따라 몇 가지 option을 구성하는데, **rewrite-target annotation** 을 얘로 들 수 있다
+- Ingress는 종종 annotation을 이용해서 ingress controller에 따라 몇 가지 option을 구성하는데, **rewrite-target annotation** 을 예로 들 수 있다
 
 - 서로 다른 ingress controller는 각각 다른 annotation을 지원한다
 - `Ingress spec` 에는 Load Balancer 또는 proxy server를 구성하는데 필요한 모든 정보가 있다
@@ -242,5 +242,5 @@ spec:
 
 <br>`+`
 
-- Kubernetes의 서비스는 `L4 layer` 로 `TCP` 단에서 **Pods** 를 balancing 한다
+- Kubernetes의 서비스는 `L4 layer` 로 `TCP`단에서 **Pods** 를 balancing 한다
 

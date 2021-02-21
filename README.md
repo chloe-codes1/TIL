@@ -326,7 +326,8 @@
 - #### [Kubernetes](/DevOps/Kubernetes)
 
   - [Kubernetes Basics](/DevOps/Kubernetes/01_Kubernetes_Basics.md)
-  - [What is Ingress](/DevOps/Kubernetes/What_is_Ingress.md)
+  - [EKS for Kubernetes](/DevOps/Kubernetes/02_EKS_for_Kubernetes.md)
+  - [What is Ingress](/DevOps/Kubernetes/03_What_is_Ingress.md)
   
 - #### [Ansible](/DevOps/Ansible)
 
