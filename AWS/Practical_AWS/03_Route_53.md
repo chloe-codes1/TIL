@@ -21,7 +21,7 @@
 - `A record type`
   - IPv4 address
 - `AAAA record type`
-  - IPv5 address
+  - IPv6 address
 - `CNAME record type`
   - domain 주소가 다른 주소를 바라볼 때
 - `MX record type`
