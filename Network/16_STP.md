@@ -207,5 +207,13 @@
         - 11 ~ 50을 하나의 region으로
         - 101 ~ 150번을 하나의 region으로 묶으면 두 개의 spanning tree로 100개의 VLAN을 관리할 수 있다
 
+<br>
 
+<br>
 
+#### 스위치의 구조와 스위치에 IP 주소가 할당된 이유
+
+- Switch는 관리용 `Control Plane`과 packet을 forwarding 하는 `Data Plane`으로 크게 나뉜다
+  - **STP**나 switch 원격 관리용 telnet, SSH, web과 같은 service는 `Control Plane`에서 수행된다
+- Switch는 2계층에서 동작하는 장비여서 **MAC 주소만 이해**할 수 있다
+  - Switch가 동작하는데 IP는 필요 없지만, 일정 규모 이상의 network에서 운영되는 switch는 **관리 목적**으로 대부분 IP 주소가 할당된다
