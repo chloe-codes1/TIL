@@ -223,6 +223,7 @@
   - [Route 53](/AWS/Practical_AWS/03_Route_53.md)
   - [Route Table](/AWS/Practical_AWS/04_Route_Table.md)
   - [Elastic IP](AWS/Practical_AWS/05_Elastic_IP.md)
+  - [Security Group](AWS/Practical_AWS/06_Security_Group.md)
 
 <br>
 
