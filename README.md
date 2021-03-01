@@ -338,6 +338,7 @@
   
 - #### [Redis](/DevOps/Redis)
 
+  - [Install and config Redis on macOS](/DevOps/Redis/00_Install_and_config_Redis_on_macOS.md)
   - [Redis 101](/DevOps/Redis/01_Redis101.md)
   - [Redis Commands](/DevOps/Redis/02_Redis_Commands.md)
 
