@@ -224,6 +224,7 @@
   - [Route Table](/AWS/Practical_AWS/04_Route_Table.md)
   - [Elastic IP](AWS/Practical_AWS/05_Elastic_IP.md)
   - [Security Group](AWS/Practical_AWS/06_Security_Group.md)
+  - [Network ACLS](AWS/Practical_AWS/07_Network_ACLs.md)
 
 <br>
 
