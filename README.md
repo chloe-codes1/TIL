@@ -225,6 +225,7 @@
   - [Elastic IP](AWS/Practical_AWS/05_Elastic_IP.md)
   - [Security Group](AWS/Practical_AWS/06_Security_Group.md)
   - [Network ACLS](AWS/Practical_AWS/07_Network_ACLs.md)
+  - [VPC Peering](AWS/Practical_AWS/08_VPC_Peering.md)
 
 <br>
 
