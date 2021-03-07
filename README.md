@@ -275,6 +275,7 @@
 - [Switch](/Network/14_Switch.md)
 - [VLAN](/Network/15_VLAN.md)
 - [STP](/Network/16_STP.md)
+- [Router](/Network/17_Router.md)
 - [Session and Cookies](/Network/Session_and_Cookies.md)
 
 <br>
