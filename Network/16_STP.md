@@ -6,7 +6,7 @@
 
 <br>
 
-- IT 환경에서는 `SPoF (Single Point of Failure: 단일 장애점)` 로 인한 장애를 피하기 위해 다양한 노력을 한다
+- IT 환경에서는 `SPoF (Single Point of Failure: 단일 장애점)`로 인한 장애를 피하기 위해 다양한 노력을 한다
   - `SPoF`는 **하나**의 시스템이나 구성 요소에서 **고장이 발생**했을 때 **전체 시스템** 의 작동이 멈추는 요소를 말한다
   - Network에서도 하나의 장비 고장으로 전체 network가 마비되는 것을 막기 위해 `이중화`, `다중화`된 network를 디자인하고 구성한다
 - Network를 switch 하나로 구성했을 때 그 **switch에 장애가 발생**하면 **전체 network에 장애가 발생**한다
@@ -35,9 +35,9 @@
 - Loop 구조로 network가 연결된 상태에서 단말에서 **Broadcast를 발생**시키면 switch는 해당 packet이 유입된 port를 제외한 모든 port로 **flooding**한다
   - **Flooding**된 packet은 **다른 switch**로도 보내지고, 이 packet을 받은 switch는 packet이 유입된 port를 제외한 모든 port로 다시 **flooding**한다
     - `Loop` 구조 상태에서는 **이 packet이 계속 돌아가는데** 이것을 `Broadcast Storm`이라고 한다
-- `3계층 header`에서는 **TTL(Time to Live)**라는 packet 수명을 갖고 있지만, **switch** 가 확인하는 `2계층 header` 에는 3계층의 TTL과 같은 lifetime mechanism이 없어 loop가 발생하면 packet이 죽지 않고 계속 살아남아 packet 하나가 전체 network 대역폭을 차지할 수 있다
+- `3계층 header`에서는 **TTL(Time to Live)**라는 packet 수명을 갖고 있지만, **switch** 가 확인하는 `2계층 header` 에는 3계층의 TTL과 같은 **lifetime mechanism**이 없어서 loop가 발생하면 packet이 죽지 않고 계속 살아남아서 packet 하나가 전체 network 대역폭을 차지할 수 있다
   - 이런 `broadcast storm` 은 network의 **전체 대역폭을 차지**하고 network에 연결된 모든 단말이 broadcast를 처리하기 위해 **system resource를 사용**하면서 switch와 network에 연결된 단말 간 통신이 거의 불가능한 상태가 된다
-- Broadcast storm 상황이 발생하면
+- `Broadcast storm` 상황이 발생하면
   1. Network에 **접속된 단말의 속도가 느려진다**
      - 많은 Broadcast를 처리해야 하므로 CPU 사용률이 높아진다
   2. Network **접속 속도가 느려진다**
@@ -70,7 +70,7 @@
 
 ## 2. What is STP?
 
-- `STP (Spanning Tree Protocol)`은 **loop를 확인**하고 적절히 **port를 사용하지 못하게** 만들어 **loop를 예방**하는 mechanizm이다
+- `STP (Spanning Tree Protocol)`은 **loop를 확인**하고 적절히 **port를 사용하지 못하게** 만들어 **loop를 예방**하는 mechanism이다
   - 용어 그대로 잘 뻗은 나무처럼 **뿌리부터 가지까지 loop가 생기지 않도록 유지** 하는 것이 Spanning Tree Protocol의 목적이다
 - STP를 이용해 loop를 예방하려면 **전체 switch**가 어떻게 연결되는지 알아야 한다
   - 전체적인 switch 연결 상황을 파악하라면 **switch 간에 정보를 전달**하는 방법이 필요하다
@@ -115,7 +115,7 @@
 - STP는 loop를 없애기 위해 **나무가 뿌리에서 가지로 뻗어나가는 것**처럼 topology를 구성한다
   - Network 상에서 뿌리가 되는 **가장 높은 switch**를 선출하고, 그 switch를 통해 모든 BDPU가 교환되도록 하는데 이 switch를 `Root Switch` 라고 한다
     - 모든 switch는 처음에 자신을 root switch로 인식해 동작한다
-      - BPDU를 통해 2초마다 자신이 root switch임을 광고하는데 새로운 switch가 들어오면 서로 교환된 BPDU에 들어 있는 **bridge ID값을 비교**한다
+      - BPDU를 통해 2초마다 자신이 root switch임을 광고하는데, 새로운 switch가 들어오면 서로 교환된 BPDU에 들어 있는 **bridge ID값을 비교**한다
       - **Bridge ID값이 더 적은 switch**를 root switch로 선정하고, 선정된 root switch가 BPDU를 다른 siwwtch 쪽으로 보낸다
 
 <br>
@@ -132,7 +132,7 @@
    - `Root Switch (Bridge)` 로 가는 **경로가 가장 짧은 port**를 `Root Port` 라고 한다
    - `Root Port`는 `Root Bridge`에서 보낸 BPDU를 받는 port이다
 
-3. 하나의 segment에 하나의 `지정 (designated) Port` 선정
+3. 하나의 **segment**에 하나의 `지정 (designated) Port` 선정
 
    - Switch와 switch가 연결되는 port는 하나의 **지정 포트 (Designated Port)**를 선정한다
 
@@ -140,9 +140,9 @@
 
      1. 이미 root port로 선정된 경우, 그 반대쪽이 designated port로 선정되어 양쪽 모두 **forwarding status** 가 된다
 
-     2. 아무도 root port가 아닐 경우, 한쪽은 **designated port**로 선정디고 다른 한쪽은 **대체 포트 (Alternate, Non-designated)**가 되어 **blocking status**가 된다
+     2. 아무도 root port가 아닐 경우, 한쪽은 **designated port**로 선정디고 다른 한쪽은 **대체 포트 (Alternate, Non-designated)**가 되어 `blocking status`가 된다
 
-   - Designated Port는 BPDU가 전달되는 port이다
+   - Designated Port는 **BPDU가 전달되는 port**이다
 
 <br>
 
@@ -194,12 +194,12 @@
 - CST의 문제점을 해결하기 위해 `PVST (Per Vlan Spanning Tree)`가 개발되었다
   - VLAN마다 다른 spanning tree process가 동작하므로 VLAN마다 별도의 경로와 tree를 만들 수 있게 되었다
     - 그 결과 **최적의 경로를 디자인**하고 **VLAN마다 별도의 block port를 지정**해 **network load를 sahring**하도록 구성할 수 있게 되었다
-      - but, spanning tree protocol 자체가 **switch에 많은 부담을 주는 protocol (2초마다 교환)**인데 PVST는 **모든 VLAN마다 별도의 spanning tree를 유지**해야하므로 더 많은 부담이 되었따
+      - but, spanning tree protocol 자체가 **switch에 많은 부담을 주는 protocol (2초마다 교환)**인데 PVST는 **모든 VLAN마다 별도의 spanning tree를 유지**해야하므로 더 많은 부담이 되었다
 
 - 이런 CSV와 PVST의 단점을 보완하기 위해 `MST (Multiple Spanning Tree)`가 개발되었다
   - `MST`의 기본적인 아이디어는 **여러 개의 VLAN을 그룹으로 묶고** 그 그룹마다 **별도의 spanning tree가 동작**한다
     - 이 경우, PVST보다 훨씬 적은 spanning tree process가 돌게 되고 PVST의 장점인 **load sharing**기능도 함께 사용할 수 있다
-- 일반적으로 대체 경로의 개수나 용도에 따라 `MST`의spanning tree process 개수를 정의한다
+- 일반적으로 **대체 경로**의 개수나 용도에 따라 `MST`의 **spanning tree process** 개수를 정의한다
   - MST에서는 **region 개념**이 도입되어 **여러 개의 VLAN을 하나의 region으로 묶을 수 있다**
     - region 1 == spanning tree 1
     - ex)
