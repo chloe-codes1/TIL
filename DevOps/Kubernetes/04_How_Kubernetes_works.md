@@ -109,3 +109,29 @@
         - 함수의 이름과 종류는 다르지만, 하는 일은 비슷하다
         - System V 기반 message queue 함수보다 더 직관적이고 쓰기 편하다
   - IPC 객체들은 같은 IPC namespace에 존재하는 process에만 표시된다
+
+<br>
+
+#### 6. Network (net) namespace
+
+- Network interface, routing, 방화벽 규칙들을 격리한다
+
+- ex)
+
+  ```sh
+  # "chloe-ns" 라는 이름의 network namespace 생성
+  $ ip netns add chloe-ns
+  $ ip netns list
+  chloe-ns
+  ```
+
+  ```sh
+  # virtual ethernet interface pair 생성 (veth1, veth2)
+  # "veth1"은 chloe-ns에 생성, "veth2"는 PID 1의 network namespace에 생성
+  $ ip link add veth1 netns chloe-ns type veth peer name veth2 netns 1
+  ```
+
+- Docker의 container network 구조
+  - Container는 host와 network namespace가 격리된다
+    - Host - container 간 `veth peer`를 생성하여 연결한다
+    - Host이 veth는 `docker bridge` 와 연결되어 container 외부로 통신 시 `bridge`를 거쳐간다
