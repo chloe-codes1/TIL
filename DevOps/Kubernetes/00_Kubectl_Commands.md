@@ -6,15 +6,15 @@
 
 <br>
 
-### Namespace 보기
+### Namespace
+
+#### Namespace 보기
 
 ```shell
 kubectl get namespace
 ```
 
-<br>
-
-### Namespace 변경
+#### Namespace 변경
 
 ```shell
 kubectl config set-context --namespace=[namespace 이름]
@@ -58,9 +58,40 @@ kubectl delete pod [pod 이름] -grace-period=0 --force
 
 <br>
 
-### Log 보기
+### Log
+
+#### Pod log 보기
 
 ```shell
 kubectl logs -f [pod 이름]
 ```
 
+#### Container 지정하여 log 보기
+
+하나의 pod에 다수의 container가 떠있으면 `-c` option으로 container를 지정한다
+
+```sh
+kubectl logs -f [pod 이름] -c [container 이름]
+```
+
+<br>
+
+### Events
+
+#### Events 보기
+
+```sh
+kubectl get events
+```
+
+#### Events timestamp 순으로 보기
+
+```sh
+kubectl get events --sort-by=.meta.creationTimestamp
+```
+
+
+
+
+
+https://serverfault.com/questions/728727/kubernetes-stuck-on-containercreating
