@@ -89,9 +89,3 @@ kubectl get events
 ```sh
 kubectl get events --sort-by=.meta.creationTimestamp
 ```
-
-
-
-
-
-https://serverfault.com/questions/728727/kubernetes-stuck-on-containercreating
