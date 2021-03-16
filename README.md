@@ -82,6 +82,7 @@
   - [Maps](/Go/Go101/09_Maps.md)
   - [Structs](/Go/Go101/10_Structs.md)
   - [Go Routine](/Go/Go101/11_Go_Routine.md)
+  - [init() function](/Go/Go101/12_Init_Function.md)
 
 <br>
 
