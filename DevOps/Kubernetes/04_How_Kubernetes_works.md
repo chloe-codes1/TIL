@@ -135,3 +135,24 @@
   - Container는 host와 network namespace가 격리된다
     - Host - container 간 `veth peer`를 생성하여 연결한다
     - Host이 veth는 `docker bridge` 와 연결되어 container 외부로 통신 시 `bridge`를 거쳐간다
+
+<br>
+
+#### 7. Unix Time-Shring (uts) namespace
+
+- `Unix Time-Sharing`이란?
+  - Computing resource를 다른 user들과 공유하는 것에서 유래되었다
+  - 여려 user가 같은 machine을 사용하고 있지만, 마치 다른 machine을 사용중인 것 처럼 만들고 싶을 때 **hostname**을 격리할 수 있는 공간을 만들어 사용한다
+
+<br>
+
+#### 8. User ID (user) namespace
+
+- Host에서의 `uid`와 Container의 `uid` 를 다르게 mapping 한다
+- Docker container는 기본적으로 **user namespace**를 격리하지 않는다
+  - *즉, container의 user가 host와 (거의) 같은 uid 권한을 그대로 행사할 수 있다!*
+- **Docker가 user namespace를 격리하지 낳는 이유**
+  - `PID`, `Network namespace` **공유 기능**과 **호환 문제**
+  - user mapping을 지원하지 않는 외부 volume 또는 driver와의 **호환 문제**
+  - 격리된 user namespace의 user가 mapping 된 실제 host 상의 uid로부터, host에서 binding 한 file에 접근 권한이 보장되어야 하는 **복잡성**
+  - 격리되지 않은 user namespace에서 container root가 host root와 거의 대등한 수준의 권한을 가지긴 하지만 전체 root 권한을 의미하는 것은 아니다
