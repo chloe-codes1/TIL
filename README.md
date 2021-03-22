@@ -230,6 +230,7 @@
   - [VPC Peering](AWS/Practical_AWS/08_VPC_Peering.md)
   - [VPC Endpoints](AWS/Practical_AWS/09_VPC_Endpoints.md)
   - [AMI](AWS/Practical_AWS/10_AMI.md)
+  - [Load Balancer](AWS/Practical_AWS/11_Load_Balancer.md)
 
 <br>
 
