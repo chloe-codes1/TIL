@@ -89,3 +89,26 @@ kubectl get events
 ```sh
 kubectl get events --sort-by=.meta.creationTimestamp
 ```
+
+<br>
+
+### Get commands w/ basic output
+
+#### List all services
+
+```sh
+kubectl get services
+```
+
+#### List all pods in all namespaces
+
+```sh
+kubectl get pods --all-namespaces
+```
+
+#### List all pods in the current namespace w/ more detail
+
+```sh
+kubectl get pods -o wide
+```
+
