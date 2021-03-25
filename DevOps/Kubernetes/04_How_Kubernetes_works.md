@@ -6,17 +6,7 @@
 
 <br>
 
-### What is Kubernetes Pod?
-
-- Kubernetes에서 배포할 수 있는 **최소 객체 단위**
-- 1개 이상의 `container`로 이루어진 group
-  - Container를 잘 알아야 Pod를 이해할 수 있다!
-
-<br>
-
-<br>
-
-### What is Container?
+## What is Container?
 
 - Container는 **격리된 환경**에서 실행되는 **Process** 이다
 
@@ -151,8 +141,117 @@
 - Host에서의 `uid`와 Container의 `uid` 를 다르게 mapping 한다
 - Docker container는 기본적으로 **user namespace**를 격리하지 않는다
   - *즉, container의 user가 host와 (거의) 같은 uid 권한을 그대로 행사할 수 있다!*
-- **Docker가 user namespace를 격리하지 낳는 이유**
-  - `PID`, `Network namespace` **공유 기능**과 **호환 문제**
-  - user mapping을 지원하지 않는 외부 volume 또는 driver와의 **호환 문제**
-  - 격리된 user namespace의 user가 mapping 된 실제 host 상의 uid로부터, host에서 binding 한 file에 접근 권한이 보장되어야 하는 **복잡성**
-  - 격리되지 않은 user namespace에서 container root가 host root와 거의 대등한 수준의 권한을 가지긴 하지만 전체 root 권한을 의미하는 것은 아니다
+  - **Docker가 user namespace를 격리하지 않는 이유**
+    - `PID`, `Network namespace` **공유 기능**과 **호환 문제**
+    - user mapping을 지원하지 않는 외부 volume 또는 driver와의 **호환 문제**
+    - 격리된 `user namespace`의 user가 mapping 된 실제 host 상의 uid로부터, host에서 binding 한 file에 접근 권한이 보장되어야 하는 **복잡성**
+    - 격리되지 않은 `user namespace`에서 container root가 host root와 거의 대등한 수준의 권한을 가지긴 하지만 전체 root 권한을 의미하는 것은 아니다
+  - *Kubernetes 또한 `user namespace` 격리를 아직 지원하지 않는다*
+  - **`User namespace` 격리를 사용하지 않을 때**
+    - 신뢰할 수 있는 사용자만 container runtime (ex. Docker)을 실행할 수 있도록 제한한다
+    - Container의 process가 **root user**로 실행하지 않도록 한다
+      - 특정 UID, GID로 실행될 수 있도록 지정한다
+    - Host의 directory를 container가 직접 접근할 수 있도록 mount 하지 않는다
+  - *Kubernetes에서도 같은 원리의 보안 설정을 제공한다*
+
+<br>
+
+#### 9. Control group (cgroup)
+
+- `Process group`의 **자원 할당**을 제한하고, 격리할 수 있는 Linux Kernel 기능
+  - `CPU`
+    - ex) CPU 사용량을 제한
+  - `Memory`
+    - ex) Memory 사용량을 제한
+  - `Network`
+    - ex) Network Traffic 우선 순위를 설정
+  - `Disk`
+    - ex) Disk 사용량에 대한 통계를 제공
+
+<br>
+
+#### `Wrap-up`: Container가 격리된 환경을 구현하는 주요 원리
+
+- Container는 **격리된 환경**에서 실행되는 **process**이다
+- `namespace`를 통해 process의 **격리된 환경**을 구현한다
+- `cgroups`를 통해 process의 **자원 사용량**을 **제한**한다
+
+<br>
+
+<br>
+
+## What is Kubernetes Pod?
+
+- Kubernetes에서 배포할 수 있는 **최소 객체 단위**
+- 1개 이상의 `container`로 이루어진 group
+
+<br>
+
+### Pod는 "배포 가능한 최소 객체 단위"이다
+
+K8s application은 `pod` 단위로 배포되고, `pod`는 여러 형태의 resource에 의해 배포된다
+
+- `Job`
+  - 한 번 실행되고 작업이 완료되면 종료되는 형태의 pod를 관리
+- `ReplicaSet`
+  - 명시된 pod 개수가 실행되는 상태를 보장
+- `DaemonSet`
+  - 각 node마다 하나씩만 실행되는 pod를 관리
+- `StatefulSet`
+  - **Stateful application**을 실행하는 pod를 관리
+- `Deployment`
+  - Pod, ReplicaSet의 update에 대한 배포를 관리
+
+*Pod는 Kubernetes에서 **생성**하고 **관리**되는 가장 **기본적인 단위**이다!*
+
+<br>
+
+<br>
+
+### Pod는 1개 이상의 container로 이루어진 group이다
+
+- Pod에는 1개 이상의 container가 존재할 수 있다
+  - 단일 container를 실행하는 pod
+  - 여러 container를 실행하는 pod
+
+<br>
+
+#### Pod를 여러 container로 구성하는 경우
+
+- Main 역할을 하는 1개의 **Primary Container**
+- 1개 이상의 **Sidecar Containers**
+  -  Primary Container의 **보완 역할**을 하기 위해 실행되는 container
+    - ex) monitoring, logging, etc.
+
+<br>
+
+#### Container에서는 단일 Process를 실행하도록 권장한다
+
+- **Why?**
+  - Container는 앞서 언급했듯이, **격리된 환경**에서 실행되는 **process**이다
+  - 격리된 PID namespace에서 최초로 실행된 process는 `pid=1`이다
+  - 즉, Container에서 **최초로 실행된 process의 state** == **Container의 수명**이다!
+- **If container 안에서 여러 process가 실행 중이라면?**
+  - Container가 실행 중이라도, main process를 제외한 다른 process들의 실행 상태를 보장할 수 없다
+  - 즉, **Container에서 실행되는 process들의 state** != **Container의 state**
+- **If Kubernetes pod의 특정 container가 종료되면?**
+  - Kubernetes는 선언된 `restartPolicy`에 따라 container를 재시작한다
+    - `restartPolicy` options
+      - Always
+      - OnFailure 
+      - Never
+
+<br>
+
+#### Pod를 구성하는 기준
+
+- Container들이 꼭 같은 node에서 실행되어야 하는가?
+  - 같은 pod에 존재하는 container들은 항상 같은 node에 존재한다!
+- 해당 container들이 같은 개수로 **수평 확장**되어야 하는가?
+  - Pod 단위 == 확장의 단위!
+- Container들은 하나의 group으로 함께 배포해야 하는가?
+
+<br>
+
+
+
