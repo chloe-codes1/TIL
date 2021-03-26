@@ -253,5 +253,18 @@ K8s application은 `pod` 단위로 배포되고, `pod`는 여러 형태의 resou
 
 <br>
 
+#### Kubernetes Pod의 container 간 격리
 
+- Pod가 실행중인 node에서 container를 확인해보면,
+  -  `cgroup namespace`, `user namespace`는 따로 격리하지 않는다
+  - `mnt`, `uts`, `pid` namespace는 각 container 별로 격리한다
+    - 같은 pod여도 공유하지 않는다!
+  - `ipc`, `net` namespace는 pod의 container간 **공유**한다
+    - Container process간 `shared memory` 등의 IPC 가능
+    - Container 간 동일한 IP주소, port를 공유한다 (충돌 주의)
 
+**Pause Container란?**
+
+- Pause container는 격리된 IPC, Network namespace를 생성하고 유지한다
+  - 나머지 container들은 해당 namespace를 공유하여 사용한다
+- 즉, user가 실행한 특정 container가 비정상 종료되어 container 전체에서 공유되는 namespace에 문제가 발생하는 것을 방지한다!
