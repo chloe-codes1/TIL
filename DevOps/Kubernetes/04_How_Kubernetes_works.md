@@ -267,4 +267,83 @@ K8s application은 `pod` 단위로 배포되고, `pod`는 여러 형태의 resou
 
 - Pause container는 격리된 IPC, Network namespace를 생성하고 유지한다
   - 나머지 container들은 해당 namespace를 공유하여 사용한다
-- 즉, user가 실행한 특정 container가 비정상 종료되어 container 전체에서 공유되는 namespace에 문제가 발생하는 것을 방지한다!
+    - 즉, user가 실행한 특정 container가 비정상 종료되어 container 전체에서 공유되는 namespace에 문제가 발생하는 것을 방지한다!
+- 단순히 무한 loop를 돌면서 `SIGINT`, `SIGTERM`을 받으면 종료한다
+  - `SIGINT`
+    - keyboard로 부터 오는 interrupt signal
+      - [CTRL] + [C] 입력 시에 보내지는 signal
+    - 실행을 중지시킨다
+  - `SIGTERM`
+    - Terminate의 약자로, 가능한 정상 종료하도록 하는 signal
+    - kill 명령의 기본 signal
+- **Zombie Process Reaping** 역할을 한다
+  - PID namespace sharing을 하는 경우!
+
+<br>
+
+#### Kubernetes의 PID namespace sharing
+
+- 각 container에서 **Zombie process**가 발생할 우려가 있는 경우, Kubernetes `PID namespace sharing` option을 활성화하여 **Pause container**에 **Zombie process reaping** 역할을 위임할 수 있다
+- 활성화 방법
+  -  해당 pod yml file의 `spec.template.spec.shareProcessNamespace: true`로 설정한다
+
+<br>
+
+<br>
+
+## Wrap-up
+
+### Kubernetes Pod의 개념
+
+<br>
+
+#### Pod란?
+
+- Kubernetes에서 배포할 수 있는 **최소 객체 단위**
+  - Pod는 여러 형태의 resource에 의해 배포된다 (`Job`, `ReplicaSet` 등)
+- 1개 이상의 container로 이루어진 group
+  - 단일 container를 실행하는 pod
+  - 여러 container를 실행하는 pod
+    - `Primary Container`
+    - `Sidecar containers`
+
+<br>
+
+#### 하나의 container에서 여러 process를 실행하는 것은 권장하지 않는다
+
+- Container가 실행 중이라도 main process를 제외한 다른 process들이 실행 중인 상태를 보장할 수 없기 때문이다!
+
+<br>
+
+#### Kubernetes Pod의 특정 container가 종료되면, `Kubelet`이 `restartPolicy`에 따라 container를 재시작한다
+
+<br>
+
+#### Pod를 어떻게 구성할지 판단 기준
+
+- Container들이 꼭 **같은 node**에서 실행되어야 하는가?
+- 해당 container들이 **같은 개수**로 **수평 확장**되어야 하는가?
+- Container들을 하나의 group으로 함께 배포해야 하는가?
+
+<br>
+
+#### Pod의 container 간 격리
+
+- Host와 공유되는 namespace
+  - `cgroup`
+  - `user`
+- 같은 pod container 간 공유되는 namespace
+  - `ipc`
+  - `net`
+- Container 별로 격리되는 namespace
+  - `mount`
+  - `uts`
+  - `pid`
+    - pid namespace 공유는 optional!
+
+<br>
+
+#### Pause Container란?
+
+- Container 간 공유될 `IPC`, `Network namespace`를 생성하고 유지한다
+- `PID namespace` 공유 시 **Zombie process reaping** 역할도 수행한다
