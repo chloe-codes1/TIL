@@ -56,6 +56,12 @@ kubectl delete pod [pod 이름] -grace-period=0 --force
 - `-grace-period` option을 0으로 주면 즉시 삭제된다
 - `--force` option을 통해 강제 삭제가 가능하다
 
+###  Fully shut down the Deployment
+
+```sh
+kubectl delete all --selector app=[APP_IDENTIFIER]
+```
+
 <br>
 
 ### Log
