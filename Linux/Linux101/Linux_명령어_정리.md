@@ -254,10 +254,11 @@
 
 ## Options
 
-| Option                 | 설명                                  |
-| ---------------------- | ------------------------------------- |
-| -h  (--human-readable) | human readable 로 바꾸어줌            |
-| --max-dept=1           | depth 설정<br>ex) du -h --max-depth=1 |
+| Option                 | 설명                                          |
+| ---------------------- | --------------------------------------------- |
+| -h  (--human-readable) | human readable 로 바꾸어줌                    |
+| --max-dept=1           | depth 설정<br>ex) du -h --max-depth=1         |
+| -l                     | o see the information in the long list format |
 
 <br>
 
