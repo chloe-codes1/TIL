@@ -92,3 +92,17 @@
     - 그래서 router에 들어올 때의 packet Layer 2  header 정보와 나갈 때의 packet Layer 2 정보가 다른 것이다
     - 이 기능을 이용하면 전혀 다른 기술 간 변환이 가능하다!
 
+<br>
+
+<br>
+
+## 3. 경로 지정 - Routing/Switch
+
+- Router가 packet을 처리할 때는 크게 두 가지 작업을 수행한다
+  1. 경로 정보를 얻어 **경로 정보를 정리**하는 역할
+  2. 정리된 경로 정보를 기반으로 **packet을 forwarding** 하는 역할
+- Router는 자신이 분명히 알고 있는 주소가 아닌 목적지를 가진 packet이 들어오면 해당 packet을 버리므로, 들어오기 전에 **경로 정보를 충분히 수집**하고 있어야 router가 정상적으로 동작한다
+  - Router는 복잡하고 많은 경로 정보를 얻어 **최적의 경로 정보**인 `routing table`을 적절히 유지해야 한다
+- Router는 다양하고 많은 경로 정보를 얻을 수 있지만, 원하는 목적지 정보와 정확히 일치하지 않는 경우가 더 많다
+  - Router는 **subnet 단위**로 routing 정보를 습득하고, routing 정보를 **최적화**하기 위해 `summary 작업`을 통해 여려 개의 subnet 정보를 **뭉쳐 전달** 한다
+    - 그래서 router에 들어온 packet의 목적지 주소와 router가 갖고 있는 routing table 정보가 **정확히 일치하지 않더라도** (not exact match), 수많은 정보 중 목적지에 **가장 근접한 정보**를 찾아 packet을 forwarding 해야한다 
