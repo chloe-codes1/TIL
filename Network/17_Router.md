@@ -77,3 +77,18 @@
       - 이 기능을 `Broadcast / Multicast Control` 이라고 한다
   - Network에 broadcast가 많이 발생하는 경우, router로 network를 분리하면 broadcast network를 분할해 network **성능**을 높일 수 있다
 
+<br>
+
+<br>
+
+### 2-3. Protocol 변환
+
+- `Router`의 또 다른 역할은 **서로 다른 protocol**로 구성된 network를 **연결**하는 것이다
+- 현대 network는 `Ethernet`으로 수렴되기 때문에 protocol 변환의 역할이 많이 줄었지만, 과거에는 LAN에서 사용하는 protocol과 WAN에서 사용하는 protocol이 전혀 다른, 완전히 구분된 공간이었다
+  - LAN은 다수의 컴퓨터가 서로 통신하는 데 초점을 맞추었고, WAN은 원거리 통신이 목적이었다
+  - LAN 기술이 WAN 기술로 **변환**되어야만 Internet과 같은 **원격지 네트워크와의 통신**이 가능했고, 이 역할을 `Router`가 담당했다
+- `Router`는 Layer 3에서 동작하는 장비이므로 Layer 3 주소 정보를 확인하고, 그 정보를 기반으로 동작한다
+  - Router에 packet이 들어오면 `Layer 2까지의 header 정보`를 **벗겨내고** `Layer 3 주소`를 **확인**한 후 `Layer 2 hearder 정보`를 새로 **만들어** 외부로 내보낸다
+    - 그래서 router에 들어올 때의 packet Layer 2  header 정보와 나갈 때의 packet Layer 2 정보가 다른 것이다
+    - 이 기능을 이용하면 전혀 다른 기술 간 변환이 가능하다!
+
