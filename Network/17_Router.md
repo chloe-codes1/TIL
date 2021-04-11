@@ -106,3 +106,55 @@
 - Router는 다양하고 많은 경로 정보를 얻을 수 있지만, 원하는 목적지 정보와 정확히 일치하지 않는 경우가 더 많다
   - Router는 **subnet 단위**로 routing 정보를 습득하고, routing 정보를 **최적화**하기 위해 `summary 작업`을 통해 여려 개의 subnet 정보를 **뭉쳐 전달** 한다
     - 그래서 router에 들어온 packet의 목적지 주소와 router가 갖고 있는 routing table 정보가 **정확히 일치하지 않더라도** (not exact match), 수많은 정보 중 목적지에 **가장 근접한 정보**를 찾아 packet을 forwarding 해야한다 
+
+<br>
+
+### 3-1. Routing 동작과 Routing Table
+
+- 현대 network에서는 단말부터 목적지까지의 경로를 모두 책임지는 것이 아니라 **인접한 router**까지만 경로를 지정하면,
+  - 인접 router에서 최적의 경로를 파악한 후,
+  - router로 packet을 forwarding 한다
+- Network를 한 단계씩 뛰어넘는다는 의미로 이 기법을 `Hop by Hop routing`이라고 부르고, 인접한 router를 `Next Hop`이라고 부른다
+  - Router는 packet이 목적지로 가는 전체 경로를 파악하지 않고, 최적의 `next hop`을 선택해 보내준다
+
+<br>
+
+#### `Next Hop`을 지정하는 방법
+
+1. 다음 router의 IP를 지정 (Next hop IP address)
+2. Router의 `outbound interface`를 지정
+3. Router의 `outbound interface`와 다음 router의 IP를 동시에 지정
+
+<br>
+
+- Router에서 next hop을 지정할 때는 일반적으로 **상대방 router**의 `Interface IP address`를 지정하는 방법을 사용한다
+- 특수한 경우에만 router의 `outbound interface`를 지정하는 방법을 쓸 수 있는데, 상대방의 `next hop IP`를 모르더라도 **MAC 주소 정보**를 알아낼 수 있을 때만 사용할 수 있다
+  - 특수한 경우들
+    1. WAN 구간 전용선에서 `PPP(Point-to-Point)`나 `HLDC(High Level Datalink Control)`와 같은 protocol을 사용해 **상대방의 MAC 주소를 알 필요가 없을 때**
+    2. 상대방 router에서 proxy ARP가 동작해 정확한 IP 주소를 모르더라도 상대방의 MAC 주소를 알 수 있을 때 
+       - ARP란? 
+         - Address Resolution Protocol
+         - 상대방의 MAC 주소를 알아내기 위해 사용되는 protocol
+- Router가 packet을 어디로 forwarding할지 경로를 선택할 때는 **출발지를 고려하지 않는다**
+  - 출발지와 상관없이 **목적지 주소**와 **routing table**을 비교해 어느 경로로 forwarding 할지 결정한다
+    - 그래서 routing table을 만들 때 
+      - **목적지 정보만 수집**하고,
+      - packet이 들어오면 목적지 주소를 확인해 
+      - packet을 **next hop으로 forwarding**한다
+
+<br>
+
+#### Routing Table에 저장하는 data
+
+1. 목적지 주소
+2. Next hop IP 주소, local outbound interface (optional!)
+
+<br>
+
+- Router에서 packet의 출발지 주소를 이용해 routing 하도록 `PBR (Policy-Based Routing)` 기능을 사용할 수 있지만, 목적지 주소만 수집하는 routing table로는 이 기능을 활성화 할 수 없고, router 정책과 관련된 별도 설정이 필요하다
+  - PBR 기능을 사용하면 관리가 어려워지고, 문제가 발생하면 해결이 어려우므로 특별한 목적으로만 사용한다
+
+<br>
+
+
+
