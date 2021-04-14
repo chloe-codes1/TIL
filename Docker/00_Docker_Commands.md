@@ -1,4 +1,4 @@
-# Docker Basics
+# Docker Commands
 
 <br>
 
@@ -149,5 +149,6 @@ $ docker network prune
 $ docker volume prune
 $ docker container prune
 $ docker image prune
+$ docker system prune  # Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 ```
 
