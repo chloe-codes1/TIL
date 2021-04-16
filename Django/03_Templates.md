@@ -42,7 +42,7 @@
 
 <br>
 
-#### 3. 주석 {# #}
+#### 3. 주석 `{# #}`
 
 ```html
 {# This is comment #}
@@ -62,9 +62,18 @@
 {% endfor %}
 ```
 
-- {{ forloop.counter }}
-- {{ forloop.counter0 }}
-- {% empty %}
+```django
+{{ forloop.counter }}
+```
+
+```django
+{{ forloop.counter0 }}
+```
+
+```django
+{% empty %}
+```
+
 - 배열이 비어있으면 출력할 내용 써줄 때 사용
 
 <br>
