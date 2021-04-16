@@ -42,7 +42,7 @@
 
 <br>
 
-#### 3. 주석 `{# #}`
+#### 3. 주석 {# #}
 
 ```html
 {# This is comment #}
@@ -52,7 +52,7 @@
 
 <br>
 
-### 반복분
+### 반복문
 
 > Loops over each item in an array
 
@@ -62,13 +62,10 @@
 {% endfor %}
 ```
 
-- `{{ forloop.counter }}`
-
-- `{{ forloop.counter0 }}`
-
-- `{% empty %}`
-
-  : 배열이 비어있으면 출력할 내용 써줄 때 사용
+- {{ forloop.counter }}
+- {{ forloop.counter0 }}
+- {% empty %}
+- 배열이 비어있으면 출력할 내용 써줄 때 사용
 
 <br>
 
@@ -130,7 +127,7 @@
 {{content|truncatechars:10}}
 ```
 
-- 10자만 짤라서 보이기
+- 10자만 잘라서 보이기
 
 <br>
 
