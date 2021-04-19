@@ -47,7 +47,7 @@ k exec -it prism-69b8c846c-gc9zj /bin/sh
 kubectl delete pod [pod 이름]
 ```
 
-### Force delete pod
+#### Force delete pod
 
 ```shell
 kubectl delete pod [pod 이름] -grace-period=0 --force
@@ -56,10 +56,16 @@ kubectl delete pod [pod 이름] -grace-period=0 --force
 - `-grace-period` option을 0으로 주면 즉시 삭제된다
 - `--force` option을 통해 강제 삭제가 가능하다
 
-###  Fully shut down the Deployment
+#### Fully shut down the Deployment
 
 ```sh
 kubectl delete all --selector app=[APP_IDENTIFIER]
+```
+
+#### Delete Service Account
+
+```sh
+kubectl delete serviceaccount [service account 이름]
 ```
 
 <br>
