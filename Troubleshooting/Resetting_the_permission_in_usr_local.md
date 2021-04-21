@@ -1,4 +1,4 @@
-# Resetting_the_permission_in_/usr/local.md
+# Resetting the permission in /usr/local
 
 > macOS update 후 발생한 권한 문제 해결 방법을 공유해요
 
