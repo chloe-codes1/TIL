@@ -20,6 +20,12 @@ kubectl get namespace
 kubectl config set-context --namespace=[namespace 이름]
 ```
 
+#### Create Namespace
+
+```sh
+kubectl create namespace [namespace 이름]
+```
+
 <br>
 
 ### Execute pod
@@ -67,6 +73,14 @@ kubectl delete all --selector app=[APP_IDENTIFIER]
 ```sh
 kubectl delete serviceaccount [service account 이름]
 ```
+
+#### Delete Deployment
+
+```sh
+kubectl delete deploymnet [deployment name]
+```
+
+
 
 <br>
 
@@ -122,5 +136,11 @@ kubectl get pods --all-namespaces
 
 ```sh
 kubectl get pods -o wide
+```
+
+#### List all deployment in all namespaces
+
+```
+kubeclt
 ```
 
