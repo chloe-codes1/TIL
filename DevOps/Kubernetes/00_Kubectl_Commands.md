@@ -31,17 +31,25 @@ kubectl create namespace [namespace 이름]
 ### Execute pod
 
 ```shell
-kubectl exec -it [pod 이름] [경로]
+kubectl exec -it [pod 이름] -- [경로]
 ```
 
 ex)
 
 ```shell
-k exec -it prism-69b8c846c-gc9zj /bin/sh
+k exec -it prism-69b8c846c-gc9zj -- /bin/sh
 ```
 
 - `kubectl` 명령어를 `k`로 **alias** 해놨다
 - `/bin/sh`가 아니라 `/bin/bash`로 생성한 경우도 있으니 참고
+
+#### Execute specific container
+
+```sh
+k exec -it [pod 이름] -c [container 이름] -- [경로]
+```
+
+
 
 <br>
 
