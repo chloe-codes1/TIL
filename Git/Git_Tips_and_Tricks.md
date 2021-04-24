@@ -33,7 +33,7 @@ $ git add [파일이름] # .은 모든 변경 사항을 staging area로 올림
 
 ### (3) 버전 관리를 위한 스냅샷 저장 : `git commit`
 
-- 현재 상테에 대한 스냅샷을 `commit` 하여, 버전 관리를 진행한다.
+- 현재 상태에 대한 스냅샷을 `commit` 하여, 버전 관리를 진행한다.
 
 ``` bash
 $ git commit -m "commit message"
