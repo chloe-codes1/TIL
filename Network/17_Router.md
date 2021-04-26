@@ -149,12 +149,16 @@
 1. 목적지 주소
 2. Next hop IP 주소, local outbound interface (optional!)
 
-<br>
-
 - Router에서 packet의 출발지 주소를 이용해 routing 하도록 `PBR (Policy-Based Routing)` 기능을 사용할 수 있지만, 목적지 주소만 수집하는 routing table로는 이 기능을 활성화 할 수 없고, router 정책과 관련된 별도 설정이 필요하다
   - PBR 기능을 사용하면 관리가 어려워지고, 문제가 발생하면 해결이 어려우므로 특별한 목적으로만 사용한다
 
 <br>
 
+#### 루프가 없는 (Loop Free) Layer 3: TTL (Time To Live)
 
+- Layer 3의 IP header에는 `TTL` 이라는 field가 있다
+  - 이 field는 packet이 network에 살아 있을 수 있는 시간(Hop)을 제한한다!
+- Internet 구간에서 쓸모없는 packet이 돌아다녀 대역폭을 낭비하는 것을 막기 위해 router는 **주소가 불분명한 packet을 버린다**
+- but, 운영되던 사이트가 갑자기 없어지는 경우가 생길 수 있고, 대안 경로를 찾다가 순간적으로 마주보는 두 대의 router의 next hop이 각각 상대방으로 구성되어 packet이 두 router 사이에서 계속 오가는 경우가 생길 수도 있다
+  - 이럴 경우 두 router 간의 잘못된 routing으로 **L3 Loop**가 발생하게 된다
 
