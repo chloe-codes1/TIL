@@ -161,4 +161,41 @@
 - Internet 구간에서 쓸모없는 packet이 돌아다녀 대역폭을 낭비하는 것을 막기 위해 router는 **주소가 불분명한 packet을 버린다**
 - but, 운영되던 사이트가 갑자기 없어지는 경우가 생길 수 있고, 대안 경로를 찾다가 순간적으로 마주보는 두 대의 router의 next hop이 각각 상대방으로 구성되어 packet이 두 router 사이에서 계속 오가는 경우가 생길 수도 있다
   - 이럴 경우 두 router 간의 잘못된 routing으로 **L3 Loop**가 발생하게 된다
+- 이렇게 packet이 영구적으로 사라지지 않는다면, 장비 간에 동일한 packet이 ping-pong을 치거나 Internet에 사라지지 않는 유령 packet이 넘쳐날 것이다
+  - 그래서, 모든 packet은 **TTL**이라는 수명값을 가지고 있고, 이 값이 0이 되면 Network 장비에서 버려진다
+- 여기서 `TTL`은 **실제 초와 같은 시간** 이 아니라, `hop` 을 지칭하며, 하나의 `hop` 을 **지날 때마다** TTL 값은 1씩 줄어든다
+
+<br>
+
+<br>
+
+### 3-2. Routing (Router가 경로 정보를 얻는 방법)
+
+Router가 경로 정보를 얻는 방법은 크게 3가지로 구분할 수 있다
+
+1. `Direct Connected`
+2. `Static Routing`
+3. `Dynamic Routing`
+
+위의 3가지 방법을 이용해 경로 정보를 수집하고, 수집된 경로 정보 중 목적지에 대한 **최적의 경로**를 선정해 `Routing Table`을 만든다
+
+ <br>
+
+#### 1. Direct Connected
+
+- IP 주소를 입력할 때 사용된 **IP 주소**와 **Subnet mask**로 해당 IP 주소가 속한 **Network 주소 정보**를 알 수 있다
+  - Router나 PC에선 이 정보로 해당 Network에 대한 Routing Table을 자동으로 만든다
+    - 이 경로 정보를 `Direct Connected` 라고 한다.
+- `Direct Connected`로 생성되는 경로 정보는 Interface에 IP를 설정하면 **자동으로 생성되는 정보**이므로, 
+  - 정보를 강제로 **지울 수 없고**,
+  - 해당 Network 설정을 삭제하거나 해당 Network Interface가 **비활성화**되어야만 **자동으로 사라진다**
+
+<br>
+
+#### 2. Static Routing
+
+- 관리자가 `목적지 Netowrk`와  `Next hop` 을 router에 **직접 지정**해 **경로 정보를 입력** 하는 것을 `Static Routing` 이라고 한다
+  - `Static Routing`은 관리자가 경로를 직접 지정하므로, routing 정보를 매우 **직관적**으로 설정, 관리할 수 있다
+- `Static Routing`은 `Direct Connected` 처럼 연결된 Network Interface 정보가 삭제되거나 비활성화되면 **연관된 Static Routing 정보가 자동으로 삭제** 된다.
+  - but, Physical Interface가 아닌 Logical Interface는, Physical Interface가 비활성화되더라도 함께 비활성화되지 않는 경우도 있어 Routing Table에서 사라지지 않을 수 있다.
 
