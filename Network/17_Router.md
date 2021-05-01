@@ -199,3 +199,16 @@ Router가 경로 정보를 얻는 방법은 크게 3가지로 구분할 수 있�
 - `Static Routing`은 `Direct Connected` 처럼 연결된 Network Interface 정보가 삭제되거나 비활성화되면 **연관된 Static Routing 정보가 자동으로 삭제** 된다.
   - but, Physical Interface가 아닌 Logical Interface는, Physical Interface가 비활성화되더라도 함께 비활성화되지 않는 경우도 있어 Routing Table에서 사라지지 않을 수 있다.
 
+<br>
+
+#### 3. Dynamic Routing
+
+- `Static Routing`은 관리자가 변화가 적은 network에서 network를 손쉽게 관리할 수 있는 좋은 방법이지만, 큰 network는 `Static Routing` 만으로는 관리하기 어렵다
+  - why? 
+    - `Static Routing` 적용 시 **장애로 인한 network** 경로 반영이 되지 않는다!
+      - `Static Routing`은 **router 너머 다른 router의 상태 정보를 파악할 수 없기 때문에** router 사이의 회선이나 router에 장애가 발생하면, **장애 상황을 파악**하고 **대체 경로로 packet을 보낼 수 없기 때문**!
+- `Dynamic Routing`은 이러한 `Static Routing` 의 단점을 보완하여, **router 끼리 자신이 알고 있는 경로 정보나 링크 상태 정보를 교환**해 전체 network 정보를 학습한다
+  - 주기적 or 상태 정보가 변경될 때 router끼리 경로 정보가 교환되므로, router를 연결하는 회선이나 router 자체에 장애가 발생하면, 이 상황을 인지해 **대체 경로로 packet을 forwarding** 할 수 있다
+- `Dynamic Routing` 에서는 **자신이 광고할 network를 선언**해주어야 한다
+- 
+
