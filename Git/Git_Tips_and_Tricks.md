@@ -357,6 +357,12 @@ $ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch �
 
 <br>
 
+#### Push하지 않은 Commit message 수정하기
+
+```bash
+$ git commit --amend
+```
+
 <br>
 
 ### `git fetch`
