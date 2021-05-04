@@ -1,0 +1,12 @@
+  {
+  "plugins": [
+    "collapsible-menu",
+    "anchor-navigation-ex",
+    "tbfed-pagefooter",
+    "disqus",
+    "page-treeview",
+    "splitter",
+    "toggle-chapters",
+    "expandable-chapters-small"
+  ]
+}
