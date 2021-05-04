@@ -7,6 +7,25 @@
     "page-treeview",
     "splitter",
     "toggle-chapters",
-    "expandable-chapters-small"
-  ]
+    "expandable-chapters-small",
+    "page-footer"
+  ],
+  "pluginsConfig": {
+    "page-footer": {
+        "description": "modified at",
+        "signature": "Chloe",
+        "wisdom": "Maker of things and fun",
+        "format": "yyyy-MM-dd hh:mm:ss",
+        "copyright": "Copyright &#169; chloe-codes1",
+        "timeColor": "#666",
+        "copyrightColor": "#666",
+        "utcOffset": "8",
+        "isShowQRCode": false,
+        "isShowIssues": false,
+        "baseUri": "https://wiki.aleen42.com/",
+        "repo": "chloe-codes1/TIL",
+        "token": "",
+        "style": "normal"
+    }
+}
 }
