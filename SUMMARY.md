@@ -1,12 +1,4 @@
-# 👩🏻‍💻 Today I Learned
-
-
-
-> We constantl learn new things. This is a repo to share those learnings.
-
-
-
-<br/><br/>
+# Summary
 
 ## Table of Contents
 
