@@ -462,4 +462,4 @@
 - [Brew error - compinit:503: no such file or directory](/Troubleshooting/Brew_error_compinit-503-no_such_file_or_directory.md)
 - [Scouter_client_JVM_error_after_macOS_Bigsur_update.md](/Troubleshooting/Scouter_client_JVM_error_after_macOS_Bigsur_update.md)
 
-y
+
