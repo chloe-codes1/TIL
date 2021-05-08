@@ -279,13 +279,15 @@
 
 ### DB
 
-- [DB Basics](/DB/01_DB_Basics.md)
-- [SQL and Django ORM](/DB/02_SQL_and_Django_ORM.md)
-- [One to Many Relationship](/DB/03_One_To_Many_Relationship.md)
-- [Many to Many Relationship](/DB/04_Many_To_Many_Relationship.md)
-- [Dump and Load Data](/DB/05_Dump_and_Load_Data.md)
-- [MySQL with Django](/DB/06_MySQL_with_Django.md)
-- [Create MySQL Users Accounts and Grant Privileges](/DB/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
+
+- #### [DB 101](/DB/DB101)
+- [DB Basics](/DB/DB101/01_DB_Basics.md)
+- [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
+- [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
+- [Many to Many Relationship](/DB/DB101/04_Many_To_Many_Relationship.md)
+- [Dump and Load Data](/DB/DB101/05_Dump_and_Load_Data.md)
+- [MySQL with Django](/DB/DB101/06_MySQL_with_Django.md)
+- [Create MySQL Users Accounts and Grant Privileges](/DB/DB101/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
 
 <br>
 
@@ -299,45 +301,37 @@
 
 <br>
 
-### DevOps
+### Infra
 
-- #### [DevOps 101](/DevOps/DevOps101)
+- #### [DevOps 101](/Infra/DevOps)
 
-  - [IT Infrastructure Basics](/DevOps/DevOps101/IT_Infrastructure_Basics.md)
-  - [What is DevOps](/DevOps/DevOps101/01_What_is_DevOps.md)
-  - [DevOps Engineer Roles and Responsibilities](/DevOps/DevOps101/02_DevOps_Engineer_Roles_and_Responsibilities.md)
+  - [IT Infrastructure Basics](/Infra/DevOps/IT_Infrastructure_Basics.md)
+  - [What is DevOps](/Infra/DevOps/01_What_is_DevOps.md)
+  - [DevOps Engineer Roles and Responsibilities](/Infra/DevOps/02_DevOps_Engineer_Roles_and_Responsibilities.md)
 
-- #### [CI/CD](/DevOps/CI-CD)
+- #### [CI/CD](/Infra/CI-CD)
 
-  - [Configuring GitLab CI-CD with AWS EC2](/DevOps/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
+  - [Configuring GitLab CI-CD with AWS EC2](/Infra/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
 
-- #### [Jenkins](/DevOps/Jenkins)
+- #### [Jenkins](/Infra/Jenkins)
 
-  - [Jenkins Build and ECR Push](/DevOps/Jenkins/Jenkins_Build_and_ECR_Push.md)
+  - [Jenkins Build and ECR Push](/Infra/Jenkins/Jenkins_Build_and_ECR_Push.md)
 
-- #### [ELK](/DevOps/ELK)
+- #### [ELK](/Infra/ELK)
 
-  - [Search System Basics](/DevOps/ELK/01_Search_System_Basics.md)
-  - [Filebeat Basics](/DevOps/ELK/Filebeat_Basics.md)
-  - [Logstash Basics](/DevOps/ELK/Logstash_Basics.md)
-  - [How Logstash Works](/DevOps/ELK/How_Logstash_Works.md)
+  - [Search System Basics](/Infra/ELK/01_Search_System_Basics.md)
+  - [Filebeat Basics](/Infra/ELK/Filebeat_Basics.md)
+  - [Logstash Basics](/Infra/ELK/Logstash_Basics.md)
+  - [How Logstash Works](/Infra/ELK/How_Logstash_Works.md)
 
-- #### [Terraform](/DevOps/Terraform)
+- #### [Terraform](/Infra/Terraform)
 
-  - [Terraform 101](/Terraform/Terraform101.md)
+  - [Terraform 101](/Infra/Terraform/Terraform101.md)
 
-- #### [Kubernetes](/DevOps/Kubernetes)
-
-  - [Kubernetes Basics](/DevOps/Kubernetes/01_Kubernetes_Basics.md)
-  - [EKS for Kubernetes](/DevOps/Kubernetes/02_EKS_for_Kubernetes.md)
-  - [What is Ingress](/DevOps/Kubernetes/03_What_is_Ingress.md)
-  - [Kubectl Commands](/DevOps/Kubernetes/00_Kubectl_Commands.md)
-  - [How Kubernetes works](/DevOps/Kubernetes/04_How_Kubernetes_works.md)
-  - [Helm Package Manager](/DevOps/Kubernetes/05_Helm_Package_Manager.md)
   
-- #### [Ansible](/DevOps/Ansible)
+- #### [Ansible](/Infra/Ansible)
 
-  - [Ansible 101](/DevOps/Ansible/Ansible101.md)
+  - [Ansible 101](/Infra/Ansible/Ansible101.md)
   
 - #### [Redis](/DevOps/Redis)
 
@@ -354,6 +348,16 @@
 - [Docker Tags](/Docker/02_Docker_Tags.md)
 
 <br>
+
+### Kubernetes
+
+  - [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
+  - [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
+  - [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
+  - [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
+  - [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
+  - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
+
 
 ### GraphQL
 
@@ -461,5 +465,4 @@
 - [Resetting the permission in /usr/local](/Troubleshooting/Resetting_the_permission_in_/usr/local.md)
 - [Brew error - compinit:503: no such file or directory](/Troubleshooting/Brew_error_compinit-503-no_such_file_or_directory.md)
 - [Scouter_client_JVM_error_after_macOS_Bigsur_update.md](/Troubleshooting/Scouter_client_JVM_error_after_macOS_Bigsur_update.md)
-
 
