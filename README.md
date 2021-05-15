@@ -297,6 +297,7 @@
 - [MySQL with Django](/DB/DB101/06_MySQL_with_Django.md)
 - [Create MySQL Users Accounts and Grant Privileges](/DB/DB101/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
 - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
+- [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
 
 
 <br>
