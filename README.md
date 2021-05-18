@@ -334,6 +334,7 @@
   - [Filebeat Basics](/Infra/ELK/02_Filebeat_Basics.md)
   - [Logstash Basics](/Infra/ELK/03_Logstash_Basics.md)
   - [How Logstash Works](/Infra/ELK/04_How_Logstash_Works.md)
+  - [Index and Shards](/Infra/ELK/05_Index_and_Shards.md)
 
 - #### [Terraform](/Infra/Terraform)
 
