@@ -34,7 +34,7 @@
 
 <br>
 
- ![node_went_down](../../images/primary_shard_and_replica.png)
+ ![node_went_down](../../images/node_went_down.png)
 
 - 처음에 cluster는 먼저 유실된 node가 복구 되기를 기다린다.
     - But, timeout 되어 유실된 node가 복귀되지 않는다고 판단이 되면, Elasticsearch는 replica가 사라져 `primary shard` 1개만 남은 0번, 4번 shard들의 **복제**를 시작한다
