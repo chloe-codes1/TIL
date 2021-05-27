@@ -34,6 +34,9 @@
 
 ### Java
 
+- #### [Java Environment Setup](/Java/Java_Environment_Setup)
+  - [Multiple Java Versions in MacOS](/Java/Java_Environment_Setup/Multiple_Java_Versions_in_MacOS.md)
+
 - #### [Java 101](/Java/Java101)
 
   - [Java Basics](/Java/Java101/01_Java_basics.md)
