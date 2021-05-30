@@ -135,6 +135,7 @@
   - [Linux Performance Analysis in 60 seconds](/Linux/Linux101/Linux_Performance_Analysis_in_60_seconds.md)
   - [Ways to Check Linux OS Version in Command Line](/Linux/Linux101/Ways_to_Check_Linux_OS_Version_in_Command_Line.md)
   - [tmux cheatsheet](/Linux/Linux101/tmux_cheatsheet.md)
+  - [Logrotate](/Linux/Linux101/Logrotate.md)
 
 
 - #### [Arch Linux](/Linux/Arch_Linux)
