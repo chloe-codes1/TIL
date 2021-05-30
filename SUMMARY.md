@@ -285,7 +285,7 @@
 ### DB
 
 
-- #### [DB 101](/DB/DB101)
+- #### DB 101
 - [DB Basics](/DB/DB101/01_DB_Basics.md)
 - [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
 - [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
