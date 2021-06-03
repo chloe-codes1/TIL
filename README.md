@@ -303,6 +303,8 @@
 - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
 - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
 
+- #### [DB Advanced](/DB/DB_Advanced)
+- [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)
 
 <br>
 

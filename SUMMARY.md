@@ -285,16 +285,19 @@
 ### DB
 
 
-- #### DB 101
-- [DB Basics](/DB/DB101/01_DB_Basics.md)
-- [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
-- [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
-- [Many to Many Relationship](/DB/DB101/04_Many_To_Many_Relationship.md)
-- [Dump and Load Data](/DB/DB101/05_Dump_and_Load_Data.md)
-- [MySQL with Django](/DB/DB101/06_MySQL_with_Django.md)
-- [Create MySQL Users Accounts and Grant Privileges](/DB/DB101/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
-- [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
-- [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
+- #### [DB 101](/DB/DB101)
+  - [DB Basics](/DB/DB101/01_DB_Basics.md)
+  - [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
+  - [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
+  - [Many to Many Relationship](/DB/DB101/04_Many_To_Many_Relationship.md)
+  - [Dump and Load Data](/DB/DB101/05_Dump_and_Load_Data.md)
+  - [MySQL with Django](/DB/DB101/06_MySQL_with_Django.md)
+  - [Create MySQL Users Accounts and Grant Privileges](/DB/DB101/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
+  - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
+  - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
+
+- #### [DB Advanced](/DB/DB_Advanced)
+  - [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)    
 
 <br>
 
