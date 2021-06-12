@@ -121,6 +121,7 @@
 
 ### OS
 - [What is an Operating System](/OS/01_What_is_an_Operating_System.md)
+- [What is Hyper-Threading](/OS/02_What_is_Hyper-Threading.md)
 
 <br>
 
