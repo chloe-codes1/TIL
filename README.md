@@ -100,6 +100,7 @@
 - [Unit Testing in Python](/Python/Unit_Testing_in_Python.md)
 - [Handling Encoding Issues Using Redis with Python](/Python/Handling_Encoding_Issues_Using_Redis_with_Python.md)
 - [Working with Datetime Objects and Timezones in Python](/Python/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
+- [itertools.cycle](/Python/itertools.cycle.md)
 
 <br>
 
