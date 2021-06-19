@@ -58,7 +58,7 @@
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
-  - [Lombok](/Java/Java_Advanced/Lombok.md)
+  - [Lombok](/Java/Java_Advanced/00_Lombok.md)
   - [Java Thread](/Java/Java_Advanced/01_Thread.md)
   - [JMX and Jolokia](/Java/Java_Advanced/02_JMX_and_Jolokia.md)
 
