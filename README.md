@@ -106,21 +106,21 @@
 
 ### Django
 
-#### [Django 101](/Django/Django101)
+- #### [Django 101](/Django/Django101)
 
-- [Django Basics](/Django/Django101/01_Django101.md)
-- [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
-- [Templates](/Django/Django101/03_Templates.md)
-- [Model](/Django/Django101/04_Model.md)
-- [URL name](/Django/Django101/05_URL_name.md)
-- [Form & ModelForm](/Django/Django101/06_Form_&_ModelForm.md)
-- [Authentication](/Django/Django101/07_Authentication.md)
-- [Request and Response Objects](/Django/Django101/08_Request_and_Response_Objects.md)
-- [ImageField](/Django/Django101/09_Image_Upload.md)
-- [Optimization](/Django/Django101/10_Optimization.md)
-- [Django RESTful Framework](/Django/Django101/11_DRF.md)
-- [Class Based View](/Django/Django101/12_Class_Based_View.md)
-- [DRF with JWT](/Django/Django101/13.DRF_with_JWT.md)
+  - [Django Basics](/Django/Django101/01_Django101.md)
+  - [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
+  - [Templates](/Django/Django101/03_Templates.md)
+  - [Model](/Django/Django101/04_Model.md)
+  - [URL name](/Django/Django101/05_URL_name.md)
+  - [Form & ModelForm](/Django/Django101/06_Form_&_ModelForm.md)
+  - [Authentication](/Django/Django101/07_Authentication.md)
+  - [Request and Response Objects](/Django/Django101/08_Request_and_Response_Objects.md)
+  - [ImageField](/Django/Django101/09_Image_Upload.md)
+  - [Optimization](/Django/Django101/10_Optimization.md)
+  - [Django RESTful Framework](/Django/Django101/11_DRF.md)
+  - [Class Based View](/Django/Django101/12_Class_Based_View.md)
+  - [DRF with JWT](/Django/Django101/13.DRF_with_JWT.md)
 
 <br>
 
