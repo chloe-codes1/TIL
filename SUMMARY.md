@@ -25,6 +25,7 @@
   - [Quick Sort](/Algorithm/Sorting_Methods/Quick_Sort.md)
 
 - #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
+
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
   
@@ -35,6 +36,7 @@
 ### Java
 
 - #### [Java Environment Setup](/Java/Java_Environment_Setup)
+
   - [Multiple Java Versions in MacOS](/Java/Java_Environment_Setup/Multiple_Java_Versions_in_MacOS.md)
 
 - #### [Java 101](/Java/Java101)
@@ -50,7 +52,7 @@
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
-  - [Lombok](/Java/Java_Advanced/Lombok.md)
+  - [Lombok](/Java/Java_Advanced/00_Lombok.md)
   - [Java Thread](/Java/Java_Advanced/01_Thread.md)
   - [JMX and Jolokia](/Java/Java_Advanced/02_JMX_and_Jolokia.md)
 
@@ -59,6 +61,7 @@
 ### Spring
 
 - [Spring Security](/Spring/01_Spring_Web_Security.md)
+- [IoC](/Spring/02_IoC.md)
 
 <br>
 
@@ -98,19 +101,21 @@
 
 ### Django
 
-- [Django Basics](/Django/01_Django101.md)
-- [Variable Routing & DTL](/Django/02_Variable_Routing_&_DTL.md)
-- [Templates](/Django/03_Templates.md)
-- [Model](/Django/04_Model.md)
-- [URL name](/Django/05_URL_name.md)
-- [Form & ModelForm](/Django/06_Form_&_ModelForm.md)
-- [Authentication](/Django/07_Authentication.md)
-- [Request and Response Objects](/Django/08_Request_and_Response_Objects.md)
-- [ImageField](/Django/09_Image_Upload.md)
-- [Optimization](/Django/10_Optimization.md)
-- [Django RESTful Framework](/Django/11_DRF.md)
-- [Class Based View](/Django/12_Class_Based_View.md)
-- [DRF with JWT](/Django/13.DRF_with_JWT.md)
+- #### [Django 101](/Django/Django101)
+
+  - [Django Basics](/Django/Django101/01_Django101.md)
+  - [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
+  - [Templates](/Django/Django101/03_Templates.md)
+  - [Model](/Django/Django101/04_Model.md)
+  - [URL name](/Django/Django101/05_URL_name.md)
+  - [Form & ModelForm](/Django/Django101/06_Form_&_ModelForm.md)
+  - [Authentication](/Django/Django101/07_Authentication.md)
+  - [Request and Response Objects](/Django/Django101/08_Request_and_Response_Objects.md)
+  - [ImageField](/Django/Django101/09_Image_Upload.md)
+  - [Optimization](/Django/Django101/10_Optimization.md)
+  - [Django RESTful Framework](/Django/Django101/11_DRF.md)
+  - [Class Based View](/Django/Django101/12_Class_Based_View.md)
+  - [DRF with JWT](/Django/Django101/13.DRF_with_JWT.md)
 
 <br>
 
@@ -121,6 +126,7 @@
 <br>
 
 ### OS
+
 - [What is an Operating System](/OS/01_What_is_an_Operating_System.md)
 - [What is Hyper-Threading](/OS/02_What_is_Hyper-Threading.md)
 
@@ -139,8 +145,8 @@
   - [tmux cheatsheet](/Linux/Linux101/tmux_cheatsheet.md)
   - [Logrotate](/Linux/Linux101/Logrotate.md)
 
-
 - #### [Arch Linux](/Linux/Arch_Linux)
+
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
   
@@ -180,8 +186,8 @@
 - #### [AWS Services](/AWS/AWS_Services)
 
   - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
-  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md) 
-  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)                    
+  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
+  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)
   - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
   - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
@@ -243,6 +249,7 @@
   - [What is Cache?](/Server/Server101/What_is_Cache.md)
 
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
+
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
@@ -286,8 +293,8 @@
 
 ### DB
 
-
 - #### [DB 101](/DB/DB101)
+
   - [DB Basics](/DB/DB101/01_DB_Basics.md)
   - [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
   - [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
@@ -299,7 +306,8 @@
   - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
 
 - #### [DB Advanced](/DB/DB_Advanced)
-  - [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)    
+
+  - [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)
 
 <br>
 
@@ -341,7 +349,6 @@
 
   - [Terraform 101](/Infra/Terraform/Terraform101.md)
 
-  
 - #### [Ansible](/Infra/Ansible)
 
   - [Ansible 101](/Infra/Ansible/Ansible101.md)
@@ -364,17 +371,17 @@
 
 ### Kubernetes
 
-  - [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
-  - [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
-  - [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
-  - [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
-  - [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
-  - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
-
+- [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
+- [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
+- [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
+- [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
+- [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
+- [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
 
 ### GraphQL
 
 - #### [GraphQL 101](/GraphQL/GraphQL101)
+
   - [Intro to GraphQL](/GraphQL/GraphQL101/01_GraphQL101.md)
 
 - #### [GraphQL Korea Meet-up](/GraphQL/GraphQL_Korea_Meetup)
@@ -450,9 +457,9 @@
   
 - #### [Express.js](/Node.js/Express.js)
 
-    - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
-    - [EJS](/Node.js/Express.js/02_EJS.md)
-    - [RESTful API](/Node.js/Express.js/03_RESTful_API.md)
+  - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
+  - [EJS](/Node.js/Express.js/02_EJS.md)
+  - [RESTful API](/Node.js/Express.js/03_RESTful_API.md)
 
 <br>
 
@@ -478,4 +485,3 @@
 - [Resetting the permission in /usr/local](/Troubleshooting/Resetting_the_permission_in_/usr/local.md)
 - [Brew error - compinit:503: no such file or directory](/Troubleshooting/Brew_error_compinit-503-no_such_file_or_directory.md)
 - [Scouter_client_JVM_error_after_macOS_Bigsur_update.md](/Troubleshooting/Scouter_client_JVM_error_after_macOS_Bigsur_update.md)
-
