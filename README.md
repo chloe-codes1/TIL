@@ -1,10 +1,6 @@
 # 👩🏻‍💻 Today I Learned
 
-
-
 > We constantly learn new things. This is a repo to share those learnings.
-
-
 
 <br/><br/>
 
@@ -33,6 +29,7 @@
   - [Quick Sort](/Algorithm/Sorting_Methods/Quick_Sort.md)
 
 - #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
+
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
   
@@ -43,6 +40,7 @@
 ### Java
 
 - #### [Java Environment Setup](/Java/Java_Environment_Setup)
+
   - [Multiple Java Versions in MacOS](/Java/Java_Environment_Setup/Multiple_Java_Versions_in_MacOS.md)
 
 - #### [Java 101](/Java/Java101)
@@ -92,18 +90,23 @@
 
 ### Python
 
-- [Python Coding Convention](/Python/Python_Coding_Convention.md)
-- [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
-- [Python Virtual Environment](/Python/Python_Virtual_Environment.md)
-- [@property in Python](/Python/@property_in_Python.md)
-- [Generators in Python](/Python/Generators_in_Python.md)
-- [Type Hints in Python](/Python/Type_Hints_in_Python.md)
-- [Unit Testing in Python](/Python/Unit_Testing_in_Python.md)
-- [Handling Encoding Issues Using Redis with Python](/Python/Handling_Encoding_Issues_Using_Redis_with_Python.md)
-- [Working with Datetime Objects and Timezones in Python](/Python/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
-- [itertools.cycle](/Python/itertools.cycle.md)
-- [Inheritance in Python](/Python/Inheritance_in_Python.md)
-- [Python GIL](/Python/Python_GIL.md)
+#### [Python 101](/Python/Python101)
+
+- [Python 101](/Python/)
+- [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
+- [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
+- [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
+- [@property in Python](/Python/Python101/@property_in_Python.md)
+- [Generators in Python](/Python/Python101/Generators_in_Python.md)
+- [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
+- [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
+- [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
+- [itertools.cycle](/Python/Python101/itertools.cycle.md)
+
+#### [Python Advanced](/Python/Python_Advanced)
+
+- [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
+- [Python GIL](/Python/Python_Advanced/Python_GIL.md)
 
 <br>
 
@@ -134,6 +137,7 @@
 <br>
 
 ### OS
+
 - [What is an Operating System](/OS/01_What_is_an_Operating_System.md)
 - [What is Hyper-Threading](/OS/02_What_is_Hyper-Threading.md)
 
@@ -153,6 +157,7 @@
   - [Logrotate](/Linux/Linux101/Logrotate.md)
 
 - #### [Arch Linux](/Linux/Arch_Linux)
+
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
   
@@ -192,8 +197,8 @@
 - #### [AWS Services](/AWS/AWS_Services)
 
   - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
-  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md) 
-  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)                    
+  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
+  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)
   - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
   - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
@@ -255,6 +260,7 @@
   - [What is Cache?](/Server/Server101/What_is_Cache.md)
 
 - #### [ServerLess Computing](/Server/ServerLess_Computing)
+
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
@@ -298,8 +304,8 @@
 
 ### DB
 
-
 - #### [DB 101](/DB/DB101)
+
   - [DB Basics](/DB/DB101/01_DB_Basics.md)
   - [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
   - [One to Many Relationship](/DB/DB101/03_One_To_Many_Relationship.md)
@@ -311,6 +317,7 @@
   - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
 
 - #### [DB Advanced](/DB/DB_Advanced)
+
   - [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)
 
 <br>
@@ -353,7 +360,6 @@
 
   - [Terraform 101](/Infra/Terraform/Terraform101.md)
 
-  
 - #### [Ansible](/Infra/Ansible)
 
   - [Ansible 101](/Infra/Ansible/Ansible101.md)
@@ -376,17 +382,17 @@
 
 ### Kubernetes
 
-  - [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
-  - [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
-  - [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
-  - [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
-  - [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
-  - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
-
+- [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
+- [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
+- [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
+- [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
+- [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
+- [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
 
 ### GraphQL
 
 - #### [GraphQL 101](/GraphQL/GraphQL101)
+
   - [Intro to GraphQL](/GraphQL/GraphQL101/01_GraphQL101.md)
 
 - #### [GraphQL Korea Meet-up](/GraphQL/GraphQL_Korea_Meetup)
@@ -462,9 +468,9 @@
   
 - #### [Express.js](/Node.js/Express.js)
 
-    - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
-    - [EJS](/Node.js/Express.js/02_EJS.md)
-    - [RESTful API](/Node.js/Express.js/03_RESTful_API.md)
+  - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
+  - [EJS](/Node.js/Express.js/02_EJS.md)
+  - [RESTful API](/Node.js/Express.js/03_RESTful_API.md)
 
 <br>
 
@@ -490,4 +496,3 @@
 - [Resetting the permission in /usr/local](/Troubleshooting/Resetting_the_permission_in_/usr/local.md)
 - [Brew error - compinit:503: no such file or directory](/Troubleshooting/Brew_error_compinit-503-no_such_file_or_directory.md)
 - [Scouter_client_JVM_error_after_macOS_Bigsur_update.md](/Troubleshooting/Scouter_client_JVM_error_after_macOS_Bigsur_update.md)
-

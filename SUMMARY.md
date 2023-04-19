@@ -86,16 +86,23 @@
 
 ### Python
 
-- [Python Coding Convention](/Python/Python_Coding_Convention.md)
-- [Python Tips & Tricks](/Python/Python_Tips_&_Tricks.md)
-- [Python Virtual Environment](/Python/Python_Virtual_Environment.md)
-- [@property in Python](/Python/@property_in_Python.md)
-- [Generators in Python](/Python/Generators_in_Python.md)
-- [Type Hints in Python](/Python/Type_Hints_in_Python.md)
-- [Unit Testing in Python](/Python/Unit_Testing_in_Python.md)
-- [Handling Encoding Issues Using Redis with Python](/Python/Handling_Encoding_Issues_Using_Redis_with_Python.md)
-- [Working with Datetime Objects and Timezones in Python](/Python/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
-- [itertools.cycle](/Python/itertools.cycle.md)
+#### [Python 101](/Python/Python101)
+
+- [Python 101](/Python/)
+- [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
+- [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
+- [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
+- [@property in Python](/Python/Python101/@property_in_Python.md)
+- [Generators in Python](/Python/Python101/Generators_in_Python.md)
+- [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
+- [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
+- [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
+- [itertools.cycle](/Python/Python101/itertools.cycle.md)
+
+#### [Python Advanced](/Python/Python_Advanced)
+
+- [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
+- [Python GIL](/Python/Python_Advanced/Python_GIL.md)
 
 <br>
 
