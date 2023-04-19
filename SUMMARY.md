@@ -6,7 +6,7 @@
 
 ### Algorithm
 
-- #### [Algorithm Basics](/Algorithm/Algorithm101)
+- #### Algorithm Basics
 
   - [Algorithm101](/Algorithm/Algorithm101/00_Algorithm101.md)
   - [Brute-Force](/Algorithm/Algorithm101/01_Brute-Force.md)
@@ -17,29 +17,27 @@
   - [Minimum Spanning Tree](/Algorithm/Algorithm101/06_Minimum_Spanning_Tree.md)
   - [Dijkstra Algorithm](/Algorithm/Algorithm101/07_Dijkstra_Algorithm.md)
 
-- #### [Sorting Methods](/Algorithm/Sorting_Methods)
+- #### Sorting Methods
 
   - [Insertion Sort](/Algorithm/Sorting_Methods/Insertion_Sort.md)
   - [Selection Sort](/Algorithm/Sorting_Methods/Selection_Sort.md)
   - [Merge Sort](/Algorithm/Sorting_Methods/Merge_Sort.md)
   - [Quick Sort](/Algorithm/Sorting_Methods/Quick_Sort.md)
 
-- #### [Data Structure & Algorithms in Python](/Algorithm/Data_Structure&Algorithms_in_Python)
+- #### Data Structure & Algorithms in Python
 
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
   
-- #### [Standford Algorithm](/Algorithm/Stanford_Algorithm)
-
 <br/>
 
 ### Java
 
-- #### [Java Environment Setup](/Java/Java_Environment_Setup)
+- #### Java Environment Setup
 
   - [Multiple Java Versions in MacOS](/Java/Java_Environment_Setup/Multiple_Java_Versions_in_MacOS.md)
 
-- #### [Java 101](/Java/Java101)
+- #### Java 101
 
   - [Java Basics](/Java/Java101/01_Java_basics.md)
   - [OOP](/Java/Java101/02_OOP.md)
@@ -60,7 +58,7 @@
 
 ### Spring
 
-#### [Spring 101](/Spring/Spring101)
+- #### Spring 101
 
 - [Spring Security](/Spring/Spring101/01_Spring_Web_Security.md)
 - [IoC](/Spring/Spring101/02_IoC.md)
@@ -70,7 +68,7 @@
 
 ### Go
 
-- #### [Go 101](/Go/Go101)
+- #### Go 101
 
   - [Go Basics](/Go/Go101/01_Go_basics.md)
   - [Variables and Constants](/Go/Go101/02_Variables_and_Constants.md)
@@ -89,7 +87,7 @@
 
 ### Python
 
-#### [Python 101](/Python/Python101)
+- #### Python 101
 
 - [Python 101](/Python/)
 - [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
@@ -102,7 +100,7 @@
 - [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
 - [itertools.cycle](/Python/Python101/itertools.cycle.md)
 
-#### [Python Advanced](/Python/Python_Advanced)
+- #### Python Advanced
 
 - [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
 - [Python GIL](/Python/Python_Advanced/Python_GIL.md)
@@ -111,7 +109,7 @@
 
 ### Django
 
-- #### [Django 101](/Django/Django101)
+- #### Django 101
 
   - [Django Basics](/Django/Django101/01_Django101.md)
   - [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
@@ -144,7 +142,7 @@
 
 ### Linux
 
-- #### [Linux 101](/Linux/Linux101)
+- #### Linux 101
 
   - [Linux 명령어 정리](/Linux/Linux101/Linux_명령어_정리.md)
   - [Linux Kernel](/Linux/Linux101/Linux_Kernel.md)
@@ -155,12 +153,12 @@
   - [tmux cheatsheet](/Linux/Linux101/tmux_cheatsheet.md)
   - [Logrotate](/Linux/Linux101/Logrotate.md)
 
-- #### [Arch Linux](/Linux/Arch_Linux)
+- #### Arch Linux
 
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
   
-- #### [Ubuntu](/Linux/Ubuntu)
+- #### Ubuntu
 
   - [Using apt-get Commands in Ubuntu](/Linux/Ubuntu/Using_apt-get_Commands_in_Ubuntu.md)
   - [Free Up Space on Ubuntu](/Linux/Ubuntu/Free_Up_Space_on_Ubuntu.md)
@@ -170,7 +168,7 @@
   - [Fix AirPods not Working on Ubuntu](/Linux/Ubuntu/Fix_AirPods_not_Working_on_Ubuntu.md)
   - [Setting a JAVA HOME Path in Ubuntu](/Linux/Ubuntu/Setting_a_JAVA_HOME_Path_in_Ubuntu.md)
   
-- #### [RedHat](/Linux/RedHat)
+- #### RedHat
 
   - [RPM Options for RedHat Fedora Centos Installs](/Linux/RedHat/RPM_Options_for_RedHat_Fedora_Centos_Installs.md)
 
@@ -178,7 +176,7 @@
 
 ### AWS
 
-- #### [AWS 101](/Server/AWS/AWS_101)
+- #### AWS 101
 
   - [What is Cloud Computing](/AWS/AWS_101/00_Cloud_Computing.md)
   - [Getting Started with AWS](/AWS/AWS_101/01_Getting_Started_with_AWS.md)
@@ -193,7 +191,7 @@
   - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
   - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
 
-- #### [AWS Services](/AWS/AWS_Services)
+- #### AWS Services
 
   - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
   - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
@@ -205,8 +203,8 @@
   - [Amazon Athena](/AWS/AWS_Services/Amazon_Athena.md)
   - [Amazon VPC](/AWS/AWS_Services/Amazon_VPC.md)
 
-- #### [AWS Tips](/AWS/AWS_Tips)
-
+- #### AWS Tips
+  
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
   - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
   - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
@@ -222,18 +220,18 @@
   - [What Are AWS Elasitc Network Interfaces](/AWS/AWS_Tips/What_Are_AWS_Elasitc_Network_Interfaces.md)
   - [Estimate AWS Resource Costs](/AWS/AWS_Tips/Estimate_AWS_Resource_Costs.md)
 
-- #### [AWS Certifications](/AWS/AWS_cert)
+- #### AWS Certifications
 
   - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
   - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
   - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
 
-- #### [AWS Builders Series](/AWS/AWS_Builders)
-
+- #### AWS Builders Series
+  
   - [AWS Cloud기반 나의 첫 web application 만들기](/AWS/AWS_Builders/00_AWS_클라우드_기반_나의_첫_웹_애플리케이션_만들기.md)
   - [DevOps 문화 모범 사례와 구현 도구 살펴보기](/AWS/AWS_Builders/06_DevOps_문화_모범_사례와_구현_도구_살펴보기.md)
   
-- #### [Practical AWS](/AWS/Practical_AWS)
+- #### Practical AWS
 
   - [VPC](/AWS/Practical_AWS/01_VPC.md)
   - [Subnet](/AWS/Practical_AWS/02_Subnet.md)
@@ -251,21 +249,21 @@
 
 ### Server
 
-- #### [Server 101](/Server/Server101)
+- #### Server 101
 
   - [HTTPS and SSL](/Server/Server101/HTTPS_and_SSL.md)
   - [What is NGINX](/Server/Server101/What_is_NGINX.md)
   - [Scale Up and Scale Out](/Server/Server101/Scale_Up_and_Scale_Out.md)
   - [What is Cache?](/Server/Server101/What_is_Cache.md)
 
-- #### [ServerLess Computing](/Server/ServerLess_Computing)
+- #### ServerLess Computing
 
   - [What is ServerLess Computing](/Server/ServerLess_Computing/What_is_ServerLess_Computing.md)
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
   - [Serverless Framework Setup for AWS Lambda](/Server/ServerLess_Computing/Serverless_Framework_Setup_for_AWS_Lambda.md)
   
-- #### [Deployment](/Server/Deployment)
+- #### Deployment
 
   - [Deploying a Django project on PythonAnywhere](/Server/Deployment/Deploying_a_Django_project_on_PythonAnywhere.md)
   - [Deploying a Django project on Microsoft Azure](/Server/Deployment/Deploying_a_Django_project_on_Microsoft_Azure.md)
@@ -303,7 +301,7 @@
 
 ### DB
 
-- #### [DB 101](/DB/DB101)
+- #### DB 101
 
   - [DB Basics](/DB/DB101/01_DB_Basics.md)
   - [SQL and Django ORM](/DB/DB101/02_SQL_and_Django_ORM.md)
@@ -315,7 +313,7 @@
   - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
   - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
 
-- #### [DB Advanced](/DB/DB_Advanced)
+- #### DB Advanced
 
   - [SQL Order of Operations](/DB/DB_Advanced/01_SQL_Order_of_Operations.md)
 
@@ -333,21 +331,21 @@
 
 ### Infra
 
-- #### [DevOps 101](/Infra/DevOps)
+- #### DevOps 101
 
   - [IT Infrastructure Basics](/Infra/DevOps/IT_Infrastructure_Basics.md)
   - [What is DevOps](/Infra/DevOps/01_What_is_DevOps.md)
   - [DevOps Engineer Roles and Responsibilities](/Infra/DevOps/02_DevOps_Engineer_Roles_and_Responsibilities.md)
 
-- #### [CI/CD](/Infra/CI-CD)
+- #### CI/CD
 
   - [Configuring GitLab CI-CD with AWS EC2](/Infra/CI-CD/Configuring_GitLab_CI-CD_with_AWS_EC2.md)
 
-- #### [Jenkins](/Infra/Jenkins)
+- #### Jenkins
 
   - [Jenkins Build and ECR Push](/Infra/Jenkins/Jenkins_Build_and_ECR_Push.md)
 
-- #### [ELK](/Infra/ELK)
+- #### ELK
 
   - [Search System Basics](/Infra/ELK/01_Search_System_Basics.md)
   - [Filebeat Basics](/Infra/ELK/02_Filebeat_Basics.md)
@@ -355,15 +353,15 @@
   - [How Logstash Works](/Infra/ELK/04_How_Logstash_Works.md)
   - [Index and Shards](/Infra/ELK/05_Index_and_Shards.md)
 
-- #### [Terraform](/Infra/Terraform)
+- #### Terraform
 
   - [Terraform 101](/Infra/Terraform/Terraform101.md)
 
-- #### [Ansible](/Infra/Ansible)
+- #### Ansible
 
   - [Ansible 101](/Infra/Ansible/Ansible101.md)
   
-- #### [Redis](/DevOps/Redis)
+- #### Redis
 
   - [Install and config Redis on macOS](/DevOps/Redis/00_Install_and_config_Redis_on_macOS.md)
   - [Redis 101](/DevOps/Redis/01_Redis101.md)
@@ -390,11 +388,11 @@
 
 ### GraphQL
 
-- #### [GraphQL 101](/GraphQL/GraphQL101)
+- #### GraphQL 101
 
   - [Intro to GraphQL](/GraphQL/GraphQL101/01_GraphQL101.md)
 
-- #### [GraphQL Korea Meet-up](/GraphQL/GraphQL_Korea_Meetup)
+- #### GraphQL Korea Meet-up
 
   - [GraphQL Korea Meetup (06/13/2020)](/GraphQL/GraphQL_Korea_Meetup/GraphQL_Korea_Meetup_0613.md)
 
@@ -402,19 +400,19 @@
 
 ### Web
 
-- #### [HTML](/Web/HTML)
+- #### HTML
 
   - [HTML Basics](/Web/HTML/01_HTML101.md)
   - [HTML Sections & Outlines](/Web/HTML/02_HTML_Sections_and_Outlines.md)
 
-- #### [CSS](/Web/CSS)
+- #### CSS
 
   - [CSS Basics](/Web/CSS/01_CSS101.md)
   - [CSS Layout](/Web/CSS/02_CSS_Layout.md)
   - [CSS Advanced](/Web/CSS/03_CSS_Advanced.md)
   - [Grid System](/Web/CSS/04_Grid_System.md)
 
-- #### [JavaScript](/Web/JavaScript)
+- #### JavaScript
 
   - [JavaScript Basics](/Web/JavaScript/01_JavaScript101.md)
   - [Array & Function](/Web/JavaScript/02_JavaScript_Array_&_Function.md)
@@ -452,7 +450,7 @@
 
 ### Node.js
 
-- #### [Node.js 101](/Node.js/Node.js_101)
+- #### Node.js 101
 
   - [Installing Node.js using NVM](/Node.js/Node.js_101/00_Installing_Node.js_Using_NVM.md)
   - [Intro to Node.js](/Node.js/Node.js_101/01_Intro_to_Node.js.md)
@@ -465,7 +463,7 @@
   - [Buffers](/Node.js/Node.js_101/08_Buffers.md)
   - [Web Module](/Node.js/Node.js_101/13_Web_Module.md)
   
-- #### [Express.js](/Node.js/Express.js)
+- #### Express.js
 
   - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
   - [EJS](/Node.js/Express.js/02_EJS.md)
