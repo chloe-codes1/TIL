@@ -60,9 +60,11 @@
 
 ### Spring
 
-- [Spring Security](/Spring/01_Spring_Web_Security.md)
-- [IoC](/Spring/02_IoC.md)
-- [DI](/Spring/03_DI.md)
+#### [Spring 101](/Spring/Spring101)
+
+- [Spring Security](/Spring/Spring101/01_Spring_Web_Security.md)
+- [IoC](/Spring/Spring101/02_IoC.md)
+- [DI](/Spring/Spring101/03_DI.md)
 
 <br>
 
