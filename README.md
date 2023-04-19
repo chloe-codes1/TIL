@@ -64,9 +64,9 @@
 
 - #### Spring 101
 
-- [Spring Security](/Spring/Spring101/01_Spring_Web_Security.md)
-- [IoC](/Spring/Spring101/02_IoC.md)
-- [DI](/Spring/Spring101/03_DI.md)
+  - [Spring Security](/Spring/Spring101/01_Spring_Web_Security.md)
+  - [IoC](/Spring/Spring101/02_IoC.md)
+  - [DI](/Spring/Spring101/03_DI.md)
 
 <br>
 
@@ -92,22 +92,21 @@
 ### Python
 
 - #### Python 101
-
-- [Python 101](/Python/)
-- [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
-- [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
-- [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
-- [@property in Python](/Python/Python101/@property_in_Python.md)
-- [Generators in Python](/Python/Python101/Generators_in_Python.md)
-- [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
-- [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
-- [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
-- [itertools.cycle](/Python/Python101/itertools.cycle.md)
+  
+  - [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
+  - [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
+  - [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
+  - [@property in Python](/Python/Python101/@property_in_Python.md)
+  - [Generators in Python](/Python/Python101/Generators_in_Python.md)
+  - [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
+  - [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
+  - [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
+  - [itertools.cycle](/Python/Python101/itertools.cycle.md)
 
 - #### Python Advanced
 
-- [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
-- [Python GIL](/Python/Python_Advanced/Python_GIL.md)
+  - [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
+  - [Python GIL](/Python/Python_Advanced/Python_GIL.md)
 
 <br>
 
@@ -283,7 +282,7 @@
 
 - [네트워크 용어 사전](/Network/네트워크_용어_사전.md)
 - [Protocol](/Network/01_Protocol.md)
-- [OSI 7 Layers](/Network/OSI_7_Layers.md)
+- [OSI 7 Layers](/Network/02_OSI_7_Layers.md)
 - [TCP/IP](/Network/03_TCP_IP.md)
 - [Encapsulation and Decapsulation](/Network/04_Encapsulation_and_Decapsulation.md)
 - [Types of Computer Network](/Network/05_Types_of_Computer_Network.md)
