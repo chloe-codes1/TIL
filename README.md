@@ -66,6 +66,7 @@
 
 - [Spring Security](/Spring/01_Spring_Web_Security.md)
 - [IoC](/Spring/02_IoC.md)
+- [DI](/Spring/03_DI.md)
 
 <br>
 
