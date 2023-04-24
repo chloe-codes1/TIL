@@ -64,6 +64,7 @@
   - [IoC](/Spring/Spring101/02_IoC.md)
   - [DI](/Spring/Spring101/03_DI.md)
   - [AOP](/Spring/Spring101/04_AOP.md)
+  - [Spring Bean](/Spring/Spring101/05_Spring_Bean.md)
 
 <br>
 
