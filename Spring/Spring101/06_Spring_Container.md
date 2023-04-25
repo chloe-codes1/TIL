@@ -35,4 +35,4 @@
 
 - 두 가지 방식으로 나누어진 이유는 `사용 빈도`와 `사용되는 자원의 관계` 때문이다
   - 자주 사용되지 않는 Bean이라면 소모되는 자원을 아끼기 위해 실제 요청 시에만 로딩하고 (Lazy-loading) → `BeanFactory 사용`
-  - 자주 사용되는 Bean이라면 한 번에 로드하는 것 (Pre-loading)이 좋다 → AplicationContext 사용`
+  - 자주 사용되는 Bean이라면 한 번에 로드하는 것 (Pre-loading)이 좋다 → `ApplicationContext 사용`
