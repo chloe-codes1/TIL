@@ -31,7 +31,7 @@
   - `ApplicationContext` 는 `Pre-loading` 을 한다
   - 모든 Bean들과 설정 파일들이 ApplicationContext에 의해 로드 요청이 될 때 인스턴스로 만들어지고, 로드된다
 
-### `BeanFactory 와 ApplicationContext`
+### BeanFactory 와 ApplicationContext
 
 - 두 가지 방식으로 나누어진 이유는 `사용 빈도`와 `사용되는 자원의 관계` 때문이다
   - 자주 사용되지 않는 Bean이라면 소모되는 자원을 아끼기 위해 실제 요청 시에만 로딩하고 (Lazy-loading) → `BeanFactory 사용`
