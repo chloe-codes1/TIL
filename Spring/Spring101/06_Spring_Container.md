@@ -21,6 +21,8 @@
   - Method나 class가 Bean loading 요청을 받는 시점에 인스턴스를 만들고 로딩하는 방식이다
     - 그래서 `.getBean()` method에 의해 요청을 받는 시점에 인스턴스를 만들고 로드된다
 
+<br/>
+
 ### ApplicationContext
 >
 > 런타임 실행 시 모든 Bean을 로딩 (Pre-loading)
@@ -30,6 +32,8 @@
 - `Bean을 생성하고 로딩하는 방식`
   - `ApplicationContext` 는 `Pre-loading` 을 한다
   - 모든 Bean들과 설정 파일들이 ApplicationContext에 의해 로드 요청이 될 때 인스턴스로 만들어지고, 로드된다
+
+<br/>
 
 ### BeanFactory 와 ApplicationContext
 

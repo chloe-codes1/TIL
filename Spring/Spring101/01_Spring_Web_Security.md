@@ -34,7 +34,7 @@
 <br>
 
 - Servlet의 여러 종류의 filter와 interceptor 를 이용해서 처리됨
-  - `Filter` 
+  - `Filter`
     - Servlet 에서 말하는 단순한 필터
     - Spring 과는 무관하게 Servlet 자원임
   - `Interceptor`
@@ -50,6 +50,3 @@
 - **Spring Security**를 이용하게 되면 `Interceptor`와 `Filter`를 이용하여 별도의 **Context**를 생성해 처리됨
 
 - Spring Security는 현재 동작하는 **Spring Context** 내에서 동작하기 때문에 이미 context에 포함된 여러 빈들을 같이 이용해서 다양한 방식의 인증 처리가 가능하도록 설계할 수 있다!
-
-  
-

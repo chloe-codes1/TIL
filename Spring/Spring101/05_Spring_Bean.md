@@ -13,11 +13,15 @@
   - 이렇게 `Spring에 의하여 생성되고 관리되는 자바 객체`를 `Bean` 이라고 한다
 - Spring Framework에서는 `Spring Bean` 을 얻기 위하여 `ApplicationContext.getBean()` 와 같은 method를 사용하여 Spring에서 직접 자바 객체를 얻어서 사용한다
 
+<br/>
+
 ### Spring Bean의 특징
 
 - POJO (Plain Old Java Object) 로써, Spring application을 구성하는 핵심 객체이다
 - Spring IoC 컨테이너 (or DI 컨테이너)에 의해 생성되고 관리된다
 - Spring에서는 기본적으로 `Singleton` 방식으로 Bean이 생성된다
+
+<br/>
 
 ### Spring Bean의 구성 요소
 
@@ -32,6 +36,8 @@
   - Bean 생성 시 생성자에 전달할 파라미터
 - `property`
   - Bean 생성 시 setter에 전달할 인수
+
+<br/>
 
 ### Spring Bean Scope
 
