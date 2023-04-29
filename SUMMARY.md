@@ -70,6 +70,7 @@
 - #### Spring Advanced
 
   - [Spring Security](/Spring/Spring_Advanced/01_Spring_Web_Security.md)
+  - [Register a Spring Bean in the Spring IoC Container](/Spring/Spring_Advanced/02_Register_a_Spring_Bean_in_the_Spring_IoC_Container.md)
 
 <br>
 
