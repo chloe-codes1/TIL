@@ -52,7 +52,7 @@
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
   - [Inheritance](/Java/Java101/08_Inheritance.md)
 
-- #### [Java Advanced](/Java/Java_Advanced)
+- #### Java Advanced
 
   - [Lombok](/Java/Java_Advanced/00_Lombok.md)
   - [Java Thread](/Java/Java_Advanced/01_Thread.md)
@@ -64,13 +64,15 @@
 
 - #### Spring 101
 
-  - [Spring Security](/Spring/Spring101/01_Spring_Web_Security.md)
-  - [IoC](/Spring/Spring101/02_IoC.md)
-  - [DI](/Spring/Spring101/03_DI.md)
-  - [AOP](/Spring/Spring101/04_AOP.md)
-  - [Spring Bean](/Spring/Spring101/05_Spring_Bean.md)
-  - [Spring Container](/Spring/Spring101/06_Spring_Container.md)
-  - [Spring and SpringBoot](/Spring/Spring101/07_Spring_and_SpringBoot.md)
+  - [IoC](/Spring/Spring101/01_IoC.md)
+  - [DI](/Spring/Spring101/02_DI.md)
+  - [AOP](/Spring/Spring101/03_AOP.md)
+  - [Spring Bean](/Spring/Spring101/04_Spring_Bean.md)
+  - [Spring Container](/Spring/Spring101/05_Spring_Container.md)
+  - [Spring and SpringBoot](/Spring/Spring101/06_Spring_and_SpringBoot.md)
+
+- #### Spring Advanced
+  - [Spring Security](/Spring/Spring_Advanced/01_Spring_Web_Security.md)
 
 <br>
 
