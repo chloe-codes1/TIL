@@ -397,6 +397,7 @@
 - [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
 - [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
 - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
+- [Pod](/Kubernetes/06_Pod.md)
 
 ### GraphQL
 
