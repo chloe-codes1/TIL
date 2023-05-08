@@ -29,7 +29,6 @@
 > Control Plane은 `Cluster를 제어하고 작동`시킨다
 
 하나의 master node에서 실행하거나 여러 node로 분할되고 복제되어 `고가용성을 보장`할 수 있는 아래 요소들로 구성된다
->
 
 <br/>
 

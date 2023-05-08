@@ -401,6 +401,7 @@
   - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
   - [Pod](/Kubernetes/06_Pod.md)
   - [Cluster](/Kubernetes/07_Cluster.md)
+  - [Namespace](/Kubernetes/08_Namespace.md)
 
 ### GraphQL
 
