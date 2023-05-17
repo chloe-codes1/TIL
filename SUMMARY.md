@@ -47,6 +47,7 @@
   - [Array](/Java/Java101/06_Array.md)
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
   - [Inheritance](/Java/Java101/08_Inheritance.md)
+  - [JVM](/Java/Java101/09_JVM.md)
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
