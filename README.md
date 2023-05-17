@@ -52,6 +52,7 @@
   - [Access Modifiers](/Java/Java101/07_Access_modifiers.md)
   - [Inheritance](/Java/Java101/08_Inheritance.md)
   - [JVM](/Java/Java101/09_JVM.md)
+  - [GC](/Java/Java101/10_GC.md)
 
 - #### Java Advanced
 
