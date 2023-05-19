@@ -61,6 +61,7 @@
   - [Java Thread](/Java/Java_Advanced/01_Thread.md)
   - [JMX and Jolokia](/Java/Java_Advanced/02_JMX_and_Jolokia.md)
   - [Constructor vs Factory method](/Java/Java_Advanced/03_Constructor_vs_Factory_Method.md)
+  - [GC Algorithm](/Java/Java_Advanced/04_GC_Algorithm.md)
 
 <br>
 
