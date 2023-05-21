@@ -50,6 +50,7 @@
   - [JVM](/Java/Java101/09_JVM.md)
   - [GC](/Java/Java101/10_GC.md)
   - [Java Memory Area](/Java/Java101/11_Java_Memory_Area.md)
+  - [Collection](/Java/Java101/12_Collection.md)
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
