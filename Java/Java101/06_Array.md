@@ -2,28 +2,50 @@
 
 <br>
 
-<br>
+## Array 알아보기
 
-## Array (배열)
+### Array 란?
 
 - 같은 타입의 여러 변수를 하나의 묶음으로 다루는 것
 
 - 배열은 같은 타입의 기억공간을 하나의 이름으로 모아서 handling 할 수 있는 자료형이다.
 
-- 위치 첨자가 따라다니는 변수 
+- 위치 첨자가 따라다니는 변수
 
   => 위치 인덱스가 반드시 따라다님
 
 - 배열 또한 Class이므로 method 쓸 수 있다
 - 배열은 한번 size가 정해지면 resizing이 안된다!
 
-  <br>
+<br>
 
-### 1. 선언   
+### Array의 단점
+
+- `크기`를 `변경할 수 없다`
+  - 확장이 필요할 경우 새로운 배열을 생성하여 복사해야 한다
+  - 실행 속도를 향상시키기 위해 배열의 크기를 크게 생성할 경우 메모리가 낭비된다
+- `비순차적인 데이터`의 `추가/삭제`에 시간이 많이 걸린다
+  - 차례대로 데이터를 추가하고 마지막의 데이터를 삭제하는 경우에는 굉장히 빠르나,
+    - 배열의 중간에서 값을 제거/추가할 때는 시간이 오래 걸린다
+
+<br>
+
+### Array vs ArrayList & LinkedList
+
+- 배열을 이러한 단점을 가지고 있고, `배열을 통해 List를 구현`한 `ArrayList` 도 위와 같은 문제점들을 가지고 있다
+  - 이러한 문제점을 보완하기 위해서 고안된 자료구조가 바로 `LinkedList` 이다
+    - 배열은 모든 데이터가 `연속적` 으로 존재하는 반면,
+    - `LinkedList` 는 `불연속적`  으로 존재하는 데이터를 서로 연결한 형태로 구성되었다
+
+<br>
+
+## Array 사용하기
+
+### 1. 선언
 
   타입[] 변수이름;  
 
-ex) 
+ex)
 
 ```java
 // ver1) 
@@ -35,11 +57,11 @@ int scores[];
 
 <br>
 
-### 2. 생성   
+### 2. 생성
 
   변수이름 = new 타입[길이];
 
-ex) 
+ex)
 
 ```java
 int [] nums = new int [5];
@@ -74,13 +96,13 @@ int [] nums = new int[5] ;
 
 - stack영역에 nums라는 주소 만들어줘
 
-- new니까 Heap 영역에 int type으로 방 5개 만들어   
+- new니까 Heap 영역에 int type으로 방 5개 만들어
   - heap이니까 JVM이 관리
   - 그러면 JVM에 의해 5개방에 각각 int 니까 0으로 default 초기화가 일어남
 
 - 한번 이렇게 만들면 resizing 안됨
 
-- 연속적인 공간을 할당 받는다는 보장을 받음 
+- 연속적인 공간을 할당 받는다는 보장을 받음
 
 <br>
 
@@ -126,7 +148,7 @@ names[0] = “홍길동”;
 System.arraycopy(arg0, arg1, arg2, arg3, arg4);
 ```
 
-**Parameters :** 
+**Parameters :**
 
 - source_arr : array to be copied from  (원본 배열)
 
@@ -166,13 +188,11 @@ score[0].length //==> 3
 //->score[0]가 참조하고 있는 배열의 길이
 ```
 
-
-
 <br>
 
 #### String to char array
 
-: `.toCharArray();` 
+: `.toCharArray();`
 
 ```java
 import java.util.Arrays;
@@ -204,10 +224,6 @@ public class JavaStringToCharArray {
 
 2. String[] is one parameter which is an array of strings.
 
-
-
-
-
 <br>
 
 #### Oracle에서 args 실행하기
@@ -215,4 +231,3 @@ public class JavaStringToCharArray {
 ![img](https://lh3.googleusercontent.com/uGqQh0xF6AbgCvfISK3_liROQRWTzf6W_F__F1W-tJnGakIAnExSAP-kiAUABWS66CIzSviOy-k6xPS-z9tXuM9kNFFn1hZ70fO3kdcDrb7NV2hxCHg_XSs6qBczN-yfYJhZsKZQ)
 
 <br>
-
