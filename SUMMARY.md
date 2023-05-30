@@ -53,6 +53,7 @@
   - [Collection](/Java/Java101/12_Collection.md)
   - [TreeSet, TreeMap vs HashSet, HashMap](/Java/Java101/13_TreeSet_TreeMap_vs_HashSet_HashMap.md)
   - [Annotation](/Java/Java101/14_Annotation.md)
+  - [Generic](/Java/Java101/15_Generic.md)
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
