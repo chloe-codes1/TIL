@@ -57,7 +57,7 @@
   - [Static Keyword](/Java/Java101/16_Static_Keyword.md)
   - [Final Keyword](/Java/Java101/17_Final_Keyword.md)
   - [Overriding vs Overloading](/Java/Java101/18_Overriding_vs_Overloading.md)
-  - [Wrapper Class](/Java/Java101/18_Wrapper_Class.md)
+  - [Wrapper Class](/Java/Java101/19_Wrapper_Class.md)
 
 - #### [Java Advanced](/Java/Java_Advanced)
 
