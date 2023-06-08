@@ -62,6 +62,7 @@
   - [Final Keyword](/Java/Java101/17_Final_Keyword.md)
   - [Overriding vs Overloading](/Java/Java101/18_Overriding_vs_Overloading.md)
   - [Wrapper Class](/Java/Java101/19_Wrapper_Class.md)
+  - [Checked & Unchecked Exception](/Java/Java101/20_Checked_%26_Unchecked_Exception.md)
 
 - #### Java Advanced
 
