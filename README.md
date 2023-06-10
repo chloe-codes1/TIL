@@ -64,6 +64,7 @@
   - [Wrapper Class](/Java/Java101/19_Wrapper_Class.md)
   - [Checked & Unchecked Exception](/Java/Java101/20_Checked_and_Unchecked_Exception.md)
   - [==, equals(), hashCode](/Java/Java101/21_Equals_and_HashCode.md)
+  - [Interface vs Abstract Class, Abstract method](/Java/Java101/22_Interface_vs_Abstract%20Class_Abstract%20method.md)
 
 - #### Java Advanced
 
