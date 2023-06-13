@@ -2,11 +2,12 @@
 
 > We constantly learn new things. This is a repo to share those learnings.
 
-<br/><br/>
+<br>
+<br>
 
 ## Table of Contents
 
-<br/>
+<br>
 
 ### Algorithm
 
@@ -66,6 +67,7 @@
   - [==, equals(), hashCode](/Java/Java101/21_Equals_and_HashCode.md)
   - [Interface vs Abstract Class, Abstract method](/Java/Java101/22_Interface_vs_Abstract%20Class_Abstract%20method.md)
   - [Initialization Order of Member Variables](/Java/Java101/23_Initialization_Order_of_Member_Variables.md)
+  - [Lambda Expression](/Java/Java101/24_Lambda_Expression.md)
 
 - #### Java Advanced
 
