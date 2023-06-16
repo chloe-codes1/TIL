@@ -69,6 +69,7 @@
   - [Initialization Order of Member Variables](/Java/Java101/23_Initialization_Order_of_Member_Variables.md)
   - [Lambda Expression](/Java/Java101/24_Lambda_Expression.md)
   - [Stream API](/Java/Java101/25_Stream_API.md)
+  - [Optional Class](/Java/Java101/26_Optional.md)
 
 - #### Java Advanced
 
