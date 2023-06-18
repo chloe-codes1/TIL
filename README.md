@@ -79,6 +79,7 @@
   - [Constructor vs Factory method](/Java/Java_Advanced/03_Constructor_vs_Factory_Method.md)
   - [GC Algorithm](/Java/Java_Advanced/04_GC_Algorithm.md)
   - [Guidelines for Selecting a GC](/Java/Java_Advanced/05_Guidelines_for_Selecting_a_GC.md)
+  - [CompletableFuture](/Java/Java_Advanced/06_CompletableFuture.md)
 
 <br>
 
