@@ -174,6 +174,7 @@
 - [What is Hyper-Threading](/OS/02_What_is_Hyper-Threading.md)
 - [Process vs Thread](/OS/03_Process_vs_Thread.md)
 - [Multithread and Multiprocess](/OS/04_Multithread_and_Multiprocess.md)
+- [Scheduler](/OS/05_Scheduler.md)
 
 <br>
 
