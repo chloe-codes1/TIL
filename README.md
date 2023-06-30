@@ -175,6 +175,7 @@
 - [Process vs Thread](/OS/03_Process_vs_Thread.md)
 - [Multithread and Multiprocess](/OS/04_Multithread_and_Multiprocess.md)
 - [Scheduler](/OS/05_Scheduler.md)
+- [Synchronous vs Asynchronous](/OS/06_Synchronous_vs_Asynchronous.md)
 
 <br>
 
