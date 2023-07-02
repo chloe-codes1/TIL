@@ -172,6 +172,7 @@
 - [Scheduler](/OS/05_Scheduler.md)
 - [Synchronous vs Asynchronous](/OS/06_Synchronous_vs_Asynchronous.md)
 - [Blocking vs Non-blocking](/OS/07_Blocking_vs_Non-blocking.md)
+- [Process Synchronization](/OS/08_Process_Synchronization.md)
 
 <br>
 
