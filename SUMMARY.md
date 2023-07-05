@@ -174,6 +174,7 @@
 - [Blocking vs Non-blocking](/OS/07_Blocking_vs_Non-blocking.md)
 - [Process Synchronization](/OS/08_Process_Synchronization.md)
 - [Deadlock](/OS/09_Deadlock.md)
+- [Locality of Reference](/OS/10_Locality_of_Reference.md)
 
 <br>
 
