@@ -320,25 +320,27 @@
 
 ### Network
 
-- [네트워크 용어 사전](/Network/네트워크_용어_사전.md)
-- [Protocol](/Network/01_Protocol.md)
-- [OSI 7 Layers](/Network/02_OSI_7_Layers.md)
-- [TCP/IP](/Network/03_TCP_IP.md)
-- [Encapsulation and Decapsulation](/Network/04_Encapsulation_and_Decapsulation.md)
-- [Types of Computer Network](/Network/05_Types_of_Computer_Network.md)
-- [Network Lines](/Network/06_Network_Lines.md)
-- [Network Components](/Network/07_Network_Components.md)
-- [Network Address Types](/Network/08_Network_Address_Types.md)
-- [MAC Address](/Network/09_MAC_Address.md)
-- [IP Address](/Network/10_IP_Address.md)
-- [TCP / UDP](/Network/11_TCP_and_UDP.md)
-- [ARP](/Network/12_ARP.md)
-- [Subnet and Gateway](/Network/13_Subnet_and_Gateway.md)
-- [Switch](/Network/14_Switch.md)
-- [VLAN](/Network/15_VLAN.md)
-- [STP](/Network/16_STP.md)
-- [Router](/Network/17_Router.md)
-- [Session and Cookies](/Network/Session_and_Cookies.md)
+- #### Network 101
+
+  - [네트워크 용어 사전](/Network/Network101/네트워크_용어_사전.md)
+  - [Protocol](/Network/Network101/01_Protocol.md)
+  - [OSI 7 Layers](/Network/Network101/02_OSI_7_Layers.md)
+  - [TCP/IP](/Network/Network101/03_TCP_IP.md)
+  - [Encapsulation and Decapsulation](/Network/Network101/04_Encapsulation_and_Decapsulation.md)
+  - [Types of Computer Network](/Network/Network101/05_Types_of_Computer_Network.md)
+  - [Network Lines](/Network/Network101/06_Network_Lines.md)
+  - [Network Components](/Network/Network101/07_Network_Components.md)
+  - [Network Address Types](/Network/Network101/08_Network_Address_Types.md)
+  - [MAC Address](/Network/Network101/09_MAC_Address.md)
+  - [IP Address](/Network/Network101/10_IP_Address.md)
+  - [TCP / UDP](/Network/Network101/11_TCP_and_UDP.md)
+  - [ARP](/Network/Network101/12_ARP.md)
+  - [Subnet and Gateway](/Network/Network101/13_Subnet_and_Gateway.md)
+  - [Switch](/Network/Network101/14_Switch.md)
+  - [VLAN](/Network/Network101/15_VLAN.md)
+  - [STP](/Network/Network101/16_STP.md)
+  - [Router](/Network/Network101/17_Router.md)
+  - [Session and Cookies](/Network/Network101/Session_and_Cookies.md)
 
 <br>
 
