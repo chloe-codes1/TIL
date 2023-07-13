@@ -340,6 +340,7 @@
 - #### Http
   
   - [Http Stateless](/Network/Http/01_Http_Stateless.md)
+  - [Http Methods](/Network/Http/02_Http_Methods.md)
 
 <br>
 
