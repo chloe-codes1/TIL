@@ -345,6 +345,7 @@
   - [HTTP/2](/Network/Http/04_HTTP2.md)
   - [RESTful API](/Network/Http/05_RESTful_API.md)
   - [Keep-Alive Header](/Network/Http/06_Keep_Alive_Header.md)
+  - [HTTP vs HTTPS](/Network/Http/07_HTTP_vs_HTTPS.md)
 
 <br>
 
