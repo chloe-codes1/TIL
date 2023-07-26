@@ -88,6 +88,7 @@
   - [Spring Bean](/Spring/Spring101/04_Spring_Bean.md)
   - [Spring Container](/Spring/Spring101/05_Spring_Container.md)
   - [Spring and SpringBoot](/Spring/Spring101/06_Spring_and_SpringBoot.md)
+  - [Controller and RestController](/Spring/Spring101/07_Controller_and_RestController.md)
 
 - #### Spring Advanced
 
