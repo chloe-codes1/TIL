@@ -93,14 +93,17 @@
   - [Spring Bean](/Spring/Spring101/04_Spring_Bean.md)
   - [Spring Container](/Spring/Spring101/05_Spring_Container.md)
   - [Spring and SpringBoot](/Spring/Spring101/06_Spring_and_SpringBoot.md)
-  - [Controller and RestController](/Spring/Spring101/07_Controller_and_RestController.md)
 
 - #### Spring Advanced
 
   - [Spring Security](/Spring/Spring_Advanced/01_Spring_Web_Security.md)
   - [Register a Spring Bean in the Spring IoC Container](/Spring/Spring_Advanced/02_Register_a_Spring_Bean_in_the_Spring_IoC_Container.md)
   - [Interceptor vs AOP vs Filter](/Spring/Spring_Advanced/03_Interceptor_vs_AOP_vs_Filter.md)
-  - [Transactional](/Spring/Spring_Advanced/04_Transactional.md)
+
+- #### Spring Annotations
+
+  - [Controller and RestController](/Spring/Spring_Annotations/01_Controller_and_RestController.md)
+  - [Transactional](/Spring/Spring_Annotations/02_Transactional.md)
 
 <br>
 
