@@ -3,6 +3,8 @@
 > Reference: [Spring Docs - @ConditionalOnBean](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/condition/ConditionalOnBean.html)
 >
 
+<br>
+
 ## @ConditionalOnBean 란?
 
 - 해당 조건의 Bean이 BeanFactory에 이미 등록되어 있으면 Bean을 등록한다

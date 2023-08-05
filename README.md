@@ -108,6 +108,7 @@
   - [@RequestParam](/Spring/Spring_Annotations/04_RequestParam.md)
   - [@ConditionalOnProperty](/Spring/Spring_Annotations/05_ConditionalOnProperty.md)
   - [@ConditionalOnBean](/Spring/Spring_Annotations/06_ConditionalOnBean.md)
+  - [@ConditionalOnClass](/Spring/Spring_Annotations/07_ConditionalOnClass.md)
 
 <br>
 
