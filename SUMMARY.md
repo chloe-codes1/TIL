@@ -101,7 +101,8 @@
   - [@Transactional](/Spring/Spring_Annotations/02_Transactional.md)
   - [@Autowired](/Spring/Spring_Annotations/03_Autowired.md)
   - [@RequestParam](/Spring/Spring_Annotations/04_RequestParam.md)
-  - [@ConditionalOnProperty](/Spring/Spring_Annotations/05_ConditionalOnProperty.md)
+  - [@ConditionalOnProperty](/Spring/Spring_Annotations/05_ConditionalOnProperty.md
+  - [@ConditionalOnBean](/Spring/Spring_Annotations/06_ConditionalOnBean.md)
 
 <br>
 

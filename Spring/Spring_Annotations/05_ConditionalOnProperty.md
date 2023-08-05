@@ -10,6 +10,10 @@
 - Spring Framework에서 어떤 Bean이 생성되거나 구성되기 위한 조건을 지정하는데 사용되는 조건부 annotation
 - 특정 property 값의 유무나 값에 따라 Bean 생성 여부를 결정할 수 있다
 
+<br>
+
+## @ConditionalOnProperty 의 속성
+
 ```java
 
 @Retention(RetentionPolicy.RUNTIME)
@@ -60,10 +64,6 @@ public @interface ConditionalOnProperty {
 
 }
 ```
-
-<br>
-
-## @ConditionalOnProperty 의 속성
 
 ### Default value
 
