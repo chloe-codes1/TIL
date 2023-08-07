@@ -1,4 +1,4 @@
-<h1>Privacy Policy for chloe-codes1</h1>
+<h1>Privacy Policy for Chloe's TIL</h1>
 
 <p>At TIL, accessible from https://chloe-codes1.gitbook.io/til/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by TIL and how we use it.</p>
 
