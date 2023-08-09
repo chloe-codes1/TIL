@@ -377,6 +377,7 @@
   - [Create MySQL Users Accounts and Grant Privileges](/DB/DB101/08_Create_MySQL_Users_Accounts_and_Grant_Privileges.md)
   - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
   - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
+  - [INNER JOIN & OUTER_JOIN](/DB/DB101/11_INNER_JOIN_and_OUTER_JOIN.md)
 
 - #### DB Advanced
 
