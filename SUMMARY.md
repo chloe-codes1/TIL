@@ -373,6 +373,7 @@
   - [How to Avoid N+1 Queries](/DB/DB101/09_How_to_Avoid_N+1_Queries.md)
   - [Configure PostgreSQL on your Mac](/DB/DB101/10_Configure_PostgreSQL_on_your_Mac.md)
   - [INNER JOIN & OUTER_JOIN](/DB/DB101/11_INNER_JOIN_and_OUTER_JOIN.md)
+  - [Primary key vs Unique key](/DB/DB101/12_Primary_Key_vs_Unique_Key.md)
 
 - #### DB Advanced
 
