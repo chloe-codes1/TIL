@@ -15,9 +15,11 @@
 
 ### Final Method
 
-- 다른 method에서 `overriding` 하지 못한다.
+- 다른 method에서 `overriding` 하지 못한다
   - 더 이상 method를 변형시킬 수 없다
 - sub class로 확장하면서 더 이상 method 형태를 변형시키지 않게 한다
+  - 자식 class에서 재정의 할 수 없는 method로, 자식 class가 부모 class의 method 동작을 변경하지 못하도록 방지할 수 있다
+  - 이를 통해 프로그램의 일관성을 유지하고 버그를 방지할 수 있다!
 
 <br>
 
