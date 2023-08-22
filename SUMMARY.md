@@ -175,16 +175,22 @@
 
 ### OS
 
-- [What is an Operating System](/OS/01_What_is_an_Operating_System.md)
-- [What is Hyper-Threading](/OS/02_What_is_Hyper-Threading.md)
-- [Process vs Thread](/OS/03_Process_vs_Thread.md)
-- [Multithread and Multiprocess](/OS/04_Multithread_and_Multiprocess.md)
-- [Scheduler](/OS/05_Scheduler.md)
-- [Synchronous vs Asynchronous](/OS/06_Synchronous_vs_Asynchronous.md)
-- [Blocking vs Non-blocking](/OS/07_Blocking_vs_Non-blocking.md)
-- [Process Synchronization](/OS/08_Process_Synchronization.md)
-- [Deadlock](/OS/09_Deadlock.md)
-- [Locality of Reference](/OS/10_Locality_of_Reference.md)
+- #### OS 101
+  
+  - [What is OS](/OS/OS101/01_What_is_OS.md)  
+
+- #### OS Basics
+
+  - [What is an Operating System](/OS/OS_Basics/01_What_is_an_Operating_System.md)
+  - [What is Hyper-Threading](/OS/OS_Basics/02_What_is_Hyper-Threading.md)
+  - [Process vs Thread](/OS/OS_Basics/03_Process_vs_Thread.md)
+  - [Multithread and Multiprocess](/OS/OS_Basics/04_Multithread_and_Multiprocess.md)
+  - [Scheduler](/OS/OS_Basics/05_Scheduler.md)
+  - [Synchronous vs Asynchronous](/OS/OS_Basics/06_Synchronous_vs_Asynchronous.md)
+  - [Blocking vs Non-blocking](/OS/OS_Basics/07_Blocking_vs_Non-blocking.md)
+  - [Process Synchronization](/OS/OS_Basics/08_Process_Synchronization.md)
+  - [Deadlock](/OS/OS_Basics/09_Deadlock.md)
+  - [Locality of Reference](/OS/OS_Basics/10_Locality_of_Reference.md)
 
 <br>
 
