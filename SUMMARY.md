@@ -111,7 +111,7 @@
 
 - #### OS 101
   
-  - [What is OS](/OS/OS101/01_What_is_OS.md)  
+  - [What is an OS](/OS/OS101/01_What_is_an_OS.md)  
 
 - #### OS Basics
 
