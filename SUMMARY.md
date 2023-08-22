@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-<br/>
+<br>
 
 ### Algorithm
 
@@ -66,7 +66,7 @@
   - [Stream API](/Java/Java101/25_Stream_API.md)
   - [Optional Class](/Java/Java101/26_Optional.md)
 
-- #### [Java Advanced](/Java/Java_Advanced)
+- #### Java Advanced
 
   - [Lombok](/Java/Java_Advanced/00_Lombok.md)
   - [Java Thread](/Java/Java_Advanced/01_Thread.md)
@@ -104,72 +104,6 @@
   - [@ConditionalOnProperty](/Spring/Spring_Annotations/05_ConditionalOnProperty.md)
   - [@ConditionalOnBean](/Spring/Spring_Annotations/06_ConditionalOnBean.md)
   - [@ConditionalOnClass](/Spring/Spring_Annotations/07_ConditionalOnClass.md)
-
-<br>
-
-### Go
-
-- #### Go 101
-
-  - [Go Basics](/Go/Go101/01_Go_basics.md)
-  - [Variables and Constants](/Go/Go101/02_Variables_and_Constants.md)
-  - [Functions](/Go/Go101/03_Functions.md)
-  - [For Loop](/Go/Go101/04_For_Loop.md)
-  - [If Else](/Go/Go101/05_If_Else.md)
-  - [Switch](/Go/Go101/06_Switch.md)
-  - [Pointers](/Go/Go101/07_Pointers.md)
-  - [Arrays and Slices](/Go/Go101/08_Arrays_and_Slices.md)
-  - [Maps](/Go/Go101/09_Maps.md)
-  - [Structs](/Go/Go101/10_Structs.md)
-  - [Go Routine](/Go/Go101/11_Go_Routine.md)
-  - [init() function](/Go/Go101/12_Init_Function.md)
-
-<br>
-
-### Python
-
-- #### Python 101
-  
-  - [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
-  - [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
-  - [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
-  - [@property in Python](/Python/Python101/@property_in_Python.md)
-  - [Generators in Python](/Python/Python101/Generators_in_Python.md)
-  - [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
-  - [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
-  - [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
-  - [itertools.cycle](/Python/Python101/itertools.cycle.md)
-
-- #### Python Advanced
-
-  - [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
-  - [Python GIL](/Python/Python_Advanced/Python_GIL.md)
-
-<br>
-
-### Django
-
-- #### Django 101
-
-  - [Django Basics](/Django/Django101/01_Django101.md)
-  - [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
-  - [Templates](/Django/Django101/03_Templates.md)
-  - [Model](/Django/Django101/04_Model.md)
-  - [URL name](/Django/Django101/05_URL_name.md)
-  - [Form & ModelForm](/Django/Django101/06_Form_&_ModelForm.md)
-  - [Authentication](/Django/Django101/07_Authentication.md)
-  - [Request and Response Objects](/Django/Django101/08_Request_and_Response_Objects.md)
-  - [ImageField](/Django/Django101/09_Image_Upload.md)
-  - [Optimization](/Django/Django101/10_Optimization.md)
-  - [Django RESTful Framework](/Django/Django101/11_DRF.md)
-  - [Class Based View](/Django/Django101/12_Class_Based_View.md)
-  - [DRF with JWT](/Django/Django101/13.DRF_with_JWT.md)
-
-<br>
-
-### Flask
-
-- [Flask Routes](/Flask/Flask_Routes.md)
 
 <br>
 
@@ -225,79 +159,6 @@
 - #### RedHat
 
   - [RPM Options for RedHat Fedora Centos Installs](/Linux/RedHat/RPM_Options_for_RedHat_Fedora_Centos_Installs.md)
-
-<br>
-
-### AWS
-
-- #### AWS 101
-
-  - [What is Cloud Computing](/AWS/AWS_101/00_Cloud_Computing.md)
-  - [Getting Started with AWS](/AWS/AWS_101/01_Getting_Started_with_AWS.md)
-  - [AWS Main Services](/AWS/AWS_101/02_AWS_Main_Services.md)
-  - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)
-  - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
-  - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
-  - [AWS Database Server](/AWS/AWS_101/06_AWS_Database_Server.md)
-  - [AWS HA Load Balancing](/AWS/AWS_101/07_AWS_HA_Load_Balancing.md)
-  - [AWS Analytics](/AWS/AWS_101/08_AWS_Analytics.md)
-  - [AWS Blockchain](/AWS/AWS_101/09_AWS_Blockchain.md)
-  - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
-  - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
-
-- #### AWS Services
-
-  - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
-  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
-  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)
-  - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
-  - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
-  - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
-  - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
-  - [Amazon Athena](/AWS/AWS_Services/Amazon_Athena.md)
-  - [Amazon VPC](/AWS/AWS_Services/Amazon_VPC.md)
-
-- #### AWS Tips
-  
-  - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
-  - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
-  - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
-  - [AWS Security Meetup (07/23/2020)](/AWS/AWS_Tips/AWS_Security_Meetup_07232020.md)
-  - [DevAx Connect-CDK로 EKS Cluster Fullstack 관리하기 (09/01/2020)](/AWS/AWS_Tips/DevAx_Connect-CDK로_EKS_Cluster_Fullstack_관리하기.md)
-  - [AWS CDK Workshop](/AWS/AWS_Tips/AWS_CDK_Workshop.md)
-  - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
-  - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
-  - [Amazon Security Group](/AWS/AWS_Tips/Amazon_Security_Group.md)
-  - [AWS Well-architected Framework - Security Pillar](/AWS/AWS_Tips/AWS_Well-architected_Framework_Security_Pillar.md)
-  - [Find EC2 Instance by Domain Name](/AWS/AWS_Tips/Find_EC2_Instance_by_Domain_Name.md)
-  - [Resizing an Amazon EBS Volume](/AWS/AWS_Tips/Resizing_an_Amazon_EBS_Volume.md)
-  - [What Are AWS Elasitc Network Interfaces](/AWS/AWS_Tips/What_Are_AWS_Elasitc_Network_Interfaces.md)
-  - [Estimate AWS Resource Costs](/AWS/AWS_Tips/Estimate_AWS_Resource_Costs.md)
-
-- #### AWS Certifications
-
-  - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
-  - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
-  - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
-
-- #### AWS Builders Series
-  
-  - [AWS Cloud기반 나의 첫 web application 만들기](/AWS/AWS_Builders/00_AWS_클라우드_기반_나의_첫_웹_애플리케이션_만들기.md)
-  - [DevOps 문화 모범 사례와 구현 도구 살펴보기](/AWS/AWS_Builders/06_DevOps_문화_모범_사례와_구현_도구_살펴보기.md)
-  
-- #### Practical AWS
-
-  - [VPC](/AWS/Practical_AWS/01_VPC.md)
-  - [Subnet](/AWS/Practical_AWS/02_Subnet.md)
-  - [Route 53](/AWS/Practical_AWS/03_Route_53.md)
-  - [Route Table](/AWS/Practical_AWS/04_Route_Table.md)
-  - [Elastic IP](AWS/Practical_AWS/05_Elastic_IP.md)
-  - [Security Group](AWS/Practical_AWS/06_Security_Group.md)
-  - [Network ACLS](AWS/Practical_AWS/07_Network_ACLs.md)
-  - [VPC Peering](AWS/Practical_AWS/08_VPC_Peering.md)
-  - [VPC Endpoints](AWS/Practical_AWS/09_VPC_Endpoints.md)
-  - [AMI](AWS/Practical_AWS/10_AMI.md)
-  - [Load Balancer](AWS/Practical_AWS/11_Load_Balancer.md)
 
 <br>
 
@@ -438,30 +299,167 @@
 
 <br>
 
+### AWS
+
+- #### AWS 101
+
+  - [What is Cloud Computing](/AWS/AWS_101/00_Cloud_Computing.md)
+  - [Getting Started with AWS](/AWS/AWS_101/01_Getting_Started_with_AWS.md)
+  - [AWS Main Services](/AWS/AWS_101/02_AWS_Main_Services.md)
+  - [AWS Main Products](/AWS/AWS_101/03_AWS_Main_Products.md)
+  - [AWS Servers](/AWS/AWS_101/04_AWS_Servers.md)
+  - [AWS Storages](/AWS/AWS_101/05_AWS_Storages.md)
+  - [AWS Database Server](/AWS/AWS_101/06_AWS_Database_Server.md)
+  - [AWS HA Load Balancing](/AWS/AWS_101/07_AWS_HA_Load_Balancing.md)
+  - [AWS Analytics](/AWS/AWS_101/08_AWS_Analytics.md)
+  - [AWS Blockchain](/AWS/AWS_101/09_AWS_Blockchain.md)
+  - [AWS IoT](/AWS/AWS_101/10_AWS_IoT.md)
+  - [AWS Machine Learning](/AWS/AWS_101/11_AWS_Machine_Learning.md)
+
+- #### AWS Services
+
+  - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
+  - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
+  - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)
+  - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
+  - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
+  - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
+  - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
+  - [Amazon Athena](/AWS/AWS_Services/Amazon_Athena.md)
+  - [Amazon VPC](/AWS/AWS_Services/Amazon_VPC.md)
+
+- #### AWS Tips
+  
+  - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
+  - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
+  - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
+  - [AWS Security Meetup (07/23/2020)](/AWS/AWS_Tips/AWS_Security_Meetup_07232020.md)
+  - [DevAx Connect-CDK로 EKS Cluster Fullstack 관리하기 (09/01/2020)](/AWS/AWS_Tips/DevAx_Connect-CDK로_EKS_Cluster_Fullstack_관리하기.md)
+  - [AWS CDK Workshop](/AWS/AWS_Tips/AWS_CDK_Workshop.md)
+  - [AWS Builders - Cloud Economics](/AWS/AWS_Tips/AWS_Builders_Cloud_Economics.md)
+  - [Amazon VPC Basics](/AWS/AWS_Tips/Amazon_VPC_Basics.md)
+  - [Amazon Security Group](/AWS/AWS_Tips/Amazon_Security_Group.md)
+  - [AWS Well-architected Framework - Security Pillar](/AWS/AWS_Tips/AWS_Well-architected_Framework_Security_Pillar.md)
+  - [Find EC2 Instance by Domain Name](/AWS/AWS_Tips/Find_EC2_Instance_by_Domain_Name.md)
+  - [Resizing an Amazon EBS Volume](/AWS/AWS_Tips/Resizing_an_Amazon_EBS_Volume.md)
+  - [What Are AWS Elasitc Network Interfaces](/AWS/AWS_Tips/What_Are_AWS_Elasitc_Network_Interfaces.md)
+  - [Estimate AWS Resource Costs](/AWS/AWS_Tips/Estimate_AWS_Resource_Costs.md)
+
+- #### AWS Certifications
+
+  - [Solutions Architect](/AWS/AWS_cert/Solutions_Architect.md)
+  - [SAA Prep Workshop](/AWS/AWS_cert/Solutions_Architect_Associate_Workshop.md)
+  - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
+
+- #### AWS Builders Series
+  
+  - [AWS Cloud기반 나의 첫 web application 만들기](/AWS/AWS_Builders/00_AWS_클라우드_기반_나의_첫_웹_애플리케이션_만들기.md)
+  - [DevOps 문화 모범 사례와 구현 도구 살펴보기](/AWS/AWS_Builders/06_DevOps_문화_모범_사례와_구현_도구_살펴보기.md)
+  
+- #### Practical AWS
+
+  - [VPC](/AWS/Practical_AWS/01_VPC.md)
+  - [Subnet](/AWS/Practical_AWS/02_Subnet.md)
+  - [Route 53](/AWS/Practical_AWS/03_Route_53.md)
+  - [Route Table](/AWS/Practical_AWS/04_Route_Table.md)
+  - [Elastic IP](AWS/Practical_AWS/05_Elastic_IP.md)
+  - [Security Group](AWS/Practical_AWS/06_Security_Group.md)
+  - [Network ACLS](AWS/Practical_AWS/07_Network_ACLs.md)
+  - [VPC Peering](AWS/Practical_AWS/08_VPC_Peering.md)
+  - [VPC Endpoints](AWS/Practical_AWS/09_VPC_Endpoints.md)
+  - [AMI](AWS/Practical_AWS/10_AMI.md)
+  - [Load Balancer](AWS/Practical_AWS/11_Load_Balancer.md)
+
+<br>
+
 ### Docker
 
-- #### Docker 101
-
-  - [Docker Commands](/Docker/00_Docker_Commands.md)
-  - [Getting Started with Docker](/Docker/01_Getting_Started_with_Docker.md)
-  - [Docker Tags](/Docker/02_Docker_Tags.md)
+- [Docker Commands](/Docker/00_Docker_Commands.md)
+- [Getting Started with Docker](/Docker/01_Getting_Started_with_Docker.md)
+- [Docker Tags](/Docker/02_Docker_Tags.md)
 
 <br>
 
 ### Kubernetes
 
-- #### Kubernetes 101
+- [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
+- [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
+- [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
+- [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
+- [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
+- [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
+- [Pod](/Kubernetes/06_Pod.md)
+- [Cluster](/Kubernetes/07_Cluster.md)
+- [Namespace](/Kubernetes/08_Namespace.md)
+- [Node](/Kubernetes/09_Node.md)
 
-  - [Kubernetes Basics](/Kubernetes/01_Kubernetes_Basics.md)
-  - [EKS for Kubernetes](/Kubernetes/02_EKS_for_Kubernetes.md)
-  - [What is Ingress](/Kubernetes/03_What_is_Ingress.md)
-  - [Kubectl Commands](/Kubernetes/00_Kubectl_Commands.md)
-  - [How Kubernetes works](/Kubernetes/04_How_Kubernetes_works.md)
-  - [Helm Package Manager](/Kubernetes/05_Helm_Package_Manager.md)
-  - [Pod](/Kubernetes/06_Pod.md)
-  - [Cluster](/Kubernetes/07_Cluster.md)
-  - [Namespace](/Kubernetes/08_Namespace.md)
-  - [Node](/Kubernetes/09_Node.md)
+<br>
+
+### Go
+
+- #### Go 101
+
+  - [Go Basics](/Go/Go101/01_Go_basics.md)
+  - [Variables and Constants](/Go/Go101/02_Variables_and_Constants.md)
+  - [Functions](/Go/Go101/03_Functions.md)
+  - [For Loop](/Go/Go101/04_For_Loop.md)
+  - [If Else](/Go/Go101/05_If_Else.md)
+  - [Switch](/Go/Go101/06_Switch.md)
+  - [Pointers](/Go/Go101/07_Pointers.md)
+  - [Arrays and Slices](/Go/Go101/08_Arrays_and_Slices.md)
+  - [Maps](/Go/Go101/09_Maps.md)
+  - [Structs](/Go/Go101/10_Structs.md)
+  - [Go Routine](/Go/Go101/11_Go_Routine.md)
+  - [init() function](/Go/Go101/12_Init_Function.md)
+
+<br>
+
+### Python
+
+- #### Python 101
+  
+  - [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
+  - [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
+  - [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
+  - [@property in Python](/Python/Python101/@property_in_Python.md)
+  - [Generators in Python](/Python/Python101/Generators_in_Python.md)
+  - [Type Hints in Python](/Python/Python101/Type_Hints_in_Python.md)
+  - [Unit Testing in Python](/Python/Python101/Unit_Testing_in_Python.md)
+  - [Working with Datetime Objects and Timezones in Python](/Python/Python101/Working_with_Datetime_Objects_and_Timezones_in_Python.md)
+  - [itertools.cycle](/Python/Python101/itertools.cycle.md)
+
+- #### Python Advanced
+
+  - [Handling Encoding Issues Using Redis with Python](/Python/Python_Advanced/Handling_Encoding_Issues_Using_Redis_with_Python.md)
+  - [Python GIL](/Python/Python_Advanced/Python_GIL.md)
+
+<br>
+
+### Django
+
+- #### Django 101
+
+  - [Django Basics](/Django/Django101/01_Django101.md)
+  - [Variable Routing & DTL](/Django/Django101/02_Variable_Routing_&_DTL.md)
+  - [Templates](/Django/Django101/03_Templates.md)
+  - [Model](/Django/Django101/04_Model.md)
+  - [URL name](/Django/Django101/05_URL_name.md)
+  - [Form & ModelForm](/Django/Django101/06_Form_&_ModelForm.md)
+  - [Authentication](/Django/Django101/07_Authentication.md)
+  - [Request and Response Objects](/Django/Django101/08_Request_and_Response_Objects.md)
+  - [ImageField](/Django/Django101/09_Image_Upload.md)
+  - [Optimization](/Django/Django101/10_Optimization.md)
+  - [Django RESTful Framework](/Django/Django101/11_DRF.md)
+  - [Class Based View](/Django/Django101/12_Class_Based_View.md)
+  - [DRF with JWT](/Django/Django101/13.DRF_with_JWT.md)
+
+<br>
+
+### Flask
+
+- [Flask Routes](/Flask/Flask_Routes.md)
+
+<br>
 
 ### GraphQL
 
@@ -507,25 +505,21 @@
 
 ### Vue.js
 
-- #### Vue.js 101
-
-  - [Intro to Vue.js](/Vue.js/01_Vue101.md)
-  - [Vue Intermediate](/Vue.js/02_Vue_intermediate.md)
-  - [Vue CLI](/Vue.js/03_Vue_CLI.md)
-  - [Vue Router](/Vue.js/04_Vue_Router.md)
-  - [Props and Emit](/Vue.js/05_Props_and_Emit.md)
-  - [Vue Loader](/Vue.js/06_Vue_Loader.md)
+- [Intro to Vue.js](/Vue.js/01_Vue101.md)
+- [Vue Intermediate](/Vue.js/02_Vue_intermediate.md)
+- [Vue CLI](/Vue.js/03_Vue_CLI.md)
+- [Vue Router](/Vue.js/04_Vue_Router.md)
+- [Props and Emit](/Vue.js/05_Props_and_Emit.md)
+- [Vue Loader](/Vue.js/06_Vue_Loader.md)
 
 <br>
 
 ### React.js
 
-- #### React.js 101
-  
-  - [React Hooks](./React/React_Hooks.md)
-  - [Caret vs Tilde in package.json](/React/Caret_vs_Tilde_in_package.json.md)
-  - [Yarn vs npm](/React/Yarn_vs_npm.md)
-  - [Redux](/React/Redux.md)
+- [React Hooks](./React/React_Hooks.md)
+- [Caret vs Tilde in package.json](/React/Caret_vs_Tilde_in_package.json.md)
+- [Yarn vs npm](/React/Yarn_vs_npm.md)
+- [Redux](/React/Redux.md)
 
 <br>
 
