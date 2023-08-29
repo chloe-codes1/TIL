@@ -113,19 +113,19 @@
       - processor의 현재 상태와 flag 정보를 저장하는 register
       - 주로 processor의 실행 상태, 연산 결과, Interrupt 상태와 관련된 정보를 저장하고 제어한다
       - Flag 종류
-                1. Zero Flag (ZF)
-                    1. 연산 결과가 0인 경우에 설정된다
-                    2. 주로 비교 연산과 관련되어 사용된다
-                2. Sign Flag (SF)
-                    1. 연산 결과가 음수인 경우에 설정된다
-                3. Overflow Flag (OF)
-                    1. 연산 결과가 오버플로우가 발생한 경우에 설정된다
-                    2. 정수 연산에서 사용된다
-                4. Carry Flag (CF)
-                    1. 연산 결과가 캐리(자리 올림)가 발생한 경우에 설정된다
-                    2. 산술 연산에서 사용된다
-                5. Parity Flag (PF)
-                    1. 연산 결과의 하위 비트들 중 1의 개수가 짝수일 경우에 설정된다
+        1. Zero Flag (ZF)
+            1. 연산 결과가 0인 경우에 설정된다
+            2. 주로 비교 연산과 관련되어 사용된다
+        2. Sign Flag (SF)
+            1. 연산 결과가 음수인 경우에 설정된다
+        3. Overflow Flag (OF)
+            1. 연산 결과가 오버플로우가 발생한 경우에 설정된다
+            2. 정수 연산에서 사용된다
+        4. Carry Flag (CF)
+            1. 연산 결과가 캐리(자리 올림)가 발생한 경우에 설정된다
+            2. 산술 연산에서 사용된다
+        5. Parity Flag (PF)
+            1. 연산 결과의 하위 비트들 중 1의 개수가 짝수일 경우에 설정된다
   - local buffer를 가짐 (일종의 data register)
 - I/O 는 실제 device 와 local buffer 사이에서 일어남
 - Device Controller는 I/O 가 끝났을 경우 Interrupt 로 CPU에게 그 사실을 알림
