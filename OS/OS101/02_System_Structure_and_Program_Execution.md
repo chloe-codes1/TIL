@@ -63,23 +63,7 @@
   - Timer 값이 0이 되면 Timer Interrupt가 발생한다
   - CPU를 특정 프로그램이 독점하는 것으로 부터 보호한다
 
-## System Call
-
-- System Call이란?
-  - 사용자 프로그램이 OS의 서비스를 받기 위해 Kernel 함수를 호출하는 것
-  - CPU가 I/O 를 요청하는 기계어는 `특권 명령`이다
-    - 즉, 사용자 프로그램이 실행할 수 없다
-
-            (mode bit이 1인 사용자 모드일 때는 특권 명령을 수행할 수 없기 때문)
-
-    - 그래서 OS에 해달라고 요청을 해야한다
-
-            → 그게 바로 System Call 이다
-
-  - 사용자 프로그램이 스스로 Interrupt를 거는 것을 System Call 이라고 한다
-    - CPU를 OS에 넘기기 위해서 직접 Program Counter를 넘길 수 없기 때문에 Interrupt를 건다
-
-## nterrupt
+## Interrupt
 
 - Interrupt 동작 방식
   - Interrupt 당한 시점의 register와 Program Counter를 저장한 후 CPU의 제어를 Interrupt 처리 루틴에 넘긴다
@@ -101,6 +85,22 @@
         (= Interrupt Service Routine, Interrupt Handler)
 
     - 해당 Interrupt를 처리하는 Kernel 함수
+
+## System Call
+
+- System Call이란?
+  - 사용자 프로그램이 OS의 서비스를 받기 위해 Kernel 함수를 호출하는 것
+  - CPU가 I/O 를 요청하는 기계어는 `특권 명령`이다
+    - 즉, 사용자 프로그램이 실행할 수 없다
+
+            (mode bit이 1인 사용자 모드일 때는 특권 명령을 수행할 수 없기 때문)
+
+    - 그래서 OS에 해달라고 요청을 해야한다
+
+            → 그게 바로 System Call 이다
+
+  - 사용자 프로그램이 스스로 Interrupt를 거는 것을 System Call 이라고 한다
+    - CPU를 OS에 넘기기 위해서 직접 Program Counter를 넘길 수 없기 때문에 Interrupt를 건다
 
 ## Device Controller
 
@@ -136,3 +136,41 @@
     - 컴퓨터 내부에서 CPU가 수행하는 코드
   - Device Controller (장치 제어기)
     - 각 장치를 제어하는 일종의 작은 CPU  → hardware
+
+## CPU가 OS에 넘어가는 경우
+
+> Interrupt가 걸리면 넘어간다
+>
+1. Hardware 장치들이 Interrupt를 거는 경우
+
+    → 진정한 의미의 Interrupt
+
+    - Timer
+        - CPU의 독점을 막기위한 hardware
+2. Program이 직접 Interrupt line을 설정하는 경우
+    - System call
+        - CPU가 I/O 를 요청하는 기계어는 `특권 명령` 이라 사용자 Program이 실행할 수 없기 때문에 존재한다
+
+## Sync I/O vs Async I/O
+
+> 두 경우 모두 I/O 완료는 Interrupt를 통해 알려준다
+>
+
+- `동기식 입출력 (Synchronous I/O)`
+  - I/O 요청 후 입출력 작업이 `완료된 후`에야 제어가 사용자 프로그램에 넘어감
+  - 구현 방법
+        1. I/O가 끝날 때가지 CPU를 낭비시킴
+            - 매 시점 하나의 I/O만 일어날 수 있음
+        2. I/O가 완료될 때까지 해당 프로그램에게서 CPU를 빼앗고, I/O 처리를 기다리는 줄에 그 프로그램을 줄 세움
+            - 다른 프로그램에게 CPU를 줌
+- `비동기식 입출력 (Asynchronous I/O)`
+  - I/O 가 시작된 후 입출력 작업이 끝나기를 `기다리지 않고` 제어가 사용자 프로그램에 `즉시` 넘어감
+
+## DMA (Direct Memory Access)
+
+- 빠른 I/O 장치를 memory에 가까운 속도로 처리하기 때문에 사용
+
+    → memory에 직접 접근하기위한 장치
+
+- CPU의 중재 없이 device controller가 device의 buffer storage의 내용을 block 단위로 직접 전송
+- Byte 단위가 아니라 block 단위로 interrupt를 발생시킨다
