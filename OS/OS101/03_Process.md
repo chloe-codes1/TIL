@@ -177,7 +177,7 @@ process가 생성중인 상태
 ## Process 상태 변화도
 
 <p align="center" width="100%">
-  <img width="713" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/8f7c73db-972e-48cc-8388-52315c0a050e">
+  <img width="713" alt="process state" src="https://github.com/chloe-codes1/TIL/assets/53922851/8f7c73db-972e-48cc-8388-52315c0a050e">
 </p>
 
 - new
@@ -208,7 +208,7 @@ process가 생성중인 상태
 ## PCB (Process Control Block)
 
 <p align="center" width="100%">
-  <img width="230" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/85034d50-fde4-4960-ace3-d8c07fe7357a" >
+  <img width="230" alt="pcb" src="https://github.com/chloe-codes1/TIL/assets/53922851/85034d50-fde4-4960-ace3-d8c07fe7357a" >
 </pr>
 
 ### 설명
@@ -235,7 +235,7 @@ OS가 각 process를 관리하기 위해 두는 자료구조로, process 당 유
 ## Context Switching
 
 <p align="center" width="100%">
-  <img width="470" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/92eca9fc-8723-4504-b944-322acbae5088">
+  <img width="470" alt="context switch" src="https://github.com/chloe-codes1/TIL/assets/53922851/92eca9fc-8723-4504-b944-322acbae5088">
 </p>
 
 ### 설명
@@ -294,7 +294,7 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
 ### Process Scheduling Queue 의 모습
 
 <p align="center" width="100%">
-  <img width="473" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/9fac457b-febe-4267-ab3c-11fafb653744">
+  <img width="473" alt="process scheduling queue" src="https://github.com/chloe-codes1/TIL/assets/53922851/9fac457b-febe-4267-ab3c-11fafb653744">
 </p>
 
 - `fork a child`
