@@ -36,7 +36,7 @@
   - but, Host Machine OS의 **Kernel을 공유**하면서 **유저 스페이스 격리 기능**을 제공한다는 점이 다르다
 - VM과 마찬가지로 Container에 **전용 리소스**를 할당할 수 있고, application과 library 등을 설치, 설정 및 구동 할 수 있다
 - OS Container는 **확장성 테스트**를 할 때 유용하다!
-  - 다양한 배포판으로 구성된 여러 컨테이너를 쉽게 배포할 수 있는데 VM보다 훨씬 **가볍다** 
+  - 다양한 배포판으로 구성된 여러 컨테이너를 쉽게 배포할 수 있는데 VM보다 훨씬 **가볍다**
 - Container는 구조와 내용물을 정의한 **이미지**나 **템플릿**을 통해 생성한다
   - 그래서 개발 환경을 구축할 때 다른 Container와 동일한 실행 환경과 버전, 패키지 환경을 갖추도록 구성하기가 쉽다!
 - 현재 다양한 컨테이너 기술이 나와 있는데, 그 중 OS Container로 적합한 것은 `LXC`, `OpenVZ`, `Docker`, `BSD Jain` 등이 있다
@@ -49,15 +49,15 @@
   - Appllication container는 하나의 process만 구동한다
     - 이 때 구동되는 process는 aaplication process로서 **OS Container** 가 하나의 OS 위에 여러 개의 서비스를 구동하는 방식과 대조적이다!
 - Docker container는 계층 (layer) 방식을 사용하는데, 이를 통해 **중복을 최소화**하고 **재사용성**을 높일 수 있다
-  - 즉, 모든 구성 요소에서 공통적으로 사용하는 `base image`에 대한 container를 먼저 구동하고, 
+  - 즉, 모든 구성 요소에서 공통적으로 사용하는 `base image`에 대한 container를 먼저 구동하고,
   - 그 위에 원하는 요소를 파일 시스템에 별도의 layer로 추가하는 방식으로 구성한다
 - Layer 기반 파일 시스템을 사용하면 원하는 시점에 언제든지 예전 레이어로 쉽게 되돌아갈 수 있다!
 - **Dockerfile**에 명시된 `RUN`  명령이 실행될 때마다 container에 layer가 새로 생성된다
 - Application Container의 주 목적으로는 application을 구성하는 다양한 컴포넌트들을 **별도의 컨테이너 형태의 패키지**로 만드는 데 있다
   - 이렇게 container 단위로 묶인 application의 구성 요소들은 API나 서비스를 통해 상호작용하는 방식으로 application을 구동한다
     - 이러한 **분산 멀티 컴포넌트 시스템** 형태의 배포 방식은 `마이크로서비스 아키텍처` 구현의 핵심이다!
-      - 이렇게 하면 
-        - 개발자는 자신이 원하는 형태로 application을 container 형태의 package로 만들고, 
+      - 이렇게 하면
+        - 개발자는 자신이 원하는 형태로 application을 container 형태의 package로 만들고,
         - 이를 수평적으로나 수직적으로 확장하기 위해 다양한 platform에 container를 배포하는 작업은 IT팀이 전담하게 할 수 있다
 
 <br>
@@ -79,12 +79,12 @@
 ### Docker 자세히 알아보기
 
 - 도커는 다양한 Linux Kernel 기능을 파일시스템과 엮어서 image를 **module** 방식으로 구성한다
-- 구성한 image를 통해 
+- 구성한 image를 통해
   - application 가상 환경을 마음껏 설정할 수 있으며,
   - **WORA (Write-Once-Run-Anywhere)** 원칙을 실현할 수 있다
--  Application을 하나의 process 를 구동하는 수준으로 간략하게 만들 수 있으므로
-  - 여러 process가 협업하는 **분산 시스템**을 쉽게 구축할 수 있으며,
-  - 높은 **확장성**도 지원할 수 있다
+- Application을 하나의 process 를 구동하는 수준으로 간략하게 만들 수 있으므로
+- 여러 process가 협업하는 **분산 시스템**을 쉽게 구축할 수 있으며,
+- 높은 **확장성**도 지원할 수 있다
 - 도커는 application 개발에 있어서 중요한 네 가지 특징을 제공한다
   1. 자율성 (autonomy)
   2. 분산화 (decentralization)
@@ -140,19 +140,19 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - Container를 package로 만드는 데 필요한 모든 명령을 `Dockerfile`에 작성하고, 이를 이용해 Docker image를 **build** 한다
 
   ```bash
-  $ docker build
+  docker build
   ```
 
 - Image에 tag를 달려면 **-t** option을 준다
 
   ``` bash
-  $ docker build -t 사용자 이름/이미지 이름
+  docker build -t 사용자 이름/이미지 이름
   ```
 
 - `Dockerfile`이 현재 directory가 아닌 다른 경로에 존재할 때는 **-f** option으로 Dockerfile의 경로를 지정한다
 
   ``` bash
-  $ docker build -t 사용자 이름/이미지 이름 -f /경로/Dockerfile
+  docker build -t 사용자 이름/이미지 이름 -f /경로/Dockerfile
   ```
 
 <br>
@@ -162,13 +162,13 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - Image를 생성한 후에 Container를 배치할 때는 **docker run** 명령을 실행한다
 
   ``` bash
-  $ docker run
+  docker run
   ```
 
-- 구동한 container의 상태를 확인하려면 **docker ps** 명령을 실행한다. 
+- 구동한 container의 상태를 확인하려면 **docker ps** 명령을 실행한다.
 
   ```bash
-  $ docker ps
+  docker ps
   ```
 
   - 이 명령을 실행하면 현재 active 상태에 있는 container 목록이 나타난다
@@ -176,7 +176,7 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - 모든 프로세스를 일시정지 할 때는 **docker pauge** 명령을 실행한다
 
   ```bash
-  $ docker pause
+  docker pause
   ```
 
   - 이 명령은 `cgroups freezer` 를 이용해 현재 container에서 구동 중인 모든 process를 일시 정지한다
@@ -186,7 +186,7 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - 한 개 이상의 stop 상태에 있는 container를 실행 시킬때는 **docker start** 명령어를 사용한다
 
   ```bash
-  $ docker start
+  docker start
   ```
 
 <br>
@@ -196,14 +196,14 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - Docker를 다 사용했다면 멈추거나(Stop) 종료(Kill)한다
 
   ```bash
-  $ docker stop
+  docker stop
   ```
 
   - **docker stop** 명령을 사용하면 현재 구동중인 container에 **SIGTERM** signal을 보낸 후 **SIGKILL** signal을 보내서 자연~스럽게 멈추게 한다
   - 이 명령으로 멈춘 후에도 **docker ps -a** 명령을 실행하면 목록에 container가 나타난다
 
   ```bash
-  $ docker kill
+  docker kill
   ```
 
   - **docker kill** 명령을 실행하면 현재 구동중인 container의 main process에 **SIGKILL** signal을 보낸다
@@ -215,7 +215,7 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
 - Container를 실행 주엥 변경한 사항을 저장하려면 먼저 container를 멈춘 (Stop) 후에 **docker commit** 명령을 실행한다
 
   ```bash
-  $ docker commit
+  docker commit
   ```
 
   - 이 명령어를 실행하면 변경된 부분이 Image에 반영된다!
@@ -254,4 +254,3 @@ Microservice Architecture에서 Docker Container를 사용하면 다음과 같�
     - 이는 실전에 배치한 서버에서 application을 변경할 필요가 있을 때 새로운 Image를 생성하는 불변형 애플리케이션 배포 (immutable application deployment) 방식의 핵심 개념이다
 - 컨테이너와 유니커널을 서로 궁합이 잘 맞는다
   - 유니커널이라는 또 다른 추상화 계층을 도입하면, docker 개발자는 기존 방식으로 docker container를 사용할 수도 있고, 실전 환경을 위한 유니커널 container 방식으로 활용할 수도 있다
-

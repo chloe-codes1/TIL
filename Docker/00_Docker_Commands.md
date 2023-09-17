@@ -13,7 +13,7 @@
 ### Create container
 
 ```bash
-$ docker container create [옵션] [이미지 이름] [명령] [매개변수] 
+docker container create [옵션] [이미지 이름] [명령] [매개변수] 
 ```
 
 <br>
@@ -21,7 +21,7 @@ $ docker container create [옵션] [이미지 이름] [명령] [매개변수]
 ### Run container
 
 ```bash
-$ docker container run [옵션] [이미지 이름] [명령] [매개변수]
+docker container run [옵션] [이미지 이름] [명령] [매개변수]
 ```
 
 - `-d` : runs on background
@@ -31,7 +31,7 @@ $ docker container run [옵션] [이미지 이름] [명령] [매개변수]
 ### Start container
 
 ```bash
-$ docker container start [컨테이너명]
+docker container start [컨테이너명]
 ```
 
 - `start`를 `restart` 로 바꾸면 재시작
@@ -41,7 +41,7 @@ $ docker container start [컨테이너명]
 ### Stop container
 
 ```bash
-$ docker container stop [컨테이너명]
+docker container stop [컨테이너명]
 ```
 
 <br>
@@ -49,7 +49,7 @@ $ docker container stop [컨테이너명]
 ### Pause container
 
 ```bash
-$ docker container pause [컨테이너명]
+docker container pause [컨테이너명]
 ```
 
 <br>
@@ -57,7 +57,7 @@ $ docker container pause [컨테이너명]
 ### Unpause container
 
 ```bash
-$ docker container unpause [컨테이너명]
+docker container unpause [컨테이너명]
 ```
 
 <br>
@@ -65,7 +65,7 @@ $ docker container unpause [컨테이너명]
 ### Remove container
 
 ```bash
-$ docker container rm [컨테이너명]
+docker container rm [컨테이너명]
 ```
 
 <br>
@@ -73,7 +73,7 @@ $ docker container rm [컨테이너명]
 ### Check the log
 
 ```bash
-$ docker container logs -t webserver
+docker container logs -t webserver
 ```
 
 - `realtime` : -t 뒤에 `-f` 붙이기!
@@ -83,7 +83,7 @@ $ docker container logs -t webserver
 ### Check container stats
 
 ```bash
-$ docker container stats [컨테이너명]
+docker container stats [컨테이너명]
 ```
 
 <br>
@@ -91,7 +91,7 @@ $ docker container stats [컨테이너명]
 ### Check process status
 
 ```bash
-$ docker ps -a
+docker ps -a
 ```
 
 <br>
@@ -99,7 +99,7 @@ $ docker ps -a
 ### Connect to container
 
 ```bash
-$ docker exec -it [container ID] sh
+docker exec -it [container ID] sh
 ```
 
 <br>
@@ -107,7 +107,7 @@ $ docker exec -it [container ID] sh
 ### List images
 
 ```bash
-$ docker image ls
+docker image ls
 ```
 
 or
@@ -125,14 +125,12 @@ alpine                                                                latest    
 ### Remove image(s)
 
 ```bash
-$ docker image rm [OPTIONS] IMAGE [IMAGE ...]
+docker image rm [OPTIONS] IMAGE [IMAGE ...]
 ```
 
 - IMAGE에는 `docker image ls` 명령어로 파악한 IMAGE ID를 적어주면 된다
 
 <br>
-
-
 
 <br>
 
@@ -145,10 +143,9 @@ $ docker image rm [OPTIONS] IMAGE [IMAGE ...]
 <br>
 
 ```bash
-$ docker network prune
-$ docker volume prune
-$ docker container prune
-$ docker image prune
-$ docker system prune  # Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
+docker network prune
+docker volume prune
+docker container prune
+docker image prune
+docker system prune  # Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 ```
-

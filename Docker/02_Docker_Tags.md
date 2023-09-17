@@ -6,7 +6,7 @@
 
 <br>
 
-##  What are docker tags?
+## What are docker tags?
 
 <br>
 
@@ -21,7 +21,7 @@
 : Docker의 `tag` 명령어를 이용하여 기존에 만든 image에 추가로 tag 를 지정할 수 있다
 
 ```bash
-$ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 ```
 
 <br>
@@ -34,7 +34,7 @@ $ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 
 ### `latest` tag
 
-- Docker image 생성 시 `tag`명 지정을 생략하면, default  값으로 `latest` tag 가 붙는다 
+- Docker image 생성 시 `tag`명 지정을 생략하면, default  값으로 `latest` tag 가 붙는다
 - `latest` tag 는 특정 **tag / version** 지정 없이 마지막으로 **build / tag** 된 image를 의미한다
 
 <br>
@@ -51,6 +51,3 @@ $ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
   - tag 를 붙이지 않거나 tag를 **latest** 라고 지정하지 않는다면, **:latest** 는 영향을 받거나 새로 만들어지지 않는다
 
 - Versioning을 위해 `latest` tag를 사용하지 않고, tag에 **patch number** 나 **git commit** 을 활용하는 것이 좋은  practice 이다
-
-  
-
