@@ -24,7 +24,7 @@ virtual memory에 올라가 있는 주소에서 physical memory 주소로 변환
 - stack
   - 함수 안에 있는 지역 변수가 위치한다
 
-        → 함수의 호출과 return과 관련된 것
+      → 함수의 호출과 return과 관련된 것
 
 - data
   - 전역 변수 / 프로그램이 시작될 때부터 종료될 때까지 있는 값이 위치한다
@@ -32,7 +32,7 @@ virtual memory에 올라가 있는 주소에서 physical memory 주소로 변환
   - 실행 파일에 있던 code가 올라오는 것
   - CPU에서 실행할 기계어가 위치
 
-        → 컴파일 된 기계어 코드
+      → 컴파일 된 기계어 코드
 
 - `Kernel Address Space`
   - Kernel도 함수 호출을 하기 때문에 동일하게 stack, data, code로 구성되어 있다
@@ -56,12 +56,12 @@ virtual memory에 올라가 있는 주소에서 physical memory 주소로 변환
 - 운영체제의 `Data`
   - 모든 hardware, process 를 관리하기 위한 자료구조를 갖고 있다
 
-        → 이것을 `PCB (Process Control Block)` 라고 한다
+      → 이것을 `PCB (Process Control Block)` 라고 한다
 
 - 운영체제의 `Stack`
   - 지금 누가 실행중인지를 알기 위해 process의 kernel stack은 각각 저장된다
 
-        → Kernel로 들어오기 전에 (kernel이 호출되기 전에) 어떤 process에서 실행된 것인지에 따라 구분되어 저장된다
+      → Kernel로 들어오기 전에 (kernel이 호출되기 전에) 어떤 process에서 실행된 것인지에 따라 구분되어 저장된다
 
   - Kernel의 stack이기 때문에 kernel 함수와 관련된다
 
@@ -85,11 +85,11 @@ virtual memory에 올라가 있는 주소에서 physical memory 주소로 변환
     >
   - 운영체제 프로그램의 함수
 
-        → 커널의 코드에 들어있는 함수
+      → 커널의 코드에 들어있는 함수
 
   - virtual memory의 주소 공간을 가로질러서 다른 program 의 영역으로 바뀌는 것
 
-        → CPU 제어권을 OS에 넘긴 후 실행한다
+      → CPU 제어권을 OS에 넘긴 후 실행한다
 
   - 커널 함수의 호출 == `System call`
 
@@ -124,11 +124,11 @@ virtual memory에 올라가 있는 주소에서 physical memory 주소로 변환
     >
   - Program Counter
 
-        → 현재 어디를 실행하고 있는가
+      → 현재 어디를 실행하고 있는가
 
   - 각종 register
 
-        → Register에 어떤 값을 넣고 있었는가
+      → Register에 어떤 값을 넣고 있었는가
 
 - Process의 주소 공간
 
@@ -183,7 +183,7 @@ process가 생성중인 상태
 - new
   - 생성중인 상태
 
-        → 생성 시작이 안됐으면 process가 아님!
+      → 생성 시작이 안됐으면 process가 아님!
 
 - ready
   - CPU만 할당되면 바로 실행이 가능한 상태
@@ -203,7 +203,7 @@ process가 생성중인 상태
 - terminated
   - 종료중인 상태
 
-        → 종료가 완료되면 process가 아님!
+      → 종료가 완료되면 process가 아님!
 
 ## PCB (Process Control Block)
 
@@ -230,7 +230,10 @@ OS가 각 process를 관리하기 위해 두는 자료구조로, process 당 유
 - Memory 관련
   - code, data, stack의 위치 정보
 - File 관련
-  - Open file descriptors …
+  - Open file descriptors
+    - file 이나 I/O resource를 고유하게 식별하는데 사용된다 (0부터 시작하여 순차적으로 할당)
+    - process는 oepn file descriptor를 사용하여 파일을 읽거나 쓸 수 있다
+      - file에 대한 I/O를 수행할 수 있으며, file을 열거나 닫을 때 사용된다
 
 ## Context Switching
 
@@ -300,6 +303,108 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
 - `fork a child`
   - 자식 process를 만드는 것
 
-        → 복제 생성을 함
+      → 복제 생성을 함
 
   - 자식에게 cpu를 넘기는게 효과적이라 자식에게 보통 할당함
+
+## Scheduler
+
+> OS 안에 들어있는 code의 일부다
+>
+
+### Long-Term Scheduler (job scheduler)
+
+> OS 내에서 memory scheduling을 하는 역할
+>
+- 시작 process 중 어떤 것들을 ready queue로 보낼지 결정
+- process에 memory (및 각종 자원)을 주는 문제
+  - process가 실행될 때 `memory`에 올라오도록 하는 역할을 담당
+- `Degree of Multi-programming` 을 제어
+  - Degree of Multi-programming 이란?
+    - memory에 올라가 있는 program의 수를 뜻한다
+  - memory에 올라간 program이 몇개인지를 조절하는 역할을 장기 스케줄러가 담당한다
+- Time sharing system에는 보통 장기 스케줄러가 없음 (무조건 ready status)
+
+### Short-Term Scheduler (CPU scheduler)
+
+> CPU scheduling을 하는 역할
+>
+- 어떤 process를 다음번에 running 시킬지 결정
+- process에 `CPU` 를 주는 문제
+- 충분히 빨라야 함 (millisecond 단위)
+
+### Medium-Term Scheduler (Swapper)
+
+> Time sharing system은 장기 스케줄러를 두지 않고 중기 스케줄러를 둔다
+>
+- 여유 공간 마련을 위해 process를 통째로 memory에서 disk로 쫓아냄
+- process에게서 `memory` 를 뺏는 문제
+
+  → 일단 다 주고, memory가 부족해서 전체 시스템 성능이 떨어지면 memory에서 쫓아낸다
+
+- `Degree of Multi-programming` 을 제어
+
+## Process의 상태
+
+### Suspended (stopped)
+
+- 외부적인 이유로 process의 수행이 정지된 상태
+- process는 통째로 disk에 `swap out` 된다
+- ex)
+  - 사용자가 프로그램을 일시 정지시킨 경우 (by break key)
+  - system이 여러 이유로 process를 잠시 중단시킨 경우
+
+      (memory에 너무 많은 process가 올라와 있을 때)
+
+      → 중기 스케줄러가 여유 공간 마련을 위해 process를 통째로 memory에서 disk로 쫓아낸다
+
+### Blocked vs Suspended
+
+- Blocked
+  - 자신이 요청한 event가 만족되면 Ready
+- Suspended
+  - 외부에서 resume 해 주어야 Active
+
+## Process 상태도
+
+> Suspended를 포함한 상태도
+>
+
+<p align="center" width="100%">
+  <img width="754" alt="process status" src="https://github.com/chloe-codes1/TIL/assets/53922851/3ed6f386-fd98-40e5-b692-6013748dc4e9">
+</p>
+
+### Suspended Blocked
+
+- I/O 작업을 하다가 suspended 로 들어가면,
+  - I/O 작업은 그대로 진행하고 Suspended Blocked 로 들어간다
+  - I/O 작업이 끝나면 Suspended Ready로 간다
+    - 오래 걸리는 작업이 끝나면 Blocked → Ready로 가는 것 처럼 Suspended Blocked → Suspended Ready로 간다
+
+### Swap Out / Swap In
+
+- Swap out
+  - memory에서 통째로 쫓겨나는 것
+- Swap in
+  - 다시 memory에 올라가는 것
+
+### Running (User mode / Monitor mode)
+
+<p align="center" width="100%">
+  <img width="753" alt="running status" src="https://github.com/chloe-codes1/TIL/assets/53922851/2ac2c638-823d-4ff1-9b5d-6c634e96c554">
+</p>
+
+- `Running (User mode)`
+  - process에서 자기 code를 실행할 때
+- `Running (Monitor mode)`
+  - OS에 system call을 해서 OS의 code가 실행중일 때
+  - 해당 program은 CPU를 빼앗긴게 아니므로 CPU를 사용중인 것으로 간주한다
+    - System call을 호출한 경우
+      - process가 kernel mode에서 running이다
+    - Interrupt를 받은 경우
+      - e.g. CPU running 중 I/O controller가 다른 interrupt를 발생시켜 OS에 CPU가 넘어가는 경우
+      - 해당 program과 관련 없는 이유로 interrupt 를 받았음에도, Running 중인 것으로 간주한다
+
+          → OS 가 Running 중이라고는 표현하지 않는다
+
+          → Interrupt 받기 전 process가 Running 중인 것으로 간주한다
