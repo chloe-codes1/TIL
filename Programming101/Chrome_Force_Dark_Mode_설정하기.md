@@ -28,7 +28,7 @@ chrome://flags/#enable-force-dark
 
 <br>
 
-#### Chrome을 relaunch 한다!
+#### Chrome을 relaunch 한다
 
 <br>
 
@@ -39,4 +39,3 @@ chrome://flags/#enable-force-dark
 <br>
 
 *끝!*
-

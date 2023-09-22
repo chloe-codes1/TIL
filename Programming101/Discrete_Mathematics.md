@@ -150,7 +150,7 @@
 
 ### 동치 법칙을 이용해 증명하기
 
->  복잡해 보이는 합셩 명제 (compositional proposition)도 동치 법칙을 이용해 간단한 명제로 바꿀 수 있다!
+> 복잡해 보이는 합셩 명제 (compositional proposition)도 동치 법칙을 이용해 간단한 명제로 바꿀 수 있다!
 
 <br>
 
