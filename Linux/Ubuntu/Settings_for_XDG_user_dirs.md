@@ -4,7 +4,8 @@
 
 <br>
 
-### $HOME/.config/user-dirs.dirs file 
+### $HOME/.config/user-dirs.dirs file
+
 - Text file that contains the **user-specific values** for the XDG user dirs
 - It is created and updated by the `xdg-user-dirs-update` command.
 
@@ -15,7 +16,7 @@
 > Terminal
 
 ```bash
-$ gedit ~/.config/user-dirs.dirs
+gedit ~/.config/user-dirs.dirs
 ```
 
 <br>
@@ -45,9 +46,9 @@ XDG_VIDEOS_DIR="$HOME/Videos"
 ### Restart `nautilus` without logging out
 
 ```bash
-$ killall nautilus
+killall nautilus
 
-$ nautilus -q
+nautilus -q
 ```
 
 - Both of them works!
@@ -56,7 +57,6 @@ $ nautilus -q
 
 `+`
 
-### **nautilus** 
+### **nautilus**
 
 : a file manager, designed for the GNOME 3 desktop.
-

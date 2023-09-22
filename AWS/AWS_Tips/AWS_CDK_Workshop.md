@@ -22,8 +22,8 @@
 
 : AWS CDK CLI를 사용하여 CDK application과 상호 작용할 수 있다
 
-- **CDK CLI**를 사용하면 
-  - CDK 앱에 정의된 stack을 나열하고, 
+- **CDK CLI**를 사용하면
+  - CDK 앱에 정의된 stack을 나열하고,
   - Stack을 `CloudFormation` 템플릿에 합성하고,
   - 실행중인 stack instance와 CDK code에 정의된 stack 간의 CDK code 에 정의된 stack 간의 차이점을 확인하고,
   - 원하는 Public AWS Region 에 stack을 배포 할 수 있다
@@ -44,7 +44,7 @@
 <br>
 
 ```bash
-$ npm i -g aws-cdk
+npm i -g aws-cdk
 ```
 
 <br>
@@ -58,7 +58,7 @@ $ npm i -g aws-cdk
 > CDK INIT
 
 ```bash
-$ cdk init sample-app --language typescript
+cdk init sample-app --language typescript
 ```
 
 - **Typescript**를 사용하는 CDK 프로젝트 생성하기
@@ -108,11 +108,12 @@ npm WARN cdk-workshop@0.1.0 No license field.
 ### Useful commands
 
 - `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+
+- `npm run watch`   watch for changes and compile
+- `npm run test`    perform the jest unit tests
+- `cdk deploy`      deploy this stack to your default AWS account/region
+- `cdk diff`        compare deployed stack with current state
+- `cdk synth`       emits the synthesized CloudFormation template
 
 <br>
 
@@ -131,7 +132,7 @@ npm WARN cdk-workshop@0.1.0 No license field.
 
 <br>
 
-###  코드 변경분 watch 하기
+### 코드 변경분 watch 하기
 
 <br>
 
@@ -147,7 +148,7 @@ $ cd Workspace/aws-test/cdk-workshop/
 > `watch` script 수행
 
 ```bash
-$ npm run watch
+npm run watch
 ```
 
 - 그러면 터미널 창의 내용이 지워지고 다음과 같은 결과가 출력된다
@@ -172,7 +173,7 @@ $ npm run watch
 
 - `lib/cdk-workshop-stack.ts`
   - CDK application의 **main stack**이 저장되는 곳
-- `bin/cdk-workshop.ts` 
+- `bin/cdk-workshop.ts`
   - CDK application의 **entry point**
   - `lib/cdk-workshop-stack.ts` 에 정의된 stack을 load 한다
 - `cdk.json`
@@ -234,7 +235,7 @@ export class CdkWorkshopStack extends cdk.Stack {
      - `new sqs.Queue`
   2. **SNS Topoic**
      - `new sns.Topic`
-  3. SNS Topic에서 발생하는 모든 **message**를 **수신**하도록 Queue 설정 
+  3. SNS Topic에서 발생하는 모든 **message**를 **수신**하도록 Queue 설정
      - `topic.addSubscription`
 
 <br>
@@ -384,19 +385,19 @@ Conditions:
 
 - 이 template은 아래의 4가지 자원을 생성한다
 
-  1. #### AWS::SQS::Queue 
+1. #### AWS::SQS::Queue
 
      - SQS 큐
 
-  2. #### AWS::SNS::Topic
+2. #### AWS::SNS::Topic
 
      - SNS 토픽
 
-  3. #### AWS::SNS::Subscription
+3. #### AWS::SNS::Subscription
 
      - 큐와 토픽 사이의 subscription 정의
 
-  4. #### AWS::SQS::QueuePolicy 
+4. #### AWS::SQS::QueuePolicy
 
      - 토픽에서 큐로 `메시지`를 보낼 수 있는 **IAM** 정책
 
@@ -416,7 +417,7 @@ Conditions:
 
 - AWS CDK 앱을 환경 (계졍/region)에 배포하기 위해서는 먼저 `bootstrap stack` 을 설치해야 한다
   - **bootstrap stack**에는 toolkit의 운영을 위해 필요한 자원들이 포함되어 있다
-    - ex) `CFN` teamplate을 보관하고, 배포 process 동안 생성되는 asset들을 저장하는 **S3 bucket** 
+    - ex) `CFN` teamplate을 보관하고, 배포 process 동안 생성되는 asset들을 저장하는 **S3 bucket**
 - `cdk bootstrap` 명령어를 이용해서 하나의 환경에 대한 bootstrap stack을 설치할 수 있다
 
 ```bash
@@ -435,7 +436,7 @@ CDKToolkit: creating CloudFormation changeset...
 **************************************************
 ```
 
-- 만약 여기에서 **Access Denied** error가 발생하면, 
+- 만약 여기에서 **Access Denied** error가 발생하면,
   1. AWS CLI 가 제대로 설정되지 않았거나
   2. 사용중인 **AWS profile** 이 `cloudformation:CreateChangeSet` 작업을 수행할 권한이 없는 것
 - 위의 명령어가 성공정으로 수행되고 나면 CDK 앱을 배포할 수 있다!
@@ -485,9 +486,9 @@ Stack ARN:
 arn:aws:cloudformation:us-west-2:213888382832:stack/CdkWorkshopStack/fa564140-f078-11ea-b665-0a050e07f862
 ```
 
-- 실행 결과 설명 
+- 실행 결과 설명
   - `us-west-2` 는 app을 생성한 **region** 이고,
-  -  `213888382832` 는 **account ID**이고, 
+  - `213888382832` 는 **account ID**이고,
   - `fa564140-f078-11ea-b665-0a050e07f862` 는 **stack ID** 이다
 
 <br>

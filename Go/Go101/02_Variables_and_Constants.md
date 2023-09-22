@@ -25,7 +25,7 @@
     package main
     
     func main() {
-    	const name = "chloe"
+     const name = "chloe"
     }
     ```
 
@@ -76,8 +76,8 @@
     
     func main() {
     
-    	var year = 2020
-    	fmt.Println(year)
+     var year = 2020
+     fmt.Println(year)
     
     }
     ```
@@ -95,23 +95,21 @@
     
     func main() {
     
-    	var month int = 12
-    	// -> month := 12 (same)
+     var month int = 12
+     // -> month := 12 (same)
     
-    	fmt.Println(month)
+     fmt.Println(month)
     }
     ```
 
 <br>
 
-### Types in Go 
+### Types in Go
 
 - Go는 작성한 값의 type을 알아내려고 한다
   - Go는 **type langague** 이기 때문!
     - *"Type이 무엇이다!"* 라는 것을 알려주어야 함
       - Java나 typescript 처럼 타입을 알려줘야함
-
-
 
 <br>
 
@@ -159,10 +157,10 @@
   package main
   
   func main() {
-  	var a int = 100
-  	var b string = "Haha"
-  	c := 200
-  	print(b, a+c);
+   var a int = 100
+   var b string = "Haha"
+   c := 200
+   print(b, a+c);
   }
   ```
 
@@ -171,4 +169,3 @@
 <br>`+`
 
 Go는 변수를 만들고 **사용하지 않으면** 에러를 발생시키므로 유의하자!
-

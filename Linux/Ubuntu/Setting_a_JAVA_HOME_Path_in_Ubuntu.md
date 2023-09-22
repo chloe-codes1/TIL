@@ -7,7 +7,7 @@
 ### 1.  Install
 
 ```bash
-$ sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-11-jdk
 ```
 
 - 이 명령어로 Java runtime environment를 갖고있는 `openjdk-11-jre` package 까지 설치된다!
@@ -36,7 +36,7 @@ OpenJDK 64-Bit Server VM (build 11.0.8+10-post-Ubuntu-0ubuntu118.04.1, mixed mod
   
   chloe@chloe-XPS-15-9570 /usr/lib/jvm
   $ ls
-  default-java		   java-11-openjdk-amd64     java-8-openjdk-amd64
+  default-java     java-11-openjdk-amd64     java-8-openjdk-amd64
   java-1.11.0-openjdk-amd64  java-1.8.0-openjdk-amd64  openjdk-11
   
   ```
@@ -48,7 +48,7 @@ OpenJDK 64-Bit Server VM (build 11.0.8+10-post-Ubuntu-0ubuntu118.04.1, mixed mod
 > vim으로  `/etc/environment` 열기
 
 ```bash
-$ sudo vi /etc/environment
+sudo vi /etc/environment
 ```
 
 > 아래의 환경변수를 추가하기
@@ -61,7 +61,7 @@ export JAVA_HOME
 > `source` 명령어로 수정된 값 바로 적용하기
 
 ```bash
-$ source /etc/environment
+source /etc/environment
 ```
 
 <br>
@@ -85,7 +85,7 @@ JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ```
 
 - `grep` 을 사용하면 특정 문자열을 찾을 수 있다!
-  - 여기서는 "java" 를 찾는 것! 
+  - 여기서는 "java" 를 찾는 것!
 
 <br>
 
@@ -98,8 +98,6 @@ JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 <br>
 
 <br>
-
-
 
 `+`
 

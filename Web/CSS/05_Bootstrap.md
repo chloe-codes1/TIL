@@ -1,6 +1,6 @@
 # Bootstrap
 
-> An open source toolkit for developing with HTML, CSS, and JS. 
+> An open source toolkit for developing with HTML, CSS, and JS.
 
 - 반응형, 모바일 대을을 위한 front-end component
 
@@ -10,7 +10,7 @@
 
 <br>
 
-#### CDN 
+#### CDN
 
 > Content Delivery (Distribution) Network
 
@@ -31,7 +31,7 @@
 
 #### JS CDN
 
-```html 
+```html
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -51,8 +51,6 @@
 - border
 - color
 - flex
-
-
 
 <br>
 
@@ -106,8 +104,6 @@ ex)
 }
 ```
 
-
-
 - 브라우저 기본 rem = 16px
 
 <br>
@@ -118,7 +114,7 @@ ex)
 
 #### BEM
 
-- 1naming 
+- 1naming
 
 <br>
 
@@ -173,7 +169,7 @@ ex)
 
    : 사이트 이동 경로 표시
 
-​	ex) 쇼핑몰 - Home/남성/아우터/자켓
+​ ex) 쇼핑몰 - Home/남성/아우터/자켓
 
 ```html
 <nav aria-label="breadcrumb">
@@ -182,8 +178,6 @@ ex)
   </ol>
 </nav>
 ```
-
-
 
 <br>
 
@@ -230,7 +224,7 @@ ex)
 
 #### 5. Carousel
 
--  계속 transition 일어나는 것
+- 계속 transition 일어나는 것
 
 - 회전목마 처럼 계속 component가 돈다
 
@@ -258,8 +252,6 @@ ex)
       </div>
 ```
 
-
-
 <br>
 
 #### 6. Forms
@@ -282,8 +274,6 @@ ex)
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 ```
-
-
 
 <br>
 
@@ -320,8 +310,6 @@ ex)
   </div>
 </div>
 ```
-
-
 
 <br>
 
@@ -382,8 +370,6 @@ ex)
 </nav>
 ```
 
-
-
 <br>
 
 <br>
@@ -398,8 +384,6 @@ github pages 등 이용 시 index.html이 있어야 거기를 첫 페이지로 h
 
 <br><br>
 
-
-
 #### 기타등등
 
 - CSS Minifier
@@ -413,4 +397,3 @@ github pages 등 이용 시 index.html이 있어야 거기를 첫 페이지로 h
   - 마크다운을 기반으로 홈페이지를 만들어줌
     - Jekyll
     - Gatsby
-

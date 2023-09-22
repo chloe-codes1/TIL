@@ -164,7 +164,7 @@ You can also find many dominant names from AWS glossary in the storage services 
 
 <br><br>
 
-## Database 
+## Database
 
 <br>
 
@@ -254,7 +254,7 @@ Analytics have become very important for data-driven organizations in the presen
 
 - #### AWS Lake Formation
 
-[Lake Formation](https://aws.amazon.com/lake-formation/) helps in collection and cataloging of data from databases and data storage. It is ideal for setting up a secure data lake within a limited time. 
+[Lake Formation](https://aws.amazon.com/lake-formation/) helps in collection and cataloging of data from databases and data storage. It is ideal for setting up a secure data lake within a limited time.
 
 ![image-20200302024315172](../../../images/image-20200302024315172.png)
 
@@ -262,11 +262,9 @@ Analytics have become very important for data-driven organizations in the presen
 
 -> AWS는 보안 또는 governance (관리) 를 저하하지 않으면서 모든 관련 데이터에 쉽게 access 할 수 있는 가장 광범위한 분석 및 machine learning service를 제공함
 
-
-
 <br><br>
 
-## Security and Identity Management 
+## Security and Identity Management
 
 Security and identity are other formidable principles of AWS service. The common entries in AWS cheat sheet in this category are as follows. <br>
 
@@ -340,7 +338,7 @@ The [AWS directory service](https://aws.amazon.com/directoryservice/) has Micros
 
 - #### AWS Security Hub
 
-[AWS Security Hub](https://aws.amazon.com/security-hub/) is also one of the notable names in AWS Glossary which has not made its mark yet. The Security Hub can provide a detailed view of security alerts with high-priority and compliance status of various AWS accounts. 
+[AWS Security Hub](https://aws.amazon.com/security-hub/) is also one of the notable names in AWS Glossary which has not made its mark yet. The Security Hub can provide a detailed view of security alerts with high-priority and compliance status of various AWS accounts.
 
 <br><br>
 
@@ -422,7 +420,7 @@ The [Management Console](https://aws.amazon.com/console/) is a helpful avenue fo
 
 - #### AWS Command Line Interface (CLI)
 
-The [AWS Command Line Interface](https://aws.amazon.com/cli/) is also an important product in the management tools category of AWS services. However, we shall throw light on AWS CLI in the developer tools section of this AWS cheat sheet. 
+The [AWS Command Line Interface](https://aws.amazon.com/cli/) is also an important product in the management tools category of AWS services. However, we shall throw light on AWS CLI in the developer tools section of this AWS cheat sheet.
 
 <br><br>
 
@@ -456,7 +454,7 @@ A [simple message queuing service](https://aws.amazon.com/sqs/) for decoupling a
 
 <br><br>
 
-## Developer Tools 
+## Developer Tools
 
 <br>
 
@@ -572,7 +570,7 @@ The [Cost and Usage report](https://docs.aws.amazon.com/awsaccountbilling/latest
 
 - #### Amazon Quantum Ledger Database (QLDB)
 
-The [QLDB](https://aws.amazon.com/qldb/) is also in preview and can come into AWS services cheat sheet very soon. It serves as a ledger database for providing a transparent, verifiable, and immutable transaction log under the ownership of a central trusted authority. 
+The [QLDB](https://aws.amazon.com/qldb/) is also in preview and can come into AWS services cheat sheet very soon. It serves as a ledger database for providing a transparent, verifiable, and immutable transaction log under the ownership of a central trusted authority.
 
 <br><br>
 
@@ -698,7 +696,7 @@ This addition in AWS cheat sheet is a [programmable button](https://aws.amazon.c
 
 - #### AWS IoT Things Graph
 
-[AWS IoT Things Graph](https://aws.amazon.com/iot-things-graph/) is helpful for easier visualization of connectivity between different devices and web services for building IoT applications. 
+[AWS IoT Things Graph](https://aws.amazon.com/iot-things-graph/) is helpful for easier visualization of connectivity between different devices and web services for building IoT applications.
 
 <br><br>
 
@@ -844,9 +842,8 @@ Presently in preview, addition to [AWS Ground Station](https://aws.amazon.com/gr
 
 > Micro service, Distributed System, Serverless Application 통합
 
--  좀 더 쉽게 개발, 배포 및 유지 관리 할 수 있는 작고 독립적인 building block으로 구성
+- 좀 더 쉽게 개발, 배포 및 유지 관리 할 수 있는 작고 독립적인 building block으로 구성
 - Micro service, Distributed System, Serverless Application 내에 결합되지 않은 구성 요소 간 communication을 활서오하하여 사용자가 확장 가능하고, 복원력이 뛰어난 solution 구축 가능
 - 메시지 대기열, 게시 및 구독, application orchestration, GraphQL API를 통해 AWS는 거의 모든 application 내의 통합을 실현
 
 <br><br>
-

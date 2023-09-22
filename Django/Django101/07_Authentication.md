@@ -59,8 +59,6 @@ from django.contrib.auth.models import User
 
 <br>
 
-
-
 ### Primary attributes of default user
 
 - `username`
@@ -179,8 +177,6 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import get_user_model, login
 ```
 
-
-
 <br>
 
 ```python
@@ -202,7 +198,7 @@ def signin(request):
 ```
 
 - `else`문 처리를 매끄럽게 하기 위해 첫번째 `if`로 **POST**를 먼저 거른다
-  - why? 
+  - why?
     - 만약 **GET**을 먼저 거르면, **POST**에서 `.is_valid()`에 걸리지 않고 `else` 로 떨어지면 다시 render하는 코드 써줘야해서!
     - 즉, *code의 경제성을 위해 **POST** 를 먼저 쓴다!
 
@@ -211,14 +207,13 @@ def signin(request):
 #### `POST` 로 먼저 분기하는 이유
 
 1. 코드의 간결성
-2.  REST API 대응
-   - 현재 우리는 GET & POST만 대응하고 있는데 이후에 RESTful 하게 메소드 구성할 경우 GET/POST/PUT/DELETE 여러개의 메소드가 오게 되고 GET method가 마지막에에 핸들링되는 형태가 가장 간결한 코드 구성이 가능!
+2. REST API 대응
+
+- 현재 우리는 GET & POST만 대응하고 있는데 이후에 RESTful 하게 메소드 구성할 경우 GET/POST/PUT/DELETE 여러개의 메소드가 오게 되고 GET method가 마지막에에 핸들링되는 형태가 가장 간결한 코드 구성이 가능!
 
 <br>
 
 <br>
-
-
 
 ## Message Framework
 
@@ -230,7 +225,7 @@ def signin(request):
 
 -> DB에저장
 
--> render 
+-> render
 
 -> redirect(성공여부)
 
@@ -242,15 +237,13 @@ def signin(request):
 
 <br>
 
-#### HTTP 
+#### HTTP
 
 - stateless (무 상태성)
   - 한번 요청을 보내면 상태(과거)를 알 수 없음
   - 모든 요청 & 응답은 일회성이다
   - HTTP는 단절적인 protocol
 - connectionless (무 연결성)
-
-
 
 <br>
 
@@ -273,8 +266,6 @@ Article CRUD
 - title, content, create_at, updated_at
 
 User CRUD (직접 < Django)
-
-
 
 <br><br>
 

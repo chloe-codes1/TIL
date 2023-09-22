@@ -11,7 +11,7 @@
 ### Installation
 
 ```bash
-$ npm install -g @vue/cli
+npm install -g @vue/cli
 ```
 
 <br>
@@ -19,7 +19,7 @@ $ npm install -g @vue/cli
 ### Start project
 
 ```bash
-$ vue create [PROJECT_NAME]
+vue create [PROJECT_NAME]
 ```
 
 <br>
@@ -48,7 +48,7 @@ $ npm run serve
 ### Install `axios`
 
 ```bash
-$ npm i axios
+npm i axios
 ```
 
 <br>
@@ -56,7 +56,7 @@ $ npm i axios
 ### Compiles and minifies for production
 
 ```bash
-$ npm run build
+npm run build
 ```
 
 <br>
@@ -64,7 +64,7 @@ $ npm run build
 ### Lints and fixes files
 
 ```bash
-$ npm run lint
+npm run lint
 ```
 
 <br>
@@ -97,4 +97,3 @@ export default {
 
 </style>
 ```
-

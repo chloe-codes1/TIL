@@ -10,7 +10,7 @@
   - `SPoF`는 **하나**의 시스템이나 구성 요소에서 **고장이 발생**했을 때 **전체 시스템** 의 작동이 멈추는 요소를 말한다
   - Network에서도 하나의 장비 고장으로 전체 network가 마비되는 것을 막기 위해 `이중화`, `다중화`된 network를 디자인하고 구성한다
 - Network를 switch 하나로 구성했을 때 그 **switch에 장애가 발생**하면 **전체 network에 장애가 발생**한다
-  - 이런 `SPoF`를 피하기 위해 **switch 두 대**로 network를 디자인하지만, 
+  - 이런 `SPoF`를 피하기 위해 **switch 두 대**로 network를 디자인하지만,
     - 두 대 이상의 switch로 디자인하면 **packet이 network를 따라 계속 전송**되므로 network를 **마비**시킬 수 있다
       - 이런 상황을 `Network Loop` 라고 한다
   - `Loop`를 예방하려면 별도의 **mechanism**이 필요하다
@@ -82,9 +82,9 @@
 
 ### 2-1. Switch Port의 상태 및 변경 과정
 
-- Spanning Tree Protocol이 동작중인 switch에서는 loop를 막기 위해 
+- Spanning Tree Protocol이 동작중인 switch에서는 loop를 막기 위해
   - switch port에 신규 switch가 연결되면 바로 **traffic이 흐르지 않도록 차단**한다
-  - 그리고 해당 port로 **traffic이 흘러도 되는지 확인**하기 위해 
+  - 그리고 해당 port로 **traffic이 흘러도 되는지 확인**하기 위해
     - `BPDU` 를 기다려 학습하고,
     - 구조를 파악한 후,
     - Traffic을 흘리거나 loop 구조인 경우 차단 상태를 유지한다
@@ -136,7 +136,7 @@
 
    - Switch와 switch가 연결되는 port는 하나의 **지정 포트 (Designated Port)**를 선정한다
 
-   - Switch 간의 연결에서 
+   - Switch 간의 연결에서
 
      1. 이미 root port로 선정된 경우, 그 반대쪽이 designated port로 선정되어 양쪽 모두 **forwarding status** 가 된다
 
@@ -203,7 +203,7 @@
   - MST에서는 **region 개념**이 도입되어 **여러 개의 VLAN을 하나의 region으로 묶을 수 있다**
     - region 1 == spanning tree 1
     - ex)
-      - 11 ~ 50번 VLAN과 101 ~ 150번 VLAN이 있다면 
+      - 11 ~ 50번 VLAN과 101 ~ 150번 VLAN이 있다면
         - 11 ~ 50을 하나의 region으로
         - 101 ~ 150번을 하나의 region으로 묶으면 두 개의 spanning tree로 100개의 VLAN을 관리할 수 있다
 

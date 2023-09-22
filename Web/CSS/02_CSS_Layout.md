@@ -12,14 +12,10 @@
   - float
 - 네비게이션
   - 이미지 버튼
-  - 텍스트 네비게이션 
+  - 텍스트 네비게이션
 - animation, transition
   - 요소의 변형
   - 요소 클리핑
-
-
-
-
 
 ### CSS Position
 
@@ -49,15 +45,13 @@ div {
 
 <br>
 
-#### relative 
+#### relative
 
 : 상대위치
 
 ```css
 
 ```
-
-
 
 <br>
 
@@ -105,8 +99,3 @@ div {
 <br>
 
 #### float이 발생시키는 문제
-
-
-
-
-

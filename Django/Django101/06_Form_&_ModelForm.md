@@ -203,8 +203,6 @@ def update(request, pk):
 {% endblock %}
 ```
 
-
-
 <br>
 
 <br>
@@ -212,7 +210,7 @@ def update(request, pk):
 > shell 들어가기
 
 ```bash
-$ python manage.py shell_plus
+python manage.py shell_plus
 ```
 
 <br>
@@ -259,13 +257,9 @@ In [5]: print(form)
 </textarea></td></tr>
 ```
 
-
-
 <br>
 
 <br>
-
-
 
 ### Looping over the form’s fields
 
@@ -310,7 +304,7 @@ Here’s the output of `{{ form.as_p }}` for our `ContactForm` instance:
 > Install
 
 ```bash
-$ pip install django-bootstrap4
+pip install django-bootstrap4
 ```
 
 <br>
@@ -390,13 +384,9 @@ INSTALLED_APPS = [
 {% endblock  %}
 ```
 
-
-
 <br>
 
 <br>
-
-
 
 `+`
 
@@ -405,7 +395,7 @@ INSTALLED_APPS = [
 > 특정 commit을 기준으로 돌아가기
 
 ```bash
-$ git checkout f008d8f
+git checkout f008d8f
 ```
 
 <br>
@@ -427,7 +417,7 @@ a046911 01 | startproject
 > reference log 확인
 
 ```bash
-$ git reflog
+git reflog
 ```
 
 <br>
@@ -455,4 +445,3 @@ Switched to branch 'test'
 ```
 
 <br>
-

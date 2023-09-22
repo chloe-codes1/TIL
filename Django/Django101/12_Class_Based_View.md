@@ -25,7 +25,7 @@
 
 <br>
 
-### `Function generic view`  vs  `class based generic view` 
+### `Function generic view`  vs  `class based generic view`
 
 <br>
 
@@ -75,8 +75,6 @@ urlpatterns = [
 ]
 ```
 
-
-
 <br>
 
 <br>
@@ -85,9 +83,6 @@ urlpatterns = [
 
 ### Django REST API Auth
 
-https://django-rest-auth.readthedocs.io/en/latest/installation.html
-
-
+<https://django-rest-auth.readthedocs.io/en/latest/installation.html>
 
 <br>
-

@@ -9,7 +9,7 @@
   > C++보다 간단하다  -> 근데 느림
   - Java의 간결하면서도 명료한 객체지향적 설계는 사용자들이 객체지향개념을 보다 쉽게 이해하고 활용할 수 있도록 하여 객체지향 프로그래밍의 저변확대에 크게 기여했다.
 
-- `Object-Oriented` 
+- `Object-Oriented`
 
   - **객체지향 프로그래밍언어** 중 하나로 객체지향개념의 특징인 **상속**, **캡슐화**, **다형성**이 잘 적용된 언어다
 
@@ -26,12 +26,12 @@
 
 - `Platform Independent`
 
-  > 운영체제에 독립적이다 (JVM) 
+  > 운영체제에 독립적이다 (JVM)
   >
   > -> OS 위에 있는 **Java Virtual Machine**이 동작
   - 기존의 언어는 한 운영체제에 맞게 개발된 프로그램을 다른 종류의 운영체제에 적용하기 위해서는 많은 노력이 필요하였지만, Java에서는 더 이상 그런 노력을 하지 않아도 된다
-    - 일종의 emulator인 **Java Virtual Machine(JVM)**을 통해서 가능한 것인데, 
-      - 자바 응용프로그램은 운영체제나 하드웨어가 아닌 **JVM**하고만 통신하고, 
+    - 일종의 emulator인 **Java Virtual Machine(JVM)**을 통해서 가능한 것인데,
+      - 자바 응용프로그램은 운영체제나 하드웨어가 아닌 **JVM**하고만 통신하고,
       - **JVM**이 자바 응용프로그램으로부터 전달받은 명령을 해당 운영체제가 이해할 수 있도록 **변환**하여 전달한다.
   - 자바로 작성된 프로그램은 운영체제에 독립적이지만, **JVM**은 운영체제에 종속적이어서, 썬에서는 여러 운영체제에 설치할 수 있는 서로 다른 버전의 **JVM**을 제공하고 있다
     - 그래서 자바로 작성된 프로그램은 운영체제와 하드웨어에 관계없이 실행 가능하며 이것을 "한번 작성하면, 어디서나 실행된다 (`Write once, run anywhere`)" 고 표현하기도 한다
@@ -43,19 +43,17 @@
   - 그러나, Java에서 개발되는 **multi-thread** 프로그램은 시스템과는 관계없이 구현 가능하며, 관련된 library (**Java API**)가 제공되므로 구현이 쉽다.
   - 여러 thread에 대한 **scheduling**을 **Java interpreter**가 담당하게 된다
 
-- `Secured` 
+- `Secured`
 
   : Java is pretty much "safe" unleses a third party is trying to exploit the JVM
 
-- `Dynamic` 
+- `Dynamic`
 
   > 동적 로딩 (Dynamic Loading)을 지원한다
   - 보통 Java로 작성된 application은 여러 개의 class로 구성되어 있다.
   - Java는 **동적 로딩**을 지원하기 때문에 실행 시에 모든 class가 loading 되지 않고, 필요한 시점에 class를 load 하여 사용할 수 있다는 장점이 있다.
   - 일부 class가 변경되어도 전체 application을 다시 compile하지 않아도 되며, application에 변경 사항이 발생해도 비교적 적은 작업만으로도 처리할 수 있는 **유연한 application**을 작성할 수 있다
   
-  
-
 <br>
 
 <br>
@@ -68,7 +66,7 @@
 
 - a list of all classes that are part of the Java development kit (JDK). It includes all Java packages, classes, and interfaces, along with their methods, fields, and constructors
 
-<br> 
+<br>
 
 <br>
 
@@ -79,23 +77,20 @@
 > => 컴파일 된 모든 자바 프로그램들은 JVM을 통해 그 어떠한 환경에서도 수정 작업 없이 어디서든 사용 가능!
 
 #### JVM과 속도
-  - 일반 application의 코드는 `OS`만 거치고 하드웨어로 전달되는데 비해, 
-    - Java application은 `JVM`을 한 번 더 거치고 하드웨어에 맞게 완전히 compile된 상태가 아니고 **실행 시에 해석(interpret)**되기 때문에 **속도가 느리다**는 단점을 가지고 있다
-  - 그러나 요즘엔 바이트코드 (compile 된 자바 코드)를 하드웨어의 기계어로 바로 변환해 주는 `JIT 컴파일러`와 향상된 최적환 기술이 적용되어서 속도 격차를 많이 줄였다
+
+- 일반 application의 코드는 `OS`만 거치고 하드웨어로 전달되는데 비해,
+  - Java application은 `JVM`을 한 번 더 거치고 하드웨어에 맞게 완전히 compile된 상태가 아니고 **실행 시에 해석(interpret)**되기 때문에 **속도가 느리다**는 단점을 가지고 있다
+- 그러나 요즘엔 바이트코드 (compile 된 자바 코드)를 하드웨어의 기계어로 바로 변환해 주는 `JIT 컴파일러`와 향상된 최적환 기술이 적용되어서 속도 격차를 많이 줄였다
 
 <br>
 
-
 #### JVM의 기능 2가지
+
 1. to allow Java programs to run on any device or operating system
 2. to manage and optimize program memory
 
-   
-
 <br>
 <br>
-
-
 
 ### 람다식(Lambda Expression)
 
@@ -117,7 +112,6 @@
    (분산환경 지원 / 너무 어렵고, 동작할 수 있게 하는 서버 환경이 고가임)
 
 3. `J2ME`  -> 소형제품 ex) 휴대폰, PDA, 셋탑 박스
-
 
 <br>
 
@@ -155,10 +149,6 @@
 `Classpath`    -> 클래스를 찾아오는 경로
 
 ​                            => 실행 프로그램에서 사용하는 라이브러리의 위치를 나타냄
-
-
-
-
 
   => Cl변수값에  .; 입력하면 지금 내가 있는곳을 기준으로 찾는다는 것!
 
@@ -200,19 +190,17 @@ public static void main(String[] args) {}
 
 - `args`: 지역변수 (변수명)
 
--  `void`: 콜한 자리에 리턴값(반환값)이 없다는 뜻 -> 이 명령문을 실행하기만 한다는 뜻!
+- `void`: 콜한 자리에 리턴값(반환값)이 없다는 뜻 -> 이 명령문을 실행하기만 한다는 뜻!
 
 <br>
 <br>
 
-  ### 접근 제한자 (Access Modifier)
+### 접근 제한자 (Access Modifier)
 
   `public` : 모든 접근을 허용
   `protected` : 동일 패키지와 하위 클래스에게 접근 허용
   `default` : 동일 패키지에서 접근 허용
   `private` : 현재 객체 내에서만 허용
-
-
 
 <br><br>
 
@@ -228,8 +216,6 @@ public static void main(String[] args) {}
 
   ex) class, import, new, public, void, etc.
 
-
-
 ### Class 안에 들어갈 수 있는 것 2가지
 
 1. Data ( = Variable 변수)
@@ -240,8 +226,7 @@ public static void main(String[] args) {}
 
    : 동사는 method!     => ~ 하다 붙여서 말되면 동사,,,
 
-    -> 다른 언어에서는 Function이라고 함!        
-
+    -> 다른 언어에서는 Function이라고 함!
 
 <br>
 <br>
@@ -264,7 +249,6 @@ public static void main(String[] args) {}
 
   : main에서 출발하여 순차적으로 알아서 쭈욱 실행되는 형태
 
-
 <br>
 
 #### GUI (Graphical User Interface)
@@ -281,11 +265,8 @@ public static void main(String[] args) {}
 
  명령을 받으면 해당 처리를 하는 방식
 
-
-
 <br>
 <br>
-
 
 ### Cmd (Command Prompt)
 
@@ -299,7 +280,7 @@ public static void main(String[] args) {}
 
 : cmd 창에서 `javac`
 
- (이 명령어가 제대로 실행되려면 환경변수를 잡아야함) 
+ (이 명령어가 제대로 실행되려면 환경변수를 잡아야함)
 
 <br>
 
@@ -328,8 +309,6 @@ Hello World!
 
 ```
 
-
-
  ex 2)
 
 ``` powershell
@@ -357,13 +336,10 @@ E:\data\bin>java Sample
 
 ```
 
-
 =>그래서!  `Java App`을 실행하려면 `Main Method`가 있어야 한다!!!!!
 
 <br>
 <br>
-
-
 
   \* . : 현재 디렉토리
 
@@ -401,7 +377,7 @@ File - new - java project
 <br>
 <br>
 
-### Java 소스코드와 클래스 코드는 따로 관리함!
+### Java 소스코드와 클래스 코드는 따로 관리함
 
   그런데! Eclipse는 자동으로 컴파일을 해서 bin에 저장해줌
 
@@ -417,14 +393,13 @@ File - new - java project
 
 : 마우스 오른쪽 -> refactor -> move or rename
 
-
 <br>
 
 #### 소스코드 확인하기
 
 1. JRE System Library - rt.jar - Java.util - Date.class 들어가거나
 
-2. Eclipse 창에서 class (ex. Date class)위에 마우스 놓고 Ctrl + 클릭 - attach source하면 소스코드 볼 수 있음 
+2. Eclipse 창에서 class (ex. Date class)위에 마우스 놓고 Ctrl + 클릭 - attach source하면 소스코드 볼 수 있음
 
 <br>
 <br>

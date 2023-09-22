@@ -27,7 +27,7 @@ Python 3.6.9
 >Install `virtualenv`
 
 ```bash
-$ pip install virtualenv
+pip install virtualenv
 ```
 
 <br>
@@ -35,7 +35,7 @@ $ pip install virtualenv
 > Create a virtual environment
 
 ```bash
-$ python -m venv venv
+python -m venv venv
 ```
 
 <br>
@@ -43,7 +43,7 @@ $ python -m venv venv
 > activate your virtual environment
 
 ```bash
-$ source venv/bin/activate
+source venv/bin/activate
 ```
 
 <br>
@@ -55,4 +55,3 @@ alias va="source venv/bin/activate"
 ```
 
 <br>
-

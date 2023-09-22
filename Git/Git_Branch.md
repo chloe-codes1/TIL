@@ -44,7 +44,7 @@
     (master) $ git merge {브랜치명}
     ```
 
-	* master 브랜치에서 {브랜치명}을 병합
+ * master 브랜치에서 {브랜치명}을 병합
 
 <br>
 
@@ -65,23 +65,20 @@
 1. feature/crud branch 생성 및 이동
 
    ```bash
-   $ git branch feature/crud
-   $ git checkout feature/crud
+   git branch feature/crud
+   git checkout feature/crud
    ```
 
    * 혹은
 
    ```bash
-   $ git checkout -b feature/crud
+   git checkout -b feature/crud
    ```
-
-   
 
 2. 작업 완료 후 commit
 
    * 임의의 파일을 만들고, commit
-   * `add` , `commit` 
-
+   * `add` , `commit`
 
 3. master 이동
 
@@ -90,9 +87,6 @@
    Switched to branch 'master'
    (master) $
    ```
-   
-   
-
 
 4. master에 병합
 
@@ -110,11 +104,8 @@
     create mode 100644 views.py
    
    ```
-   
-   
 
-
-5. 결과 -> fast-foward 
+5. 결과 -> fast-foward
 
    ```bash
    $ git log --oneline
@@ -122,17 +113,11 @@
    d66ff92 Init
    ```
 
-   
-
 6. branch 삭제
 
    ```bash
-   $ git branch -d feature/crud
+   git branch -d feature/crud
    ```
-   
-   
-   
-   
 
 ---
 
@@ -151,14 +136,12 @@
    (feature/signout) $
    ```
 
-   
-
 2. 작업 완료 후 commit
 
    ```bash
-   $ touch signout.txt
-   $ git add .
-   $ git commit -m 'Complete'
+   touch signout.txt
+   git add .
+   git commit -m 'Complete'
    ```
 
 3. master 이동
@@ -170,13 +153,9 @@
    (master) $
    ```
 
-   
-
 4. *master에 추가 commit 이 발생시키기!!*
 
    * **다른 파일을 수정 혹은 생성하세요!**
-
-   
 
 5. master에 병합
 
@@ -188,11 +167,7 @@
     create mode 100644 signout.txt
    ```
 
-   
-
 6. 결과 -> 자동으로 *merge commit 발생*
-
-   
 
 7. 그래프 확인하기
 
@@ -218,8 +193,6 @@
    $ git branch -d feature/signout
    Deleted branch feature/signout (was fb74094).
    ```
-
-
 
 <br>
 
@@ -251,7 +224,6 @@
 
    * `add`, `commit`
 
-
 3. master 이동
 
    ```bash
@@ -260,11 +232,10 @@
    Switched to branch 'master'
    ```
 
-
 4. *master에 추가 commit 이 발생시키기!!*
 
    * **동일 파일을 수정 혹은 생성하세요!**
-   
+
 ```bash
    $ git log --oneline
    3c81134 (HEAD -> master) Hotfix signout urls.py
@@ -274,8 +245,6 @@
    f219c8c Complete CRUD)
    d66ff92 Init
 ```
-
-   
 
 5. master에 병합
 
@@ -288,14 +257,11 @@
    
    (master|MERGING)
    ```
-   
-   
-
 
 6. 결과 -> *merge conflict발생*
 
    > git status 명령어로 충돌 파일을 확인할 수 있음.
-   
+
    ```bash
    (master|MERGING)
    $ git status
@@ -311,9 +277,6 @@
      (use "git add <file>..." to mark resolution)
            both modified:   urls.py
    ```
-   
-   
-
 
 7. 충돌 확인 및 해결
 
@@ -324,24 +287,21 @@
    # signup
    >>>>>>> feature/signup
    ```
-   
-   
-
 
 8. merge commit 진행
 
     ```bash
-    $ git commit
+    git commit
     ```
 
    * vim 편집기 화면이 나타납니다.
-   
+
    * 자동으로 작성된 커밋 메시지를 확인하고, `esc`를 누른 후 `:wq`를 입력하여 저장 및 종료를 합니다.
       * `w` : write
       * `q` : quit
-      
+
    * 커밋이  확인 해봅시다.
-   
+
 9. 그래프 확인하기
 
    ```bash
@@ -362,13 +322,10 @@
    
    ```
 
-
 10. branch 삭제
 
     ```bash
-    $ git branch -d feature/signup
+    git branch -d feature/signup
     ```
-    
-    
-    
+
     <br>

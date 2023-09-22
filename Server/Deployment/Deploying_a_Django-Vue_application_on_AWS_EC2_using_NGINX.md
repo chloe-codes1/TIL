@@ -35,10 +35,10 @@
 
 <br>
 
-#### 3-1. PEM key 를 저장한 경로로 이동 
+#### 3-1. PEM key 를 저장한 경로로 이동
 
 ```bash
-$ cd ~/[PEM Key 저장한 경로]
+cd ~/[PEM Key 저장한 경로]
 ```
 
 <br>
@@ -54,11 +54,11 @@ sudo chmod 400 [PEM Key 이름]
 
 <br>
 
-#### 3-3. ` ssh` 명령으로 EC2에 접속하기
+#### 3-3. `ssh` 명령으로 EC2에 접속하기
 
 1. AWS console의 EC2 Instance 목록에서 접속하려는 instance를 선택하고 `연결 (Connect)`을 누르면 연결 방법이 적혀있는 modal 창이 뜬다
 
-2. 그 중에  `ssh -i ` 로 시작하는 명령어를 복사한다
+2. 그 중에  `ssh -i` 로 시작하는 명령어를 복사한다
 3. PEM Key가 저장되어 있는 곳에서 해당 명령어를 실행한다
    - 여기까지 하면 Ubuntu Bash로 접속한 상태가 된다!
 
@@ -73,10 +73,10 @@ sudo chmod 400 [PEM Key 이름]
 #### 4-1. nvm 설치
 
 ```bash
-$ sudo apt update  # update 하기
+sudo apt update  # update 하기
 
-$ sudo apt install -y build-essentail libssl-dev
-$ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+sudo apt install -y build-essentail libssl-dev
+sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
 ```
 
@@ -87,19 +87,19 @@ $ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/instal
 #### 4-2. python 3.7 설치
 
 ```bash
-$ sudo apt install software-properties-common    # 우분투 16.04 에서 add-apt-repository 명령어를 사용하기 위해 설치
-$ sudo add-apt-repository ppa:deadsnakes/ppa     # 파이썬 3.7을 설치하기 위한 패키지 저장소 입력
+sudo apt install software-properties-common    # 우분투 16.04 에서 add-apt-repository 명령어를 사용하기 위해 설치
+sudo add-apt-repository ppa:deadsnakes/ppa     # 파이썬 3.7을 설치하기 위한 패키지 저장소 입력
 
-$ sudo apt update   
-$ sudo apt upgrade # update & upgrade 하기
+sudo apt update   
+sudo apt upgrade # update & upgrade 하기
 
-$ sudo apt install -y python3.7    # -y 안붙이면 예스 노 물어봄
-$ python3.7 --version         # 아직 python --version 하면 안 나옴
+sudo apt install -y python3.7    # -y 안붙이면 예스 노 물어봄
+python3.7 --version         # 아직 python --version 하면 안 나옴
 
-$ sudo apt-get install python3-pip # pip 없다고 해서 설치!!!!! 
+sudo apt-get install python3-pip # pip 없다고 해서 설치!!!!! 
 
-$ python3.7 -m pip install pip   # python3.7 사용하는 pip 설치
-$ pip3.7 --version             # pip3.7 로 입력하려니 불편
+python3.7 -m pip install pip   # python3.7 사용하는 pip 설치
+pip3.7 --version             # pip3.7 로 입력하려니 불편
 ```
 
 <br>
@@ -114,7 +114,7 @@ $ sudo vim ~/.bashrc       # 모든 vim 명령어는 sudo 를 사용한다
 
 - 아래의 `alias` 입력하기
 
-  ``` 
+  ```
   alias python="python3.7"
   alias pip="pip3.7"
   ```
@@ -124,7 +124,7 @@ $ sudo vim ~/.bashrc       # 모든 vim 명령어는 sudo 를 사용한다
 - `source` 명령어로 수정된 값 바로 적용하기
 
   ```bash
-  $ source ~/.bashrc
+  source ~/.bashrc
   ```
 
 <br>
@@ -132,9 +132,9 @@ $ sudo vim ~/.bashrc       # 모든 vim 명령어는 sudo 를 사용한다
 #### 4-4. node & npm 설치
 
 ``` bash
-$ nvm install 12.15.0
-$ node -v
-$ npm -v
+nvm install 12.15.0
+node -v
+npm -v
 ```
 
 <br>
@@ -142,7 +142,7 @@ $ npm -v
 #### 4-5. nginx 설치
 
 ``` bash
-$ sudo apt install -y nginx
+sudo apt install -y nginx
 ```
 
 - `nginx` 로 빌드된 파일 서빙할 예정
@@ -159,7 +159,7 @@ $ sudo apt install -y nginx
 
 #### 5-2. 보안그룹 만들기
 
-- `80` 포트와 `8000` 포트를 허용할 보안그룹이기 때문에 
+- `80` 포트와 `8000` 포트를 허용할 보안그룹이기 때문에
   - 보안그룹 이름은 **80-8000** 으로 설정하고,
   - 설명에는 "Allow 80-8000" 이라고 적었다
 
@@ -178,10 +178,10 @@ $ sudo apt install -y nginx
 ### 6. nginx 상태 확인
 
 ``` bash
-$ sudo service nginx status
+sudo service nginx status
 ```
 
-- ` Active: active (running)` 이라고 뜨는 것 확인하기
+- `Active: active (running)` 이라고 뜨는 것 확인하기
 
 - AWS Console의 Instance 목록에서 instance 누르면 나오는 주소를 복사해서 Browser에서 실행시키면 아래와 같은 화면이 나와야 함
 
@@ -198,7 +198,7 @@ $ sudo service nginx status
 #### 7-1. clone
 
 ```bash
-$ git clone [프로젝트 web URL]
+git clone [프로젝트 web URL]
 ```
 
 <br>
@@ -206,9 +206,9 @@ $ git clone [프로젝트 web URL]
 #### 7-2 Frontend 에 필요한 패키지 설치 & build
 
 ```bash
-$ cd frontend
-$ npm install
-$ npm run build
+cd frontend
+npm install
+npm run build
 ```
 
 <br>
@@ -222,15 +222,15 @@ $ npm run build
 #### 8-1. `nginx.conf`  수정
 
 ```bash
-$ cd /etc/nginx
+cd /etc/nginx
 
-$ ls # nginx.conf 가 있는 것을 확인
+ls # nginx.conf 가 있는 것을 확인
 
-$ sudo vi nginx.conf
+sudo vi nginx.conf
 ```
 
 - `include /etc/nginx/sites-enabled/*.conf;`  의 **enabled**를 **available**로 수정
-  - 수정 후:  `include /etc/nginx/sites-available/*.conf;` 
+  - 수정 후:  `include /etc/nginx/sites-available/*.conf;`
 - 저장 후 빠져나오기
 
 <br>
@@ -238,11 +238,11 @@ $ sudo vi nginx.conf
 #### 8-2. `sites-available` 수정
 
 ``` bash
-$ cd sites-available
+cd sites-available
 
-$ ls # default가 있는 것을 확인
+ls # default가 있는 것을 확인
 
-$ sudo vi default
+sudo vi default
 ```
 
 - 주석을 제외하고 전부 지운 후, 아래의 내용을 추가하기
@@ -265,7 +265,7 @@ $ sudo vi default
 #### 8-3. nginx 재 시작하기
 
 ``` bash
-$ sudo service nginx restart
+sudo service nginx restart
 ```
 
 - 사이트 URL로 접속하면 Frontend 서빙 되는 것 확인 가능
@@ -281,13 +281,13 @@ $ sudo service nginx restart
 #### 9-1. 설치
 
 ```bash
-$ sudo apt update && sudo apt upgrade # apt 패키지 인스톨러 갱신
+sudo apt update && sudo apt upgrade # apt 패키지 인스톨러 갱신
 
-$ sudo apt install mysql-server
+sudo apt install mysql-server
 
-$ sudo apt install libmysqlclient-dev
+sudo apt install libmysqlclient-dev
 
-$ sudo apt install python3.7-dev
+sudo apt install python3.7-dev
 ```
 
 <br>
@@ -295,7 +295,7 @@ $ sudo apt install python3.7-dev
 #### 9-2. root 계정 설정
 
 ``` bash
-$ sudo mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 - 입력 후 비밀번호 설정하기
@@ -305,7 +305,7 @@ $ sudo mysql_secure_installation
 #### 9-3. root 계정으로 접속 해보기
 
 ``` bash
-$ sudo mysql -u root -p
+sudo mysql -u root -p
 ```
 
 - 입력 후 설정한 비밀번호 입력
@@ -318,8 +318,6 @@ $ sudo mysql -u root -p
 mysql> create database [database명];
 ```
 
-
-
 <br>
 
 <br>
@@ -329,7 +327,7 @@ mysql> create database [database명];
 <br>
 
 ``` bash
-$ sudo vi .env
+sudo vi .env
 ```
 
 - 필요한 내용 입력후 빠져나가기
@@ -345,9 +343,9 @@ $ sudo vi .env
 #### 11-1. pipenv 설치
 
 ```bash
-$ cd ~/[프로젝트명]/backend
+cd ~/[프로젝트명]/backend
 
-$ pip install pipenv --three
+pip install pipenv --three
 ```
 
 <br>
@@ -355,7 +353,7 @@ $ pip install pipenv --three
 #### 11-2. 가상환경 실행하기
 
 ``` bash
-$ pipenv shell
+pipenv shell
 ```
 
 <br>
@@ -363,9 +361,9 @@ $ pipenv shell
 #### 11-3. 필요한 패키지 설치하기
 
 ```  bash
-$ pipenv install -r requirements.txt
+pipenv install -r requirements.txt
 
-$ pipenv install mysql-client
+pipenv install mysql-client
 ```
 
 <br>
@@ -379,7 +377,7 @@ $ pipenv install mysql-client
 #### 12-1. gunicorn 설치
 
 ```bash
-$ pipenv install gunicorn
+pipenv install gunicorn
 ```
 
 <br>
@@ -389,7 +387,7 @@ $ pipenv install gunicorn
 - web server gateway interface
 
   ```bash
-  $ gunicorn django_server.wsgi:application -b 0.0.0.0:8000  --daemon
+  gunicorn django_server.wsgi:application -b 0.0.0.0:8000  --daemon
   ```
 
   - `--daemon`  붙이면 Background에서 실행됨
@@ -399,7 +397,7 @@ $ pipenv install gunicorn
 #### 12-3. 잘 실행되고 있는지 확인
 
 ``` bash
-$ lsof -i TCP:8000
+lsof -i TCP:8000
 ```
 
 <br>
@@ -407,7 +405,7 @@ $ lsof -i TCP:8000
 #### 12-4. nginx 재실행
 
 ``` bash
-$ sudo service nginx restart
+sudo service nginx restart
 ```
 
 <br>
@@ -433,19 +431,19 @@ $ sudo service nginx restart
 ### backend 수정 시
 
 ```bash
-$ lsof -i TCP:8000
+lsof -i TCP:8000
 
-$ sudo kill -9 pid번호
+sudo kill -9 pid번호
 
-$ git pull origin master
+git pull origin master
 
-$ cd backend
+cd backend
 
-$ pipenv shell
+pipenv shell
 
-$ gunicorn django_server.wsgi:application -b 0.0.0.0:8000 --daemon
+gunicorn django_server.wsgi:application -b 0.0.0.0:8000 --daemon
 
-$ sudo service nginx restart
+sudo service nginx restart
 ```
 
 <br>
@@ -453,12 +451,11 @@ $ sudo service nginx restart
 ### frontend 수정 시
 
 ```bash
-$ git pull origin master
+git pull origin master
 
-$ cd frontend
+cd frontend
 
-$ npm run build
+npm run build
 
-$ sudo service nginx restart
+sudo service nginx restart
 ```
-

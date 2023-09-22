@@ -1,6 +1,6 @@
 # Vue Loader
 
-> https://vue-loader-v14.vuejs.org/kr/features/scoped-css.html
+> <https://vue-loader-v14.vuejs.org/kr/features/scoped-css.html>
 
 <br>
 
@@ -22,7 +22,7 @@
 
 <br>
 
-### Local style 과 global style 
+### Local style 과 global style
 
 - 하나의 컴포넌트 안에 `scoped` style과 그렇지 않은 style을 동시에 사용할 수 있다
 
@@ -53,7 +53,7 @@
 
 #### `>>>` Combinator
 
--  `scoped` style을 사용하면서 자식 component에도 영향을 미치려면 `>>>` combinator 를 사용하면 된다
+- `scoped` style을 사용하면서 자식 component에도 영향을 미치려면 `>>>` combinator 를 사용하면 된다
 
   ex)
 

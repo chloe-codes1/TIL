@@ -8,7 +8,7 @@
 
 <br>
 
->  Check how big your apt cache is
+> Check how big your apt cache is
 
 ```bash
 sudo du -sh /var/cache/apt/archives
@@ -16,7 +16,7 @@ sudo du -sh /var/cache/apt/archives
 
 <br>
 
-> Clean the apt cache 
+> Clean the apt cache
 
 ```bash
 sudo apt-get clean
@@ -66,7 +66,7 @@ sudo journalctl --vacuum-time=3d
 
 <br>
 
-### 5.  Clean the thumbnail cache 
+### 5.  Clean the thumbnail cache
 
 - Ubuntu automatically creates a thumbnail, for viewing in the file manager.
 - It stores those thumbnails in a hidden directory in your user account at the location ~/.cache/thumbnails.
@@ -86,4 +86,3 @@ du -sh ~/.cache/thumbnails
 ```bash
 rm -rf ~/.cache/thumbnails/*
 ```
-

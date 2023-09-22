@@ -22,28 +22,28 @@
 - 다중 app으로 구성되는 경우 이름 중복이 가능하여 `template/{app이름}/{}.html` 으로 구성한다
   - why?
     - 개별 app에 생성된 templates folder의 하위 directory는 template file로 활용된다 (default)
-    - Django는 template file을 탐색하는 과정에서 `settings.py`의 `DIR`과 `INSTALLED_APPS`의 선언 순서에 따르기 때문에 이름 중복을 막고자 **template** 밑에 **app 이름**과 동일한 folder를 둔다 
+    - Django는 template file을 탐색하는 과정에서 `settings.py`의 `DIR`과 `INSTALLED_APPS`의 선언 순서에 따르기 때문에 이름 중복을 막고자 **template** 밑에 **app 이름**과 동일한 folder를 둔다
 
 <br>
 
 ### 1. Project 생성
 
 ```bash
-$ django-admin startproject {프로젝트 명}
+django-admin startproject {프로젝트 명}
 ```
 
 <br>
 
 ### 2. Project 기본 설정 - `settings.py`
 
-1. 
+1.
 
 ```python
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ```
 
-2. 
+2.
 
 ```python
 TEMPLATES = [
@@ -65,7 +65,7 @@ TEMPLATES = [
 ]
 ```
 
-3. 
+3.
 
 ```python
 DATABASES = {
@@ -83,7 +83,7 @@ DATABASES = {
 - app이름은 일반적으로 복수형으로 구성된다
 
   ```bash
-  $ python manage.py startapp articles
+  python manage.py startapp articles
   ```
 
 - app 등록
@@ -134,8 +134,6 @@ urlpatterns = [
     path('', views.index),
     ]
 ```
-
-
 
 <br>
 
@@ -195,8 +193,6 @@ urlpatterns = [
 
 <br>
 
-
-
 | Model                       | Migration                       | ORM (Query mtehods, QuerySet API)                     |
 | :-------------------------- | ------------------------------- | ----------------------------------------------------- |
 | MTV pattern에서 데이터 관리 | Model로 정의된 db schema를 반영 | db를 조작하는 query문 (python 객체 조작으로 가능하다) |
@@ -204,8 +200,6 @@ urlpatterns = [
 <br>
 
 <br>
-
-
 
 ## Model 활용
 
@@ -242,8 +236,7 @@ class Article(models.Model):
     - `auto_now_add` : (선택) 생성시에만 자동으로 해당 시간 값 설정
     - `auto_now` : (선택) 수정시마다 자동으로 해당 시간 값 설정
 
-  
-  - 이외의 필드는 https://docs.djangoproject.com/ko/2.1/ref/models/fields/#field-types 링크에서 확인!
+  - 이외의 필드는 <https://docs.djangoproject.com/ko/2.1/ref/models/fields/#field-types> 링크에서 확인!
 
 <br>
 
@@ -315,32 +308,30 @@ Running migrations:
 - 마이그레이션 생성
 
   ```bash
-  $ python manage.py makemigrations
+  python manage.py makemigrations
   ```
 
 - 마이그레이션 DB 반영 여부 확인
 
   ```bash
-  $ python manage.py showmigratons
+  python manage.py showmigratons
   ```
 
 - 마이그레이션에 대응되는 SQL문 출력
 
   ```bash
-  $ python manage.py sqlmigrate app_label migration_name
+  python manage.py sqlmigrate app_label migration_name
   ```
 
 - 마이그레이션 파일의 내용을 DB에 최종 반영
 
   ```bash
-  $ python manage.py migrate
+  python manage.py migrate
   ```
 
 <br>
 
 <br>
-
-
 
 `+`
 
@@ -378,18 +369,18 @@ admin.site.register(Article)
 > python interactive interpreter를 django 프로젝트에 맞게 쓸 수 있는 기능
 
 ```bash
-$ python manage.py shell
+python manage.py shell
 ```
 
 - 추가적인 패키지 설치를 통해 편하게 활용할 수 있다.
 
   ```bash
-  $ pip install django-extensions ipython
+  pip install django-extensions ipython
   ```
 
   - django-extensions 는 django 개발에 있어서 유용한 기능들을 기본적으로 제공한다.
 
-    - https://github.com/django-extensions/django-extensions
+    - <https://github.com/django-extensions/django-extensions>
   - `ipython` 은 인터렉티브 쉘을 조금 더 편하게 활용하기 위해서 설치
 
 - 설치 이후에, settings.py 에 다음의 내용을 추가한다. (콤마 유의)
@@ -406,12 +397,10 @@ $ python manage.py shell
 - 그리고 이제부터는 아래의 명령어를 사용한다.
 
   ```bash
-  $ python manage.py shell_plus
+  python manage.py shell_plus
   ```
 
   <br>
-
-
 
 #### 1. 생성
 
@@ -515,10 +504,6 @@ admin.site.register(Article)
 
 - /admin/ url로 접속하여, 관리자 계정으로 로그인
 
-
-
-
-
 <br>
 
 <br>
@@ -541,8 +526,6 @@ COMMIT;
 
 <br>
 
-
-
 #### Fat Model
 
 - MVC
@@ -552,7 +535,4 @@ COMMIT;
 
  -> *Make model fat!!!!*
 
-
-
 <br>
-

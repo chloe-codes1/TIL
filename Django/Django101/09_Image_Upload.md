@@ -9,7 +9,7 @@
 - 단순 ImageField를 활용하기 위해서는 `pillow` 패키지가 반드시 필요하다.
 
 ```bash
-$ pip install pillow
+pip install pillow
 ```
 
 #### 1-2. resizing
@@ -17,10 +17,8 @@ $ pip install pillow
 - Resizing을 위해서는 pilkit, django-imagekit 패키지가 필요하다.
 
 ```bash
-$ pip install pilkit django-imagekit
+pip install pilkit django-imagekit
 ```
-
-
 
 <br>
 
@@ -133,14 +131,6 @@ urlpatterns = [
     <img src="{{post.image_thumbnail.url}}"/>
 ```
 
-
-
-
-
-
-
-
-
 ## migrations
 
 ```python
@@ -160,8 +150,6 @@ Type 'exit' to exit this prompt
 
 ```
 
-
-
 <br>
 
 <br>
@@ -174,14 +162,14 @@ Type 'exit' to exit this prompt
 
 #### Download & usage
 
-https://github.com/matthewwithanm/django-imagekit
+<https://github.com/matthewwithanm/django-imagekit>
 
 <br>
 
 ### Installation
 
 ```bash
-$ pip install pilkit django-imagekit
+pip install pilkit django-imagekit
 ```
 
 <br>
@@ -194,4 +182,3 @@ ProcessedImageField(upload_to='avatars',
                                            format='JPEG',
                                            options={'quality': 60})
 ```
-

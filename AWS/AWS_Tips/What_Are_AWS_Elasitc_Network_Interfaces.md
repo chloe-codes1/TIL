@@ -2,7 +2,7 @@
 
 > ENI에 대해 알아보아요
 >
-> Reference: https://speakerdeck.com/twkiiim/amazon-vpc-deep-dive-eni-reul-almyeon-vpc-ga-boinda
+> Reference: <https://speakerdeck.com/twkiiim/amazon-vpc-deep-dive-eni-reul-almyeon-vpc-ga-boinda>
 
 <br>
 
@@ -94,4 +94,3 @@ The Hyperplane ENI is a managed network resource that the Lambda service control
 
 - VPC 및 Subnet을 선택해서 **직접 만든 VPC**와 **연동**된다
 - 해당 Subnet에 **ENI**가 자동으로 생성되고, 이를 통해 **VPC 내부 resource**와 통신이 가능하다!!
-

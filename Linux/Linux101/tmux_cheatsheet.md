@@ -65,49 +65,49 @@ Linux shell을 사용할 때 겪는 아래와 같은 어려움을 tmux를 통해
 start new session:
 
 ```bash
-$ tmux
+tmux
 ```
 
 start new with session name:
 
 ```bash
-$ tmux new -s SESSION_NAME
+tmux new -s SESSION_NAME
 ```
 
 attach:
 
 ```bash
-$ tmux a  #  (or at, or attach)
+tmux a  #  (or at, or attach)
 ```
 
 attach to named:
 
 ```bash
-$ tmux a -t SESSION_NAME
+tmux a -t SESSION_NAME
 ```
 
 list sessions:
 
 ```bash
-$ tmux ls
+tmux ls
 ```
 
 exit tmux:
 
 ```bash
-$ ctrl d
+ctrl d
 ```
 
 kill session:
 
 ```bash
-$ tmux kill-session -t SESSION_NAME
+tmux kill-session -t SESSION_NAME
 ```
 
 Kill all the tmux sessions:
 
 ```bash
-$ tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
 ```
 
 <br>
@@ -120,7 +120,7 @@ $ tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | x
 
 ### Prefix
 
-- `.tmux.conf` 에서 따로 설정을 하지 않으면, default prefix는 ` ctrl + b` 이다
+- `.tmux.conf` 에서 따로 설정을 하지 않으면, default prefix는 `ctrl + b` 이다
 - prefix 와 아래의 commands 를 조합하여 사용한다
 
 <br>
@@ -130,7 +130,7 @@ $ tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | x
 vi editor로 $HOME 경로에 ~/.tmux.conf file 열기
 
 ```bash
-$ sudo vi ~/.tmux.conf
+sudo vi ~/.tmux.conf
 ```
 
 `.tmux.conf` 에 추가할 내용:
@@ -145,7 +145,7 @@ bind-key C-a send-prefix
 변경된 `.tmux.conf` 적용:
 
 ```bash
-$ tmux source-file ~/.tmux.conf
+tmux source-file ~/.tmux.conf
 ```
 
 <br>
@@ -200,6 +200,3 @@ t  # big clock
 ?  # list shortcuts
 :  # prompt
 ```
-
-
-

@@ -148,7 +148,7 @@ if __name__ == '__main__':
       return content
    
   def test_handler(load_file):
-    	handler(load_file)
+     handler(load_file)
   ```
 
 <br>
@@ -179,8 +179,5 @@ if __name__ == '__main__':
     
   @pytest.mark.xfail
   def test_handler_with_wrong_format_file(self, load_wrong_format_file):
-    	handler(load_wrong_format_file)
+     handler(load_wrong_format_file)
   ```
-
-  
-

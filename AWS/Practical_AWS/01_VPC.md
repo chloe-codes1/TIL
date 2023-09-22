@@ -74,15 +74,13 @@
 
 ![dns](../../images/dns.png)
 
-- `DNS hostnames` 
+- `DNS hostnames`
 
   - enable 되어 있으면 AWS domain을 통해 **DNS lookup**이 가능하다
 
 - `DNS resolution`
 
-  - Disable 하면 
+  - Disable 하면
 
     - EKS 연결시 문제가 발생할 수 있다
     - Route 53으로 alias 연결이 불가능하다
-
-    

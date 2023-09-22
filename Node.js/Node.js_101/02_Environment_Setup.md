@@ -15,10 +15,10 @@
 > Debian
 
 ```bash
-$ sudo apt-get update
-$ sudo apt-get install nodejs
-$ sudo apt-get install npm
-$ sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
 <br>
@@ -26,9 +26,9 @@ $ sudo ln -s /usr/bin/nodejs /usr/bin/node
 > Redhat
 
 ```bash
-$ sudo yum install epel-release
-$ sudo yum install nodejs
-$ sudo yum install npm
+sudo yum install epel-release
+sudo yum install nodejs
+sudo yum install npm
 ```
 
 <br>
@@ -41,7 +41,7 @@ $ sudo yum install npm
 
 <br>
 
->  main.js
+> main.js
 
 ```javascript
 console.log("Hello, Node.js!")
@@ -62,7 +62,5 @@ $node main.js
 ```bash
 Hello, Node.js!
 ```
-
-
 
 <br>

@@ -6,7 +6,7 @@
 
 <br>
 
-## 1. useState 
+## 1. useState
 
 - 가장 기본적인 `Hook` 으로서, **functional component** 에서도 가변적인 상태를  지니고 있을 수 있게 해줌
 - 함수형 component에서 상태를 관리해야 될 때, `Hook`을 사용하면 된다!
@@ -15,7 +15,7 @@
 
 <br>
 
-## 2. useEffect 
+## 2. useEffect
 
 - React component가 rendering 될 때마다 특정 작업을 수행하도록 설정할 수 있는 `Hook`
 - **class component** 의 `componentDidMount` 와 `componentDidUpdate` 를 합친 것이라고 보면 됨!
@@ -53,4 +53,3 @@ useEffect( () => {
 <br>
 
 <br>
-

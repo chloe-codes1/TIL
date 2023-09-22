@@ -14,8 +14,6 @@
 
 <br><br>
 
-
-
 ### 함수 호이스팅
 
 - JavaScript 에서는 모든 선언이 호이스팅 된다
@@ -109,7 +107,7 @@
 
 - `every`
 
-  - 모든 배열 요소 call-back 함수에서 제시하는 요소 통과 시 return  **true**, 실패 시 return **false** 
+  - 모든 배열 요소 call-back 함수에서 제시하는 요소 통과 시 return  **true**, 실패 시 return **false**
 
     ```javascript
     function isBigEnough(element, index, array){
@@ -144,10 +142,6 @@
     : 자신만의 유효 범위 설정
 
     - 함수 내부에서 선언된 변수 => 함수 내부에서만 유효
-
-
-
-
 
 ### Closure
 

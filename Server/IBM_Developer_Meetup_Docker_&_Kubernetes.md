@@ -1,8 +1,7 @@
 ```shell
-$ docker ps
-$ docker container ls
+docker ps
+docker container ls
 
-$ docker image pull node:12-alpine 
-$ docer image ls
+docker image pull node:12-alpine 
+docer image ls
 ```
-

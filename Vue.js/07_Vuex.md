@@ -4,7 +4,7 @@
 
 ## What is Vuex?
 
-> https://vuex.vuejs.org/
+> <https://vuex.vuejs.org/>
 
 <br>
 
@@ -97,10 +97,10 @@
 
 <br>
 
->  Add vuex
+> Add vuex
 
 ```bash
-$ vue add vuex
+vue add vuex
 ```
 
 <br>

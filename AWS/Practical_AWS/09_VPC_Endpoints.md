@@ -24,7 +24,7 @@
   - 만든다고 우리 VPC의 IP를 소모하지 않는 resource들의 scope
     - 완전 관리형 services
   - **Internet 통신**을 하게 된다
-    - why? 
+    - why?
       - 우리 VPC 밖에 있으니까!
     - 그렇기 때문에 **Outbound Traffic**, **보안/네트워크 구성** 등을 고려해야 한다
       - 이때 사용하는 service가 바로 `VPC Endpoints`다!!

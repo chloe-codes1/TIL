@@ -1,22 +1,12 @@
 # Serverless
 
-
-
 ```
 Serverless != No service
 
 Serverless == you do not have a server that you are going to be managing & putting entire application
 ```
 
-
-
-
-
-
-
 ### How we got here?
-
-
 
 1. D.I.A.Y
 
@@ -30,25 +20,13 @@ Serverless == you do not have a server that you are going to be managing & putti
 
 ​          ---> and Serverless!!
 
-
-
-
-
 #### Serverless
 
 > Building software without worrying about servers
 
-
-
-
-
 ### How does serverless work?
 
 ![image-20200213130649793](Images/image-20200213130649793.png)
-
-
-
-
 
 ### Pros and cons
 
@@ -63,10 +41,6 @@ Serverless == you do not have a server that you are going to be managing & putti
   - higher latency
   - vendor lock-in
 
-
-
-
-
 <br/>
 
 ### Serverless providers
@@ -75,11 +49,7 @@ Serverless == you do not have a server that you are going to be managing & putti
 2. Google cloud functions
 3. Google Firebase
 
-
-
 <br/>
-
-
 
 ### What you can do with Serverless
 
@@ -89,4 +59,3 @@ Serverless == you do not have a server that you are going to be managing & putti
 - IoT services
 - Big data applications
 - Event-driven systems
-

@@ -8,7 +8,7 @@
 
 <br>
 
-### tilde (~) 
+### tilde (~)
 
 : ***Approximately equivalent to version***
 
@@ -33,7 +33,7 @@
 
   - Node.js를 비릇한 npm module은 모두 `SemVer` 를 따르고 있다
 
-    - #### npm version의 의미
+- #### npm version의 의미
 
       ```
       {MAJOR}.{MINOR}.{PATCH}
@@ -68,4 +68,3 @@
   - MAJOR version의 증가 없니, 미래의 MINOR/PATCH를 update 한다
   - ex)
     - `^2.3.4`: will use releases from `2.3.4` to `<3.0.0`
-

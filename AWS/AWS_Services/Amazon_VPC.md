@@ -12,10 +12,10 @@
 
 - Amazon에서 제공하는 **private**한 네트워크 망 서비스
   - 사용자에게 aws 계정 전용 네트워크망을 만들어주는 서비스
-- VPC를 적용하면 
+- VPC를 적용하면
   - VPC별로 Network를 구성할 수 있고,
   - 각각의 VPC에 따라 Network 설정을 다르게 줄 수 있다
-- 각각의 VPC는 완전히 독립된 네트워크처럼 작동한다 
+- 각각의 VPC는 완전히 독립된 네트워크처럼 작동한다
 
 <br>
 
@@ -69,7 +69,7 @@
   - 어떤 machine (ex. EC2)에서 **outbound**로 나가는 traffic이 어디로 나가느냐에 대한것
     - 내부로 나가느냐 외부로 나가느냐에 대한 규칙을 정하는 table
   - 네트워크 요청이 발생하면 data는 우선 **router**로 향하게 된다
-    - 네트워크 요청은 각각 정의된 **routing table**에 따라 작동한다 
+    - 네트워크 요청은 각각 정의된 **routing table**에 따라 작동한다
       - 위의 그림에서,
         - **서브넷 A 라우팅테이블**은 `172.31.0.0/16`, 즉, VPC 안의 네트워크 범위를 갖는 네트워크 요청은 local에서 찾도록 되어있다
           - but, 그 이외에 외부로 통하는 traffic은 처리할 수 없다
@@ -88,7 +88,7 @@
         - **서브넷 B 라우팅 테이블**을 보면 `0.0.0.0/0`으로 정의되어있다
           - 이것은 모든 traffic에 **대하여 IGA(Internet Gateway) A**로 향하라는 뜻이다
             - **Routing table**은 가장 먼저 목적지의 주소가 `172.31.0.0/16`에 매칭되는지 확인한 후,
-              - 매칭되지 않는다면 **IGA A**로 traffic을 보낸다 
+              - 매칭되지 않는다면 **IGA A**로 traffic을 보낸다
   - 라우팅 테이블에 인터넷으로 나가는 서비스가 `Internet Gateway` 를 통한다면 **Public Subnet**이라고 부른다
 
 <br>
@@ -117,12 +117,12 @@
       - 동작하는 보안그룹은 모든 허용을 차단하도록 기본 설정 되어있다
         - 그래서 필요한 설정을 허용해줘야 한다
       - Network ACL과 다르게 보안그룹은 별도의 traffic을 설정할 수 있으며,
-        - Subnet에도 설정할 수 있지만 각각의 EC2 instance에도 적용할 수 있다 
+        - Subnet에도 설정할 수 있지만 각각의 EC2 instance에도 적용할 수 있다
     - `Network ACL`은 **stateless** 하게 작동하며,
       - 모든 traffic이 기본 설정으로 되어있기 때문에
         - 불필요한 traffic을 막도록 해야한다
           - Subnet 단위로 적용되며, resource별로는 설정할 수 없다
-    - Network ACL과 보안그룹이 충돌한다면 보안그룹이 더 높은 우선순위를 갖는다! 
+    - Network ACL과 보안그룹이 충돌한다면 보안그룹이 더 높은 우선순위를 갖는다!
 
  <br>
 
@@ -132,22 +132,3 @@
   - `Internet gateway`, `NAT device`, `VPC 연결` 또는 AWS Direct Connect 연결을 필요로 하지 않고, `PrivateLink` 구동 지원 및 AWS 서비스 및 VPC Endpoint service에 VPC를 비공개로 연결할 수 있다
   - **VPC의 Instance**는 **서비스의 resource** 와 통신하는 데 **Public IP**를 필요로 하지 않는다!
   - VPC와 기타 서비스 간의 traffic은 Amazon Network를 벗어나지 않는다
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

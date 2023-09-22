@@ -13,14 +13,14 @@
 ### MySQL 접속
 
 ```bash
-$ mysql -u [username] -p
+mysql -u [username] -p
 ```
 
 - Password 입력
 
 <br>
 
-### Database 만들기 
+### Database 만들기
 
 ```mysql
 mysql> CREATE DATABASE [database 이름];
@@ -101,10 +101,8 @@ OperationalError: (1366, "Incorrect string value: '\\xEB\\xA1\\x9C\\xEA\\xB1\\xB
    - 위의 설정 추가 후 재시작
 
      ```bash
-     $ sudo /etc/init.d/mysql restart
+     sudo /etc/init.d/mysql restart
      ```
-
-     
 
 2. `table` character set 설정
 
@@ -118,10 +116,6 @@ OperationalError: (1366, "Incorrect string value: '\\xEB\\xA1\\x9C\\xEA\\xB1\\xB
    mysql> alter database DB_NAME default character set utf8 collate utf8_general_ci;
    ```
 
-   
-
-
-
 <br>
 
 ## 2. Django 연동
@@ -131,7 +125,7 @@ OperationalError: (1366, "Incorrect string value: '\\xEB\\xA1\\x9C\\xEA\\xB1\\xB
 ### 설치
 
 ```bash
-$ pip install mysqlclient
+pip install mysqlclient
 ```
 
 - 여기서 에러 발생함!
@@ -164,16 +158,12 @@ $ pip install mysqlclient
 - 해결 방법
 
   ```bash
-  $ sudo apt-get install libmysqlclient-dev
+  sudo apt-get install libmysqlclient-dev
   ```
 
   ```bash
-  $ sudo apt-get install python-dev
+  sudo apt-get install python-dev
   ```
-
-  
-
-
 
 <br>
 
@@ -219,8 +209,8 @@ DATABASES = {
 #### 3. fake migration
 
 ```bash
-$ python manage.py makemigrations
-$ python manage.py migrate --fake
+python manage.py makemigrations
+python manage.py migrate --fake
 ```
 
 #### 4. Comment-in the model
@@ -228,8 +218,8 @@ $ python manage.py migrate --fake
 #### 5.  migration
 
 ```bash
-$ python manage.py makemigrations
-$ python manage.py migrate 
+python manage.py makemigrations
+python manage.py migrate 
 ```
 
 <br>
@@ -243,4 +233,3 @@ SET FOREIGN_KEY_CHECKS = 0;
 drop table if exists [TABLE_NAME];
 SET FOREIGN_KEY_CHECKS = 1;
 ```
-

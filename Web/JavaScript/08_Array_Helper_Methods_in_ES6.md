@@ -2,11 +2,9 @@
 
 <br>
 
-
-
 ## Callback function
 
-<br>            
+<br>
 
 ### Callback function 이란? - MDN
 
@@ -47,8 +45,6 @@ const newNumbers2 = numbers.map(function(number) {
 console.log(newNumbers2)
 ```
 
-
-
 <br>
 
 ### 2. forEach()
@@ -71,8 +67,6 @@ nums.forEach(function(number){
 
 console.log('밍?'+nums)
 ```
-
-
 
 <br>
 
@@ -104,7 +98,7 @@ ex)
 ```javascript
 // 4. find
 const evens = [1,2,3,4].find(function(number) {
-	// filter()와는 다르게 find()는 함수가 true를 return하면 바로 종료됨
+ // filter()와는 다르게 find()는 함수가 true를 return하면 바로 종료됨
     return !(number & 1)
 })
 console.log('짝수 찾아라~ ', evens)
@@ -130,4 +124,3 @@ console.log('통과입니까? ',pass)
 <br>
 
 <br>
-

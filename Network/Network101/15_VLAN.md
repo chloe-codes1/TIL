@@ -13,7 +13,7 @@
     - 별도의 switch 처럼 동작한다
 - 기업에서의 부서별 네트워크 분할 및 스마트폰, PC 등 다수의 단말이 네트워크에 연결됨에 따라 **네트워크 분할**이 중요하다
   - **네트워크 분할이 필요한 이유**
-    1. **과도한 broadcast**로 인한 단말들의 **성능 저하** 
+    1. **과도한 broadcast**로 인한 단말들의 **성능 저하**
     2. 보안 향상을 위한 차단 용도
     3. 서비스 성격에 따른 정책 적용
 - `VLAN`을 나누면 하나의 장비를 **서로 다른 network를 갖도록 논리적으로 분할**한 것이므로 `Unicast` 뿐만 아니라 `Broadcast` 도 **VLAN 간에 통신할 수 없다**
@@ -39,7 +39,7 @@
   - 어떤 단말이 접속하든지 **switch의 특정 port**에 **VLAN을 할당**하면 할당된 VLAN에 속하게 된다
 
 - `Port Based VLAN`으로 설정된 switch에서 **VLAN 설정 기준은 Switch의 port** 이다
-  - ex) 
+  - ex)
     - AA PC가 1번 port에 연결되면 VLAN 10에 속하고, 4번 port에 연결되면 VLAN 20에 속한다
 
 <br>
@@ -52,7 +52,7 @@
 - 단말이 연결되면, 단말의 MAC Address를 인식한 switch가 해당 port를 지정된 VLAN으로 변경한다
   - 단말에 따라 VLAN 정보가 바뀔 수 있어 `Dynamic VLAN`이라고도 부른다
 
-- `Mac Based VLAN`의 **VLAN 할당 기준**은 **PC의 MAC주소**이다 
+- `Mac Based VLAN`의 **VLAN 할당 기준**은 **PC의 MAC주소**이다
   - ex)
     - AA PC는 **어떤 switch의 어떤 port**에 접속하더라도 **동일한 VLAN**이 할당된다
 
@@ -72,7 +72,7 @@
   - VLAN이 분할된 switch는 **물리적인 별도의 switch로 취급**된다
   - ex)
     - Switch 하나에 3개의 VLAN이 구성되어 있는 경우, **각 VLAN이 switch 간에 통신**하려면 3개의 port가 필요하다
-      - VLAN을 더 많이 사용하는 중/대형 network에서 이렇게 VLAN별로 port를 연결하면 **장비 간의 연결**만으로도 **많은 port가 낭비**된다 
+      - VLAN을 더 많이 사용하는 중/대형 network에서 이렇게 VLAN별로 port를 연결하면 **장비 간의 연결**만으로도 **많은 port가 낭비**된다
   - 이 문제를 해결하기 위해 `VLAN Tag 기능`이 등장했다!
 
 <br>
@@ -119,6 +119,6 @@
 
 ### VLAN 간 통신
 
--  VLAN은 switch 통신을 분할하는 기능 때문에 `unicast`, `multicast`, `broadcast`모두 VLAN을 넘어가지 못한다
+- VLAN은 switch 통신을 분할하는 기능 때문에 `unicast`, `multicast`, `broadcast`모두 VLAN을 넘어가지 못한다
 - 일반적으로 VLAN이 다르다는 것은 **별도의 network로 분할**한 것이기 때문에 **network가 다르고**, **IP 주소 할당도 다른 network로 할당**되는 것이 일반적이다
   - 다른 network 간의 통신이 필요하다면 `router`와 같은 **3계층 장비**의 도움이 필요하다  

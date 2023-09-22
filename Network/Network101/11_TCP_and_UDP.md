@@ -8,7 +8,7 @@
 
 - 2계층과 3계층은 목적지를 정확히 찾아가기 위한 **주소 제공**이 목적이었지만, 4계층에서 동작하는 protocol은 만들어진 목적이 2, 3 계층과 조금 다르다
   - 목적지 단말 안에서 동작하는 여러 application process 중 **통신해야 할 목적지 process**를 정확히 찾아가고,
-  - packet 순서가 바뀌지 않도록 잘 **조합**해 
+  - packet 순서가 바뀌지 않도록 잘 **조합**해
   - **원래 data**를 잘 만들어내기 위한 역할을 한다
 
 <br>
@@ -40,7 +40,7 @@
 - **동적**, **사설**, **임시** port 의 범위는 `49152 ~ 65535` 이다
   - 이 범위의 port 번호는 IANA에 등록되어 사용되지 않는다
   - 이 port 번호는 자동으로 할당되거나, 사설 용도로 할당되고, client의 임시 port 번호로 사용된다!
-- [IANA가 관리하는 Port 확인하기](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) 
+- [IANA가 관리하는 Port 확인하기](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
 <br>
 
@@ -49,8 +49,8 @@
 ## 2. TCP
 
 - TCP는 Layer 4의 특징을 대부분 포함하고 있다
-- TCP protocol은 신뢰할 수 없는 공용망에서도 **정보유실** 없는 통신을 보장하기 위해 
-  - session을 안전하게 연결하고 
+- TCP protocol은 신뢰할 수 없는 공용망에서도 **정보유실** 없는 통신을 보장하기 위해
+  - session을 안전하게 연결하고
   - data를 분할하고
   - 분할된 packet이 잘 전송되었는지 확인하는 기능이 있다
 - Packet 에 번호(`Sequence Number`)를 부여하고 잘 전송되었는지에 대해 응답(`Acknowledge Number`) 한다
@@ -105,7 +105,7 @@ ex)
       - 이 방법을 사용하면 기존 숫자의 10배, 100배로 window가 커진다!
 - TCP는 **data 유실**이 발생하면 window size를 **절반**으로 떨어뜨리고 정상적인 통신이 되는 경우 서서히 하나씩 늘린다
   - 만약 **Network 경합**이 발생해 `packet drop`이 생기면 작아진 window size로 인해 data 통신 속도가 느려져 회선을 제대로 사용하지 못하는 상황이 발생할 수 있다
-    - 이 경우 경합을 피하기 위해 
+    - 이 경우 경합을 피하기 위해
       1. 회선 속도를 증가시키거나
       2. 경합을 임시로 피하게 할 수 있는 **buffer가 큰 network 장비**르ㄹ 사용하거나
       3. **TCP 최적화 solution**을 사용해 이런 문제들을 해결할 수 있다
@@ -161,7 +161,7 @@ ex)
 
 - TCP와 달리 UDP는 Layer 4 protocol이 가져야 할 특징이 거의 없다
   - 4계층에서는 **신뢰성 있는 통신**을 위해 아래와 같은 작업을 수행했다
-    - **연결을 미리 확립 (3-Way Handshake)** 
+    - **연결을 미리 확립 (3-Way Handshake)**
     - Data를 잘 **분할**하고 **조립**하기 위해 `packet 번호`를 부여하고 수신된 data에 대해 응답
     - Data를 특정 단위(`Window Size`)로 보내고 memory에 유지하다가 `ACK Number`를 받은 후 통신이 잘 된 상황을 파악하고나서야 memory에서 이 data들을 제거
     - 만약 중간에 **유실**이 있으면 `Sequence Number`와 `ACK Number`를 비교해가며 이를 파악하고, memory에 유지해놓은 data를 이용해 **재전송**
@@ -203,13 +203,12 @@ ex)
 
 #### Communication channels in telecommunications
 
-- 단방향 통신(**simplex** communication) 
+- 단방향 통신(**simplex** communication)
   - 단방향 전송
   - ex) TV, Radio
 - 반이중 통신(**half-duplex** communication)
   - 양방향으로 전송이 가능하지만, 동시에 양쪽에서는 전송할 수 없다
   - ex) 무전기
-- 전이중 통신(**full-duplex** communication) 
+- 전이중 통신(**full-duplex** communication)
   - 동시에 양방향 전송이 가능하다
   - ex) 전화기
-

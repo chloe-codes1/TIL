@@ -20,7 +20,7 @@
   - public
   - private
 - 꼭 subnet의 이름으로 `public` 이나 `private`을 쓰지 않아도 된다
-- DB subnet을 별도로 나누는 것은 취향차이다 
+- DB subnet을 별도로 나누는 것은 취향차이다
 
 <br>
 
@@ -35,4 +35,3 @@
     - but, resource 생성 시 **subnet option** 이 두 가지가 되므로 어떤 subnet을 선택할지 고민 될 것이다..
       - 중간에 추가로 subnet을 만들지 말고 처음에 잘 설계하자!
   - Subnet을 VPC 빈공간에 추가로 생성할 수는 있지만, Subnet 두 개를 **합칠 수는 없다**
-

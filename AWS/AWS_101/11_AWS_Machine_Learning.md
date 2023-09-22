@@ -20,8 +20,6 @@
   - You need to stitch together tools and workflows, which is time-consuming and error-prone
   - `SageMaker` solves this challenge by **providing all of the components used for machine learning in a single tool set** so models get to production faster with much less effort and at lower cost
 
-
-
 <br>
 
 <br>
@@ -39,11 +37,11 @@
 
 <br>
 
-### Recommendations 
+### Recommendations
 
 ### : `Amazon Personalize`
 
->  Amazon Personalize is a machine learning service that makes it easy for developers to create individualized recommendations for customers using their applications.
+> Amazon Personalize is a machine learning service that makes it easy for developers to create individualized recommendations for customers using their applications.
 
 <br>
 
@@ -192,10 +190,6 @@
 ### : `AMAZON CODEGURU`
 
 > Automate code reviews and identify your most expensive lines of code.
-
-
-
-
 
 <br><br>
 

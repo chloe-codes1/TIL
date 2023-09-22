@@ -20,15 +20,11 @@ if( condition ) {
 }
 ```
 
-
-
 <br>
 
+### switch statement
 
-
- ### switch statement
-
-- a multi-way branch **statement**. 
+- a multi-way branch **statement**.
 - provides an easy way to dispatch execution to different parts of code based on the value of the expression
 
 ```java
@@ -69,10 +65,6 @@ break;
   수행문;
 ```
 
-
-
-
-
 <br><br>
 
 ## Loops
@@ -98,8 +90,6 @@ for (초기식 ; 조건식 ; 증감식) {
 }
 ```
 
-
-
 <br>
 
 ### 다중 for 문
@@ -120,8 +110,6 @@ for (초기식1 ; 조건식1 ; 증감식1) {
 명령어 3;
 ```
 
-
-
 <br>
 
 ### 향상된 for 문 (enhanced for loop)
@@ -136,11 +124,7 @@ for ( 타입 변수명 : 배열 or 컬렉션) {
 }
 ```
 
-
-
 <br>
-
-
 
 ### while 문
 
@@ -158,8 +142,6 @@ while (조건식 ) {
 
 <br>
 
-
-
 ### do ~ while 문
 
 : 조건에 맞지 않아도 일단 1번 실행 한다
@@ -171,8 +153,6 @@ do {
 
 } while (조건식); 
 ```
-
-
 
 <br><br>
 
@@ -200,8 +180,6 @@ for (초기식 ; 조건식 ; 증감식) {
 }
 ```
 
-
-
 <br>
 
 <br>
@@ -226,5 +204,4 @@ for (초기식 ; 조건식 ; 증감식) {
 
 <br>
 
-#### return문은 function 자체를 종료시키는 것이다!
-
+#### return문은 function 자체를 종료시키는 것이다

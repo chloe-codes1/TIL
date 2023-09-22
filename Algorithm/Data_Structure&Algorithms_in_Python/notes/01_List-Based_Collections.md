@@ -1,67 +1,43 @@
 # 01. List-Based Collections
 
-
-
 <br/>
 
 <br/>
-
-
 
 ## 1-1 Linked Lists
 
 - stores a reference to the next element in the list
 - next component is storing the memory address of the next element
 
-
-
 <br/>
 
 ### Linked List & Array
-
-
 
 Main distinction?
 
 : each element stores different information
 
-
-
-
-
 <br/>
 
 <br/>
-
-
 
 ### Pros & Cons
-
-
 
 - Pros
 
   : pretty easy to insert & delete elements
 
-
-
 - Cons
 
   : need to be careful not to lose references when adding or removing elements
 
-
-
 <br/>
-
-
 
 ### Linked List in Python
 
->  There isn't a built-in data structure in Python that books like a linked list.
+> There isn't a built-in data structure in Python that books like a linked list.
 >
 > But, it's easy to make classes that represent data structures in Python!
-
-
 
 <br/>
 
@@ -125,7 +101,7 @@ class LinkedList(object):
             new_element.next = self.head
             self.head = new_element
             
-	# delete the first element with that particular value
+ # delete the first element with that particular value
     def delete(self, value):
         current = self.head
         previous = None
@@ -139,8 +115,6 @@ class LinkedList(object):
                 self.head = current.next
 ```
 
-
-
 <br/>
 
 <br/>
@@ -149,11 +123,9 @@ class LinkedList(object):
 
 : List-based data structure
 
-​	-> has a bit of a different flair than arrays & linked lists
+​ -> has a bit of a different flair than arrays & linked lists
 
 <br/>
-
-
 
 #### How it works?
 
@@ -162,20 +134,12 @@ class LinkedList(object):
 
 <br/>
 
-
-
-
-
 #### When to use?
 
 - when you only care about the most recent elements
 - the order in which you see & save elements actually matters
 
 <br/>
-
-
-
-
 
 #### Push & Pop
 
@@ -191,19 +155,13 @@ class LinkedList(object):
 
       -> O(1)
 
-
-
 ​                => All you need here is to look at the top element of the stack!
 
 <br/>
 
-
-
-#### Stack == L.I.F.O 
+#### Stack == L.I.F.O
 
 : Last In First Out Structure
-
-
 
 <br/>
 
@@ -212,8 +170,6 @@ class LinkedList(object):
 - `pop()` is a given function
 - `append()` is equivalent to a push function
 
-
-
 <br/>
 
 <br/>
@@ -221,8 +177,6 @@ class LinkedList(object):
 Make your own code instead of using `append()` since it traverses the whole list, taking O(n)
 
   -> it will take a lot faster if we push/pop from the first element in a linked list!
-
-
 
 <br/>
 
@@ -277,11 +231,9 @@ class Stack(object):
 
 <br/>
 
+`+` alternative `delete_first()` method
 
-
-`+` alternative `delete_first()` method 
-
-ex) 
+ex)
 
 ```python
 def delete_first(self):
@@ -292,21 +244,13 @@ def delete_first(self):
     return deleted
 ```
 
-
-
 <br/><br/>
-
-
 
 ## Queues
 
-
-
-#### Queues == F.I.F.O 
+#### Queues == F.I.F.O
 
 : First In First Out Structure
-
-
 
 <br/>
 
@@ -322,7 +266,7 @@ def delete_first(self):
 
 <br/>
 
-#### Enqueue & Dequeue 
+#### Enqueue & Dequeue
 
 1. Enqueue
 
@@ -336,11 +280,7 @@ def delete_first(self):
 
    : look at the head element, but not removing it
 
-
-
 <br/><br/>
-
-
 
 ### Deque
 
@@ -350,11 +290,7 @@ def delete_first(self):
 
    -> kind of a generalized version of both stacks & queues since you could represent either of them with it!
 
-
-
 <br/>
-
-
 
 ### Priority Queue
 
@@ -362,19 +298,11 @@ def delete_first(self):
 
 - remove the element with the highest priority when you dequeue
 
-  
-
   -> if the elements have the same priority, the oldest element is the one that gets dequeue first
-
-
 
 <br/>
 
-
-
 ### Queues in Python
-
-
 
 ex)
 
@@ -392,22 +320,3 @@ class Queue:
     def dequeue(self):
         self.storage.pop(0)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

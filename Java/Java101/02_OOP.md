@@ -33,7 +33,7 @@
 
 <br>
 
-###  Inheritance
+### Inheritance
 
 - provides code `re-usability`
 - used to achieve runtime `polymorphism`
@@ -59,11 +59,6 @@
 
 - Binding  (or wrapping) code and data together into a single unit are known as encapsulation
 - A `Java class` is the example of encapsulation
-- `Java bean` is the fully encapsulated class since all the data members are private here 
+- `Java bean` is the fully encapsulated class since all the data members are private here
 
 <br>
-
-
-
-
-

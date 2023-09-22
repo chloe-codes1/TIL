@@ -14,8 +14,6 @@
 
 <br>
 
-
-
 ## Overview
 
 <br>
@@ -44,7 +42,7 @@
 
 ![image-20200309134828549](../../images/image-20200309134828549.png)
 
->  답: B
+> 답: B
 
 <br><br>
 
@@ -53,7 +51,7 @@
 - Object Storage
 - 일관성
 - Storage class 및 내구성 - Standard, Standard-IA
-- 암호화 
+- 암호화
   - 저장데이터
   - 전송데이터
 - 버전 관리
@@ -103,7 +101,7 @@
 
 ![image-20200309135953183](../../images/image-20200309135953183.png)
 
->  답: B, D
+> 답: B, D
 
 <br><br>
 
@@ -114,8 +112,6 @@
 ![image-20200309140033872](../../images/image-20200309140033872.png)
 
 <br>
-
-
 
 ![image-20200309140344479](/home/chloe/SSAFY/TIL/images/image-20200309140344479.png)
 
@@ -143,8 +139,6 @@
 
 <br>
 
-
-
 ### Cloud formation
 
 - AWS서비스를 배포하기 위한 선언형 언어
@@ -168,7 +162,7 @@
 
 ![image-20200309141006364](/home/chloe/SSAFY/TIL/images/image-20200309141006364.png)
 
->  답: C
+> 답: C
 
 <br>
 
@@ -183,8 +177,6 @@
 - RPO (Recovery Point Objective)
 
   : 목표 복구 시점
-
-
 
 <br>
 
@@ -277,7 +269,7 @@
 
 <br>
 
-### DynamoDB: Provisioning 된 처리 용량 
+### DynamoDB: Provisioning 된 처리 용량
 
 > AWS의 대표적인 NoSQL
 
@@ -300,8 +292,6 @@
 ![image-20200309144934818](../../images/image-20200309144934818.png)
 
 <br>
-
-
 
 ![image-20200309145317660](../../images/image-20200309145317660.png)
 
@@ -457,8 +447,6 @@ ex  2)
 
 ![image-20200309153943668](/home/chloe/SSAFY/TIL/images/image-20200309153943668.png)
 
-
-
 - 성능에 대한 확장성은 NAT Gateway가 더 나음
 
 <br>
@@ -476,11 +464,9 @@ ex  2)
 
 ### 저장 데이터
 
->  S3에 저장된 데이터는 기본적으로 프라입시이고 accessㅏ려면 AWS 자격 증명이 필요하다
+> S3에 저장된 데이터는 기본적으로 프라입시이고 accessㅏ려면 AWS 자격 증명이 필요하다
 
 ![image-20200309154502649](../../images/image-20200309154502649.png)
-
-
 
 ![image-20200309154523626](../../images/image-20200309154523626.png)
 
@@ -576,15 +562,11 @@ ex  2)
 
 ![image-20200309161734120](../../images/image-20200309161734120.png)
 
-
-
 <br>
 
 <br>
 
 ![image-20200309161805190](../../images/image-20200309161805190.png)
-
-
 
 <br><br>
 
@@ -604,7 +586,7 @@ ex  2)
 
 <br>
 
--  `AWS Cloud Trail`
+- `AWS Cloud Trail`
 
   : AWS API 단위로 누가 언제 어떤 명령어를 내렸는지 기록을 남김
 
@@ -626,8 +608,6 @@ ex  2)
 
 ![image-20200309162947164](../../images/image-20200309162947164.png)
 
-
-
 <br>
 
 <br>
@@ -639,10 +619,6 @@ ex  2)
 <br>
 
 ![image-20200309163436032](../../images/image-20200309163436032.png)
-
-
-
-
 
 <br>
 

@@ -19,23 +19,23 @@
 
 ### XMLHttpREquest (XHR)
 
-- Use `XMLHttpRequest (XHR)` objects to interact with servers. 
-- You can retrieve data from a URL without having to do a full page refresh. 
-- This enables a Web page to update just part of a page without disrupting what the user is doing. 
+- Use `XMLHttpRequest (XHR)` objects to interact with servers.
+- You can retrieve data from a URL without having to do a full page refresh.
+- This enables a Web page to update just part of a page without disrupting what the user is doing.
 - XMLHttpRequest is used heavily in AJAX programming.
 
 <br>
 
 <br>
 
-## Django API: Ping-Pong 만들기 
+## Django API: Ping-Pong 만들기
 
 <br>
 
 > 가상 환경 만들기
 
 ```bash
-$ python -m venv venv
+python -m venv venv
 ```
 
 <br>
@@ -43,7 +43,7 @@ $ python -m venv venv
 > 해당 프로젝트에서 pip list 찾게 하기
 
 ```bash
-$ source venv/bin/activate
+source venv/bin/activate
 ```
 
 <br>
@@ -73,7 +73,7 @@ $ pip install django==2.1.15
 > installation
 
 ```bash
-$ pip install art
+pip install art
 ```
 
 <br>
@@ -246,4 +246,3 @@ def like_api(request, article_pk):
 
     return JsonResponse(context)  
 ```
-

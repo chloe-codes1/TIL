@@ -4,7 +4,7 @@
 
 ### JSONPlaceholder 사용하기
 
-> https://jsonplaceholder.typicode.com/
+> <https://jsonplaceholder.typicode.com/>
 
 <br>
 
@@ -12,7 +12,7 @@
 
 ### Array concat vs spread operator vs push
 
-> https://www.measurethat.net/Benchmarks/Show/4223/0/array-concat-vs-spread-operator-vs-push
+> <https://www.measurethat.net/Benchmarks/Show/4223/0/array-concat-vs-spread-operator-vs-push>
 
 <br>
 
@@ -50,7 +50,7 @@
 >
 > (대신해서 절차를 수행 -> Framework)
 
-- Vue.js 
+- Vue.js
   - 데이터의 변화에 맞춰 UI를 변경
   - UI 단계  (Hook)
 - == django 의 url('/articles') -> views (list_article())
@@ -65,10 +65,6 @@
 > 레시피 (절차적)
 
 - DOM EventListener
-
-
-
-
 
 <br>
 
@@ -120,10 +116,6 @@ ex)
   - declarative
     - watch로 쓰면 직접 짜야되는 것을 computed에서는 프레임워크가 해준다!!
 
-
-
-
-
 <br>
 
 <br>
@@ -145,14 +137,3 @@ ex)
 ### Cross Origin Resource Sharing (CORS)
 
 - 다른 Source에서 오는 것도 허용 하는 지 여부
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-# One-To-Many Relationship 
+# One-To-Many Relationship
 
 <br>
 
@@ -27,9 +27,10 @@ Out[5]: django.db.models.query.QuerySet
 ```
 
 - Query (method) 할 때
-  - #### 조회 (loop up)
 
-    - `get()` 
+- #### 조회 (loop up)
+
+    - `get()`
       - Returns the **object** matching the given lookup parameters
       - return오직 하나 or Error 발생
       - ex) **RUD (Read / Update / Delete)**
@@ -37,10 +38,10 @@ Out[5]: django.db.models.query.QuerySet
       - Returns a new **QuerySet** containing objects that match the given lookup parameters.
         - (없으면 비어있는 QuerySet)
       - ex) **Search**
-      - `AND` 
+      - `AND`
         - `method chaining`
         - filter. filter. ....
-      - `OR` 
+      - `OR`
         - `Q Object`
         - (Q ( ) | Q ( ) )
       - `LIKE`
@@ -84,7 +85,7 @@ Out[2]: <Article: #1 (1st post - haha)>
 
 - QuerySet을 합쳐진 결과로 보고싶을 때 사용
 
-  - ex) 
+  - ex)
 
     ```python
     # Average price across all books.
@@ -130,8 +131,6 @@ Out[2]: <Article: #1 (1st post - haha)>
     1323
     ```
 
-    
-
 <br>
 
 ### Annotate
@@ -152,10 +151,10 @@ SELECT country, COUNT(country) FROM countries;
 
 - *1 has many N*
 - *N must belong to 1*
-  -  (그래서 cascading이 가능하다)
-    - ex) 
-      - Article has many Comments
-    - Comment belongs to Article
+  - (그래서 cascading이 가능하다)
+  - ex)
+    - Article has many Comments
+  - Comment belongs to Article
 - `Foreign Key`는 **N** 에게 준다
 
 ```python
@@ -191,14 +190,12 @@ class Article(models.Model):
 -- sql
 
 CREATE TABLE "aricles_article" (
-	"id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+ "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "title" VARCHAR(10) NOT NULL,
     "content" TEXT NOT NULL,
     "reporter_id" INTEGER NOT NULL REFERENCES "artices_reporter" ("id") DEFERRABLE INITIALLY DEFERRED
 );
 ```
-
-
 
 <br>
 
@@ -233,9 +230,9 @@ In [5]: article.content = '내용1'
 In [6]: r1 = Reporter.objects.get(pk=1)                 
 
 In [7]: article.reporter = r1                           
-		# reporter_id는 숫자(INTEGER)를 저장
-		# article.reporter_id = 1
-		
+  # reporter_id는 숫자(INTEGER)를 저장
+  # article.reporter_id = 1
+  
 In [8]: article.save()                                  
 
 In [9]: article                                         
@@ -475,7 +472,7 @@ id,first_name,last_name,age,country,phone,balance
 
 <br>
 
-##  Data Integrity
+## Data Integrity
 
 - the maintenance of, and the assurance of the accuracy and consistency of data over its entire life-cycle
 - a critical aspect to the design, implementation and usage of any system which stores, processes, or retrieves data
@@ -484,17 +481,17 @@ id,first_name,last_name,age,country,phone,balance
 
 ### Entity Integrity
 
-- defines each row to be unique within its table. 
+- defines each row to be unique within its table.
   - No two rows can be the same.
 
-- To achieve this, a `primary key` can be defined. 
+- To achieve this, a `primary key` can be defined.
   - The primary key field contains a unique identifier – no two rows can contain the same unique identifier.
 
 ### Referential Integrity
 
-- concerned with relationships. 
-  - When two or more tables have a relationship, we have to ensure that the foreign key value matches the primary key value at all times. 
-  - We don’t want to have a situation where a foreign key value has no matching primary key value in the primary table. 
+- concerned with relationships.
+  - When two or more tables have a relationship, we have to ensure that the foreign key value matches the primary key value at all times.
+  - We don’t want to have a situation where a foreign key value has no matching primary key value in the primary table.
   - This would result in an orphaned record.
 
 So referential integrity will prevent users from:
@@ -505,15 +502,13 @@ So referential integrity will prevent users from:
 
 ### Domain Integrity
 
-- concerns the validity of entries for a given column. 
-- Selecting the appropriate data type for a column is the first step in maintaining domain integrity. 
+- concerns the validity of entries for a given column.
+- Selecting the appropriate data type for a column is the first step in maintaining domain integrity.
 - Other steps could include, setting up appropriate constraints and rules to define the data format and/or restricting the range of possible values.
 
 ### User-Defined Integrity
 
 - allows the user to apply business rules to the database that aren’t covered by any of the other three data integrity types.
-
-
 
 <br>
 
@@ -521,11 +516,9 @@ So referential integrity will prevent users from:
 
 ### Django settings.py
 
-https://github.com/django/django/blob/master/django/conf/global_settings.py
+<https://github.com/django/django/blob/master/django/conf/global_settings.py>
 
 참고하기
-
-
 
 <br>
 
@@ -560,8 +553,6 @@ class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 ```
-
-
 
 ```python
 from onetomany.models import User, Article, Comment
@@ -632,17 +623,11 @@ c6 = Comment.objects.create(content='3글2댓', article=a3, user=u1)
    print(Comment.objects.filter(article__title='1글').query)
    ```
 
-   * 1:N 관계에서 1의 열에 따라서,  필터링
+   - 1:N 관계에서 1의 열에 따라서,  필터링
 
      ```sql
      SELECT "onetomany_comment"."id", "onetomany_comment"."content", "onetomany_comment"."article_id", "onetomany_comment"."user_id" FROM "onetomany_comment" INNER JOIN "onetomany_article" ON ("onetomany_comment"."article_id" = "onetomany_article"."id") WHERE "onetomany_article"."title" = 1글
      ```
-
-
-
-
-
-
 
 <br>
 
@@ -653,14 +638,13 @@ c6 = Comment.objects.create(content='3글2댓', article=a3, user=u1)
 ### Django 에게 맡겨서 `sqlite` 열기
 
 ```bash
-$ python manage.py dbshell
+python manage.py dbshell
 ```
 
-<br> 
+<br>
 
 ### Shell 에서 ORM query 바로 보여주는 option
 
 ```shell
-$ python manage.py shell_plus --print-sql
+python manage.py shell_plus --print-sql
 ```
-

@@ -1,6 +1,6 @@
 # Buffers in Node.js
 
-> Pure JavaScript is Unicode friendly, but it is not so for binary data. 
+> Pure JavaScript is Unicode friendly, but it is not so for binary data.
 >
 > While dealing with TCP streams or the file system, it's necessary to handle octet streams.
 
@@ -65,7 +65,7 @@ buf.write(string[, offset][, length][, encoding])
 
 #### Parameters
 
-- **string** 
+- **string**
 
   - `string data` to be written to buffer
 
@@ -93,7 +93,7 @@ buf.write(string[, offset][, length][, encoding])
 
 ex)
 
->  buffer_write.js
+> buffer_write.js
 
 ```javascript
 buf = new Buffer(256);
@@ -133,7 +133,7 @@ buf.toString([encoding][, start][, end])
   - default is `utf8`
 - **start**
   - beginning index to start reading
-  - defaults is to `0` 
+  - defaults is to `0`
 - **end**
   - end index to end reading
   - default is `complete buffer`
@@ -182,7 +182,7 @@ buf.toJSON()
 
 <br>
 
-ex) 
+ex)
 
 > buffer_toJSON.js
 
@@ -245,11 +245,11 @@ Buffer.concat(list[, totalLength])
 
 #### Parameters
 
-- **list** 
+- **list**
 
   - Array List of Buffer objects to be concatenated.
 
-- **totalLength** 
+- **totalLength**
 
   - This is the total length of the buffers when concatenated.
 
@@ -300,7 +300,7 @@ buf.compare(otherBuffer);
 
 #### Parameters
 
-- **otherBuffer** 
+- **otherBuffer**
   - 위의 syntax 예시에서 `buf`와 비교할 다른 **buffer**
 
 <br>
@@ -368,15 +368,15 @@ buf.copy(targetBuffer[, targetStart][, sourceStart][, sourceEnd])
 
 #### Parameters
 
-- **targetBuffer** 
+- **targetBuffer**
   - Buffer object where buffer will be copied.
-- **targetStart** 
+- **targetStart**
   - Number, Optional
   - Default: `0`
-- **sourceStart** 
+- **sourceStart**
   - Number, Optional
   - Default: `0`
-- **sourceEnd** 
+- **sourceEnd**
   - Number, Optional
   - Default: `buffer.length`
 

@@ -1,4 +1,4 @@
-# Django REST Framework 
+# Django REST Framework
 
 <br>
 
@@ -67,8 +67,6 @@ Template: 데이터를 표시하는 곳
 
 ![image-20200511121142258](../images/image-20200511121142258.png)
 
-
-
 <br>
 
 ### Javscript & framewokr를 분리하는 이유
@@ -82,7 +80,7 @@ Template: 데이터를 표시하는 곳
    - **churn (이탈율)**
    - JS 필수 (Adobe Flash)
 
-2. 분리되어 있는 것이 편해서 
+2. 분리되어 있는 것이 편해서
 
 <br>
 
@@ -91,9 +89,9 @@ Template: 데이터를 표시하는 곳
 ### Django 다시 깔기
 
 ```bash
-$ pip uninstall django
+pip uninstall django
 
-$ pip install django==2.1.15
+pip install django==2.1.15
 ```
 
 <br>
@@ -107,7 +105,7 @@ $ pip install django==2.1.15
 ### faker 설치
 
 ```bash
-$ pip install faker
+pip install faker
 ```
 
 <br>
@@ -138,7 +136,7 @@ Out[6]: 'Early program four bill. Comput
 
 ## RESTful API
 
-> https://meetup.toast.com/posts/92 참고하기
+> <https://meetup.toast.com/posts/92> 참고하기
 
 : url을 깔끔하게 정리하는 방식 (공통의 rule / 약속)
 
@@ -148,8 +146,6 @@ Out[6]: 'Early program four bill. Comput
 
 1. HTTP verb (GET, POST)
 2. 명사 (복수형)로 구정
-
-
 
 <br>
 
@@ -161,12 +157,12 @@ Out[6]: 'Early program four bill. Comput
   - R (GET)
     - index (모든 정보) - `(GET) / articles /`
     - detail (하나의 정보) - `(GET) / articles / <id>`
-  - U (PUT/PATCH) 
+  - U (PUT/PATCH)
     - `(PUT) / articles / <id>`
   - D (DELETE)
     - `(DELETE) / articles / <id>`
 - 목적어만 URL에 집어 넣어 -> 복수형으로
-  - Data 
+  - Data
 
 <br>
 
@@ -196,7 +192,7 @@ Out[6]: 'Early program four bill. Comput
 > djangorestframework 설치
 
 ```bash
-$ pip install djangorestframework
+pip install djangorestframework
 ```
 
 <br>
@@ -216,8 +212,6 @@ Location: /home/chloe/.local/lib/python3.6/site-packages
 Requires: django
 Required-by: drf-serializer-cache
 ```
-
-
 
 <br>
 
@@ -240,8 +234,6 @@ JSON -> dict (**parse**, `deserialize`)
 <br>
 
 <br>
-
-
 
 ### CREATE
 
@@ -284,14 +276,14 @@ def article_create(request):
 ## yasg
 
 - API 관련 문서를 자동으로 생성
-- 
+-
 
 ### DRF yasg 설치하기
 
-> https://drf-yasg.readthedocs.io/en/stable/readme.html
+> <https://drf-yasg.readthedocs.io/en/stable/readme.html>
 
 ```bash
-$ pip install drf-yasg
+pip install drf-yasg
 ```
 
 <br>
@@ -353,7 +345,7 @@ $ python manage.py dumpdata musics
 > 이렇게 하면 다닥다닥 붙어있음
 
 ```bash
-$ python manage.py dumpdata musics > dump.json
+python manage.py dumpdata musics > dump.json
 ```
 
 <br>
@@ -363,7 +355,7 @@ $ python manage.py dumpdata musics > dump.json
 > `--indent 2`  -> indenting을 2 줘라
 
 ```bash
-$ python manage.py dumpdata musics --indent 2 > dump2.json
+python manage.py dumpdata musics --indent 2 > dump2.json
 ```
 
 <br>
@@ -484,4 +476,3 @@ $ python manage.py dumpdata musics --indent 2 > dump2.json
 }
 ]
 ```
-

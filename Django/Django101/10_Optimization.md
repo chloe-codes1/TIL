@@ -23,12 +23,12 @@
 
 <br>
 
-### 필수 라이브러리 : [ django debug toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
+### 필수 라이브러리 : [django debug toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
 
 #### installation
 
 ```bash
-$ pip install django-debug-toolbar
+pip install django-debug-toolbar
 ```
 
 <br>
@@ -74,7 +74,7 @@ if settings.DEBUG:
 
 ```python
 MIDDLEWARE = [
-	...
+ ...
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     ...
 ]
@@ -100,26 +100,26 @@ INTERNAL_IPS = [
 
 ### 0. 관련 문서
 
-- #### 데이터베이스 최적화 
+- #### 데이터베이스 최적화
 
-  : https://docs.djangoproject.com/en/3.0/topics/db/optimization/
+  : <https://docs.djangoproject.com/en/3.0/topics/db/optimization/>
 
-  - QuerySet 실행에 관한 이해 : https://docs.djangoproject.com/en/3.0/topics/db/optimization/#understand-queryset-evaluation
+  - QuerySet 실행에 관한 이해 : <https://docs.djangoproject.com/en/3.0/topics/db/optimization/#understand-queryset-evaluation>
 
     - lazy하여, evaluated 되는 시점에 실행되며, cache를 활용할 수 있음. (각각 문서 확인할 것)
 
-  - #### `count` , `exists`
+- #### `count` , `exists`
 
-    - https://docs.djangoproject.com/en/3.0/topics/db/optimization/#don-t-overuse-count-and-exists
+    - <https://docs.djangoproject.com/en/3.0/topics/db/optimization/#don-t-overuse-count-and-exists>
     - 일반적으로 활용하는 것이 좋으나, 예시의 코드의 상황에서는 cache된 값을 바탕으로 length를 구하는 방식으로 풀어나갈 수 있음
 
-  - #### `select_related` 
+- #### `select_related`
 
-    : https://docs.djangoproject.com/en/3.0/ref/models/querysets/#django.db.models.query.QuerySet.select_related
+    : <https://docs.djangoproject.com/en/3.0/ref/models/querysets/#django.db.models.query.QuerySet.select_related>
 
-  - #### `prefetch_related` 
+- #### `prefetch_related`
 
-    : https://docs.djangoproject.com/en/3.0/ref/models/querysets/#prefetch-related
+    : <https://docs.djangoproject.com/en/3.0/ref/models/querysets/#prefetch-related>
 
 <br>
 
@@ -230,7 +230,7 @@ posts = Post.objects.order_by('-pk')
 
 ```html
 {% for comment in post.comment_set.all %}
-	<p>{{ comment.content }}</p>
+ <p>{{ comment.content }}</p>
 {% endfor %}
 ```
 
@@ -249,7 +249,7 @@ posts = Post.objects.prefetch_related('comment_set').order_by('-pk')
 ```html
 <!-- 변경 없음 -->
 {% for comment in article.comment_set.all %}
-	<p>{{ comment.content }}</p>
+ <p>{{ comment.content }}</p>
 {% endfor %}
 ```
 
@@ -274,7 +274,7 @@ posts = Post.objects.order_by('-pk')
 
 ```html
 {% for comment in article.comment_set.all %}
-	<p>{{ comment.user.username }} : {{ comment.content }}</p>
+ <p>{{ comment.user.username }} : {{ comment.content }}</p>
 {% endfor %}
 ```
 
@@ -291,14 +291,14 @@ posts = Post.objects.order_by('-pk')
 from django.db.models import Prefetch
 
 posts = Post.objects.prefetch_related(
-    	Prefetch('comment_set'),
-		queryset=Comment.objects.select_related('user')
-	).order_by('-pk')
+     Prefetch('comment_set'),
+  queryset=Comment.objects.select_related('user')
+ ).order_by('-pk')
 ```
 
 ```html
 {% for comment in article.comment_set.all %}
-	<p>{{ comment.user.username }} : {{ comment.content }}</p>
+ <p>{{ comment.user.username }} : {{ comment.content }}</p>
 {% endfor %}
 ```
 
@@ -316,8 +316,6 @@ posts = Post.objects.prefetch_related(
 
 ![How to join three tables in SQL with MySQL database example](https://4.bp.blogspot.com/-_HsHikmChBI/VmQGJjLKgyI/AAAAAAAAEPw/JaLnV0bsbEo/s400/sql%2Bjoins%2Bguide%2Band%2Bsyntax.jpg)
 
-
-
 <br>
 
 ex)
@@ -334,8 +332,6 @@ INNER JOIN user
 ON article.user_id = user.id;
 ```
 
-
-
 <br>
 
 <br>
@@ -344,7 +340,7 @@ ON article.user_id = user.id;
 
 ## Gravata 활용하여 profile photo 설정하기
 
-https://en.gravatar.com/site/implement/
+<https://en.gravatar.com/site/implement/>
 
 <br>
 
@@ -414,4 +410,3 @@ def profile_url(email):
           
 ...          
 ```
-

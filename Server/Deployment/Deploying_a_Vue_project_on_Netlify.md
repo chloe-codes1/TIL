@@ -8,16 +8,14 @@
 
 <br>
 
-- **Netlify is** an all-in-one platform for automating modern web projects. 
+- **Netlify is** an all-in-one platform for automating modern web projects.
 - Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow.
-
-
 
 <br>
 
 ## 1. Login to your `Netlify` account
 
-![image-20200603094640326](../../images/image-20200603094640326.png) 
+![image-20200603094640326](../../images/image-20200603094640326.png)
 
 - Login with `Github` is recommended
 
@@ -32,7 +30,7 @@
 ### 2-1-1. Build your project
 
 ```bash
-$ npm run build
+npm run build
 ```
 
 <br>
@@ -65,7 +63,7 @@ $ tree .
 
 <br>
 
-### 2-1-3. DONE! 
+### 2-1-3. DONE
 
 > but it's not exactly over yet
 
@@ -83,7 +81,7 @@ $ tree .
 
 ### 2-2-1. Choose the Git provider & connect
 
-![image-20200603101141684](../../images/image-20200603101141684.png) 
+![image-20200603101141684](../../images/image-20200603101141684.png)
 
 <br>
 
@@ -91,7 +89,7 @@ $ tree .
 
 <br>
 
-### 2-2-3. Build options, and deploy!
+### 2-2-3. Build options, and deploy
 
 ![image-20200603101750885](../../images/image-20200603101750885.png)
 
@@ -107,7 +105,7 @@ npm run build
 
 <br>
 
-##### 2. Publish directory 
+##### 2. Publish directory
 
 ```
 dist
@@ -115,7 +113,7 @@ dist
 
 <br>
 
-### 2-2-4. Deployment succeed!
+### 2-2-4. Deployment succeed
 
 - Deploys from **master** branch are published automatically since auto publishing is on
 

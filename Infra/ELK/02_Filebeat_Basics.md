@@ -63,7 +63,7 @@
 
 - **Prospector** 는 **harvester** 를 **관리**하고, 읽어들일 자원을 **찾는** 역할을 한다
 
-- 만약 `input` 이 **log** 라면 prospector는 
+- 만약 `input` 이 **log** 라면 prospector는
 
   1. 해당 경로의 모든 파일을 찾고
   2. **harvester** 를 각 파일에서 실행시킨다
@@ -75,29 +75,28 @@
     ```yml
     filebeat.prospectors:
     - type: log
-    	paths:
-    		- /var/log/*.log
-    		- /var/path2/*.log
+     paths:
+      - /var/log/*.log
+      - /var/path2/*.log
     ```
 
 - Filebeat는 현재 **prospector** type으로 `log` 와 `stdin` 을 지원한다
 
 - Filebeat **prospector** 는 오직 **local file** 만 읽을 수 있다!
 
-  - Remote host 에 연결하여 파일이나 log를 읽을 수 없다!! 
+  - Remote host 에 연결하여 파일이나 log를 읽을 수 없다!!
 
 <br>
 
 ### How does Filebeat keep the state of files?
 
 - Filebeat는 각 파일의 **state**를 추적하고 disk의 registry file에 저장한다
-  - **state**는 
+  - **state**는
     1. harvest가 마지막으로 읽고있던 곳을 **기억**하고,
     2. 모든 log가 전송되었는지 보증하는데에 사용된다
 - Filebeat가 동작 하는동안 **state** 정보는 `prospector` 에 의해 **memory** 에 저장된다
-- Filebeat가 재시작되면, 
+- Filebeat가 재시작되면,
   1. Registry file에 저장된 정보는 **state** 를 다시 설정하는데 사용되고,
   2. Filebeat는 각 `harvester` 를 마지막으로 실행되던 위치에서 실행시킨다
 
 <br>
-

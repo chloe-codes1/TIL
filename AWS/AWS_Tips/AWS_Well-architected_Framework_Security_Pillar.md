@@ -29,7 +29,7 @@
 
 #### 전송 중 및 유휴 시 Data 보호
 
-- Data를 민감도 level로 **분류** 하고, 
+- Data를 민감도 level로 **분류** 하고,
 - 필요시`암호화`, `토큰화` 및 access 제어
 
 #### Data로 부터 사용자를 최대한 격리
@@ -75,7 +75,7 @@
 
 <br>
 
-####  AWS Landing Zone
+#### AWS Landing Zone
 
 - AWS 직원이 투입되어 `CloudFormation` 을 구축해줌
 
@@ -83,15 +83,15 @@
 
 #### AWS Control Tower
 
-> https://aws.amazon.com/controltower/
+> <https://aws.amazon.com/controltower/>
 
 - `Landing Zone` 자동 구성 서비스
 - 2개의 core account 생성
   1. `Log_archive`
   2. `Audit`
 - Core/Custom OU 구조와 Account Factory wprhd
-- AWS SSO를 이용한 Single Sign-On 제공 
-  - with Active Directory custom option 
+- AWS SSO를 이용한 Single Sign-On 제공
+  - with Active Directory custom option
 - 탐지 및 방지 용 25개의 Built-In guard rail 제공
 
 <br>
@@ -120,7 +120,7 @@
 
 #### AWS SSO
 
-- AWS SSO enables administrators to configure and maintain all the necessary permissions for your accounts automatically, without requiring any additional setup in the individual accounts. 
+- AWS SSO enables administrators to configure and maintain all the necessary permissions for your accounts automatically, without requiring any additional setup in the individual accounts.
 
 <br>
 
@@ -152,19 +152,19 @@
 
 #### 1. AWS AD Domain Join
 
-- https://aws.amazon.com/blogs/security/how-to-domain-join-amazon-ec2-instances-aws-managed-microsoft-ad-directory-multiple-accounts-vpcs/
+- <https://aws.amazon.com/blogs/security/how-to-domain-join-amazon-ec2-instances-aws-managed-microsoft-ad-directory-multiple-accounts-vpcs/>
 
 <br>
 
 #### 2. Session Manager
 
-- https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html
+- <https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html>
 
 - Server에 접근할 수 있는 권한을 최소화하라
   - How?
     - 반복적으로 하는 작업을 `document`를 사용하여 스크립트화
       - System manager는 document를 갖고 있는다
-    - https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html
+    - <https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html>
 
 <br>
 
@@ -227,15 +227,11 @@
 
 ## Hands-On: AWS 환경에서의 침해사고 대응 workshop
 
-http://gslim-public-workshops.s3-website.ap-northeast-2.amazonaws.com/incidentresponseworkshop/
+<http://gslim-public-workshops.s3-website.ap-northeast-2.amazonaws.com/incidentresponseworkshop/>
 
 <br>
 
-
-
 <br>
-
-
 
 `+`
 
@@ -243,13 +239,8 @@ http://gslim-public-workshops.s3-website.ap-northeast-2.amazonaws.com/incidentre
 
 - Group 은 policy 를 부여할때만 사용된다!?!?!
 - AWS Lambda Layer
-  - https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html
+  - <https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html>
 - VPC Flow log
 - Amazon GuardDuty
-  - https://aws.amazon.com/guardduty/
+  - <https://aws.amazon.com/guardduty/>
   - Runbook
-
-
-
-
-

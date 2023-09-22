@@ -18,17 +18,17 @@ package main
 import "fmt"
 
 func canIDrink(age int) bool {
-	switch age {
-	case 18:
-		return false
-	case 19:
-		return true
-	}
-	return false
+ switch age {
+ case 18:
+  return false
+ case 19:
+  return true
+ }
+ return false
 }
 
 func main() {
-	fmt.Println(canIDrink(19))
+ fmt.Println(canIDrink(19))
 }
 ```
 
@@ -45,19 +45,19 @@ import "fmt"
 
 // Avoid if else with switch
 func canIDrive(age int) bool {
-	switch {
-	case age < 19:
-		return false
-	case age == 19:
-		return true
-	case age > 19:
-		return true
-	}
-	return false
+ switch {
+ case age < 19:
+  return false
+ case age == 19:
+  return true
+ case age > 19:
+  return true
+ }
+ return false
 }
 
 func main() {
-	fmt.Println(canIDrive(18))
+ fmt.Println(canIDrive(18))
 }
 ```
 
@@ -74,19 +74,18 @@ import "fmt"
 
 // Variable expression in switch
 func canIVote(age int) bool {
-	switch koreanAge := age + 2; {
-	case koreanAge < 19:
-		return false
-	case koreanAge == 19:
-		return true
-	case koreanAge > 19:
-		return true
-	}
-	return false
+ switch koreanAge := age + 2; {
+ case koreanAge < 19:
+  return false
+ case koreanAge == 19:
+  return true
+ case koreanAge > 19:
+  return true
+ }
+ return false
 }
 
 func main() {
-	fmt.Println(canIVote(29))
+ fmt.Println(canIVote(29))
 }
 ```
-

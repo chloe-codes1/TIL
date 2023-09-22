@@ -6,7 +6,7 @@
 
 <br>
 
- ### `brew`로 설치하기
+### `brew`로 설치하기
 
 ```shell
 brew install redis
@@ -52,4 +52,3 @@ brew services restart redis
 ➜ redis-cli ping
 PONG
 ```
-

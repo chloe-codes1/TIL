@@ -7,7 +7,7 @@
 <br>
 
 ```bash
-$ django-admin startproject django_for_vue .
+django-admin startproject django_for_vue .
 ```
 
 - 뒤에 . 을 해야 프로젝트가 중첩해서 생기지 않음
@@ -18,18 +18,16 @@ $ django-admin startproject django_for_vue .
 
 ## django-rest-auth & django-allauth
 
-> https://django-rest-auth.readthedocs.io/en/latest/installation.html
+> <https://django-rest-auth.readthedocs.io/en/latest/installation.html>
 
 <br>
-
-
 
 #### Installation
 
 > Install
 
 ```bash
-$ pip install django-rest-auth django-allauth
+pip install django-rest-auth django-allauth
 ```
 
 <br>
@@ -102,8 +100,6 @@ urlpatterns = [
 ]
 ```
 
-
-
 <br>
 
 <br>
@@ -115,7 +111,7 @@ urlpatterns = [
 > Installation
 
 ``` bash
-$ pip install django-cors-headers
+pip install django-cors-headers
 ```
 
 <br>
@@ -144,12 +140,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 <br>
 
 <br>
-
-
-
-
-
-
 
 <br>
 

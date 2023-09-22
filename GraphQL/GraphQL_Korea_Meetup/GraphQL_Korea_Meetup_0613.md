@@ -12,7 +12,7 @@
 
 <br>
 
-### Graphene 
+### Graphene
 
 - ORM 방식으로 정의하면 GraphQL Schema로 바꾸어 줌
 - GraphQL 을 객체화해서 잘 만들어준다!
@@ -34,7 +34,7 @@
   - slicing과 pagination을 제공하는 향상된 버전의 리스트
     - Graph에 분산되어 있는 각 점을 **Node**라고 하며, 데이터 구조를 구성하는 하나의 개체를 의미하고,
     - 서로 연관된 **Node** 를 연결하는 선은 **Edge** 라고 한다
-      - GraphQL에서 각 Node 의 주소를 **Cursor**라고 하고, 
+      - GraphQL에서 각 Node 의 주소를 **Cursor**라고 하고,
         - **Connection**은 **Cursor**를 기반으로한 `pagination` design pattern
   - ex)
     - `relay.Connection`
@@ -104,7 +104,7 @@
   - Resolvers
   - Directives
     - GraphQL Document 처리기에 추가적인 정보를 제공할 수 있는 지시자
-      -  Standard (`@deprecated`, `@include`, `@skip`)
+      - Standard (`@deprecated`, `@include`, `@skip`)
       - Schema Directive
         - ex) `@deprecated`
       - Operational Directive
@@ -120,5 +120,3 @@
 
 - GraphQL 에 관심이 더 생겼다!!!!!!
 - 더 깊게 공부해봐야겠다 넘 재밌다!
-
- 

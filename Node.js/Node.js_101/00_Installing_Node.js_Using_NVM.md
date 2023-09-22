@@ -5,7 +5,7 @@
 ### 1. Download the `nvm` installation script from [GitHub page](https://github.com/nvm-sh/nvm) by using `curl`
 
 ```bash
-$ curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
 ```
 
 <br>
@@ -13,7 +13,7 @@ $ curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh 
 ### 2. Run the script with `bash`
 
 ```bash
-$ bash install_nvm.sh
+bash install_nvm.sh
 ```
 
 <br>
@@ -21,7 +21,7 @@ $ bash install_nvm.sh
 ### 3. Restart your terminal
 
 ```bash
-$ source ~/.profile
+source ~/.profile
 ```
 
 - Source the `~/.profile` file to gain access to the `nvm` functionality
@@ -34,7 +34,7 @@ $ source ~/.profile
 ```bash
 $ nvm ls-remote
 
-  		  ...
+      ...
   
         v12.0.0
         v12.1.0
@@ -69,21 +69,19 @@ $ nvm ls-remote
 
 <br>
 
-### 5. Install 
+### 5. Install
 
 > Install specific version
 
 ```bash
-$ nvm install 12.14.0
+nvm install 12.14.0
 ```
 
 > Install the most recent LTS release
 
 ```bash
-$ nvm install --lts
+nvm install --lts
 ```
-
-
 
 <br>
 
@@ -136,34 +134,30 @@ Now using node v12.14.0 (npm v6.13.4)
 > Switch to the latest Node.js version
 
 ```bash
-$ nvm use node
+nvm use node
 ```
 
 > Switch to the latest LTS version
 
 ```bash
-$ nvm use --lts
+nvm use --lts
 ```
 
 <br>
 
 ### 9. Set the default version of node when starting a new shell
 
-> Specific version 
+> Specific version
 
 ```bash
-$ nvm alias default 12.14.0
+nvm alias default 12.14.0
 ```
 
 > Latest Node.js version
 
 ```bash
-$ nvm alias default node
+nvm alias default node
 ```
-
-
-
-
 
 <br>
 
@@ -174,10 +168,5 @@ $ nvm alias default node
 ### Uninstall `Node.js`
 
 ```bash
-$ nvm uninstall [NODE_VERSION]
+nvm uninstall [NODE_VERSION]
 ```
-
-
-
-
-

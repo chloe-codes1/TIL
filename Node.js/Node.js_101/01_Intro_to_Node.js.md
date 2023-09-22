@@ -21,13 +21,13 @@
 <br>
 
 - Google Chrome의 JavaScript Engine (V8 Engine) 에 기반해 만들어진 server side platform
-  - Chrome V8 Engine으로 빌드된 JavaScript runtime 
+  - Chrome V8 Engine으로 빌드된 JavaScript runtime
 - Event based non-blocking I/O model을 사용해 가볍고 효율적
 - Node.js의 패키지 생태계인 `npm` 은 세계에서 가장 큰 **open source library**
 
 <br>
 
-#### Node는 Web server가 아니다!
+#### Node는 Web server가 아니다
 
 - Node 자체로는 아무것도 하지 않음!
   
@@ -84,6 +84,7 @@
 <br>
 
 ### Who Uses Node.js?
+
 Following is the link on github wiki containing an exhaustive list of projects, application and companies which are using Node.js. This list includes eBay, General Electric, GoDaddy, Microsoft, PayPal, Uber, Wikipins, Yahoo!, and Yammer to name a few.
 
 - [Projects, Applications, and Companies Using Node](https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node)

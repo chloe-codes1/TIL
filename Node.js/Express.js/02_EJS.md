@@ -60,7 +60,7 @@ Test02_EXPRESS/
 > Install the modules
 
 ```bash
-$ npm install
+npm install
 ```
 
 <br>
@@ -190,7 +190,7 @@ module.exports = function(app,fs){
 > execute
 
 ```bash
-$ node server.js
+node server.js
 ```
 
 <br>
@@ -205,7 +205,7 @@ $ node server.js
 
 ### 2-3. EJS 분할하기
 
->  `PHP` 나 `Rails` 에서 처럼 `EJS`에서도 code를 여러 파일로 분리하고 불럴와서 사용할 수 있다!
+> `PHP` 나 `Rails` 에서 처럼 `EJS`에서도 code를 여러 파일로 분리하고 불럴와서 사용할 수 있다!
 
 <br>
 

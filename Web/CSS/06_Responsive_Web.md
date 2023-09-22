@@ -24,7 +24,7 @@
 
 - `meta tag`는 browser 또는 **검색엔진최적화(SEO)**를 위해 검색 엔진에게 meta data 를 전달하기 우해 사용됨
 
-  - viewport meta tag는 browser의 화면 설정과 관련된 정보를 제공 
+  - viewport meta tag는 browser의 화면 설정과 관련된 정보를 제공
 
     | Property      | Description                      | Usage               |
     | :------------ | :------------------------------- | :------------------ |
@@ -123,7 +123,7 @@
 
 <br>
 
-#### Bootstrap Media Query 
+#### Bootstrap Media Query
 
 ```css
 // Extra small devices (portrait phones, less than 576px)
@@ -142,8 +142,6 @@
 @media (min-width: 1200px) { ... }
 ```
 
-
-
 <br>
 
 <br>
@@ -154,7 +152,7 @@
 
 ### Grid System
 
-> Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. 
+> Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content.
 >
 > It’s built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive.
 
@@ -163,8 +161,6 @@
 - Grid System은 균형감 있는 layout을 구성하기 위한 방법이며, Bootstrap에서는 반응형으로 layout을 자유롭게 구성할 수 있다.
 
 <br>
-
-
 
 Grid System Breakpoint
 
@@ -183,8 +179,6 @@ Grid System Breakpoint
   - 12개의 column으로 구성
   - `.col - {breakpoint} - {number}`
 
-
-
 <br>
 
 #### 12 column grid
@@ -195,7 +189,7 @@ Grid System Breakpoint
 
 #### Mix and match
 
->  Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed.
+> Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed.
 
 <br>
 
@@ -222,8 +216,6 @@ ex)
 </div>
 ```
 
-
-
 <br>
 
 #### Gutters
@@ -247,11 +239,7 @@ ex)
 
 <br>
 
-
-
 #### Offsetting columns
-
-
 
 <br>
 
@@ -270,8 +258,6 @@ ex)
   <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
 </div>
 ```
-
-
 
 - In addition to column clearing at responsive breakpoints, you may need to reset offsets
   - `.offset-md-0`
@@ -308,13 +294,11 @@ ex)
 
 #### viewport min width device
 
-
-
 <br>
 
 <br>
 
-### Tips!
+### Tips
 
 - Bootstrap 설명 보면
   - *Build responsive, **mobile-first** projects on the web with the world’s most popular front-end component library* 라고 써있음

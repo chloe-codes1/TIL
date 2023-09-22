@@ -24,10 +24,10 @@
 
 ### 1. Java 설치
 
-#### 1-1. Install 
+#### 1-1. Install
 
 ```bash
-$ sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-11-jdk
 ```
 
 - 이 명령어로 Java runtime environment를 갖고있는 `openjdk-11-jre` package 까지 설치된다!
@@ -48,13 +48,13 @@ OpenJDK 64-Bit Server VM (build 11.0.8+10-post-Ubuntu-0ubuntu118.04.1, mixed mod
 #### 2-1. Install `Maven`
 
 ```bash
-$ sudo apt-get install maven
+sudo apt-get install maven
 ```
 
 #### 2-2. Install `maven-wrapper`
 
 ```bash
-$ mvn -N io.takari:maven:wrapper
+mvn -N io.takari:maven:wrapper
 ```
 
 #### 2-3.  Build
@@ -62,7 +62,7 @@ $ mvn -N io.takari:maven:wrapper
 > `mvnw` 가 보이는 위치로 들어가서 아래의 명령어를 실행한다
 
 ```bash
-$ ./mvnw clean package
+./mvnw clean package
 ```
 
 - 이 명령어를 실행하면, 현재 디렉토리에 있는 mvnw 파일의 이전 기록들을 clean 하고 새로 package로 빌드한다
@@ -78,15 +78,15 @@ $ ./mvnw clean package
 > `target` directory 안으로 들어가서 아래의 명령어를 실행한다
 
 ```  bash
-$ nohup java -jar [생성된 jar 파일 이름] &
+nohup java -jar [생성된 jar 파일 이름] &
 ```
 
 - `nohup`
   - Linux, Unix에서 shell script 파일 (*.sh)을 demon 형태로 실행시키는 프로그램
     - terminal session이 끊겨도 계속 동작하게 함
 - 명령어 뒤에 `&`를 붙이면 현재의 명령과 다른 명령을 분리한다는 의미!
-  -  jar 파일로 서버를 실행하고도 다른 명령어들을 수행할 수 있다
-    - **background** 에서 jar 파일이 실행된다!
+  - jar 파일로 서버를 실행하고도 다른 명령어들을 수행할 수 있다
+  - **background** 에서 jar 파일이 실행된다!
 
 <br>
 
@@ -131,7 +131,7 @@ java    3972 ubuntu   22u  IPv6 325640      0t0  TCP *:8000 (LISTEN)
 #### 2. 포트 종료시키기
 
 ```bash
-$ sudo kill -9 [위에서 확인한 pid번호]
+sudo kill -9 [위에서 확인한 pid번호]
 ```
 
 <br>
@@ -139,21 +139,21 @@ $ sudo kill -9 [위에서 확인한 pid번호]
 #### 3. git으로 프로젝트 Pull 받기
 
 ```bash
-$ git pull origin master
+git pull origin master
 ```
 
 <br>
 
-#### 4. build 
+#### 4. build
 
 ```bash
-$ ./mvnw clean package
+./mvnw clean package
 ```
 
 #### 5. run
 
 ```bash
-$ java -jar [생성된 jar 파일 이름] &
+java -jar [생성된 jar 파일 이름] &
 ```
 
 <br>
@@ -163,12 +163,11 @@ $ java -jar [생성된 jar 파일 이름] &
 ### frontend 수정 시
 
 ``` bash
-$ git pull origin master
+git pull origin master
 
-$ cd frontend
+cd frontend
 
-$ npm run build
+npm run build
 
-$ sudo service nginx restart
+sudo service nginx restart
 ```
-

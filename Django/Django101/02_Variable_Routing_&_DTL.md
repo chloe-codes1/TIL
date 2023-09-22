@@ -12,8 +12,6 @@
 
 ### 1. Package folder
 
-
-
 #### `settings.py`
 
 <br>
@@ -43,8 +41,6 @@ INSTALLED_APPS = [
 ```
 
 - 새로운 app을 만들 때마다 추가해줘야함
-
-
 
 > Language setting & Internalization
 
@@ -130,7 +126,7 @@ def hi(request, name):
 ```html
 <!-- pages/templates/hi.html -->
 <h1>
-	Hi, {{name}}
+ Hi, {{name}}
 </h1>
 ```
 
@@ -142,7 +138,7 @@ def hi(request, name):
 
 <br>
 
-- Django’s template language is designed to strike a balance between power and ease. 
+- Django’s template language is designed to strike a balance between power and ease.
 - It’s designed to feel comfortable to those used to working with HTML.
 
 <br>

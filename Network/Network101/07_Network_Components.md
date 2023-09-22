@@ -36,7 +36,7 @@
   - **Storage**와 **server**를 연결하는 `SAN (Storage Area Network)` 구성용 **Fibre Channel** 표준이 있고,
   - `Ethernet`에서 storage network를 구성하기 위한 **iSCSI protocol**도 있다
   - `슈퍼 컴퓨터`와 같이 여러대의 서버를 묶어 고성능 clustering을 구현할 수 있는 **HPC (High Performance Computing)** network에는 **InfiniBand** 기술도 사용된다
-- 최근 이런 다양한 protocol이 `Ethernet` 기반으로 변화하고 있지만, 
+- 최근 이런 다양한 protocol이 `Ethernet` 기반으로 변화하고 있지만,
   - 아직도 이런 다양한 Protocol이 일부 network에서 사용 중이며
   - 이런 특수 network를 지원하고 가속할 수 있는 network card도 사용되고 있다
 
@@ -72,7 +72,7 @@
 
 - 앞에 숫자 1,000은 **속도**를 나타낸다
   - 앞 숫자가 1,000이면 **1,000Mbps 속도**로 통신할 수 있는 networkDㅣ다
-- 중간 문자는 **채널의 종류**에 대한 것으로 
+- 중간 문자는 **채널의 종류**에 대한 것으로
   - `BASE`는 **단일채널 통신**을 나타내고,
   - `BROAD`는 **다채널 통신**을 나타낸다
 - 마지막 문자는 **cable type**을 나타낸은 것으로
@@ -106,7 +106,7 @@
 - **Twisted Pair cable의 등급**
   - Twisted Pair cable은 `category` 단위로 cable 등급을 나눈다
   - 가장 많이 사용하는 cable은 **category 5E** cable 이다
-    - **1G** 속도를 지원하는 대중적인 cable로 desktop, laptop과 같은 **일반 단말**을 연결하는 데는 **적합**하지만, 
+    - **1G** 속도를 지원하는 대중적인 cable로 desktop, laptop과 같은 **일반 단말**을 연결하는 데는 **적합**하지만,
     - data center와 같이 **높은 대역폭**을 지원해야 할 때는 **적합하지 않다**
 
 <br>
@@ -122,7 +122,7 @@
 ### 2-5. Cable - 광케이블
 
 - 광케이블은 일반적으로 다른 구리선 (`UDP`, `동축`) 보다 **신뢰도**가 높고, 더 **먼 거리까지 통신**할 수 있어 **높은 대역폭**을 요구하거나 **먼거리를 통신**해야 하는 network 장비 간의 통신에 주로 사용된다
-- cable은 **저항** 때문에 생기는 **감쇄**와 **주위 자기장**의 **간섭**으로부터 보호받아야 하는데 `광신호`를 기반으로 한 광케이블은 이런 **감쇄와 간섭으로부터 비교적 자유롭다** 
+- cable은 **저항** 때문에 생기는 **감쇄**와 **주위 자기장**의 **간섭**으로부터 보호받아야 하는데 `광신호`를 기반으로 한 광케이블은 이런 **감쇄와 간섭으로부터 비교적 자유롭다**
 - 광케이블은 `Single mode`와 `Multi mode` 2가지로 나뉜다
   - `Single mode`
     - **먼 거리 통신**을 지원하기 위헤 **cable 굵기가 매우 가늘고**, 신호를 보내는 광원으로 **레이저**를 사용한다
@@ -157,10 +157,10 @@
 - 정확히 구분하자면,
   - **GBIC (GigaBit Interface Converter)**은 **SC type** connector 를 연결할 수 있는 interface이다
     - SC type connector는 광케이블에 주로 사용되는 connector이다
-  - **SFP (Small Form-Factor Pluggable**는 **LC type**  connector를 연결 할 수 있다 
+  - **SFP (Small Form-Factor Pluggable**는 **LC type**  connector를 연결 할 수 있다
 
 - **Transceiver 없이** 전용 interface를 사용하면 길이나 속도마다 다른 network 장비나 NIC를 별도로 구매해야 하지만,
-  - **Transceiver만 변경**하면 **통신 길이**와** 속도**를 조절할 수 있어 최근 생상되는 대부분의 network 장비와 NIC는 transceiver를 지원하고 있다
+  - **Transceiver만 변경**하면 **통신 길이**와**속도**를 조절할 수 있어 최근 생상되는 대부분의 network 장비와 NIC는 transceiver를 지원하고 있다
 
 <br>
 
@@ -184,7 +184,7 @@
 - Hub는 **단순히 전기신호를 재생성**해 출발지를 제외한 모든 port에 전기 신호를 내보내지만,
   - Switch는 Hub와 달리 **MAC 주소를 이해**할 수 있어 **목적지 MAC 주소의 위치를 파악**하고 정확한 목적지가 연결된 port로만 전기 신호를 보낸다
     - ex) A, B, C, D server가 있을 때 A에서 C로 통신해야 하는 상황에서
-      -  `Hub`는 A가 전기신호를 보내면 출발지 Port를 제외한 HUB에 있는 모든 port인 B, C, D에 전기 신호를 흘리지만,
+      - `Hub`는 A가 전기신호를 보내면 출발지 Port를 제외한 HUB에 있는 모든 port인 B, C, D에 전기 신호를 흘리지만,
       - `Switch`는 C로만 전기신호를 보낸다
         - B, D는 이번 통신의 영향을 전혀 받지 않아 그 사이 다른 통신을 **동시에** 수행할 수 있게 된다
 - `Hub`는 **무전기**처럼 송수신을 동시에 할 수 없고 **한쪽 방향으로만 동작**하지만,
@@ -216,7 +216,7 @@
 - Load Balancer가 가장 많이 사용되는 service는 **Web**이다
   - Web server 를 **증설**하고싶을 때 load balancer를 web server 앞에 두고 web server를 여러 대로 늘려준다
     - **대표 IP**는 load balancer가 갖고, load balancer가 각 web server로 **packet의 목적지 IP 주소**를 **변경**해 보내준다
-  - 이런 원리를 이용해 여러 대의 web server가 동시에 동작해 서비스 **성능**을 높여주는 동시에 
+  - 이런 원리를 이용해 여러 대의 web server가 동시에 동작해 서비스 **성능**을 높여주는 동시에
   - 일부 web server에 문제가 발생하더라도 빠른 시간안에 서비스가 **복구**되도록 도와준다
     - 이런 기능을 위해 load balancer는 IP 변환 외에도 **service health check** 기능이나 **대용량 session 처리 기능**이 있다!
 
@@ -226,11 +226,11 @@
 
 ## 7. 보안 장비 (방화벽/IPS)
 
-- 대부분의 network 장비는 **정확한 정보 전달**에 초점이 맞추어져 있지만, 
+- 대부분의 network 장비는 **정확한 정보 전달**에 초점이 맞추어져 있지만,
   - 보안 장비는 정보를 잘 **제어**하고 **공격을 방어**하는데 초점이 맞추어져 있다
 - **방어 목적**과 보안 장비가 **설치되는 위치**에 맞추어 다양한 보안 장비가 사용된다
 - 일반적으로 가장 유명한 보안 장비는 **방화벽**이다
-  - `방화벽`은 OSI 7계층 중 **4계층 (Transport Layer)**에서 동작해 방화벽을 통과하는 **packet의 3, 4게층 정보**를 확인하고, 
+  - `방화벽`은 OSI 7계층 중 **4계층 (Transport Layer)**에서 동작해 방화벽을 통과하는 **packet의 3, 4게층 정보**를 확인하고,
   - packet을 **정책과 비교**해 버리거나 forwarding 한다
 
 <br>

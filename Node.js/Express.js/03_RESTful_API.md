@@ -27,7 +27,7 @@
 
 <br>
 
-1. **GET** 
+1. **GET**
 
    : 조회
 
@@ -105,7 +105,7 @@ module.exports = function(app,fs){
 
 <br>
 
-> server 실행 후 http://localhost/list 접속
+> server 실행 후 <http://localhost/list> 접속
 
 ![image-20200407040640515](../../images/image-20200407040640515.png)
 
@@ -137,7 +137,7 @@ module.exports = function(app,fs){
 
 <br>
 
-> server 다시 실행 후 http://localhost/getUser/first_user 접속
+> server 다시 실행 후 <http://localhost/getUser/first_user> 접속
 
 ![image-20200407041513712](../../images/image-20200407041513712.png)
 
@@ -147,7 +147,7 @@ module.exports = function(app,fs){
 
 ### 3. API: POST addUser/:username
 
-#### body: { “password”: “_____”, “name”: “_____” }
+#### body: { “password”: “_****”, “name”: “****_” }
 
 <br>
 
@@ -199,15 +199,15 @@ app.post('/addUser/:username', function(req, res){
 
 <br>
 
-### 4. **API: PUT updateUser/:username **
+### 4. **API: PUT updateUser/:username**
 
-#### **body: { “password”: “_____”, “name”: “_____” }**
+#### **body: { “password”: “_****”, “name”: “****_” }**
 
 <br>
 
 - 사용자 정보를 update하는 API
 - `PUT` method 사용
-  - **idempotent** 한 `PUT API` 
+  - **idempotent** 한 `PUT API`
     - 요청을 몇 번 수행하더라도, 같은 결과를 보장해야함!
 
 <br>
@@ -244,13 +244,11 @@ app.put('/updateUser/:username', function(req, res){
     });
 ```
 
-
-
 <br>
 
 <br>
 
-###  5. **API: DELETE deleteUser/:username**
+### 5. **API: DELETE deleteUser/:username**
 
 <br>
 
@@ -290,4 +288,3 @@ app.delete('/deleteUser/:username', function(req, res){
 
     });
 ```
-

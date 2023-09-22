@@ -76,9 +76,10 @@
 1. #### BOM (Browser Object Model)
 
 2. #### DOM (Documenet Object Model)
-   
+
    - DOM 조작
    - JavaScript의 존재 이유
+
 3. #### ES (EcmaScript)
 
 <br>
@@ -107,7 +108,7 @@
 
 ### Naming Convention  
 
-- lower cammel case 사용하기! 
+- lower cammel case 사용하기!
 
 - snake case 안된다!
 
@@ -141,10 +142,10 @@
 
 <br>
 
- ## DOM (Document Object Model) 조작
+## DOM (Document Object Model) 조작
 
 - String 인 HTML을 Object로 바꾸고
-- **이해**하고 **해석**해서 
+- **이해**하고 **해석**해서
 - DOM Tree를 만들고
 - 화면에 rendering (그림 그리기)
 
@@ -206,15 +207,15 @@ myP.classList.add('wow') // object는 가능
 
 ## II. `var`, `let`, `const`
 
-- `var` 
+- `var`
   - 할당 자유
   - 선언 자유
   - **함수** 스코프 (절대 쓰지 않는다.)
-- `let` 
+- `let`
   - 할당 자유
   - 선언은 한번
   - **블록** 스코프
-- `const` 
+- `const`
   - 할당 한번
   - 선언 한번
   - **블록** 스코프
@@ -241,7 +242,7 @@ myP.classList.add('wow') // object는 가능
 <br>
 
 - 선언형으로 쓰면 생각대로 코드가 움직이지 않음
-  - why? 
+  - why?
     - 실행 전에 한 번 훑어서, 선언 이전에 참조가 가능하게 함
 
 <br>
@@ -405,8 +406,6 @@ const arrow = name => {return `hello!{name}`}
 const arrow = name => `hello!!!! ${name}`
 ```
 
-
-
 <br>
 
 <br>
@@ -476,4 +475,3 @@ console.log(chloe['birth'])
 console.log(chloe.greeting())
 console.log(chloe.farewell())
 ```
-

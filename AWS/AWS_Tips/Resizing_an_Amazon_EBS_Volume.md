@@ -53,7 +53,7 @@ binfmt_misc        0     0     0    - /proc/sys/fs/binfmt_misc
 
 <br>
 
-#### 2-3. 다시 file system 크기를 확인한다 
+#### 2-3. 다시 file system 크기를 확인한다
 
 ```bash
 [root@scouter ~]# df -alh
@@ -67,4 +67,3 @@ binfmt_misc        0     0     0    - /proc/sys/fs/binfmt_misc
 <br>
 
 *끝~!*
-

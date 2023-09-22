@@ -47,4 +47,3 @@
 - Network Inbound rule에서 **Port Range**에 `1024 - 65535`를 허용해놓는 이유
   - == `Well known Port`이기 때문이다!
     - [well known port 알아보기](https://chloe-codes1.gitbook.io/til/network/11_tcp_and_udp#1-layer-4-protocol-tcp-udp-and-service-port)
-

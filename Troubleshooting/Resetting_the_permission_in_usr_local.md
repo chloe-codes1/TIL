@@ -20,7 +20,7 @@ Error: Permission denied @ apply2files - /usr/local/lib/node_modules/serverless/
 
 ### Cause
 
-: macOS to Mojave 10.14.X 이상 version으로 upgrade 후 발생하는 문제라고 함 
+: macOS to Mojave 10.14.X 이상 version으로 upgrade 후 발생하는 문제라고 함
 
 [Reference - Homebrew github issue](https://github.com/Homebrew/homebrew-core/issues/45009#issuecomment-543795948)
 

@@ -8,7 +8,7 @@
 
 <br>
 
-#### 1단계: 필요한 module import하기 
+#### 1단계: 필요한 module import하기
 
 - Application에 필요한 module을 불러올 땐 `require` 명령을 사용
 
@@ -66,7 +66,7 @@ console.log("Server running at http://127.0.0.1:8081");
 > 서버 실행하기
 
 ```bash
-$ node main.js
+node main.js
 ```
 
 <br>
@@ -79,7 +79,7 @@ Server running at http://127.0.0.1:8081/
 
 <br>
 
-> 브라우저에서[ http://127.0.0.1:8081/](http://127.0.0.1:8081/) 을 열으면 다음과 같은 결과를 확인 할 수 있음
+> 브라우저에서[http://127.0.0.1:8081/](http://127.0.0.1:8081/) 을 열으면 다음과 같은 결과를 확인 할 수 있음
 
 ![image-20200321203909879](../../images/image-20200321203909879.png)
 

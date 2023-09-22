@@ -15,7 +15,7 @@
 <br>
 
 - 현대 network는 대부분 `packet`기반 network이다
-  - `packet network`는 data를 packet이라는 작은 단위로 쪼개 보내는데, 
+  - `packet network`는 data를 packet이라는 작은 단위로 쪼개 보내는데,
     - 이런 기법으로 하나의 통신이 **회선 전체를 점유**하지 않고 동시에 **여러 단말이 통신**하도록 해준다
   - data를 packet으로 **쪼개고** network를 이용해 목적지로 보내고, 받는 쪽에서는 다시 큰 data 형태로 **결합**해 사용한다
 
@@ -58,7 +58,7 @@
 
 - 실제로  data는 상위 계층(Upper Layer)에서 하위 계층(Lower Layer)로 상위 계층에서 **packet** 형태로 하나씩 **encapsulation**되면서 내려오고, 2계층의 **LAN card**에서 **전기 형태**로 변환되어 목적지로 전달된다
 - 해당 전기 신호를 받은 목적지에서는 **data 형태**로 변환해 상위 계층으로 올려주고, **packet**들을 조합해 **data 형태**로 만들게 된다
-- 즉, 실제 data는 `상위 계층`에서 `하위 계층`, `하위 계층`에서 `상위 계층`으로 전달되고 **header 정보**는 각 계층끼리 전달된다                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+- 즉, 실제 data는 `상위 계층`에서 `하위 계층`, `하위 계층`에서 `상위 계층`으로 전달되고 **header 정보**는 각 계층끼리 전달된다
 
 <br>
 
@@ -95,7 +95,7 @@ Data를 **encapsulation**하는 과정에서 **header**에 넣는 정보는 다�
 
 <br>
 
-### 상위 프로토콜 지시자 
+### 상위 프로토콜 지시자
 
 - 각 계층마다 상위 protocol 지시자를 가지고 있지만 계층마다 이름이 다르다
   - 4계층은 port 번호
@@ -154,8 +154,3 @@ Data를 **encapsulation**하는 과정에서 **header**에 넣는 정보는 다�
 | 0x88CC                           | LLDP (Link Layer Discovery Protocol) |
 | 0x8906                           | FCoE (Fibre Channel over Ethernet)   |
 | 0x8915                           | RoCE (RDMA over Coverged Ethernet)   |
-
-
-
-
-

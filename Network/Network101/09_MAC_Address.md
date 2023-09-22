@@ -74,4 +74,3 @@
 - MAC 주소는 **단말에 종속되지 않고 NIC에 종속**된다
   - 단말은 NIC를 여러개 가질 수 있으므로 MAC 주소도 여러개 가질 수 있다
 - `Multi-layer switch`, `router`와 같은 복잡한 network 장비는 NIC가 여러 개이고, MAC 주소도 여러 개가 할당된다
-

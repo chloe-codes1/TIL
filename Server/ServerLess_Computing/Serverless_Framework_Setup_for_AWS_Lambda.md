@@ -30,9 +30,9 @@
     - 여기서는 AWS Lambda 에 배포하기 위한 yaml file 이므로 *aws* 가 기재되어 있다
 - **runtime**
   - 사용하는 runtime version을 기재한다
-- **stage **
+- **stage**
   - 배포하려는 stage를 기재한다
-    - `${opt: stage, 'dev'} `
+    - `${opt: stage, 'dev'}`
       - local 환경에서 sls 명령어를 활용하여 배포 시 stage option을 주면 해당 stage로, 따로 명령어를 주지 않으면 default로 dev가 적용된다
         - ex) sls deploy -s prod
           - stage 설정을 위한 option
@@ -89,9 +89,9 @@
 
       - AWS Lambda에 생성되는 function name이다
 
-        - stage에 따라 다른 함수를 생성하기 위해 
+        - stage에 따라 다른 함수를 생성하기 위해
 
-          `${opt: stage, 'dev'} `
+          `${opt: stage, 'dev'}`
 
           로 설정했다
 
@@ -113,7 +113,7 @@
 ### plugins
 
 - npm으로 설치한 serverless plugin 중 사용할 plugin을 기재한다
-  - 해당 프로젝트의 root 에 external plugin이 설치되어 있어야만 정상 작동한다 
+  - 해당 프로젝트의 root 에 external plugin이 설치되어 있어야만 정상 작동한다
 
 <br>
 
@@ -138,11 +138,11 @@
 
 `+`
 
-#### 주의!
+#### 주의
 
-VPC 정보를 `serverless.yml`에 기재하지 않으면 lambda 함수만 배포 하는것이 아닌 전체 배포 시, VPC 정보가 **초기화** 되고 AWS Console에서 재 설정 해야한다! 
+VPC 정보를 `serverless.yml`에 기재하지 않으면 lambda 함수만 배포 하는것이 아닌 전체 배포 시, VPC 정보가 **초기화** 되고 AWS Console에서 재 설정 해야한다!
 
-꼭 Serverless.yml에  VPC 정보를 기재하자! 
+꼭 Serverless.yml에  VPC 정보를 기재하자!
 
 <br>
 
@@ -167,9 +167,7 @@ VPC 정보를 `serverless.yml`에 기재하지 않으면 lambda 함수만 배포
   - 특정 함수만 배포할 수 있다
     - 위의 예시에서 Lambda Layer를 함께 생성해서 배포하므로 최초 배포 후 재배포 시, code 만 변경 되었으면 layer를 다시 생성할 필요 없으므로 해당 option을 활용하면 된다
       - ex)
-        - sls deploy -f do_optimize 
-
-
+        - sls deploy -f do_optimize
 
 <br>
 

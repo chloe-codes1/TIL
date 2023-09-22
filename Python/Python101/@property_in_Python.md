@@ -8,7 +8,7 @@
 
 <br>
 
-- Python 에는 `private` ,`public`, `protected`, `default` 등의 keyword access modifier가 존재하지 않고, 작명법 (naming)으로 제어한다 
+- Python 에는 `private` ,`public`, `protected`, `default` 등의 keyword access modifier가 존재하지 않고, 작명법 (naming)으로 제어한다
 
 - 파이썬에서 선언되는 모든 variable과 method는 `public` 이기 때문에 `getter` 나 `setter` method가 없다!
 
@@ -33,7 +33,7 @@
           
       def _protected(self):
           print('Protected called~~')
-     	
+      
       def __private(self):
           print('Private called!!!')
   ```
@@ -156,7 +156,7 @@ class Student:
      - Class instance 내부에서 사용되는 변수를 **보호**하기 위한 것
        - why?
          - 외부에서 변수를 마음대로 조작이 가능하면, class 가 정해놓은 logic대로 작동하지 않고 error가 발생할 가능성이 높기 때문
-         - 그래서 OOP에서는 Encapsulation 을 통해 함수 내부에서 사용되는 변수와 외부에서 사용되는 변수를 구분한다! 
+         - 그래서 OOP에서는 Encapsulation 을 통해 함수 내부에서 사용되는 변수와 외부에서 사용되는 변수를 구분한다!
 2. 나중에 속성을 설정할 때 특별한 동작이 일어나야 하면
 
 3. 부모 class의 속성을 불변 (immutable) 으로 만드는 데 사용

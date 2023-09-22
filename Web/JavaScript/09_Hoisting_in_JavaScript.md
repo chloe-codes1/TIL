@@ -1,6 +1,6 @@
 # Hoisting in JavaScript
 
-> https://scotch.io/tutorials/understanding-hoisting-in-javascript
+> <https://scotch.io/tutorials/understanding-hoisting-in-javascript>
 
 <br>
 
@@ -79,13 +79,13 @@ console.log(hoist); // Output: undefined
 var hoist = 'The variable has been hoisted.';
 ```
 
-- JavaScript has hoisted the variable declaration 
+- JavaScript has hoisted the variable declaration
 
 <br>
 
 ### `let`
 
->  block scope
+> block scope
 
 ex1)
 
@@ -219,8 +219,6 @@ var expression = function() {
    console.log(typeof double); // Output: function
    ```
 
-   
-
 <br>
 
 *Function declarations are hoisted over variable declarations but not over variable assignments!*
@@ -283,4 +281,3 @@ var Polygon = class {
   }
 };
 ```
-

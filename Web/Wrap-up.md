@@ -1,5 +1,4 @@
 
-
 # HTML / CSS / JavaScript Wrap-up
 
 <br>
@@ -23,8 +22,6 @@
 
 <br><br>
 
-
-
 ### CSS
 
 - CSS 기본 개념 (정의, 활용법 등)
@@ -45,10 +42,8 @@
   - 옆에 따로 margin 없이 자신의 너비만큼만 크기를 차지함
 - position
   - `absolute` 는 자신의 원래 위치 (static) 을 버리고 감
-  - `relative` 는 자신의 원래 위치를 유지함 
+  - `relative` 는 자신의 원래 위치를 유지함
 - float
-
-
 
 <br>
 
@@ -59,7 +54,7 @@
 <br>
 
 - JS 기초 개념
-  - Data type 
+  - Data type
     - primitive type
     - object type (object, array..)
   - 연산자
@@ -75,8 +70,6 @@
 
 <br>
 
-
-
 #### First class Function
 
 - JavaScript 함수 특징
@@ -91,12 +84,10 @@
 
 #### Web 접근성
 
-- 널리 (Nuli) 사이트 
+- 널리 (Nuli) 사이트
 
 - Google Fundamentals
 
 - cantunsee.space
 
   - 어떤 UX/UI가 더 나은지 퀴즈
-
-  

@@ -17,4 +17,3 @@
   - **증분 backup**을 한다
     - 마치 docker images 처럼...
     - 그래서 두번째 backup은 더 빠르다!  
-

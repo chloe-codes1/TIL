@@ -47,7 +47,7 @@
 
 3. #### Analytics
 
-   : Analyze your data with the broadest selection of analytics services 
+   : Analyze your data with the broadest selection of analytics services
 
 4. #### Machine Learning
 
@@ -132,7 +132,7 @@
 
 <br>
 
-### Amazon Elasticsearch Service 
+### Amazon Elasticsearch Service
 
 > Amazon Elasticsearch Service is a fully managed service that makes it easy for you to deploy, secure, and run Elasticsearch cost effectively at scale
 
@@ -160,13 +160,9 @@
 
 > Amazon MSK is a fully managed service that makes it easy for you to build and run applications that use Apache Kafka to process **streaming data**
 
-
-
 <br>
 
 ![image-20200308215638160](../../images/image-20200308215638160.png)
-
-
 
 <br>
 
@@ -175,8 +171,6 @@
 - Amazon MSK를 사용하면 Apache Kafka infra 관리에 대한 전문성 없이도 Apache Kafka에서 편리하게 production application을 구축하고 실행할 수 있음
   - Infra 관리 시간을 줄이고, 더 많은 시간을 application 개발에 활용할 수 있음
 - Streaming data를 지속적으로 분석하여 관련 대응 조치를 취하는 application용 data source로 Apache Kafka를 사용함
-
-
 
 <br>
 
@@ -235,7 +229,7 @@
 
 <br>
 
-### AWS Glue (Prepare and Load Data!
+### AWS Glue (Prepare and Load Data
 
 > AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics
 
@@ -254,8 +248,6 @@
 1. 데이터 원본과 데이터 대상을 선택함
 2. AWS Glue가 Scala or Python으로 ETL code를 생성하여 원본으로부터 data를 추출하고, 해당 data를 schema에 맞춰 변환하고, 이를 대상으로 loadㅏㅁ
 3. 사용자는 console, 선호하는 IDE or notebook을 사용하여 해당 코드를 편집, debugging, test 할 수 있음
-
-
 
 <br>
 
@@ -297,11 +289,11 @@
 
 <br>
 
-- A data lake is a **centralized**, **curated**, and **secured** repository that stores all your data, both in its original form and prepared for analysis. 
+- A data lake is a **centralized**, **curated**, and **secured** repository that stores all your data, both in its original form and prepared for analysis.
 - A data lake enables you to break down `data silos` and combine different types of analytics to gain insights and guide better business decisions
 
 - Creating a data lake with Lake Formation is as simple as defining data sources and what data access and security policies you want to apply
-- `Lake Formation` then helps you 
+- `Lake Formation` then helps you
   - collect and catalog data from databases and object storage
   - move the data into your new [Amazon S3](https://aws.amazon.com/s3/) data lake
   - clean and classify your data using machine learning algorithms

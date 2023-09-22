@@ -6,7 +6,7 @@
 
 ### HTML / CSS 배치
 
-- 배치 핵심 
+- 배치 핵심
 
   : 왼쪽 위에 쌓인다 (박스모델)
 
@@ -56,7 +56,7 @@
 
 - #### 축
 
-  - `main axis` 
+  - `main axis`
 
     : 주축
 
@@ -65,7 +65,7 @@
     - `flex-direction: column-reverse;` 일 때 *밑에서 위로 올라가는* 세로 축
     - `flex-direction: row-reverse;` 일 때 *오른쪽에서 왼쪽으로 가는* 가로 축
 
-  - `cross axis` 
+  - `cross axis`
 
     : 크로스축
 
@@ -80,7 +80,7 @@
    - 만약, `row-reverse`로 지정하게 되면, 오른쪽 끝부터 배치가 시작됨
 2. 모든 `item`은 기본적으로 row를 기준으로 배치됨
    - `flex-direction` : `row` 값으로 기본 설정 됨
-3. 모든 `item`은 `cross axis`를 모두 채운다 
+3. 모든 `item`은 `cross axis`를 모두 채운다
    - 높이를 모두 채운다
      - `align-items: stretch;` 가 기본값이기 때문
 4. 모든 `item`은 본인의 너비 혹은 content 영역만큼 너비를 가지게 된다
@@ -163,7 +163,7 @@
 
 > crosss 축을 기준으로 정렬한다
 
--  `stretch`
+- `stretch`
 
   : 기본값
 
@@ -227,8 +227,6 @@
 > item에 직접 align을 지정할 수 있음
 
 <br>
-
-
 
 <br>
 

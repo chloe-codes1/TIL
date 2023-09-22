@@ -6,7 +6,7 @@
 
 ### 협업 tools
 
->  Coronavirus로 인한 재택근무 활성화로 협업 tool에 대한 관심이 높아짐
+> Coronavirus로 인한 재택근무 활성화로 협업 tool에 대한 관심이 높아짐
 
 - 잔디
 - notion
@@ -43,8 +43,6 @@
 2. EC2 Saving Plans
    - Size, tenancy, OS에 상관없이 commit된 EC2 Family 및 Region 내 instance 사용량에 적용 가능
 
-
-
 <br>
 
 <br>
@@ -56,7 +54,7 @@
 - Q1) Amazon athena의 computing power 제한이 있나요?
   - Athena
     - Serverless data query engine
-    - Open Source 
+    - Open Source
   - Computing power 제한은 없음
   - Best practice AWS Blog에 나와 있음
     - ex) 압축하기 etc.
@@ -86,5 +84,4 @@
   - 강의, 책보다 site에 정리된 자료가 더 많고 정확하다
 - 책추천
   - 배워서 바로 쓰는 14가지 AWS 구축 패턴 (AWSKRUG Machine Learning Study 주최자 정도현님이 번역하심! 사야겠다)
-  - https://brunch.co.kr/@topasvga/666 에 AWS 관련 추천도서 정리되어 있으니 참고
-
+  - <https://brunch.co.kr/@topasvga/666> 에 AWS 관련 추천도서 정리되어 있으니 참고

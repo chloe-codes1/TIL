@@ -25,7 +25,7 @@ $ npm --version
 > npm version update
 
 ```shell
-$ sudo npm install npm -g
+sudo npm install npm -g
 ```
 
 <br>
@@ -39,15 +39,15 @@ $ sudo npm install npm -g
 > Syntax to install any Node.js module
 
 ```shell
-$ npm install <Module Name>
+npm install <Module Name>
 ```
 
 <br>
 
-> Install a famous Node.js web framework module called **express** 
+> Install a famous Node.js web framework module called **express**
 
 ```shell
-$ npm install express
+npm install express
 ```
 
 <br>
@@ -103,12 +103,10 @@ $ sudo npm install express -g
   - but, `npm link` 명령어를 입력하여 해당 module을 불러올 수 있음
 
   ```shell
-  $ npm install -g express
-  $ cd [local path]/project
-  $ npm link express
+  npm install -g express
+  cd [local path]/project
+  npm link express
   ```
-
-  
 
 <br>
 
@@ -148,12 +146,12 @@ $ sudo npm install express -g
 
 <br>
 
-#### Uninstalling a Module 
+#### Uninstalling a Module
 
 <br>
 
 ```shell
-$ npm uninstall express
+npm uninstall express
 ```
 
 <br>
@@ -165,7 +163,7 @@ $ npm uninstall express
 <br>
 
 ```shell
-$ npm update express
+npm update express
 ```
 
 <br>
@@ -177,7 +175,7 @@ $ npm update express
 <br>
 
 ```shell
-$ npm search express
+npm search express
 ```
 
 - 이 명령어는 처음 이용할 때 memory 엄청 잡아먹음

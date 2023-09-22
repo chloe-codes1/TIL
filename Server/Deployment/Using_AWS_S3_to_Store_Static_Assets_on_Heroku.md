@@ -13,12 +13,12 @@
 > Installation
 
  ```bash
-$ pip install django_storages
+pip install django_storages
  ```
 
 <br>
 
-> Add `storages` to the **INSTALLED_APPS** in the `settings.py` 
+> Add `storages` to the **INSTALLED_APPS** in the `settings.py`
 
 ```python
 # Application definition
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 > **Boto3** is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
 
 ```bash
-$ pip install boto3
+pip install boto3
 ```
 
 <br>
@@ -68,8 +68,6 @@ AWS_ACCESS_KEY_ID = 'YOUR_AWS_ACCESS_KEY_ID'
 AWS_SECRET_ACCESS_KEY = '************'
 AWS_STORAGE_BUCKET_NAME = 'YOUR_AWS_STORAGE_BUCKET_NAME'
 ```
-
-
 
 <br>
 
@@ -97,7 +95,7 @@ class StaticStorage(S3Boto3Storage):
 ### 1-5. Run collectstatic
 
 ```bash
-$ python manage.py collectstatic
+python manage.py collectstatic
 ```
 
 - Type 'yes' when the message pops up
@@ -123,9 +121,9 @@ $ python manage.py collectstatic
 ### 2-1. Config Vars
 
 ```bash
-$ heroku config:set AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_AcCESS_KEY
+heroku config:set AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_AcCESS_KEY
 
-$ heroku config:set S3_BUCKET_NAME=YOUR_AWS_S3_BUCKET_NAME
+heroku config:set S3_BUCKET_NAME=YOUR_AWS_S3_BUCKET_NAME
 ```
 
  <br>
@@ -157,7 +155,7 @@ AWS_S3_SIGNATURE_VERSION = "s3v4"
 ### 3-1. `requirements.txt`
 
 ```bash
-$ pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 
 <br>
@@ -165,7 +163,7 @@ $ pip freeze > requirements.txt
 ### 3-2. Disable collectstatic
 
 ```bash
-$ heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set DISABLE_COLLECTSTATIC=1
 ```
 
 <br>
@@ -173,16 +171,12 @@ $ heroku config:set DISABLE_COLLECTSTATIC=1
 ### 3-3. Push to heroku
 
 ```bash
-$ git push heroku master
+git push heroku master
 ```
 
 <br>
 
-### DONE!!
-
-
-
-
+### DONE
 
 <br>
 
@@ -196,7 +190,7 @@ $ git push heroku master
 
 > 출처: 클라우드 시작하기 - 장기웅, AWS 테크니컬 트레이너 :: AWSome Day 온라인 컨퍼런스
 >
-> https://www.slideshare.net/awskorea/aws-awsome-day-234395883
+> <https://www.slideshare.net/awskorea/aws-awsome-day-234395883>
 
 <br>
 
@@ -205,4 +199,3 @@ $ git push heroku master
 <br>
 
 ![image-20200522011341558](../../images/image-20200522011341558.png)
-

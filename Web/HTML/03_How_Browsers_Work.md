@@ -24,10 +24,10 @@
 ![browser-components](../../images/browser-components.png)
 
 1. **User Interface**
-   - 주소 표시줄, 이전/다음 버튼, Bookmark 등 
+   - 주소 표시줄, 이전/다음 버튼, Bookmark 등
    - 요청한 page를 보여주는 창을 제외한 나머지 모든 부분
 2. **Browser engine**
-   - `User Interface`와 `Rendering engine` 사이의 동작을 제어 
+   - `User Interface`와 `Rendering engine` 사이의 동작을 제어
 3. **Rendering engine**
    - 사용자가 요청한 contents를 표시
      - ex) HTML을 요청하면 HTML과 CSS를 parsing 하여 화면에 표시함
@@ -62,7 +62,7 @@
 - **Firefox**는 Mozilla에서 직접 만든 `Gecko` Engine을 사용하고,
 - **Safari**와 **Chrome**은 `Webkit`  Engine을 사용한다
   - **Webkit**은 최초 Linux Platform에서 동작하기 위해 제작된 open source engine인데,
-    - Apple이 Mac과 Windows에서 Safari browser를 지원하기 위해 수정을 가했다. 
+    - Apple이 Mac과 Windows에서 Safari browser를 지원하기 위해 수정을 가했다.
 
 <br>
 

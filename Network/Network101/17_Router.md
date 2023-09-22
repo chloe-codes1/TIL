@@ -28,7 +28,7 @@
 
 ## 2. How Does a Router Work?
 
-- `Router`는 **다양한 경로 정보**를 수집해 **최적의 경로**를 `routing table`에 저장한 후, 
+- `Router`는 **다양한 경로 정보**를 수집해 **최적의 경로**를 `routing table`에 저장한 후,
   - `packet`이 router로 들어오면 도착지 IP 주소와 routing table을 비교해 최선의 경로로 packet을 내보낸다
 - Switch와 반대로 router는 들어온 packet의 **목적지 주소**가 routing table에 없으면 **packet을 버린다**
 - Router는 packet forwarding 과정에서 **기존 layer 2 header 정보**를 **제거**한 후 **새로운 layer 2 header**를 만들어낸다
@@ -62,12 +62,12 @@
 ### 2-2. Broadcast Control
 
 - `Switch`는 packet의 **도착지 정보**를 모르면 어딘가에 존재할지 모를 장비와의 통신을 위해 **flooding**해 packet을 모든 포트에 전송한다
-  - LAN 어딘가에 도착지가 있을 수 있다고 가정하고 packet을 전체 network에 flooding 하는 것이 쓸모없는 packet이 전소오디어 전체 network의 성능에 무리가 갈 수 있다고 생각할 수 있지만, 
-    - LAN은 크기가 작아 **flooding에 대한 영향이 작고**, 
+  - LAN 어딘가에 도착지가 있을 수 있다고 가정하고 packet을 전체 network에 flooding 하는 것이 쓸모없는 packet이 전소오디어 전체 network의 성능에 무리가 갈 수 있다고 생각할 수 있지만,
+    - LAN은 크기가 작아 **flooding에 대한 영향이 작고**,
     - 도착지 network interface card(NIC)에서 **자신의 주소와 packet 도착지 주소가 다르면** packet을 버리기 때문에 이런 flooding 작업은 **network에 큰 무리를 주지 않는다**
 - 반면 `Router`는 **packet을 원격지로 보내는 것을 목표**로 개발되어 **Layer 3에서 동작**하고, **분명한 도착지 정보가 있을 때만** 통신을 허락한다
   - Internet 연결은 대부분 지정된 대역폭만 빌려 사용하므로, **쓸모없는 통신이 network를 차지**하는 것을 최대한 막으려고 노력한다
-    - 만약 LAN에서 switch가 동작하는 것처럼 
+    - 만약 LAN에서 switch가 동작하는 것처럼
       - 목적지가 없거나
       - 명확하지 않은 packet이 flooding 된다면,
     - Internet에 쓸모 없는 packet이 가득 차 **통신불능** 상태가 될 수 있다
@@ -105,7 +105,7 @@
   - Router는 복잡하고 많은 경로 정보를 얻어 **최적의 경로 정보**인 `routing table`을 적절히 유지해야 한다
 - Router는 다양하고 많은 경로 정보를 얻을 수 있지만, 원하는 목적지 정보와 정확히 일치하지 않는 경우가 더 많다
   - Router는 **subnet 단위**로 routing 정보를 습득하고, routing 정보를 **최적화**하기 위해 `summary 작업`을 통해 여려 개의 subnet 정보를 **뭉쳐 전달** 한다
-    - 그래서 router에 들어온 packet의 목적지 주소와 router가 갖고 있는 routing table 정보가 **정확히 일치하지 않더라도** (not exact match), 수많은 정보 중 목적지에 **가장 근접한 정보**를 찾아 packet을 forwarding 해야한다 
+    - 그래서 router에 들어온 packet의 목적지 주소와 router가 갖고 있는 routing table 정보가 **정확히 일치하지 않더라도** (not exact match), 수많은 정보 중 목적지에 **가장 근접한 정보**를 찾아 packet을 forwarding 해야한다
 
 <br>
 
@@ -131,15 +131,15 @@
 - 특수한 경우에만 router의 `outbound interface`를 지정하는 방법을 쓸 수 있는데, 상대방의 `next hop IP`를 모르더라도 **MAC 주소 정보**를 알아낼 수 있을 때만 사용할 수 있다
   - 특수한 경우들
     1. WAN 구간 전용선에서 `PPP(Point-to-Point)`나 `HLDC(High Level Datalink Control)`와 같은 protocol을 사용해 **상대방의 MAC 주소를 알 필요가 없을 때**
-    2. 상대방 router에서 proxy ARP가 동작해 정확한 IP 주소를 모르더라도 상대방의 MAC 주소를 알 수 있을 때 
-       - ARP란? 
+    2. 상대방 router에서 proxy ARP가 동작해 정확한 IP 주소를 모르더라도 상대방의 MAC 주소를 알 수 있을 때
+       - ARP란?
          - Address Resolution Protocol
          - 상대방의 MAC 주소를 알아내기 위해 사용되는 protocol
 - Router가 packet을 어디로 forwarding할지 경로를 선택할 때는 **출발지를 고려하지 않는다**
   - 출발지와 상관없이 **목적지 주소**와 **routing table**을 비교해 어느 경로로 forwarding 할지 결정한다
-    - 그래서 routing table을 만들 때 
+    - 그래서 routing table을 만들 때
       - **목적지 정보만 수집**하고,
-      - packet이 들어오면 목적지 주소를 확인해 
+      - packet이 들어오면 목적지 주소를 확인해
       - packet을 **next hop으로 forwarding**한다
 
 <br>
@@ -186,7 +186,7 @@ Router가 경로 정보를 얻는 방법은 크게 3가지로 구분할 수 있�
 - IP 주소를 입력할 때 사용된 **IP 주소**와 **Subnet mask**로 해당 IP 주소가 속한 **Network 주소 정보**를 알 수 있다
   - Router나 PC에선 이 정보로 해당 Network에 대한 Routing Table을 자동으로 만든다
     - 이 경로 정보를 `Direct Connected` 라고 한다.
-- `Direct Connected`로 생성되는 경로 정보는 Interface에 IP를 설정하면 **자동으로 생성되는 정보**이므로, 
+- `Direct Connected`로 생성되는 경로 정보는 Interface에 IP를 설정하면 **자동으로 생성되는 정보**이므로,
   - 정보를 강제로 **지울 수 없고**,
   - 해당 Network 설정을 삭제하거나 해당 Network Interface가 **비활성화**되어야만 **자동으로 사라진다**
 
@@ -204,11 +204,10 @@ Router가 경로 정보를 얻는 방법은 크게 3가지로 구분할 수 있�
 #### 3. Dynamic Routing
 
 - `Static Routing`은 관리자가 변화가 적은 network에서 network를 손쉽게 관리할 수 있는 좋은 방법이지만, 큰 network는 `Static Routing` 만으로는 관리하기 어렵다
-  - why? 
+  - why?
     - `Static Routing` 적용 시 **장애로 인한 network** 경로 반영이 되지 않는다!
       - `Static Routing`은 **router 너머 다른 router의 상태 정보를 파악할 수 없기 때문에** router 사이의 회선이나 router에 장애가 발생하면, **장애 상황을 파악**하고 **대체 경로로 packet을 보낼 수 없기 때문**!
 - `Dynamic Routing`은 이러한 `Static Routing` 의 단점을 보완하여, **router 끼리 자신이 알고 있는 경로 정보나 링크 상태 정보를 교환**해 전체 network 정보를 학습한다
   - 주기적 or 상태 정보가 변경될 때 router끼리 경로 정보가 교환되므로, router를 연결하는 회선이나 router 자체에 장애가 발생하면, 이 상황을 인지해 **대체 경로로 packet을 forwarding** 할 수 있다
 - `Dynamic Routing` 에서는 **자신이 광고할 network를 선언**해주어야 한다
-- 
-
+-

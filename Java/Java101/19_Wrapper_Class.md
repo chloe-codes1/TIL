@@ -8,6 +8,7 @@
 ### Intro
 
 Java에는 기본 자료형과 Wrapper class가 존재한다
+
 - `기본 자료형(Primitive data type)`: int, long, float, double, boolean 등
 - `Wrapper class`: Integer, Long, Float, Double, Boolean 등
 
@@ -49,4 +50,4 @@ Java에는 기본 자료형과 Wrapper class가 존재한다
     ```
 
 - 주의할 점: `성능`
-    - 편의성을 위해 Auto Boxing과 Auto Unboxing이 제공되고 있지만, 내부적으로 추가 연산 작업이 필요하기 때문에  `Auto Boxing & Auto Unboxing` 이 일어나지 않도록 `동일 타입 연산` 이 이루어지도록 구현하는 것이 좋다
+  - 편의성을 위해 Auto Boxing과 Auto Unboxing이 제공되고 있지만, 내부적으로 추가 연산 작업이 필요하기 때문에  `Auto Boxing & Auto Unboxing` 이 일어나지 않도록 `동일 타입 연산` 이 이루어지도록 구현하는 것이 좋다

@@ -41,7 +41,7 @@ SET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]
 - `KEEPTTL`
   - 해당 Key가 갖고있는 TTL을 유지하도록 설정
 - `GET`
-  - 이미 Key가 존재하면, 
+  - 이미 Key가 존재하면,
     - 설정된 Value 값을 return
   - 존재하지 않은 Key면,
     - **nil**을 Return
@@ -165,7 +165,7 @@ redis> TTL haha
 
 #### Return value
 
-- 증가된 value 값을 return 한다 
+- 증가된 value 값을 return 한다
 
 - 만약 key가 integer로 바꿀 수 있는 string이 아닌 잘못된 type의 value를 갖고있으면, **Error**를 return한다
 
@@ -201,7 +201,7 @@ ERR value is not an integer or out of range
 
 #### Return value
 
-- 감소된 value 값을 return 한다 
+- 감소된 value 값을 return 한다
 
 - 만약 key가 integer로 바꿀 수 있는 string이 아닌 잘못된 type의 value를 갖고있으면, **Error**를 return한다
 
@@ -219,4 +219,3 @@ redis> DECRBY num 4
 <br>
 
 *계속 추가 중*
-

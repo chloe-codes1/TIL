@@ -20,7 +20,7 @@
 
   - 단, **for** 안에서만 사용할 수 있다
 
-  - ex) 
+  - ex)
 
     ```go
     package main
@@ -28,17 +28,17 @@
     import "fmt"
     
     func addAll(numbers ...int) int {
-    	total := 0
-    	// for loop w/ range
-    	for _, number := range numbers {
-    		total += number
-    	}
-    	return total
+     total := 0
+     // for loop w/ range
+     for _, number := range numbers {
+      total += number
+     }
+     return total
     }
     
     func main() {
-    	total := addAll(1, 2, 3, 4, 5, 6, 7, 8, 9)
-    	fmt.Println(total)
+     total := addAll(1, 2, 3, 4, 5, 6, 7, 8, 9)
+     fmt.Println(total)
     }
     
     ```
@@ -56,7 +56,7 @@ range 를 사용한 for loop는 python 의 enumerate 와 유사하다!
 
 <br>
 
-#### Range를 사용하지 않은 for 
+#### Range를 사용하지 않은 for
 
 - Range 없이도 for loop를 만들 수 있다
 
@@ -64,9 +64,9 @@ range 를 사용한 for loop는 python 의 enumerate 와 유사하다!
 
     ```go
     func add(numbers ...int) {
-    	for i := 0; i < len(numbers); i++ {
-    		fmt.Println(i)
-    	}
+     for i := 0; i < len(numbers); i++ {
+      fmt.Println(i)
+     }
     }
     ```
 

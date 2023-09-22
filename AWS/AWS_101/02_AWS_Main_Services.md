@@ -72,11 +72,11 @@
 
 ![Amazon EC2 인스턴스 유형 및 표기법 인스턴스 패밀리 인스턴스 세대 인스턴스 크기 c4.large 애플리케이션 요구에 따라 인스턴스 패밀리, 세대 및 크기 결정: ① 인스턴스 패밀리 • M, T, C, X, R,...](https://image.slidesharecdn.com/amazonec2deepdive-170830022453/95/amazon-ec2-deep-dive-aws-8-7-638.jpg?cb=1504060127)
 
-- 위의 그림과 같이 본인이 선택하는 EC2 Instance와 유형의 사이즈에 따라 최종으로 사용하게 될 
+- 위의 그림과 같이 본인이 선택하는 EC2 Instance와 유형의 사이즈에 따라 최종으로 사용하게 될
   - **Instance Type**
   - **CPU Core 수**
   - **메모리 용량**
-  - **네트워크 인터페이스의 속도** 
+  - **네트워크 인터페이스의 속도**
     - 등을 필요에 따라 선택할 수 있다
 
 <br>
@@ -94,8 +94,6 @@
 
 - 이러한 EC2 구매 옵션은 서비스의 유형에 따라 본인에게 가장 적절한 구매 옵션을 선택할 수 있다
   - EC2 서비스의 목적에 맞는 구매 옵션을 선택함으로써 **비요에 대한 최적화**가 가능하다!
-
-
 
 <br>
 
@@ -122,7 +120,7 @@
 
 - 고성능 상용 database의 성능과 가용성에 open source database의 간편성과 비용 효율성을 결합
 
-  - 고가용성 (HA: High Availability) 
+  - 고가용성 (HA: High Availability)
 
     : Server와 Network, Program 등의 정보 시스템이 오랜 기간동안 지속적으로 정상 운영이 가능한 성질
 
@@ -172,8 +170,6 @@
 
 - 초당 2,000만 개 이상의  피크 요청 지원
 
-
-
 <br><br>
 
 ## Amazon RDS
@@ -194,16 +190,16 @@
 
 - Execute codes without worrying about server
   - you don't have to provision or manage server
-- Only pay for the used computing time 
+- Only pay for the used computing time
 - Execute all kinds of applications or back-end server without management
-- All you have to do is upload your codes and Lambda will take care of everything with the high availability 
+- All you have to do is upload your codes and Lambda will take care of everything with the high availability
 - You can make it automatically triggered by other AWS services or trigger it manually from your web/mobile application
 
 <br>
 
 <br>
 
-## Amazon VPC 
+## Amazon VPC
 
 > Virtual Private Cloud
 
@@ -227,7 +223,7 @@
 
 - Internet access 없는 private subnet에 database나 application server와 같은 back-end system 배치 가능
 
-- Enable each subnet to control accessibility to EC2 by using secure group & network access control list 
+- Enable each subnet to control accessibility to EC2 by using secure group & network access control list
 
 <br><br>
 
@@ -263,8 +259,6 @@
     - 몇 초 만에 개발/테스트 환경 시작 가능
     - Production environment 외부에서 개발용 sandbox 및 test environment를 만들면 error 발생 걱정 없이 test 수행 가능
 
-    
-
 <br>
 
 <br>
@@ -278,4 +272,3 @@
 - You may execute model with less effort and cost
 
 ![image-20200302013553913](../../images/image-20200302013553913.png)
-

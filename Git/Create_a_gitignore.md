@@ -13,7 +13,7 @@
 ### 2. Create `.gitignore` file
 
 ```bash
-$ touch .gitignore
+touch .gitignore
 ```
 
 <br>
@@ -49,13 +49,13 @@ ex)
 ### If you create a `.gitignore` when in use
 
 ```bash
-$ git rm -r --cached .
+git rm -r --cached .
 
-$ git add .
+git add .
 
-$ git commit -m "git ignore add"
+git commit -m "git ignore add"
 
-$ git push
+git push
 ```
 
 <br>
@@ -77,6 +77,3 @@ $ git push
 
 .local/
 ```
-
-
-

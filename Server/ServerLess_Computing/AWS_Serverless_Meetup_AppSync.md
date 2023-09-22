@@ -2,7 +2,7 @@
 
 > AppSync를 활용한 리얼타임 서버리스 아키텍쳐
 >
-> Speaker :  김태우   https://dev.classmethod.jp/author/kim-taewoo/
+> Speaker :  김태우   <https://dev.classmethod.jp/author/kim-taewoo/>
 
 <br><br>
 
@@ -23,26 +23,26 @@
 
 #### Lambda
 
-: a compute service that lets you run code without provisioning or managing servers 
+: a compute service that lets you run code without provisioning or managing servers
 
 <br>
 
 <br>
 
-### 서버리스 아키텍쳐도 리얼타임 기능 만들 수 있다! 
+### 서버리스 아키텍쳐도 리얼타임 기능 만들 수 있다
 
 <br>
 
-####  How?
+#### How?
 
-: by using `API Gateway websocket` or `Pubsub` 
+: by using `API Gateway websocket` or `Pubsub`
 
 - API Gateway 에서 websocket을 지원함
 - Connection 기반의 solution은 아니지만 PubSub Solution도 가능하기는 함
 
 <br/>
 
-#### It's possible, but ...
+#### It's possible, but
 
 - Front-end 와 Back-end 간의 통신을 위한 Data structure 정의 해야함
 - Data 주고 받을 때의 Validation 필요
@@ -50,11 +50,11 @@
 - Back-end 신경써야 할 것이 많음
   - High availality
   - reliability
-  - scalability 
+  - scalability
 
 <br/>
 
-####    ---> AppSync 를 사용하여 극복 가능하다!
+#### ---> AppSync 를 사용하여 극복 가능하다
 
 <br>
 
@@ -87,8 +87,6 @@
 <br>
 
 ![image-20200307010708273](../../images/image-20200307010708273.png)
-
-
 
 <br>
 
@@ -166,8 +164,6 @@
 
 <br>*AppSync를 Subscription의 용도로만 쓸거라면 굳이 Appsync용 DB 연결할 필요 없이 DynamicDB Stream를 쓰면 됨!*
 
-
-
 <br>
 
 ### Microservice
@@ -234,26 +230,20 @@
   - but, Network의 속도/안정성 등에 의존성이 생김
 - 그러나 5G 시대에는 큰 문제 없지 않을까?
 
-
-
 <br>
 
 <br>
 
-
-
-## 
+##
 
 `+`
 
-#### GraphQL이 느린 이유						
+#### GraphQL이 느린 이유      
 
 - http 라서
 
 - resolver 때문
   - 이 부분은 해결 가능
-
-
 
 ​         <br>
 
@@ -267,8 +257,6 @@
 
 당근마켓이 gRPC 쓰는 이유 == 속도가 엄청 빠름
 
-
-
 <br><br>
 
 `+`
@@ -277,16 +265,16 @@
 
 1. `gRPC`
 
-   <br> 
+   <br>
 
    ![image-20200307032408544](../../images/image-20200307032408544.png)
 
    <br>
 
    - *gRPC (gRPC Remote Procedure Calls)* is an open source remote procedure call (RPC) system initially developed at Google in 2015
-   - In gRPC, a client application can directly call a method on a server application on a different machine as if it were a local object, making it easier for you to create distributed applications and services. 
-   - As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. 
-   - On the **server side**, the server implements this interface and runs a gRPC server to handle client calls. 
+   - In gRPC, a client application can directly call a method on a server application on a different machine as if it were a local object, making it easier for you to create distributed applications and services.
+   - As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types.
+   - On the **server side**, the server implements this interface and runs a gRPC server to handle client calls.
    - On the **client side**, the client has a stub (referred to as just a client in some languages) that provides the same methods as the server.
 
 <br>
@@ -300,9 +288,9 @@
    <br>
 
    - Apollo is an implementation of `GraphQL` designed for the needs of product engineering teams building modern, data-driven applications.
-   - It encourages an `agile`, incremental approach and takes special care to avoid requiring any changes to existing APIs and services. 
+   - It encourages an `agile`, incremental approach and takes special care to avoid requiring any changes to existing APIs and services.
    - Apollo puts particular emphasis on tooling and workflows.
-   - Apollo is best used as a new layer in your stack that sits between your services and your applications. 
+   - Apollo is best used as a new layer in your stack that sits between your services and your applications.
    - It's a combination of open source components, commercial extensions, and cloud services.
 
 <br>
@@ -313,13 +301,12 @@
 
    <br>
 
-   - 3factor app is an architecture pattern for modern full-stack apps. 
+   - 3factor app is an architecture pattern for modern full-stack apps.
    - Today, it is possible to build apps that have high feature velocity and scalability from the get go.
    - An architecture pattern which is composed of **3 factors**:
 
-     1.  Realtime GraphQL
+     1. Realtime GraphQL
      2. Reliable eventing
      3. Async serverless
 
 <br>
-

@@ -1,4 +1,4 @@
-#  AWS CLI 
+# AWS CLI
 
 > 자꾸 잊어서 적어놓기...
 >
@@ -34,7 +34,7 @@
 > `curl`  명령어 사용
 
 ```bash
-$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 ```
 
 <br>
@@ -42,7 +42,7 @@ $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.z
 ### 2. Unzip the installer
 
 ```bash
-$ unzip awscliv2.zip
+unzip awscliv2.zip
 ```
 
 <br>
@@ -50,7 +50,7 @@ $ unzip awscliv2.zip
 ### 3. Run the install program
 
 ```bash
-$ sudo ./aws/install
+sudo ./aws/install
 ```
 
 <br>
@@ -62,8 +62,6 @@ chloe@chloe-XPS-15-9570 ~
 $ aws --version
 aws-cli/2.0.19 Python/3.7.3 Linux/5.3.0-61-generic botocore/2.0.0dev23
 ```
-
-
 
 <br>
 
@@ -100,4 +98,3 @@ chloe@chloe-XPS-15-9570 ~/Workspace/kendra-button/frontend/kendra-button-front
 $ aws configure get region
 us-west-2
 ```
-

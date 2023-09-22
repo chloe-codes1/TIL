@@ -6,12 +6,10 @@
 
 ## 프로젝트 및 APP 초기 설정
 
-
-
 ### 프로젝트 만들기
 
 ```bash
-$ django-admin startproject [project name]
+django-admin startproject [project name]
 ```
 
 <br>
@@ -25,10 +23,10 @@ $ django-admin startproject [project name]
 
 <br>
 
-###  App 만들기
+### App 만들기
 
 ```bash
-$ python manage.py startapp [app name]
+python manage.py startapp [app name]
 ```
 
 <br>
@@ -63,8 +61,6 @@ $ python manage.py startapp [app name]
 
 - 함수 ( 인자 -> 반환 return)
 
-
-
 <br>
 
 <br>
@@ -72,8 +68,6 @@ $ python manage.py startapp [app name]
 ### OOP란?
 
 S + V
-
-
 
 <br>
 
@@ -116,19 +110,19 @@ from django.contrib import admin
 ## Project setup
 
 ```bash
-$ touch .gitignore
+touch .gitignore
 
-$ python -m venv venv
+python -m venv venv
 
-$ source venv/bin/activate
+source venv/bin/activate
 
-$ python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 
-$ pip install django==2.1.15 django_extensions django_bootstrap4
+pip install django==2.1.15 django_extensions django_bootstrap4
 
-$ pip freeze > requirements.txt
+pip freeze > requirements.txt
 
-$ django-admin startproject django_additional .
+django-admin startproject django_additional .
 ```
 
 <br>
@@ -140,7 +134,7 @@ $ django-admin startproject django_additional .
 > Installation
 
 ```bash
-$ pip install django-allauth
+pip install django-allauth
 ```
 
 <br>
@@ -218,7 +212,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 ```python
 urlpatterns = [
- 	...
+  ...
     path('accounts/', include('accounts.urls')),
     # 우리가 정의한 accounts.url 아래에
     path('accounts/', include('allauth.urls')),
@@ -226,25 +220,19 @@ urlpatterns = [
 ]
 ```
 
-
-
-
-
 <br>
-
-
 
 ### GitHub
 
 - App registration (get your key and secret here)
 
-  https://github.com/settings/applications/new
+  <https://github.com/settings/applications/new>
 
 - Development callback URL
 
-  http://127.0.0.1:8000/accounts/github/login/callback/
+  <http://127.0.0.1:8000/accounts/github/login/callback/>
 
-If you want more than just read-only access to public data, specify the scope as follows. See https://developer.github.com/v3/oauth/#scopes for details.
+If you want more than just read-only access to public data, specify the scope as follows. See <https://developer.github.com/v3/oauth/#scopes> for details.
 
 ```
 SOCIALACCOUNT_PROVIDERS = {
@@ -258,17 +246,11 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 ```
 
-
-
 <br>
 
 <br>
-
-
 
 ## Pagination
-
-
 
 <br>
 
@@ -277,7 +259,7 @@ SOCIALACCOUNT_PROVIDERS = {
 > Install
 
 ```bash
-$ pip install django-bootstrap-pagination
+pip install django-bootstrap-pagination
 ```
 
 <br>
@@ -297,8 +279,7 @@ $ pip install django-bootstrap-pagination
 ```html
  {% load bootstrap_pagination %}
 
-	...
+ ...
 
 {% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
 ```
-

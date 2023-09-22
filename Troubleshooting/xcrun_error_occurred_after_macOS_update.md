@@ -32,9 +32,6 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
     xcode-select: note: install requested for command line developer tools
     ```
 
-
-
 <br>
 
 *끝!*
-

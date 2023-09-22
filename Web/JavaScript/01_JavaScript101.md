@@ -36,8 +36,6 @@
 
 *V8 engine을 기반으로 한 Node.js*
 
-
-
 <br>
 
 ### JavaScript의 특징
@@ -82,8 +80,6 @@
 
 *JavaScript는 함수형 프로그래밍에 적합하다!!!*
 
-
-
 <br>
 
 #### Pros of JavaScript
@@ -121,11 +117,9 @@
 
 - 구문 끝
 
--  공백과 들여쓰기
+- 공백과 들여쓰기
 
 - 주석
-
-
 
 <br>
 
@@ -135,7 +129,7 @@
 
 <br>
 
-#### 1. 원시 타입 (primitive) 
+#### 1. 원시 타입 (primitive)
 
 > 변경 불가능한 값 (immutable)
 
@@ -166,7 +160,7 @@
 
 <br>
 
-#### String 
+#### String
 
 - Template 문자열
 
@@ -175,7 +169,8 @@
 #### null vs undefined
 
 - undefined
-  - 
+  -
+
 - null
   - 선언 했는데 값이 할당되지 않은 경우
   - typeof null => object 라고 나옴
@@ -196,7 +191,7 @@
 - **함수 level scope**를 가진다
 - 함수 내에서 선언된 변수는 지역변수이며, 나머지는 전역변수로 활용
 - 변수 선언 시 키워드(var)를 쓰지 않으면, 암묵적 전역으로 설정된다
-  - 주의: 변수가 아닌 전역 객체 (window)의 property로 생성 
+  - 주의: 변수가 아닌 전역 객체 (window)의 property로 생성
     - 변수에 할당된 것이 아니라 window.global 이 된 것!
   - keyword를 꼭 사용해라!
 
@@ -206,7 +201,7 @@
 
 - JavaScript에서는 모든 선언을 호이스팅 한다
 - ES6에서 새롭게 등장한 `let`과 `const` keyword는 이러한 내용을 방지할 수 있다
-  - 호이스팅 자체가 이루어 지는 것은 아니고, var는 선언과 동시에 초기화 (undefined)를 하고, 
+  - 호이스팅 자체가 이루어 지는 것은 아니고, var는 선언과 동시에 초기화 (undefined)를 하고,
   - let, const는 선언과 초기화 단계가 분리되어 진행된다
 - Block level scope를 가지고 있다
 
@@ -242,7 +237,7 @@
 
 <br><br>
 
-### JavaScript 객체 (object) 
+### JavaScript 객체 (object)
 
 > 객체는 key와 value로 구성된 속성 (property)들의 모임
 
@@ -256,8 +251,6 @@
    var cat1 = {}
    var cat2 = {name:'nero', age:3}
    ```
-
-   
 
 2. Object 생성자 함수
 
@@ -296,8 +289,6 @@
   var p1 = new Person('chloe', 25)
   ```
 
-  
-
 <br>
 
 <br>
@@ -318,8 +309,3 @@
       
       OBJ['e-mail']
       ```
-
-      
-
-    
-

@@ -31,4 +31,3 @@ def SelectionSort(arr, s):
     arr[s], arr[MIN] = arr[MIN], arr[s]
     SelectionSort(arr, s+1)
 ```
-

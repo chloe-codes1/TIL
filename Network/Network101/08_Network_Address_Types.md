@@ -75,4 +75,3 @@ Network에서 출발지에서 목적지로 data를 전송할 때 사용하는 **
   - 물론 `unicast`이므로 전달 받는 **모든 단말 NIC (Network Interface Card)**에서 **도착지 주소를 확인**하고 자신이 목적지가 아니므로 **packet을 버린다**
   - 하지만 network입장에서는 **network 자원을 쓸데없이 사용**하므로 network 상에서 **불필요한 BUM Traffic**이 많아지면 network의 **성은ㅇ이 저하** 될 수 있다!
 - `Ethernet` 환경에서는 **ARP Broadcast**를 먼저 보내고 이후 통신을 시작하므로 BUM Traffic이 많이 발생하지 않는다
-

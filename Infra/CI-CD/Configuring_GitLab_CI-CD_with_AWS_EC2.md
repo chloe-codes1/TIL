@@ -2,7 +2,7 @@
 
 > 배포 자동화를 통해 비효율 끝판왕 개선하기!!
 >
-> [지난번](https://github.com/chloe-codes1/TIL/blob/master/Server/Deployment/Deploying_a_SpringBoot-React_project_on_AWS_EC2.md)에 배포한 SSAFY에서 준 EC2 하나에 backend와 frontend server 두 개를 올리는 방식에서, 재배포 시 git repo pull 받고 일련의 배포 명령어를 주르륵 실행해야 했고, 너무 비효율적이라 빨리 고치고 싶었다. 
+> [지난번](https://github.com/chloe-codes1/TIL/blob/master/Server/Deployment/Deploying_a_SpringBoot-React_project_on_AWS_EC2.md)에 배포한 SSAFY에서 준 EC2 하나에 backend와 frontend server 두 개를 올리는 방식에서, 재배포 시 git repo pull 받고 일련의 배포 명령어를 주르륵 실행해야 했고, 너무 비효율적이라 빨리 고치고 싶었다.
 >
 > 그래서 CI/CD 를 알아보던 중, SSAFY에서 Github이 아닌 GitLab을 활용하고 있는 만큼 GitLab이 만든 Gitlab CI/CD를 활용해서 배포 자동화를 해보기로 했다!
 >
@@ -62,7 +62,7 @@
 ### 1-1. GitLab 공식 repository 추가
 
 ```bash
-$ curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
 ```
 
 <br>
@@ -70,7 +70,7 @@ $ curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/
 ### 1-2. GitLab Runner 최신 버전 설치
 
 ``` bash
-$ sudo apt-get install gitlab-runner
+sudo apt-get install gitlab-runner
 ```
 
 <br>
@@ -82,7 +82,7 @@ $ sudo apt-get install gitlab-runner
 #### 1. 계정 생성
 
 ```bash
-$ sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 ```
 
 - `gitlab-runner` 라는 이름의 계정을 생성한다
@@ -90,19 +90,19 @@ $ sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bi
 #### 2. 설치
 
 ``` bash
-$ sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
 ```
 
 #### 3. 실행
 
 ``` bash
-$ sudo gitlab-runner start
+sudo gitlab-runner start
 ```
 
 #### 4. Gitlab Runner 등록
 
 ``` bash
-$ sudo gitlab-runner register
+sudo gitlab-runner register
 ```
 
 - 위의 명령어를 입력하고, 5가지 사항을 interactive하게 입력해야 한다
@@ -145,11 +145,11 @@ $ sudo gitlab-runner register
 
 <br>
 
-#### 주의!!!
+#### 주의
 
 - 이것은 SpringBoot - React 프로젝트의 배포 자동화를 위해 내가 작성한 script 이다!!
 - 이 yml 파일 하나를 만들기 위해 엄청나게 많은 시행착오를 겪어서 나온 결과이지만, 처음 작성해보는 Gitlab CI/CD 파일이고, 더 나은 방법이 있을 수 있으므로 참고만 하자! (아마 있을 것이다! 계속 알아보고 있다!)
-  -  더 효율적인 방법을 찾으면 update 하겠다!!
+  - 더 효율적인 방법을 찾으면 update 하겠다!!
 
 ex)
 
@@ -198,17 +198,17 @@ deploy-to-server:
   - backend build 후 재배포, front build 후 재배포 하는 순서로 실행된다!
     - `kill $(lsof -t -i:8000)`
       - backend server가 사용하고 있는 포트번호인 8000번 포트를 종료한다
-    -  `setsid nohup java -jar backend-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &`
-      - 가장 많이 시행 착오 겪은 부분이다
-        - 처음에 기존 jar 파일을 background에서 실행 시키도록 `nohup -jar backend-0.0.1-SNAPSHOT.jar &` 로 pipeline을 활성화 시켰더니 Job이 종료되지 않고 계속 실행되었다
-        - `nohup -jar backend-0.0.1-SNAPSHOT.jar > nohup.out &` 로 변경했더니 permission denied error 가 났다
-        - 그 후로도 수정에 수정을 거쳐 결국 linux directory structure에서 장치 파일들이 저장되는 가상의 파일시스템인 `/dev` 로 .out 파일을 작성하게 변경하였다 (실제로 작성되지는 않는다! 물리적 용량을 차지하지 않는 directory 임!) 
-        - 그 결과, Runner의 Job이 성공적으로 종료되고, background에서 Jar 파일이 실행되는 것을 확인 할 수 있었다!
+    - `setsid nohup java -jar backend-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &`
+    - 가장 많이 시행 착오 겪은 부분이다
+      - 처음에 기존 jar 파일을 background에서 실행 시키도록 `nohup -jar backend-0.0.1-SNAPSHOT.jar &` 로 pipeline을 활성화 시켰더니 Job이 종료되지 않고 계속 실행되었다
+      - `nohup -jar backend-0.0.1-SNAPSHOT.jar > nohup.out &` 로 변경했더니 permission denied error 가 났다
+      - 그 후로도 수정에 수정을 거쳐 결국 linux directory structure에서 장치 파일들이 저장되는 가상의 파일시스템인 `/dev` 로 .out 파일을 작성하게 변경하였다 (실제로 작성되지는 않는다! 물리적 용량을 차지하지 않는 directory 임!)
+      - 그 결과, Runner의 Job이 성공적으로 종료되고, background에서 Jar 파일이 실행되는 것을 확인 할 수 있었다!
 - `after_script`
   - 말 그대로 script 수행이 완료되면 수행 될 script
 - `tags`
   - 특정 Tag가 달린 Runner에 명령을 내릴 수 있게 한다
-    - Gitlab Runner 등록 시 설정한 Tag를 잘 기억해 두었다가 여기에 적으면 된다! 
+    - Gitlab Runner 등록 시 설정한 Tag를 잘 기억해 두었다가 여기에 적으면 된다!
 
 <br>
 
@@ -252,12 +252,12 @@ deploy-to-server:
 처음에 Job 실행 시 새로 생성한 `gitlab-runner`  계정에 대한 sudo 권한이 없어서 권한을 부여했다
 
 ```bash
-$ sudo visudo
+sudo visudo
 ```
 
 - 위의 명령어를 입력한 뒤 아래의 내용을 추가했다
 
-  ``` 
+  ```
   gitlab-runner ALL=(ALL) NOPASSWD: ALL
   ```
 
@@ -269,6 +269,5 @@ $ sudo visudo
 
 ### Todos
 
-- 이 방식 말고 `Dockerfile` 을 작성하고 docker image를 실행시키는 Job을 Gitlab CI/CD로 설정하는 방법을 생각해보고 있다! 
+- 이 방식 말고 `Dockerfile` 을 작성하고 docker image를 실행시키는 Job을 Gitlab CI/CD로 설정하는 방법을 생각해보고 있다!
 - Kubernetes를 활용하는 방법도 알아보는 중! 재밌당!
-

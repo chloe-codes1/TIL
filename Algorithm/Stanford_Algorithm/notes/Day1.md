@@ -1,7 +1,5 @@
 # Day 1 -Introduction
 
-
-
 <br/>
 
 ## 1-1 Why Study Algorithms?
@@ -9,29 +7,17 @@
 - important for all other branches of computer science
 - plays a key role in modern technological innovation
 - provides novel "lens" on processes outside of CS & technology
-- challenging! 
-
-
+- challenging!
 
 <br/>
 
-
-
 ## 1-2 Integer Multiplication
-
-
 
 > How this course works
 
    : Define a computational problem & give solution
 
-
-
-
-
 #### The Grade-School Algorithm
-
-
 
 ex)
 
@@ -42,25 +28,17 @@ _______
 
 ```
 
-
-
 Up-shot
 
 : number of operations grows n<sup>2</sup>
 
-
-
 ​     -> As an algorithm designer, we should keep ask ourselves
 
-​					"*CAN WE DO BETTER?*"
-
-
+​     "*CAN WE DO BETTER?*"
 
 <br/>
 
 ## 1-3 Karatsuba Multiplication
-
-
 
 ex)
 
@@ -76,37 +54,18 @@ Step3: compute (a+b)(c+d) = 6164
 Step4: compute (3) -(2) -(1)
 ```
 
-
-
 #### <br/>
-
-
 
 ### A Recursive Algorithm
 
 > invokes themselves with a sub routine
 
-
-
   -> needs a base case
 
-
-
 <br/>
-
-
 
 ### Karatsuba Multiplication
 
 ```
 Recall: x*y = 
 ```
-
-
-
-
-
-
-
-
-

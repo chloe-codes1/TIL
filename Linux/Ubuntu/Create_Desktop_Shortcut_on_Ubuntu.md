@@ -2,12 +2,12 @@
 
 <br>
 
->  /home/[name]/.local/share/applications/
+> /home/[name]/.local/share/applications/
 
 ```bash
-$ sudo touch [name].desktop
+sudo touch [name].desktop
 
-$ gedit ./[name].destop
+gedit ./[name].destop
 ```
 
 - **`gedit`** is the official text editor of the GNOME desktop environment
@@ -33,13 +33,6 @@ Exec=/home/chloe/sts-4.4.1.RELEASE/SpringToolSuite4
 
 <br>
 
-#### Done! Now add it to favorites!
-
-
+#### Done! Now add it to favorites
 
 <br>
-
-
-
-
-

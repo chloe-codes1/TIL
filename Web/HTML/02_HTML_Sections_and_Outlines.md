@@ -24,30 +24,30 @@
 
 <br>
 
-- #### HTML Navigational Element (`<nav>`) 
+- #### HTML Navigational Element (`<nav>`)
 
-  - defines a section that contains navigation links that appear often on a site. 
+  - defines a section that contains navigation links that appear often on a site.
   - You can have primary and secondary menus, but you never nest, or put a `<nav>`element inside a `<nav>` element.
 
   <br>
 
-- #### HTML Article Element (`<article>`) 
+- #### HTML Article Element (`<article>`)
 
-  - defines a piece of self-contained content. 
+  - defines a piece of self-contained content.
   - It does not refer to the main content alone and can be used for comments and widgets.
 
   <br>
 
-- #### HTML Section Element (`<section>`) 
+- #### HTML Section Element (`<section>`)
 
   - defines a section of a document to indicate a related grouping of semantic meaning.
   - Utilize the section element providing extra context from the parent element makes sense.
 
   <br>
 
-- #### HTML Aside Element (`<aside>`) 
+- #### HTML Aside Element (`<aside>`)
 
-  - defines a section that, though related to the main element, doesn't belong to the main flow, like an explanation box or an advertisement. 
+  - defines a section that, though related to the main element, doesn't belong to the main flow, like an explanation box or an advertisement.
   - It has its own outline, but doesn't belong to the main one.
 
 <br><br>
@@ -56,24 +56,24 @@
 
 <br>
 
-- #### HTML Body Element (`<body>`) 
+- #### HTML Body Element (`<body>`)
 
-  - defines all the content of a document. 
+  - defines all the content of a document.
   - It contains all the content and HTML tags.
 
   <br>
 
-- #### HTML Header Element (`<header>`) 
+- #### HTML Header Element (`<header>`)
 
-  - defines a page which typically contains the logo, title, and navigation. 
-  - The header can also be used in other semantic elements such as `<article> `or `<section>` — or section header, containing perhaps the section's heading, author name, etc. `<article>`, `<section>`, `<aside>`, and `<nav>` can have their own `<header>`. 
+  - defines a page which typically contains the logo, title, and navigation.
+  - The header can also be used in other semantic elements such as `<article>`or `<section>` — or section header, containing perhaps the section's heading, author name, etc. `<article>`, `<section>`, `<aside>`, and `<nav>` can have their own `<header>`.
   - Despite its name, it is not necessarily positioned at the beginning of the page or section.
 
   <br>
 
-- #### HTML Footer Element (`<footer>`) 
+- #### HTML Footer Element (`<footer>`)
 
-  - defines a page footer which typically contains the copyright, legal notices and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc. `<article>`, `<section>`, `<aside>`, and `<nav>` can have their own `<footer>`. 
+  - defines a page footer which typically contains the copyright, legal notices and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc. `<article>`, `<section>`, `<aside>`, and `<nav>` can have their own `<footer>`.
   - Despite its name, it is not necessarily positioned at the end of the page or section.
 
 <br>
@@ -94,7 +94,7 @@
 
 ### Document metadata
 
-Metadata contains information about the page. This includes information about styles, scripts and data to help software ([search engines](https://developer.mozilla.org/en-US/docs/Glossary/search_engine), [browsers](https://developer.mozilla.org/en-US/docs/Glossary/Browser), etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information. 
+Metadata contains information about the page. This includes information about styles, scripts and data to help software ([search engines](https://developer.mozilla.org/en-US/docs/Glossary/search_engine), [browsers](https://developer.mozilla.org/en-US/docs/Glossary/Browser), etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information.
 
 | Element   | Description                                                  |
 | :-------- | :----------------------------------------------------------- |
@@ -174,8 +174,6 @@ title 속성을 이용하여 두문자의 원형을 나타냄
 - alt 속성은 이미지를 대체하기 위한 텍스트. 반드시 사용.
 ```
 
-
-
 <br>
 
 <br>
@@ -202,7 +200,7 @@ title 속성을 이용하여 두문자의 원형을 나타냄
 
 <br>
 
-####  셀 병합
+#### 셀 병합
 
 - 가로셀 병합: colsapn 속성 사용
 - 세로셀 병합: rowspan 속성 사용
@@ -212,8 +210,6 @@ title 속성을 이용하여 두문자의 원형을 나타냄
 #### 표의 구조화 요소
 
 > 접근성 강화와 데이터 분석을 위해 표를 구조화 한다
-
-
 
 - thead 요소
   - 표의 제목으로 구성된 row의 집합
@@ -260,6 +256,3 @@ title 속성을 이용하여 두문자의 원형을 나타냄
 #### input 요소
 
 > 다양한 타입을 가지는 입력 데이터 필드
-
-
-

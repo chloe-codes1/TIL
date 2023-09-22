@@ -2,7 +2,7 @@
 
 > Django uses request and response objects to pass state through the system.
 
-https://docs.djangoproject.com/en/3.0/ref/request-response/
+<https://docs.djangoproject.com/en/3.0/ref/request-response/>
 
 <br>
 
@@ -15,8 +15,6 @@ https://docs.djangoproject.com/en/3.0/ref/request-response/
 <br>
 
 <br>
-
-
 
 ## HttpRequest objects
 
@@ -46,11 +44,11 @@ elif request.method == 'POST':
 
 #### HttpRequest.FILES
 
-- A dictionary-like object containing all uploaded files. 
-  - Each key in FILES is the name from the `<input type="file" name="">`. 
+- A dictionary-like object containing all uploaded files.
+  - Each key in FILES is the name from the `<input type="file" name="">`.
   - Each value in FILES is an **UploadedFile**.
 
-- FILES will only contain data if the request method was POST and the `<form>` that posted to the request had `enctype="multipart/form-data"`. 
+- FILES will only contain data if the request method was POST and the `<form>` that posted to the request had `enctype="multipart/form-data"`.
   - Otherwise, FILES will be a blank dictionary-like object.
 
 <br>
@@ -63,12 +61,10 @@ elif request.method == 'POST':
 
 <br>
 
-- In contrast to **HttpRequest** objects, which are created automatically by Django, **HttpResponse** objects are your responsibility. 
+- In contrast to **HttpRequest** objects, which are created automatically by Django, **HttpResponse** objects are your responsibility.
   - Each view you write is responsible for instantiating, populating, and returning an **HttpResponse**.
 
 - The **HttpResponse** class lives in the **django.http** module.
-
-
 
 <br>
 
@@ -96,26 +92,18 @@ elif request.method == 'POST':
 
 ### class HttpResponseNotAllowed
 
-- Like HttpResponse, but uses a 405 status code. 
+- Like HttpResponse, but uses a 405 status code.
 - The first argument to the constructor is required: a list of permitted methods (e.g. ['GET', 'POST']).
 
-
-
-
-
-
-
 <br>
 
 <br>
-
-
 
 `+`
 
 ### Monolithic Architecture란?
 
-: 
+:
 
 - 장점
   - 하나에 다있으니까 빠르게 개발 가능

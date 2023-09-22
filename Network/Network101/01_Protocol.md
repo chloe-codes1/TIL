@@ -9,7 +9,7 @@
 ### Before getting started
 
 - 규정/규약과 관련된 내용을 언급할 때 **protocol** 이라는 용어를 사용한다
-- 네트워크에서도 **통신할 때의 규약**을 말할 때 protocol 이라는 용어를 사용한다 
+- 네트워크에서도 **통신할 때의 규약**을 말할 때 protocol 이라는 용어를 사용한다
 
 <br>
 
@@ -64,6 +64,3 @@
     - 잘린 `packet`을 data 형태로 잘 조합하도록 도와준다
 
   - **application layer**
-
-    
-

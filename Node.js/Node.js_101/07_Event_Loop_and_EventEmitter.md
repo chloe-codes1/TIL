@@ -7,8 +7,8 @@
 ### Event Loop
 
 - Node.js에선 Event를 매우 많이 사용하고, 이 때문에 다른 기술들보다 훨씬 속도가 빠름
-- Node.js 기반으로 만들어진 server가 가동되면, 
-  - **변수**들을 initialize하고, 
+- Node.js 기반으로 만들어진 server가 가동되면,
+  - **변수**들을 initialize하고,
   - **함수**를 **선언**하고,
   - **Event**가 일어날 때 까지 기다림
 - `Event-Driven application`에서는 event를 대기하는 **main loop**가 있음
@@ -30,7 +30,7 @@
 ##### `Observer pattern`
 
 - object의 상태 변화를 관찰하는 **관찰자**들, 즉 observer들의 목록을 object에 등록하여 상태 변화가 있을 때마다 method 등을 통해 객체가 직접 목록의 각 observer에게 통지하도록 하는 **design pattern**
-- 주로 **Distributed event handling system** 을 구현하는 데 사용됨 
+- 주로 **Distributed event handling system** 을 구현하는 데 사용됨
 
 <br>
 
@@ -50,7 +50,7 @@
 
 #### 사용 방법
 
-```javascript 
+```javascript
 // events module 사용
 var events = require('events')
 
@@ -111,8 +111,6 @@ Data received
 Program has ended
 ```
 
-
-
 <br>
 
 <br>
@@ -155,8 +153,6 @@ Program has ended
 | :----: | :----------------------------------------------------------- |
 |   1    | **`newListener`**<br/>**event** − String<br/>: the event name<br/>**listener** − Function<br/>: the event handler functionThis event is emitted any time a listener is added. <br/>When this event is triggered, the listener may not yet have been added to the array of listeners for the event. |
 |   2    | **`removeListener`**<br/>**event** − String The event name<br/>**listener** − Function The event handler function<br/>This event is emitted any time someone removes a listener. <br/>When this event is triggered, the listener may not yet have been removed from the array of listeners for the event. |
-
-
 
 <br>
 
@@ -218,4 +214,3 @@ listner2 executed.
 1 Listner(s) listening to connection event
 Program Ended.
 ```
-

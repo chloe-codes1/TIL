@@ -25,15 +25,15 @@
     import "fmt"
     
     type person struct {
-    	name    string
-    	age     int
-    	favFood []string
+     name    string
+     age     int
+     favFood []string
     }
     
     func main() {
-    	favFood := []string{"guacamole", "omelet", "biscuits and gravy"}
-    	chloe := person{"chloe", 26, favFood}
-    	fmt.Println(chloe)
+     favFood := []string{"guacamole", "omelet", "biscuits and gravy"}
+     chloe := person{"chloe", 26, favFood}
+     fmt.Println(chloe)
     }
     ```
 
@@ -50,13 +50,13 @@
    - 명확하게 어떤 value가 어떤 value인지 보이지 않기 때문에 좋지 않은 방법이다
      - 해당 값이 `struct`에서 몇번째인지 확인해야 하는 번거로움이 있다
 
-2.  어떤 값인지 명시하여 지정하기
+2. 어떤 값인지 명시하여 지정하기
 
    ```go
    camila := person{name: "camila", age: 26, favFood: camilaFav}
    ```
 
-   - `struct` 를 비교하며 확인하지 않아도 되므로 명확하다
+- `struct` 를 비교하며 확인하지 않아도 되므로 명확하다
 
 <br>
 
@@ -70,9 +70,6 @@
   - `Struct`를 활용해야 한다!
 - Struct로 **method** 도 만들 수 있다
 - Go는 **construct method** 가 없다
-  - Python의 `__init__`, JavaScript의 `constructor()` 같은 construct가 Go의 `struct`에는 없다 
+  - Python의 `__init__`, JavaScript의 `constructor()` 같은 construct가 Go의 `struct`에는 없다
   - 직접 constructor를 만들어 실행해야 한다
 - Go에서 거의 모든것을 `struct`를 활용하여 할 수 있으므로 struct는 중요한 역할을 한다!
-
-
-

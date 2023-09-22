@@ -34,7 +34,7 @@ boolean isPresent = ClassUtils.isPresent("org.springframework.security.config.an
 
 ### 1-2. org.springframework.util.StringUtils
 
-#### boolean isEmpty(@Nullable Object str);
+#### boolean isEmpty(@Nullable Object str)
 
 String null 과 empty 체크
 
@@ -70,7 +70,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 ### 1-3. org.springframework.util.TypeUtils
 
-#### boolean isAssignable(Type lhsType, Type rhsType);
+#### boolean isAssignable(Type lhsType, Type rhsType)
 
 오른쪽에 있는 타입이 왼쪽에 있는 타입의 하위 타입인지 체크
 
@@ -84,8 +84,6 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 - A Service class/interface provides a way of a client to interact with some functionality in the application. This is typically public, with some business meaning. For example, a `TicketingService` interface might allow you to `buyTicket`, `sellTicket` and so on.
 - A helper class tends to be hidden from the client and is used internally to provide some boiler plate work that has no business domain meaning. For example, let's say you wanted to convert a date into a timestamp in order to save it to your particular datastore. You might have a utility class called `DateConvertor` with a `convertDateToTimestamp` method that performs this processing.
-
-
 
  <br>
 
@@ -110,9 +108,9 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 <br>
 
-#### 간단 정리 
+#### 간단 정리
 
-> Django project 기준 
+> Django project 기준
 
 - M
   - Data  ex) models.py
@@ -141,7 +139,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 ### Cross-Origin Resource Sharing(CORS)
 
-> https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+> <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>
 
 - 추가 HTTP Header를 사용하여 browser가 한 출처에서 실행 중인 Web application이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 browser에서 알려주는 체제
 - Web application은 resource 가 자신의 출처 (Domain, Protocol, Port) 와 다를 때 CORS HTTP request를 실행함
@@ -186,7 +184,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 - Resouce를 생성/변경하기 위해 설계된 method
 - 전송해야 될 data를 Body에 담아서 전송
-- 길이의 제한 없이 data 전송 가능 
+- 길이의 제한 없이 data 전송 가능
   - GET 방식과는 다르게 대용량 data 전송이 가능하다!
 - 요청 헤더의 Content-Type에 요청 데이터의 타입을 표시해야 함
 - Non-idempotent
@@ -203,7 +201,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 ## 5. JSP의 application class
 
-> https://gmlwjd9405.github.io/2018/11/03/jsp.html
+> <https://gmlwjd9405.github.io/2018/11/03/jsp.html>
 
 <br>
 
@@ -237,7 +235,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 ## 6. Session과 Cookie
 
-> 참고: https://jeong-pro.tistory.com/80
+> 참고: <https://jeong-pro.tistory.com/80>
 
 <br>
 
@@ -262,7 +260,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 - Client의 local 에 저장되는 key와 value가 들어있는 작은 data file
 - 쿠키에는 이름, 값, 만료날짜(쿠키 저장기간), 경로 정보가 들어있다.
-- 쿠키는 일정시간동안 데이터를 저장할 수 있다. 
+- 쿠키는 일정시간동안 데이터를 저장할 수 있다.
   - 로그인 상태 유지에 활용
 - 쿠키는 클라이언트의 상태 정보를 로컬에 저장했다가 참조한다.
 - 쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 **자동으로 서버에 전송** 한다
@@ -305,7 +303,7 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 2. 서버에서는 클라이언트로 발급해준 session ID를 쿠키를 사용해 저장 (JSESSIONID)
 
 3. 클라이언트는 다시 접속할 때, 이 쿠키(JSESSIONID)를 이용해서 sessionID값을 서버에 전달
-   - session을 구별하기 위해 ID가 필요하고 그 ID만 쿠키를 이용해서 저장해놓는다. (쿠키사용) 
+   - session을 구별하기 위해 ID가 필요하고 그 ID만 쿠키를 이용해서 저장해놓는다. (쿠키사용)
    - 쿠키는 자동으로 서버에 전송되니까 서버에서 session아이디에 따른 처리를 할 수 있음
 
 <br>
@@ -337,10 +335,10 @@ path 경로에서 파일 이름을 반환 (마지막 문자열을 반환)
 
 - **S**RP (Single Responsiblity Principle)
   - 단일 책임 원칙
-    - 소프트웨어의 설계 부품 (class, method etc.) 은 하나의 책임 (기능)만을 가져야 한다 
+    - 소프트웨어의 설계 부품 (class, method etc.) 은 하나의 책임 (기능)만을 가져야 한다
 - **O**CP (Open-Closed Principle)
   - 개방-폐쇄 원칙
-    - 기존의 코드를 변경하지 않고 (closed), 기능을 수정하거나 추가할 수 있도록 (open) 설게해야 한다 
+    - 기존의 코드를 변경하지 않고 (closed), 기능을 수정하거나 추가할 수 있도록 (open) 설게해야 한다
 - **L**SP (Liskov Substitution Principle)
   - 리스코프 치환 원칙
     - 자식 class 는 부모 class에서 가능한 행위를 수행할 수 있어야 한다

@@ -4,7 +4,7 @@
 >
 > References: [man7.org](https://man7.org/linux/man-pages/man8/logrotate.8.html), [network.com](https://www.networkworld.com/article/3218728/how-log-rotation-works-with-logrotate.html), [server-talk.tistory.com](https://server-talk.tistory.com/271)
 >
-> https://byd0105.tistory.com/29
+> <https://byd0105.tistory.com/29>
 >
 
 <br>
@@ -72,6 +72,7 @@
 <br>
 
 ### logrotate.conf
+
 아래는 `logrotate.conf` 의 예시이다
 
 ```sh
@@ -115,27 +116,24 @@ include /etc/logrotate.d
 # system-specific logs may be also be configured here.
 ```
 
-
-
 <br>
 
 <br>
 
 ### Options
 
-- rotate [숫자] : log파일이 5개 이상 되면 삭제 
+- rotate [숫자] : log파일이 5개 이상 되면 삭제
   - ex) rotate 5
-- maxage [숫자] : log파일이 30일 이상 되면 삭제 
-  - ex) maxage 30 
-- size : 지정된 용량보다 클 경우 rotate 실행 
-  - ex)　size +100k 
-- create [권한] [유저] [그룹] : rotate 되는 로그파일 권한 지정 
-  - ex) create 644 root root 
+- maxage [숫자] : log파일이 30일 이상 되면 삭제
+  - ex) maxage 30
+- size : 지정된 용량보다 클 경우 rotate 실행
+  - ex)　size +100k
+- create [권한] [유저] [그룹] : rotate 되는 로그파일 권한 지정
+  - ex) create 644 root root
 - notifempty : 로그 내용이 없으면 rotate 하지 않음  
 - ifempty : 로그 내용이 없어도 rotate 진행
-- monthly(월 단위) , weekly(주 단위) , daily(일 단위) rotate 진행 
-- compress : rotate 되는 log file gzip 압축 
-- nocompress : rotate 되는 로그파일 gzip 압축 X 
+- monthly(월 단위) , weekly(주 단위) , daily(일 단위) rotate 진행
+- compress : rotate 되는 log file gzip 압축
+- nocompress : rotate 되는 로그파일 gzip 압축 X
 - missingok : 로그 파일이 발견되지 않은 경우 에러처리 하지 않음
 - dateext : 백업 파일의 이름에 날짜가 들어가도록 함  
-

@@ -10,7 +10,7 @@
 
 ### DBMS (Database Management System)
 
-- RDBMS 
+- RDBMS
   - 관계형 모델 기반 databse 관리 시스템
 
 <br>
@@ -69,8 +69,8 @@
 
 ```sql
 CREATE TABLE table (
-	column1 datatype [constraints],
-	column2 datatype [constaraints],
+ column1 datatype [constraints],
+ column2 datatype [constaraints],
 );
 ```
 
@@ -78,11 +78,11 @@ ex)
 
 ```sqlite
 CREATE TABLE contacts (
-	contact_id INTEGER PRIMARY KEY,
-	first_name TEXT NOT NULL,
-	last_name TEXT NOT NULL,
-	email TEXT NOT NULL UNIQUE,
-	phone TEXT NOT NULL UNIQUE
+ contact_id INTEGER PRIMARY KEY,
+ first_name TEXT NOT NULL,
+ last_name TEXT NOT NULL,
+ email TEXT NOT NULL UNIQUE,
+ phone TEXT NOT NULL UNIQUE
 );
 ```
 
@@ -94,10 +94,8 @@ CREATE TABLE contacts (
 
 ```sqlite
 ALTER TABLE table_name
-	RENAME TO new_table_name;
+ RENAME TO new_table_name;
 ```
-
-
 
 <br>
 
@@ -153,8 +151,6 @@ ALTER TABLE table_name
     SELECT * FROM test LIMIT 10 OFFSET 10;
     ```
 
-
-
 <br>
 
 ```sql
@@ -194,8 +190,6 @@ sqlite> CREATE TABLE IF NOT EXISTS flights(
    ...> price INTEGER NOT NULL
    ...> );
 ```
-
-
 
 <br>
 
@@ -249,7 +243,7 @@ Error: no such table: flights
 
 ### Select exercise
 
-#### 1. flights 테이블 전체 데이터를 조회하시오.
+#### 1. flights 테이블 전체 데이터를 조회하시오
 
 ```sqlite
 sqlite> SELECT * FROM flights;
@@ -263,7 +257,7 @@ id          flight_num  departure   waypoint    arrival     price
 
 <br>
 
-#### 2. 모든 waypoint를 조회하시오.
+#### 2. 모든 waypoint를 조회하시오
 
 ```sqlite
 sqlite> SELECT waypoint FROM flights;
@@ -277,7 +271,7 @@ Beijing
 
 <br>
 
-#### 3. 항공권 가격이 600 미만인 항공편들의 id와 flight_num을 조회하시오.
+#### 3. 항공권 가격이 600 미만인 항공편들의 id와 flight_num을 조회하시오
 
 ```sqlite
 sqlite> SELECT id, flight_num from flights WHERE price<600;
@@ -290,7 +284,7 @@ id          flight_num
 
 <br>
 
-#### 4. 도착지가 Incheon이고 가격이 500 이상인 항공편의 departure를 조회하시오.
+#### 4. 도착지가 Incheon이고 가격이 500 이상인 항공편의 departure를 조회하시오
 
 ```sqlite
 sqlite> SELECT departure FROM flights WHERE arrival = 'Incheon' AND 500 <= price;
@@ -302,7 +296,7 @@ LA
 
 <br>
 
-#### 5. 항공편의 숫자부분이 0으로 시작하고 2로 끝나면서 경유지가 Beijing인 항공편들의 id와 flight_num을 조회하시오.
+#### 5. 항공편의 숫자부분이 0으로 시작하고 2로 끝나면서 경유지가 Beijing인 항공편들의 id와 flight_num을 조회하시오
 
 > ver 1
 
@@ -356,23 +350,13 @@ sqlite> .read hello_user.sql
 10,"서윤","오",22,"충청남도",011-9693-6452,49000
 ```
 
-
-
-
-
-
-
 <br>
 
 <br>
-
-
-
-
 
 `+`
 
-### CLI에서 예쁘게 보기..
+### CLI에서 예쁘게 보기
 
 ```sqlite
 sqlite> .headers on

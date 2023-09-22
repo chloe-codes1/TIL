@@ -18,7 +18,7 @@
 #### `migration` file 확인
 
 ```bash
-$ python manage.py showmigrations
+python manage.py showmigrations
 ```
 
 <br>
@@ -26,7 +26,7 @@ $ python manage.py showmigrations
 #### 다시 `migrations`  만들기
 
 ```bash
-$ python manage.py makemigrations
+python manage.py makemigrations
 ```
 
 <br>
@@ -35,7 +35,7 @@ $ python manage.py makemigrations
 
 ```bash
 $ python manage.py sqlmigrate articles 0001
-							[app_label] [migration_name]
+       [app_label] [migration_name]
 BEGIN;
 --
 -- Create model Article
@@ -50,7 +50,7 @@ COMMIT;
 
 ```bash
 $ python manage.py migrate
-		[app_label] [migration_name]
+  [app_label] [migration_name]
 ```
 
 <br>
@@ -59,7 +59,7 @@ $ python manage.py migrate
 
 > 생성을 위해서는 아래와 같이도 할 수 있다!
 
-1. 
+1.
 
    ```python
    Article.objects.create(title='제목', content='내용')
@@ -157,17 +157,17 @@ def create(request):
 #### Curl 로 간단한 요청 날리기
 
 ```bash
-$ curl -X GET http://chloecodes1.pythonanywhere.com/community/
+curl -X GET http://chloecodes1.pythonanywhere.com/community/
 ```
 
 <br>
 
-#### Telnet 사용해보기 
+#### Telnet 사용해보기
 
 > 설치
 
 ```bash
-$ sudo apt-get install telnetd
+sudo apt-get install telnetd
 ```
 
 <br>
@@ -175,7 +175,7 @@ $ sudo apt-get install telnetd
 > request 날리기
 
 ```bash
-$ telnet google.com 80
+telnet google.com 80
 ```
 
 <br>
@@ -282,8 +282,6 @@ def update (request,pk):
 <form class="form-inline" action="{% url 'articles:search' %}" method="POST"> ... </form>
 ```
 
-
-
 <br>
 
 <br>
@@ -300,7 +298,7 @@ def update (request,pk):
 
   ```python
   from django.shortcuts import render, redirect, get_object_or_404
-  	...
+   ...
   article = get_object_or_404(Article, id=pk)
   ```
 
@@ -324,8 +322,6 @@ STATICFILES_DIRS = [
 ]
 ```
 
-
-
 <br>
 
 <br>
@@ -336,7 +332,7 @@ STATICFILES_DIRS = [
 
 ### Traceroute
 
->  `TraceRoute` - Linux / `TRACERT` - Windows
+> `TraceRoute` - Linux / `TRACERT` - Windows
 
 <br>
 
@@ -346,7 +342,7 @@ STATICFILES_DIRS = [
 
 - 지정된 호스트에 도달할 때까지 통과하는 **경로의 정보**와 각 경로에서의 **지연 시간**을 추적하는 네트워크 명령어로 *특정 사이트에 접속이 되지 않거나 지연이 있는 경우* 어디에서 병목이 발생하는지를 알아보는데 유용함.  
 
-- 접속이 되는 각 경로를 체크하여 **어느 경로(Routing)**를 거쳐 접속이 되고, **어느 구간**에서 **얼마만큼**의 속도 지연이 있는지,  그리고 **어디에서 **패킷이 중지 됐는지를 확인할 수 있음 
+- 접속이 되는 각 경로를 체크하여 **어느 경로(Routing)**를 거쳐 접속이 되고, **어느 구간**에서 **얼마만큼**의 속도 지연이 있는지,  그리고 **어디에서**패킷이 중지 됐는지를 확인할 수 있음
 
 - 단, *시간대/내부 트래픽/서버 상태* 등의 많은 영향을 받아 값이 달라질 수 있으므로 반복 확인이 필요하다!
 
@@ -355,7 +351,7 @@ STATICFILES_DIRS = [
 > Install traceroute
 
 ```bash
-$ sudo apt-get install traceroute
+sudo apt-get install traceroute
 ```
 
 <br>
@@ -380,8 +376,6 @@ traceroute to www.google.com (172.217.31.164), 30 hops max, 60 byte packets
 <br>
 
 <br>
-
-
 
 ### MVC Pattern
 

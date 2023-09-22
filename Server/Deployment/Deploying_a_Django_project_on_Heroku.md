@@ -23,10 +23,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'YOUR_SECRET_KEY')
 
 <br>
 
-### 2. Install `Heroku` 
+### 2. Install `Heroku`
 
 ```bash
-$ npm install -g heroku
+npm install -g heroku
 ```
 
 <br>
@@ -50,7 +50,7 @@ web: gunicorn [YOUR_APP_NAME].wsgi --log-file -
 > The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP server.
 
 ```bash
-$ pip install gunicorn
+pip install gunicorn
 ```
 
 <br>
@@ -60,7 +60,7 @@ $ pip install gunicorn
 > **dj-database-url** (Django database configuration from environment variable)
 
 ```bash
-$ pip install dj-database-url 
+pip install dj-database-url 
 ```
 
 > Add it into the bottom of the `settings.py`
@@ -75,7 +75,7 @@ DATABASES['default'].update(db_from_env)
 > **psycopg2** (Python Postgres database support)
 
 ```bash
-$ pip install psycopg2-binary
+pip install psycopg2-binary
 ```
 
 <br>
@@ -85,10 +85,10 @@ $ pip install psycopg2-binary
 > Install `whitenoise`
 
 ```bash
-$ pip install whitenoise
+pip install whitenoise
 ```
 
->  Add it into the MIDDLEWEAR of the `settings.py`
+> Add it into the MIDDLEWEAR of the `settings.py`
 
 ```python
 MIDDLEWARE = [
@@ -127,7 +127,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 > The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository
 
 ```bash
-$ pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 
 <br>
@@ -151,7 +151,7 @@ python-3.6.9
 #### 4-1. Create the app
 
 ```bash
-$ heroku create [APP_NAME]
+heroku create [APP_NAME]
 ```
 
 <br>
@@ -159,9 +159,9 @@ $ heroku create [APP_NAME]
 #### 4-2. Push our app to the Heroku repository
 
 ```bash
-$ git add .
-$ git commit
-$ git push heroku master
+git add .
+git commit
+git push heroku master
 ```
 
 <br>
@@ -169,7 +169,7 @@ $ git push heroku master
 #### 4-3. Set up the database tables
 
 ```bash
-$ heroku run python manage.py migrate
+heroku run python manage.py migrate
 ```
 
 <br>
@@ -177,7 +177,7 @@ $ heroku run python manage.py migrate
 #### 4-4. Create superuser
 
 ```bash
-$ heroku run python manage.py createsuperuser
+heroku run python manage.py createsuperuser
 ```
 
 <br>
@@ -185,16 +185,14 @@ $ heroku run python manage.py createsuperuser
 #### 4-5. Open your app
 
 ```bash
-$ heroku open
+heroku open
 ```
 
 <br>
 
 <br>
 
-### 5. You are now live!
-
-
+### 5. You are now live
 
 <br>
 
@@ -211,7 +209,7 @@ $ heroku open
 ### 1. Disable collectstatic
 
 ```bash
-$ heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set DISABLE_COLLECTSTATIC=1
 ```
 
 <br>
@@ -223,8 +221,8 @@ $ heroku config:set DISABLE_COLLECTSTATIC=1
 To export the data from your Heroku Postgres database, create a new backup and download it.
 
 ```term
-$ heroku pg:backups:capture
-$ heroku pg:backups:download
+heroku pg:backups:capture
+heroku pg:backups:download
 ```
 
 <br>
@@ -235,7 +233,7 @@ $ heroku pg:backups:download
 
 <br>
 
-#### To enable maintenance mode:
+#### To enable maintenance mode
 
 ```bash
 $ heroku maintenance:on
@@ -244,7 +242,7 @@ Enabling maintenance mode for myapp... done
 
 <br>
 
-#### To disable maintenance mode:
+#### To disable maintenance mode
 
 ```bash
 $ heroku maintenance:off
@@ -253,7 +251,7 @@ Disabling maintenance mode for myapp... done
 
 <br>
 
-#### To check the current maintenance status of an app:
+#### To check the current maintenance status of an app
 
 ```bash
 $ heroku maintenance
@@ -267,7 +265,7 @@ off
 ### 4. Restart
 
 ```bash
-$ heroku restart
+heroku restart
 ```
 
 - run this when  you see this message
@@ -280,7 +278,7 @@ $ heroku restart
 ### 5. Loaddata
 
 ```bash
-$ heroku run python manage.py loaddata [YOUR_JSON_FILE_NAME]
+heroku run python manage.py loaddata [YOUR_JSON_FILE_NAME]
 ```
 
 <br>

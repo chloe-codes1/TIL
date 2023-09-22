@@ -22,4 +22,3 @@
   - `FROM`이 내부고, `TO`가 외부이면 route table을 설정해서 routing 할 수 있지만
   - `FROM`이 외부, `TO` 가 내부면 안된다!
     - **Public LB**를 통과하도록 설정해야 한다!
-

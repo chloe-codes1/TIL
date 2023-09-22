@@ -18,8 +18,8 @@
 
 ### Vue 의 특징
 
--  작고 가볍지만, 필요한 기능을 추가 할 수 있게 하자!
-  - 그래서 router 사용하려면 따로 추가해야함!
+- 작고 가볍지만, 필요한 기능을 추가 할 수 있게 하자!
+- 그래서 router 사용하려면 따로 추가해야함!
 
 <br>
 
@@ -30,10 +30,8 @@
 > 일반 설치
 
 ```bash
-$ npm install vue-router
+npm install vue-router
 ```
-
-
 
 > vue의 힘을 빌려 **add** 하기
 >
@@ -137,8 +135,8 @@ export default router
 
 ### `views/` directory
 
--  URL(/) 과 mapping 될 **component**들이 들어가는 directory
-  - URL을 하사 받을 애들~!
+- URL(/) 과 mapping 될 **component**들이 들어가는 directory
+- URL을 하사 받을 애들~!
 - `views/` 에 있는 Component들은, router/index.js 로 가서 import 한다!
 
 <br>
@@ -235,4 +233,3 @@ export default {
 
 </style>
 ```
-

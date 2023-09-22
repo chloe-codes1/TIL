@@ -88,4 +88,3 @@ arr = [4,6,3,6,8,0,3,8,10]
 quick_sort(arr, 0, len(arr)-1)
 print(arr)
 ```
-

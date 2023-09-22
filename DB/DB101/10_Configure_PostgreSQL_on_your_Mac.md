@@ -65,4 +65,3 @@ alter user postgres with password 'YOUR_PASSWORD';
 ```sh
 brew postgresql-upgrade-database
 ```
-

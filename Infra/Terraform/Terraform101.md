@@ -1,4 +1,4 @@
-#  Introduction to Terraform
+# Introduction to Terraform
 
 > Reference: [Terraform docs](https://www.terraform.io/intro/index.html), [blog.naver.com/alice_k106](https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221489260596&parentCategoryNo=&categoryNo=24&viewDate=&isShowPopularPosts=false&from=postView), [인프런] DevOps : Infrastructure as Code with Terraform and AWS 강좌 by 송주영님
 
@@ -48,8 +48,8 @@
 
     ```yaml
     provider "aws" {
-    	region = "ap-northeast-2"
-    	version = "~> 3.0"
+     region = "ap-northeast-2"
+     version = "~> 3.0"
     }
     ```
 
@@ -64,16 +64,16 @@
 
   - 원하는 형태로 파일 이름을 사용한다
 
-  -  ex)
+  - ex)
 
     ```yaml
     resource "aws_vpc" "example" {
-    	cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
+     cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
     }
     ```
 
-    - Terraform으로 VPC를 생성하는 코드이다
-    - VPC 역시 다양한 argument와 다른 구성요소가 존재한다
+  - Terraform으로 VPC를 생성하는 코드이다
+  - VPC 역시 다양한 argument와 다른 구성요소가 존재한다
 
 <br>
 
@@ -89,15 +89,15 @@
 
     ```yaml
     {
-    	"version": 4,
-    	"terraform_version": "0.12.24",
-    	"serial": 3,
-    	"lineage": "3c77xxxx-2de4-7736-1447-038974a3c187",
-    	"outputs": {},
-    	"resources": [
-    		{...},
-    		{...}
-    	]
+     "version": 4,
+     "terraform_version": "0.12.24",
+     "serial": 3,
+     "lineage": "3c77xxxx-2de4-7736-1447-038974a3c187",
+     "outputs": {},
+     "resources": [
+      {...},
+      {...}
+     ]
     }
     ```
 
@@ -118,15 +118,15 @@
 
     ```yaml
     resource "aws_vpc" "default" {
-    	cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
+     cidr_block = "10.0.0.0/16"  # cidr_block 외에도 수많은 인자가 존재한다
     }
     
     output "vpc_id" {
-    	value = aws_vpc.default.id
+     value = aws_vpc.default.id
     }
     
     output "cidr_block" {
-    	value = aws_vpc.default.cidr_block
+     value = aws_vpc.default.cidr_block
     }
     ```
 
@@ -155,9 +155,9 @@
   
     ```yaml
     module "vpc" {
-    	source = ":./_modulesvpc"
-  	
-    	cidr_block = "1.0.0.0/16"
+     source = ":./_modulesvpc"
+   
+     cidr_block = "1.0.0.0/16"
     }
     ```
   
@@ -174,20 +174,20 @@
 
   - remote state를 사용하면 `VPC`, `IAM` 등과 같은 공용 service를 다른 service 에서 참조할 수 있다
 
-    - **tfstate 파일 (최신 terraform 상태 정보)** 이 저장되어 있는 backend 정보를 명시하면, 
+    - **tfstate 파일 (최신 terraform 상태 정보)** 이 저장되어 있는 backend 정보를 명시하면,
       - 해당 backend에서 output 정보들을 가져온다
   
   - ex)
   
     ```yaml
     data "terraform_remote_state" "vpc"{
-    	backend = "remote"
-    	
-    	config = {
-    		bucket		= "terraform-s3-bucket"
-  		region		= "ap-northeast-2"
-    		key				= "terraform/vpc/terraform.tfstate"
-    	}
+     backend = "remote"
+     
+     config = {
+      bucket  = "terraform-s3-bucket"
+    region  = "ap-northeast-2"
+      key    = "terraform/vpc/terraform.tfstate"
+     }
     }
     ```
   
@@ -206,7 +206,7 @@
      - 가장 최근에 배포한 terraform code 형상
        - `tfstate` 파일
 - 여기서 가장 중요한 것은 `AWS 실제 인프라` 와 `Backend에 저장된 상태` 가 **100% 일치하도록 만드는 것** 이다!!!
-  - Terraform을 운영하면서 최대한 이 두가지가 100% 동일하도록 유지하는 것이 중요한데, 
+  - Terraform을 운영하면서 최대한 이 두가지가 100% 동일하도록 유지하는 것이 중요한데,
     - Terraform에서는 이를 위해 **import**, **state** 등 여러 명령어를 제공한다
 - 인프라 정의는 먼저 `Local code` 에서 시작한다
   - 개발자는 local에서 terraform code를 정의한 후에
@@ -234,7 +234,7 @@
 #### apply
 
 - Terraform 코드를 바탕으로 실제로 인프라를 생성하는 명령어
-  - **apply**를 완료하면 AWS 상에 실제로 해당 인프라가 생성되고, 
+  - **apply**를 완료하면 AWS 상에 실제로 해당 인프라가 생성되고,
     - 작업 결과가 backend의 `.tfstate` 파일에 저장된다
       - 해당 결과는 local의 `.terraform` 파일에도 저장된다
   - 실제 인프라에 영향을 끼치는 명령어이기때문에 주의깊게 실행해야함!
@@ -251,14 +251,13 @@
     - 단, **code를 생성해주지 않는다!!**
       - apply 전까지는 backend에 저장되지 않는다
       - import 이후에 plan 을 하면 **local에 해당 코드가 없기 때문에** resource가 삭제 또는 변경된다는 결과를 보여준다
-        - 이 결과를 바탕으로 code를 작성할 수 있다 
+        - 이 결과를 바탕으로 code를 작성할 수 있다
 
   - ex)
 
     ```bash
-    $ terraform import [options] ADDRESS ID
+    terraform import [options] ADDRESS ID
     ```
-
 
 #### state
 
@@ -269,7 +268,7 @@
     - ex)
 
       ```bash
-      $ terraform state list
+      terraform state list
       ```
 
   - 하위 명령어로 mv, push 같은 명령어가 있음
@@ -291,25 +290,23 @@
     ```
 
     - workspace 목록을 보여준다
-    - 현재 사용중인 workspace는 asterisk(`*`)로 표시된다 
+    - 현재 사용중인 workspace는 asterisk(`*`)로 표시된다
 
   - ex2)
 
     ```bash
-    $ terraform workspace select [NAME]
+    terraform workspace select [NAME]
     ```
 
-    -  다른 workspace로 이동 할 때 사용한다
+    - 다른 workspace로 이동 할 때 사용한다
 
   - ex3)
 
     ```bash
-    $ terraform workspace new [NAME]
+    terraform workspace new [NAME]
     ```
 
     - 새로운 workspace를 생성할 때 사용한다
-
-
 
 <br>
 
@@ -332,7 +329,7 @@
 
 ### Code로서 Infra를 정의하기 & 재현 가능한 Infra
 
-- 테라폼의 웹페이지에서 강조하는 것이 
+- 테라폼의 웹페이지에서 강조하는 것이
   - **Infrastructure as a Code (코드로서 인프라를 정의하기)**
   - **Reproducible Infrastructure (재현 가능한 인프라)** 이다
 - AWS든, GCP든, Azure든 Cloud Infra 환경을 코드로서 정의해 사용함으로써 **동일한 인프라**를 재현할 수 있다는 뜻이다
@@ -350,8 +347,6 @@
 - 모든 cloud 설정은 code에 의해 명시적으로 작성되기 때문에 cloud infra를  **동일하게 배포**하는 것이 가능해진다
 - 다양한 요구사항에 맞도록 여러 version의 code를 작성해 cloud infra의 **revision** 을 관리할 수도 있다
   - 미리 준비해둔 Terrafrom 설정 파일을 Terraform에서 사용하기만 하면 복잡한 AWS cloud 환경을 한꺼번에 생서앟고 한꺼번에 삭제할 수도 있다
-
-
 
 <br>
 
@@ -472,7 +467,7 @@
       The refreshed state will be used to calculate this plan, but will not be
       persisted to local or remote state storage.
   
-  		...
+    ...
       
       Plan: 6 to add, 0 to change, 0 to destroy.
   
@@ -517,8 +512,3 @@ by multiple users at the same time. Please resolve the issue above and try
 again. For most commands, you can disable locking with the "-lock=false"
 flag, but this is not recommended.
 ```
-
-
-
-
-

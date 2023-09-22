@@ -18,7 +18,7 @@
 
 - Debian은 `dpkg packaging system` 을 사용함
 
-  - **packaging system** 이란? 
+  - **packaging system** 이란?
 
     - 시스템에 소프트웨어를 설치하고 유지/관리 하는 방법 중 하나
 
@@ -53,10 +53,10 @@
 
 <br>
 
-#### Low level package tool 
+#### Low level package tool
 
 - Package file 을 설치하고 삭제하는 작업 관리
-  - ex) debian 계열의 `dpkg`, redhat 계열의 `rpm` 
+  - ex) debian 계열의 `dpkg`, redhat 계열의 `rpm`
 
 <br>
 
@@ -80,7 +80,7 @@
 
 <br>
 
-####  apt-cache
+#### apt-cache
 
 - 새로운 package를 찾을 때 사용
 
@@ -99,7 +99,7 @@
 #### 명령어
 
 ```bash
-$ sudo apt-get update
+sudo apt-get update
 ```
 
 <br>
@@ -113,7 +113,7 @@ $ sudo apt-get update
 - `Ign`
   - 해당 패키지가 ignore 되었다는 뜻
     - 이유에는 여러가지가 있을 수 있음
-      - ex) 
+      - ex)
         - 완전 최신이라서 그 이상의 최신버전을 확인할 필요조차 없을 때
         - 해당 패키지를 검색하는 도중 에러가 발생했으나 사소한 에러라서 Ignore 되었을 때
           - 결론적으로 Error가 아니므로 걱정할 필요 없음~!
@@ -137,7 +137,7 @@ $ sudo apt-get update
 > 전체 패키지 upgrade
 
 ```bash
-$ sudo apt-get upgrade
+sudo apt-get upgrade
 ```
 
 - 맨 뒤에 `-y` 를 넣으면 upgrade 를 할 것이냐는 질문에 따로 `y` 를 입력하지 않아도 된다
@@ -145,7 +145,7 @@ $ sudo apt-get upgrade
 > 특정 패키지 upgrade
 
 ```bash
-$ sudo apt-get upgrade [패키지 이름]
+sudo apt-get upgrade [패키지 이름]
 ```
 
 <br>
@@ -173,13 +173,13 @@ $ sudo apt-get upgrade [패키지 이름]
 > 정확한 패키지 이름을 알 때
 
 ```bash
-$ apt-cache search [패키지 이름]
+apt-cache search [패키지 이름]
 ```
 
 > 해당 이름으로 시작하는 패키지를 찾을 때
 
 ``` bash
-$ apt-cache pkgnames [패키지 이름]
+apt-cache pkgnames [패키지 이름]
 ```
 
 <br>
@@ -191,4 +191,3 @@ $ apt-cache pkgnames [패키지 이름]
 <br>
 
 <br>
-

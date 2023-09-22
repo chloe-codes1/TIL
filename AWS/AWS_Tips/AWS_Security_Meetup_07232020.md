@@ -2,16 +2,16 @@
 
 <br>
 
-## 1. AWS New WAF – 새로워진 AWS WAF 의 주요 기능에 대해 알려드립니다.
+## 1. AWS New WAF – 새로워진 AWS WAF 의 주요 기능에 대해 알려드립니다
 
->  발표자: 조이정 님(AWS Solutions Architect)
+> 발표자: 조이정 님(AWS Solutions Architect)
 
 <br>
 
 ### AWS WAF (Web Application Firewall) 란?
 
-- AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. 
-- AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define. 
+- AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources.
+- AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define.
 
 <br>
 
@@ -66,7 +66,7 @@
 
 ### Workshop URL
 
-: https://go.aws/2xx2XT9
+: <https://go.aws/2xx2XT9>
 
 - 1시간 반 정도 걸린다고 함! 해봐야징
 
@@ -74,9 +74,9 @@
 
 <br>
 
-## 2. AWS New Macie/Detective – 새로워진 Macie 서비스와 신규 보안 서비스인 Detective 의 주요 기능에 대해 알려드립니다.
+## 2. AWS New Macie/Detective – 새로워진 Macie 서비스와 신규 보안 서비스인 Detective 의 주요 기능에 대해 알려드립니다
 
->  발표자: 신은수 님(AWS Security Specialist Solutions Architect)
+> 발표자: 신은수 님(AWS Security Specialist Solutions Architect)
 
 <br>
 
@@ -120,9 +120,9 @@
 
 <br>
 
-`+` 
+`+`
 
-### 느낀점....
+### 느낀점
 
 AWS가 제공하는 서비스는 정말 다양하다는 것을 다시 한번 느꼈다...!
 

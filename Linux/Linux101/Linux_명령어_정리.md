@@ -269,4 +269,3 @@
 | grep -o 'price:[0-9]\+' ./FILE.csv >> ../RESULT.txt          | FILE.csv에서 `price:` 뒤의 숫자 부분까지 찾아서 RESULT.txt 파일로 저장한다 |
 | grep -o -i 'price:' RESULT.txt \| wc -l                      | RESULT.txt 파일에서 전체 price 개수 출력                     |
 | awk 'a[$1] == "" { a[$1]="X" } END { print length(a) }' RESULT.txt | RESULT.txt 파일에서 중복되지 않은 line 수 출력               |
-

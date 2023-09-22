@@ -30,7 +30,7 @@
 - 스토리지를 **Server에 직접 연결**할 수 있고, 대용랑의 데이터를 저장하기 위해 별도의 **스토리지용 네트워크**를 구성할 수 있다
 
   1. **Server에 직접 연결하는 방식**
-     -  DAS (Direct Attached Storage)
+     - DAS (Direct Attached Storage)
 
   2. **스토리지를 빠른 속도의 네트워크로 연결하는 방식**
      - NAS (Network Attached Storage)
@@ -94,7 +94,7 @@
 
 - AWS Cloud service와 on-premise resource에서 사용할 수 있는 간단하고 확장 가능하며 탄력적인 Linux 기반 workload용 file system 제공
 - 이 제품은 application을 *중단하지 않고* on-demand 방식으로 peta byte(2^15) 까지 확장하도록 구축되었고, 파일을 추가하고 제거 할 때 자동으로 확장/축소되므로 application은 필요할 때 필요한 만큼 storage를 사용할 수 있음
--  수천 개의 Amazon EC2 instance에 대한 병렬 공유 access를 대량으로 제공하도록 설계되었기 때문에 application은 낮은 지연시간을 유지하면서 높은 수준의 집계처리량과 IOPS (Input/Output Operation Per Second)를 달성할 수 있음
+- 수천 개의 Amazon EC2 instance에 대한 병렬 공유 access를 대량으로 제공하도록 설계되었기 때문에 application은 낮은 지연시간을 유지하면서 높은 수준의 집계처리량과 IOPS (Input/Output Operation Per Second)를 달성할 수 있음
 
 <br>
 
@@ -154,13 +154,11 @@
 - Snapshot은 기술적인 용어로, 특정 시간에 **데이터 저장 장치**의 **상태**를 별도의 파일이나 이미지로 저장하는 기술
 - Snapshot 기능을 이용하여 데이터를 저장하면 **유실된 데이터**의 **복원**과 일정 시점의 상태로 데이터를 **복원**할 수 있다
   - `Git` 의 snapshot 을 떠올리자!
-- **데이터 분석**, **데이터 보호** 및 **데이터 복제**와 같은 작업을 위해 수행된다 
+- **데이터 분석**, **데이터 보호** 및 **데이터 복제**와 같은 작업을 위해 수행된다
   - **재해 복구 (Disaster Recovery)**와 같은 장애 상황에서도 데이터 복원을 통해 중요하고 긴급한 상황에도 최상의 **데이터 보호 수단**이 될 수 있다!
 - **데이터 연속성**을 요구하는 상황에서 데이터를 **보호**할 뿐만 아니라 높은 애플리케이션 **가용성**을 제공하고, 대용량 데이터의 **백업 관리**를 단순화하여 운영 관리 **비용**을 **최소화** 할 수 있다
 - Amazon Web Services 는 `EBS (Elastic Block Storage)`에 대한 Snapshot을 제공함으로써 손쉽게 서버의 데이터 **백업/복원** 및 다른 EC2 region으로 EBS **복사** 기능을 통해 Instance의 migration을 지원한다
   - 또한 이를 활용한 다양한 **재해 복구 시나리오**를 제공한다!
-
-
 
 <br>
 
@@ -236,8 +234,6 @@
 | **하이브리드 클라우드 스토리지 (Hybrid Cloud Storage)** | AWS Storage Gateway와 연계하여 `On-premise` 환경에서 클라우드 스토리지를 활용할 수 있으며, 데이터 백업 및 재해복구를 원활하게 수행할 수 있다 |
 | **재해 복구 (Disaster Recovery)**                       | S3의 **내구성** 및 **안정성**이 뛰어난 글로벌 인프라를 활용하여 탁월한 데이터 보호 및 타 region으로 **교차 리전 복제 (CCR)** 서비스를 제공한다 |
 
-
-
 <br>
 
 <br>
@@ -276,8 +272,6 @@
 
   - 시작될 때 Instance에 연결할 volume을 지정하는 **Block Device Mapping**
 
-    
-
 <br>
 
 ### AWS Marketplace
@@ -287,6 +281,3 @@
 - Security, Network, Storage, ML, Business Intelligence, Database, DevOps 등 인기있는 category에 속한 software 제품이 수천 개에 이를 정도로 매우 많음
 
 - 고객은 구매자/판매자로서 혹은 둘 다로서 AWS Marketplace 사용 가능
-
-  
-

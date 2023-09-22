@@ -2,9 +2,9 @@
 
 > GraphQL 시작하기!
 >
-> https://tech.kakao.com/2019/08/01/graphql-basic/
+> <https://tech.kakao.com/2019/08/01/graphql-basic/>
 >
-> https://www.slideshare.net/shilpe34/typescript-200-graphql-179690400
+> <https://www.slideshare.net/shilpe34/typescript-200-graphql-179690400>
 
 <br>
 
@@ -16,7 +16,7 @@
 
 - SQL (Structured Query Language) 와 마찬가지로 Query Language
   - but, 언어적 구조 차이가 크다
-    - 그 결과 이 둘에 대한 활용을 다르게 하게 됨 
+    - 그 결과 이 둘에 대한 활용을 다르게 하게 됨
     - **사용 목적**
       - `sql` : **DB** 에 저장된 데이터를 효율적으로 가져오는 것이 목적
       - `gql` : **Web Client** 가 데이터를 **서버로부터** 효율적으로 가져오는 것이 목적

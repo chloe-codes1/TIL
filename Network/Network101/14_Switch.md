@@ -15,7 +15,7 @@
 - Network의 가장 핵심장비인 **Switch**는 2계층 주소인 `MAC 주소`를 기반으로 동작한다
 - Switch는 network 중간에서 `packet`을 받아 **필요한 곳에만 보내주는** network의 **중재자 역할**을 한다
   - Switch는 아무 설정 없이 network에 연결해도 `MAC 주소`를 기반으로 **packet을 전달**하는 기본 동작을 수행할 수 있다
-- Switch는 `MAC 주소`를 인식하고 packet을 전달하는 switch의 기본 동작 외에도 
+- Switch는 `MAC 주소`를 인식하고 packet을 전달하는 switch의 기본 동작 외에도
   - 한 대의 장비에서 **논리적으로 network를 분리**할 수 있는 `VLAN 기능`,
   - **Network Loop를 방지**하는 `STP (Spanning Tree Protocol)`과 같은 기능을 기본적으로 가지고 있다
 
@@ -65,7 +65,7 @@
   - `Ethernet - TCP/IP` network에서는 **ARP Broadcast**를 미리 주고받은 후 data가 전달되므로 **실제로 data를 보내고 받을 때는 switch가 packet을 flooding 하지 않는다**
 - Switch를 사용하면 **필요한 곳에만 packet을 forwarding**하므로 주변 통신을 **악의적으로 가로채기 힘들어** 모든 packet을 flooding하는 `hub` 에 비해 보안에 도움이 된다
   - 이런 switch의 기능을 무력화해 주변 통신을 모니터링하는 공격 기법이 사용된다
-    - ex) 
+    - ex)
       - Switch에게 엉뚱한 MAC address를 습득시키거나
       - Switch의 MAC Address Table을 꽉 차게 해 switch **flooding 동작을 유도**할 수 있다
   - 만약 switch가 아무 이유없이 packet을 flooding 한다면,
@@ -101,7 +101,7 @@
 ### 3. Forwarding/Filtering
 
 - Switch의 동작은 매우 간단한데, Packet이 switch에 들어온 경우
-  - **도착지 MAC 주소**를 확인하고 
+  - **도착지 MAC 주소**를 확인하고
   - 자신이 가진 **MAC Address Table**과 비교해 맞는 정보가 있으면 **match되는 해당 port로 packet을 forwarding**한다
     - 이때, 다른 port로는 해당 packet을 보내지 않으므로 이 동작을 `filtering`이라고 한다
 - Switch는 `fowarding`과 `filtering`을 통해 **목적지로만 packet이 전달되도록 동작**한다
@@ -122,4 +122,3 @@
     - 이 ARP를 이용한 MAC 주소 습득 과정에서 이미 switch는 통신하는 출발지와 목적지의 MAC 주소를 **습득**할 수 있고, 실제 unicast 통신이 시작되면 이미 만들어진 MAC Address Table로 packet을 `forwarding`, `filtering`한다
 - ARP와 MAC Table은 일정 시간 동안 지워지지 않는데, 이 시간을 **aging time**이라고 한다
   - 일반적으로 MAC Table의 aging time이 단말의 ARP aging time보다 길어서 Ethernet network를 flooding없이 효율적으로 운영할 수 있다
-

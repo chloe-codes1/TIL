@@ -19,7 +19,7 @@
 
 <br>
 
-### Security Group Rule Set 
+### Security Group Rule Set
 
 `Security group rule set` 자체가 EC2를 감싸는 형식이기 때문에 (EC2 바깥에서 제어) 접근이 왜 안되는지 확인할 때 EC2에 접속해서 확인하는 것이 아니라 **rule set**을 보고 확인해야 한다
 
@@ -59,5 +59,3 @@
   
     - 여기서 **아무곳**은 `NAT Gateway`를 뜻한다!
   
-    
-

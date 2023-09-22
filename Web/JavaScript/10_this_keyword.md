@@ -12,25 +12,25 @@
 
 <br>
 
-#### this 
+#### this
 
 => 무조건 어떤 object를 지칭
 
 <br>
 
-#### method 
+#### method
 
 => 객체 안에 정의된 함수 ( .methodName() 으로 실행하는 함수)
 
 <br>
 
-#### function 
+#### function
 
 => method가 아닌 모든 함수
 
 <br> <br>
 
-### function() {} 정의 할 때, this 가 window가 아닌 경우,
+### function() {} 정의 할 때, this 가 window가 아닌 경우
 
 <br>
 
@@ -40,7 +40,7 @@
 
 2. #### 생성자 함수 안의 this
 
- <br>           
+ <br>
 
 *method 정의 할 때, 반드시 function(){} 으로 정의 한다!*
 

@@ -73,6 +73,5 @@ $ cat /etc/debian_version
 #### Fedora
 
 ```bash
-$ cat /etc/fedora-release
+cat /etc/fedora-release
 ```
-

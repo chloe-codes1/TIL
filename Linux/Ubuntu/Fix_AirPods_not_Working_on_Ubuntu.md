@@ -13,7 +13,7 @@
 ### 1-1. Open a shell and type the following command
 
 ```bash
-$ sudo vi /etc/bluetooth/main.conf
+sudo vi /etc/bluetooth/main.conf
 ```
 
 `main.conf`
@@ -35,14 +35,14 @@ ControllerMode = bredr
 <br>
 
 ```bash
-$ sudo /etc/init.d/bluetooth restart
+sudo /etc/init.d/bluetooth restart
 ```
 
 <br>
 
 <br>
 
-## 3.  DONE!
+## 3.  DONE
 
 ![image-20200705165824130](../../images/image-20200705165824130.png)
 
@@ -58,45 +58,42 @@ $ sudo /etc/init.d/bluetooth restart
 
 <br>
 
-### turning on Bluetooth:
+### turning on Bluetooth
 
 ```bash
-$ sudo /etc/init.d/bluetooth start
+sudo /etc/init.d/bluetooth start
 ```
 
 or
 
 ```bash
-$ systemctl start bluetooth
+systemctl start bluetooth
 ```
 
 <br>
 
-### for turning off Bluetooth:
+### for turning off Bluetooth
 
 ```bash
-$ sudo /etc/init.d/bluetooth stop
+sudo /etc/init.d/bluetooth stop
 ```
 
 or
 
 ```bash
-$ systemctl stop bluetooth
+systemctl stop bluetooth
 ```
 
 <br>
 
-### for restarting Bluetooth:
+### for restarting Bluetooth
 
 ``` bash
-$ sudo /etc/init.d/bluetooth restart
+sudo /etc/init.d/bluetooth restart
 ```
 
 or
 
 ```bash
-$ systemctl restart bluetooth
+systemctl restart bluetooth
 ```
-
-
-

@@ -36,7 +36,7 @@
 > Install express
 
 ```bash
-$ npm install express --save
+npm install express --save
 ```
 
 - saves the installation locally in the **node_modules**
@@ -56,9 +56,9 @@ $ npm view express version
 > Install modules alog with express
 
 ```bash
-$ npm install body-parser --save
-$ npm install cookie-parser --save
-$ npm install multer --save
+npm install body-parser --save
+npm install cookie-parser --save
+npm install multer --save
 ```
 
 <br><br>
@@ -106,7 +106,7 @@ express_tutorial/
 #### 2. Install dependency by using `npm`
 
 ```bash
-$ npm install
+npm install
 ```
 
 <br>
@@ -135,7 +135,7 @@ Express server running on port 8000!
 ```
 
 - port 8000 으로 web server 열어서 들어가면 `Cannot GET/` 이라는 text 출력됨
-  - why? 
+  - why?
     - `Router`를 아직 정리하지 않아서!
 
 <br>

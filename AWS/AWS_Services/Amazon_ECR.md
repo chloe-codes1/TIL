@@ -15,7 +15,7 @@
   - How?
     - 특정 user 혹은  EC2 instance만 ECR repository와 image 에 접속 할 수 있다
 
-- 개발자는 Preferred CLi를 사용하여 **Docker image**, **OCI (Open Container Initiative) image ** 및 OCI 호환 artifact를 push, pull 및 관리 할 수 있다
+- 개발자는 Preferred CLi를 사용하여 **Docker image**, **OCI (Open Container Initiative) image** 및 OCI 호환 artifact를 push, pull 및 관리 할 수 있다
 
 <br>
 

@@ -27,7 +27,6 @@
 <br>
 
 - Linux Kernel은 OS에서 가장 중요한 부분이다
-  - Processor와 System memory에 상주하면서 device나 memory 같은 hardware 자원을 관리하고, 
+  - Processor와 System memory에 상주하면서 device나 memory 같은 hardware 자원을 관리하고,
   - Process의 schedule을 관리하여 **다중 process**를 구현하고,
   - System에 연결된 I/O를 처리하는 OS의 핵심 역할을 수행한다!
-

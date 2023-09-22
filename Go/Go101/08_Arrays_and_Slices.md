@@ -18,10 +18,10 @@
     import "fmt"
     
     func main() {
-    	names := [5]string{"chloe", "camila", "bella"}
-    	names[3] = "charlotte"
-    	names[4] = "bree"
-    	fmt.Print(names)
+     names := [5]string{"chloe", "camila", "bella"}
+     names[3] = "charlotte"
+     names[4] = "bree"
+     fmt.Print(names)
     }
     ```
 
@@ -49,8 +49,8 @@
     import "fmt"
     
     func main() {
-    	states := []string{"Florida", "Kentucky"}
-    	fmt.Println(states)
+     states := []string{"Florida", "Kentucky"}
+     fmt.Println(states)
     }
     ```
 
@@ -67,7 +67,7 @@
 
 - 하지만 `append()`는 **slice** 를 수정하지는 않는다
 
-  - `append()` 새로운 값이 추가된 slice를 **return** 한다! 
+  - `append()` 새로운 값이 추가된 slice를 **return** 한다!
 
     - 그러므로 해당 slice에 다시 update 해줘야 한다
 
@@ -79,13 +79,12 @@
       import "fmt"
       
       func main() {
-      	states := []string{"Florida", "Kentucky"}
-      	states = append(states, "California")
-      	fmt.Println(states)
+       states := []string{"Florida", "Kentucky"}
+       states = append(states, "California")
+       fmt.Println(states)
       }
       ```
 
 <br>
 
 *아마 대부분 slice를 사용하게 될 것 같다!*
-

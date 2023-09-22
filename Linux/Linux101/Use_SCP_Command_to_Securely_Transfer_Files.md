@@ -2,7 +2,7 @@
 
 <br>
 
-## SCP (Secure Copy) 
+## SCP (Secure Copy)
 
 <br>
 
@@ -19,25 +19,25 @@
 ### Syntax
 
 ```bash
-$ scp [options ...] [source] [target]
+scp [options ...] [source] [target]
 ```
 
 <br>
 
 ### Options
 
-- `-r` 
+- `-r`
   - 재귀적으로 모든 폴더들을 복사
   - 폴더를 복사할 때 사용하는 옵션
-    - 전송하고자 하는 대상은 폴더로 지정하면 된다 
+    - 전송하고자 하는 대상은 폴더로 지정하면 된다
       - symbolic link가 있는 경우에는 target에 symbolic link를 생성하지 않고 symbolic link가 가리키는 파일 혹은 폴더를 복사한다
-- `-P` 
+- `-P`
   - ssh 포트를 지정하는 옵션
-- `-i` 
+- `-i`
   - ssh 키파일과 같은 identity file의 경로를 지정하는 옵션
 - `-v`
-  -  verbose 모드로 상세내용을 보며 디버깅을 할 때 사용한다
-- `-p` 
+  - verbose 모드로 상세내용을 보며 디버깅을 할 때 사용한다
+- `-p`
   - 파일의 수정 시간과 권한을 유지한다
 
 <br>
@@ -51,6 +51,5 @@ $ scp [options ...] [source] [target]
 ex)
 
 ```bash
-$ scp -i [pem key 경로] [업로드할 파일 경로] [ec2 주소]:~
+scp -i [pem key 경로] [업로드할 파일 경로] [ec2 주소]:~
 ```
-

@@ -16,17 +16,17 @@
 - `git bash` 에서 `TIL` 폴더로 이동한 이후에 아래의 명령어로 `git` 관리를 시작한다
 
 ```bash
-$ git init
+git init
 ```
 
 <br>
 
-### (2) Commit을 위한 Staging : ` git add`
+### (2) Commit을 위한 Staging : `git add`
 
 - 현재 코드 상태의 스냅샷을 찍기 위한 파일 선택 (== Staging Area에 파일 추가)
 
 ``` bash
-$ git add [파일이름] # .은 모든 변경 사항을 staging area로 올림
+git add [파일이름] # .은 모든 변경 사항을 staging area로 올림
 ```
 
 <br>
@@ -36,7 +36,7 @@ $ git add [파일이름] # .은 모든 변경 사항을 staging area로 올림
 - 현재 상태에 대한 스냅샷을 `commit` 하여, 버전 관리를 진행한다.
 
 ``` bash
-$ git commit -m "commit message"
+git commit -m "commit message"
 ```
 
 <br>
@@ -47,7 +47,7 @@ $ git commit -m "commit message"
 - 새로운 원격 저장소가 추가될 때만 입력한다.
 
 ```bash
-$ git remote add origin [github 원격 저장소 주소]
+git remote add origin [github 원격 저장소 주소]
 ```
 
 <br>
@@ -57,9 +57,9 @@ $ git remote add origin [github 원격 저장소 주소]
 - Github 원격 저장소에 있은 코드를 불러오고 각 `branch`에 해당되는 `commit`들을 적용한다.
 
 ```bash
-$ git pull
+git pull
 
-$ git pull [원격 저장소 이름] (specify a remote to pull from)
+git pull [원격 저장소 이름] (specify a remote to pull from)
 ```
 
 <br>
@@ -69,9 +69,9 @@ $ git pull [원격 저장소 이름] (specify a remote to pull from)
 - 최종적으로 Github 원격 저장소에 push 한다.
 
 ```bash
-$ git push
+git push
 
-$ git push origin master
+git push origin master
 ```
 
 #### Tip
@@ -85,29 +85,27 @@ $ git push origin master
 - 현재 `git`의 상태를 조회 `git status`
 
 ````bash
-$ git status
+git status
 ````
 
 - 버전관리 이력을 조회
 
 ```bash
-$ git log
+git log
 ```
 
 - `git` 설정 (user.name & user.email) : **최초 1회 설정**
 
 ```bash
-$ git config --global user.name "Chloe Kim"
-$ git config --global user.email "juhyun.kim@lindsey.edu"
+git config --global user.name "Chloe Kim"
+git config --global user.email "juhyun.kim@lindsey.edu"
 ```
 
 - Undo `git add` before commit
 
 ```bash
-$ git reset
+git reset
 ```
-
-
 
 <br><br>
 
@@ -122,7 +120,7 @@ $ git reset
 - `README.md` 파일을 `TIL` 폴더 (최상단)에 생성한다. 이름은 반드시 **README.md**로 설정한다.
 
 ```bash
-$ touch README.md
+touch README.md
 ```
 
 <br>
@@ -139,9 +137,9 @@ $ touch README.md
 - 작성이 완료되면 아래의 명령어를 통해 commit 이력을 남기고 원격 저장소로 push 한다.
 
 ```bash
-$ git add README.md
-$ git commit -m "add README.md"
-$ git push origin master
+git add README.md
+git commit -m "add README.md"
+git push origin master
 ```
 
 <br>
@@ -188,8 +186,6 @@ $ git log --oneline --graph
 
 ```
 
-
-
 <br>
 
 <br>
@@ -201,7 +197,7 @@ $ git log --oneline --graph
 > 특정 commit을 기준으로 돌아가기
 
 ```bash
-$ git checkout f008d8f
+git checkout f008d8f
 ```
 
 <br>
@@ -223,7 +219,7 @@ a046911 01 | startproject
 > reference log 확인
 
 ```bash
-$ git reflog
+git reflog
 ```
 
 <br>
@@ -263,12 +259,12 @@ Switched to branch 'test'
 > `$ git reset` 으로 commit 되돌리기
 
 ```bash
-$ git reset --hard HEAD       (going back to HEAD)
+git reset --hard HEAD       (going back to HEAD)
 
-$ git reset --hard HEAD^      (going back to the commit before HEAD)
+git reset --hard HEAD^      (going back to the commit before HEAD)
 
-$ git reset --hard HEAD~2     (going back two commits before HEAD)
-$ git reset --hard HEAD^^    (another syntax for going back two commits)
+git reset --hard HEAD~2     (going back two commits before HEAD)
+git reset --hard HEAD^^    (another syntax for going back two commits)
 ```
 
 <br>
@@ -276,9 +272,9 @@ $ git reset --hard HEAD^^    (another syntax for going back two commits)
 > `-f`  or  `--force` 명령어로 강제로 Push 하기
 
 ```bash
-$ git push -f origin master
+git push -f origin master
 
-$ git push --force origin master
+git push --force origin master
 ```
 
 <br>
@@ -295,18 +291,16 @@ $ git push --force origin master
 >특정 commit에서의 변경 사항을 제거하는 또 다른 commit 생성하기
 
 ```bash
-$ git revert --no-commit [되돌리고 싶은 commit의 hash]     
+git revert --no-commit [되돌리고 싶은 commit의 hash]     
 
-$ git revert --no-commmit [되돌리고 싶은 커밋의 범위]
+git revert --no-commmit [되돌리고 싶은 커밋의 범위]
 
-$ git revert --no-commit Head~3
+git revert --no-commit Head~3
 ```
 
 <br>
 
 <br>
-
-
 
 `+`
 
@@ -318,7 +312,7 @@ $ git revert --no-commit Head~3
 ### 특정  branch 만 clone 하기
 
 ```bash
-$ git clone -b {branch_name} --single-branch {저장소 URL}
+git clone -b {branch_name} --single-branch {저장소 URL}
 ```
 
 <br>
@@ -328,7 +322,7 @@ $ git clone -b {branch_name} --single-branch {저장소 URL}
 > 우선 원격 저장소에 어떤 branch 있는지 확인
 
 ```bash
-$ git branch -r
+git branch -r
 ```
 
 <br>
@@ -336,7 +330,7 @@ $ git branch -r
 > 원격저장소 + 로컬 branch 확인
 
 ```bash
-$ git branch -a
+git branch -a
 ```
 
 <br>
@@ -344,7 +338,7 @@ $ git branch -a
 #### 원격 저장소의 branch를 **동일한 이름으로** 가져오기
 
 ```bash
-$ git checkout -t [origin/가져올 원격 저장소 branch 이름]
+git checkout -t [origin/가져올 원격 저장소 branch 이름]
 ```
 
 <br>
@@ -352,7 +346,7 @@ $ git checkout -t [origin/가져올 원격 저장소 branch 이름]
 #### 원격 저장소의 branch를 이름을 변경하여 가져오기
 
 ``` bash
-$ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch 이름]
+git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch 이름]
 ```
 
 <br>
@@ -360,7 +354,7 @@ $ git checkout -b [생성할 branch 이름][가져올 원격 저장소 branch �
 #### Push하지 않은 Commit message 수정하기
 
 ```bash
-$ git commit --amend
+git commit --amend
 ```
 
 <br>
@@ -396,10 +390,10 @@ $ git commit --amend
 
 <br>
 
-### Add Submodule 
+### Add Submodule
 
 ```bash
-$ git submoduel add [repo 주소]
+git submoduel add [repo 주소]
 ```
 
 - 이후에 따로 `git add` 없이 commit 할 수 있음
@@ -411,7 +405,7 @@ $ git submoduel add [repo 주소]
 #### Update main repo
 
 ```,
-$ git pull
+git pull
 ```
 
 - main repo root에서 다음 명령어를 실행하면 main repo 가 update 됨
@@ -421,7 +415,7 @@ $ git pull
 #### Update sub repo
 
 ```bash
-$ git submodule update --remote --merge
+git submodule update --remote --merge
 ```
 
 - main repo의 root에서 위의 명령어를 실행하면 update된 main repo와 sub repo의 관계에 따라 sub repo를 업데이트 해야한다

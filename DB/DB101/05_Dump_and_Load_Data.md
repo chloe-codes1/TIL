@@ -5,7 +5,7 @@
 ### data dumping 하기
 
 ```bash
-$ python manage.py dumpdata
+python manage.py dumpdata
 ```
 
 <br>
@@ -13,7 +13,7 @@ $ python manage.py dumpdata
 ### dump 한 data를 data.json file로 만들기
 
 ```bash
-$ python manage.py dumpdata > data.json
+python manage.py dumpdata > data.json
 ```
 
 <br>
@@ -106,12 +106,9 @@ $ python manage.py dumpdata > data.json
 
 <br>
 
-
-
 ### loaddata
 
 ```bash
 $ python manage.py loaddata articles/data.json
 Installed 113 object(s) from 1 fixture(s)
 ```
-

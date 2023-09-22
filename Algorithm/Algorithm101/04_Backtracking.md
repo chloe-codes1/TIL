@@ -38,7 +38,7 @@
 ## Backtracking 기법
 
 - 어떤 node의 유망성을 점검한 후에 유망(promising) 하지 않다고 결정되면 그 node의 부모로 되돌아가서 (`backtracking`)  다음 자식 node로 감
-- 어떤 node를 방문하였을 때 
+- 어떤 node를 방문하였을 때
   - 그 node를 포함한 경로가 해답이 될 수 없으면 그 node는 유망하지 않다고 함
   - 해답이 가능성이 있으명 유망하다고 함
 
@@ -60,9 +60,9 @@
 
 <br>
 
-### N-Queen 문제 
+### N-Queen 문제
 
-> SWEA 2806 
+> SWEA 2806
 
 ```python
 def backtrack(idx): #idx = 행
@@ -175,4 +175,3 @@ def backtrack(result, selected, idx, N):
 N = 5
 backtrack([0]*N, [0]*N, 0, N)
 ```
-

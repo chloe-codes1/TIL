@@ -24,9 +24,9 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	b := a
-	a = 10
+ a := 2
+ b := a
+ a = 10
   fmt.Println(a, b) // -> 10 2
 }
 ```
@@ -52,9 +52,9 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	b := a
-	a = 10
+ a := 2
+ b := a
+ a = 10
   fmt.Println(&a, &b) //-> 0xc0000160b0 0xc0000160b8
 }
 ```
@@ -69,16 +69,16 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	b := &a
-	a = 10
-	fmt.Println(&a, b) // -> 0xc0000b4008 0xc0000b4008
+ a := 2
+ b := &a
+ a = 10
+ fmt.Println(&a, b) // -> 0xc0000b4008 0xc0000b4008
 }
 ```
 
 - 여기서 `b := &a` 를 함으로써 b는 a의 메모리를 보고있게 된다
   - 그렇기 때문에 위와 같이 같은 메모리 주소가 출력된다
-- b를 바로 **pointer** 라고 한다 
+- b를 바로 **pointer** 라고 한다
 
 <br>
 
@@ -86,7 +86,7 @@ func main() {
 
 ### `*` operator
 
-: ***** 와 주소를 사용하여 해당 메모리 주소의 **값**을 살펴볼 수 있다
+: ***** 와 주소를 사용하여 해당 메모리 주소의**값**을 살펴볼 수 있다
 
 ```go
 package main
@@ -94,11 +94,11 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	// get memory address
-	b := &a
-	a = 10
-	fmt.Println(a, *b) // -> 10 10
+ a := 2
+ // get memory address
+ b := &a
+ a = 10
+ fmt.Println(a, *b) // -> 10 10
 }
 ```
 
@@ -115,22 +115,19 @@ func main() {
 package main
 
 import (
-	"fmt"
+ "fmt"
 )
 
 func main() {
-	a := 2
-	// get memory address
-	b := &a
-	a = 10
+ a := 2
+ // get memory address
+ b := &a
+ a = 10
 
-	// change object from address
-	*b = 20
-	fmt.Println(a, *b)
+ // change object from address
+ *b = 20
+ fmt.Println(a, *b)
 }
 ```
 
 - a의 주소와 연결되어 있는 **pointer** b를 이용해서 a의 값을 변경할 수 있다
-
-
-

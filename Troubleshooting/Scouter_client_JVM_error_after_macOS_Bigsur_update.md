@@ -38,4 +38,4 @@
 
 #### Reference
 
-: https://github.com/scouter-project/scouter/issues/764
+: <https://github.com/scouter-project/scouter/issues/764>

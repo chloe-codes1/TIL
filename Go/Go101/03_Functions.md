@@ -22,11 +22,11 @@
     import "fmt"
     
     func multiply(a int, b int) int {
-    	return a * b
+     return a * b
     }
     
     func main() {
-    	fmt.Println(multiply(2, 4))
+     fmt.Println(multiply(2, 4))
     }
     ```
 
@@ -36,11 +36,11 @@
 
     ```go
     func multiply(a, b int) int {
-    	return a * b
+     return a * b
     }
     ```
 
-- **return이 필요한 함수**는 꼭 return type을 명시해야 한다! 
+- **return이 필요한 함수**는 꼭 return type을 명시해야 한다!
 
 <br>
 
@@ -56,17 +56,17 @@
     package main
     
     import (
-    	"fmt"
-    	"strings"
+     "fmt"
+     "strings"
     )
     
     func lenAndUpper(name string) (int, string) {
-    	return len(name), strings.ToUpper(name)
+     return len(name), strings.ToUpper(name)
     }
     
     func main() {
-    	totalLength, upperName := lenAndUpper("chloe")
-    	fmt.Println(totalLength, upperName)
+     totalLength, upperName := lenAndUpper("chloe")
+     fmt.Println(totalLength, upperName)
     }
     
     ```
@@ -76,7 +76,7 @@
   - ex) Error가 발생할 예시
 
     ```go
-    	totalLength := lenAndUpper("chloe")
+     totalLength := lenAndUpper("chloe")
     ```
 
     - lenAndUpper는 두 개의 값을 return 하기 때문에 아래와 같은 error를 뱉는다
@@ -93,7 +93,7 @@
   - ex)
 
     ```go
-    	totalLength, _ := lenAndUpper("chloe")
+     totalLength, _ := lenAndUpper("chloe")
     ```
 
     - 이렇게 `underscore (_)` 는 **ignored value**로 사용할 수 있다!
@@ -111,7 +111,7 @@
 
     ```go
     func repeatMe(words ...string) {
-    	fmt.Println(words)
+     fmt.Println(words)
     }
     ```
 
@@ -131,19 +131,19 @@
     package main
     
     import (
-    	"fmt"
-    	"strings"
+     "fmt"
+     "strings"
     )
     
     func lenAndLower(name string) (length int, lowercase string) {
-    	length = len(name)
-    	lowercase = strings.ToLower(name)
-    	return
+     length = len(name)
+     lowercase = strings.ToLower(name)
+     return
     }
     
     func main() {
-    	length, name := lenAndLower("CHLOE")
-    	fmt.Println(length, name)
+     length, name := lenAndLower("CHLOE")
+     fmt.Println(length, name)
     }
     ```
 
@@ -164,15 +164,12 @@
     ```go
     func lenAndLower(name string) (length int, lowercase string) {
       // defer
-    	defer fmt.Println("Done!")
+     defer fmt.Println("Done!")
       
-    	length = len(name)
-    	lowercase = strings.ToLower(name)
-    	return
+     length = len(name)
+     lowercase = strings.ToLower(name)
+     return
     }
     ```
 
 - defer를 함수 종료 후 image나 file을 닫거나 삭제하고, API request 보내는 것에 활용할 수 있다!
-
-  
-

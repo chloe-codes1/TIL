@@ -22,9 +22,6 @@
    - Application에 탁월한 성능 및 고정 IP가 필요한 경우 `Network Load Balancer`를 사용하는 것이 좋음
    - 기존 application이 EC2-Classic Network 내에 구축되어 있는 경우 `Classic Load Balancer`를 사용해야 함
 
-   
-
-
 <br>
 
 <br>
@@ -81,8 +78,8 @@
 
 #### 5. Elastic Load Balancing을 사용한 Hybrid Load Balancing
 
--  Elastic Load Balancing은 같은 Load Balancer를 사용하여 AWS와 On-premise resource 전체에 Load Balancing을 할 수 있는 기능을 제공함
-  - ex) AWS와 On-premise resource 모두에 application traffic을 분산시켜야 하는 경우, 모든 resource를 같은 대상 그룹에 등록하고 해당 대상 그룹을 Load Balancer에 연결하면 됨
+- Elastic Load Balancing은 같은 Load Balancer를 사용하여 AWS와 On-premise resource 전체에 Load Balancing을 할 수 있는 기능을 제공함
+- ex) AWS와 On-premise resource 모두에 application traffic을 분산시켜야 하는 경우, 모든 resource를 같은 대상 그룹에 등록하고 해당 대상 그룹을 Load Balancer에 연결하면 됨
 - AWS에 하나의 Load Balancer와 On-premise resource에 다른 Load Balancer, 즉 두 개의 Load Balancer를 사용하여 AWS 와 On-premise resource 전체에서 DNS 기반 **가중치 Load Balancing**을 사용할 수도 있음
 - `Hybrid Load Balancing`을 사용하여 하나는 VPC에 있고 다른 하나는 On-premise 위치에 있는 별개의 application을 활용할 수도 있음
 - VPC 대상을 하나의 대상 그룹에 넣고 On-premise 대상을 또 다른 대상 그룹에 넣은 후 `content based routing` 을 사용하여 traffic을 각 대상 그룹으로 routing 할 수 있음
@@ -134,7 +131,7 @@
 
 ### ELB 제품
 
->  Application 요구 사항에 따라 적절한 Load Balancer를 선택 할 수 있음
+> Application 요구 사항에 따라 적절한 Load Balancer를 선택 할 수 있음
 
 - #### `Application Load Balancer`
 
@@ -147,7 +144,7 @@
     - Application Load Balancer는 client와 load balancer 간 HTTPS 종료를 지원함
     - AWS Identity and Access Management(IAM) 및 AWS Certificate Manager의 사전 정의된 보안 정책을 통해 SSL 인증서 관리도 제공함
 
-  - Application Load Balancer는 항상 최신 **SSL/TLS 암호** 및 protocol이 사용되도록 하여 application의 보안을 간소화하고 개선함 
+  - Application Load Balancer는 항상 최신 **SSL/TLS 암호** 및 protocol이 사용되도록 하여 application의 보안을 간소화하고 개선함
 
   - **SNI (서버 이름 표시)**
 
@@ -168,7 +165,7 @@
 
     - Application Load Balancer에서 HTTP request를 처리하는 Lambda function을 호출하여 web browser를 포함한 모든 HTTP client에서 serverless application에 대한 사용자 access를 제공 할 수 있음
     - Lambda function을 Load balancer의 대상으로 등록하고 content 기반 routing 규칙에 대한 지원을 통하여 요청을 다른 Lambda 함수로 routing 할 수 있음
-    - Server 및 serverless computing을 사용하는 application에 대해 application load balancer를 공통 HTTP end point로 사용할 수 있음 
+    - Server 및 serverless computing을 사용하는 application에 대해 application load balancer를 공통 HTTP end point로 사용할 수 있음
 
     <br>
 
@@ -225,11 +222,11 @@
     - 비정상 EC2 instance를 감지한 경우, 더 이상 해당 instance로 traffic을 routing 하지 않고 정상 instance 전체로 load 를 분배함
   - 보안 기능
     - Amazon Virtual Private Cloud (VPC)를 사용할 경우 Classic Load Balancer와 연결된 보안 그룹을 생성 및 관리하여 추가 Networking 및 보안 옵션을 제공할 수 있음
-    - **Public IP address** 없이 Classic Load Balancer를 생성하여 Internet에 연결되지 않은 내부 Load Balancer로 사용할 수 있음 
+    - **Public IP address** 없이 Classic Load Balancer를 생성하여 Internet에 연결되지 않은 내부 Load Balancer로 사용할 수 있음
   - SSL (Secure Socket Layer) Off Load
-    - SSL 복호화 off load 
+    - SSL 복호화 off load
     - 중앙 집중식 SSL 인증서 관리
-    - Public key 인증을 사용한 back-end instance 암호화 
+    - Public key 인증을 사용한 back-end instance 암호화
     - 유연한 암호 지원을 사용하면 load balancer가 client에게 제공하는 암호 및 protocol을 제어할 수 있음
   - 고정 세션
     - 쿠키를 사용하여 사용자 session을 특정 EC2 instance에 고정시키는 기능 지원
@@ -238,7 +235,7 @@
     - Classic Load Balancer는 EC2-Classic Network에서 Internet protocol version 4 & 6 모두 사용할 수 있도록 지원함
   - Layer 4 & Layer 7 Load Balancing
     - HTTP/HTTPS application을 load balancing 하고 `X-Forwarded` 및 고정 session 과 같은 Layer 7 전용 기능을 사용할 수 있음
-    - TCP protocol 만 사용하는 application에 대해 엄격한 Layer 4 load balancing을 사용할 수 있음 
+    - TCP protocol 만 사용하는 application에 대해 엄격한 Layer 4 load balancing을 사용할 수 있음
   - 운영 Monitoring
   - Logging
     - Access log 기능을 사용하여 load balancer로 전송된 요청을 모두 기록하고 이후 분석을 위해 Amazon S3에 log를 저장함
@@ -268,7 +265,7 @@
 
 : Instance에 장애가 발생하더라도 원하는 수의 instance를 실행하고 instance의 수요가 변경되면 자동으로 instance 수를 늘리거나 줄일 수 있게 해줌
 
-- ELB와 함께 Auto Scaling을 활성화하는 경우, 
+- ELB와 함께 Auto Scaling을 활성화하는 경우,
   - Auto Scaling이 시작한 instance는 자동으로 load balancer에 등록됨
   - Auto Scaling이 종료하는 instance는 자동으로 load balancer에서 등록 취소됨
 
@@ -297,7 +294,7 @@
 
 #### 6. Route 53
 
-- **도메인 이름** (ex. www.example.com)을 computer를 사용하여 서로 연결해주는 숫자로 된 IP 주소 (ex. 192.0.2.1) 로 변환하여 방문자를 안정적이며, 비용 효율적으로 web site로 routing 하도록 함
+- **도메인 이름** (ex. <www.example.com)을> computer를 사용하여 서로 연결해주는 숫자로 된 IP 주소 (ex. 192.0.2.1) 로 변환하여 방문자를 안정적이며, 비용 효율적으로 web site로 routing 하도록 함
 - AWS는 load balancer와 같은 사용자의 AWS resource에 URL을 배정함
 
 <br>

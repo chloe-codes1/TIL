@@ -1,12 +1,12 @@
-# Props & Event emit 
+# Props & Event emit
 
-> https://kr.vuejs.org/v2/guide/components.html#Props
-
-<br>
+> <https://kr.vuejs.org/v2/guide/components.html#Props>
 
 <br>
 
-  ## Props 로 데이터 전달하기
+<br>
+
+## Props 로 데이터 전달하기
 
 - 모든 component instance 에는 자체 격리 된 범위가 있다
   - 즉, 하위 component의 template에서 상위 데이터를 직접 참조 할 수 없으며, 그렇게 해서는 안 됨!
@@ -17,7 +17,7 @@
 ### Prop
 
 - 상위 component의 정보를 전달하기위한 사용자 지정 특성
-- 하위 component는 `props` option을 사용하여 상위 component로부터 받을 것으로 기대되는 `props` 를 명시적으로 선언해야 함 
+- 하위 component는 `props` option을 사용하여 상위 component로부터 받을 것으로 기대되는 `props` 를 명시적으로 선언해야 함
 
 <br>
 
@@ -115,7 +115,7 @@ export default {
 
 ### `camelCase` vs `kebab-case`
 
--  HTML 속성은 대소 문자를 구분하지 않으므로 문자열이 아닌 템플릿을 사용할 때 `camelCased` prop 이름에 해당하는 `kebab-case`를 사용해야 함
+- HTML 속성은 대소 문자를 구분하지 않으므로 문자열이 아닌 템플릿을 사용할 때 `camelCased` prop 이름에 해당하는 `kebab-case`를 사용해야 함
 
 <br>
 
@@ -148,7 +148,7 @@ export default {
 - vue.js 는 양방향 가능
   - v-model 은 양방향
 - emit 하지 않아도 가능
-  - but, vue는 컴포넌트 간 양방향 가능하지만 단방향을 쓰는것을 권장! 
+  - but, vue는 컴포넌트 간 양방향 가능하지만 단방향을 쓰는것을 권장!
     - **단방향 flow 를 만들어야 한다!**
 
 <br>
@@ -177,10 +177,6 @@ export default {
   </div>
   ```
 
-  
-
-
-
 <br>
 
 <br>
@@ -198,20 +194,18 @@ export default {
 ### 2. `axios` 설치
 
 ```bash
-$ npm i axios
+npm i axios
 ```
 
 <br>
 
 ### 3. 공식 문서로 사용법 파악하기
 
-> https://developers.google.com/youtube/v3/docs/search
+> <https://developers.google.com/youtube/v3/docs/search>
 
 <br>
 
 <br>
-
-
 
 `+`
 
@@ -220,12 +214,12 @@ $ npm i axios
 > install
 
 ```bash
-$ npm install @vuejs-community/vue-filter-date-parse
+npm install @vuejs-community/vue-filter-date-parse
 ```
 
 <br>
 
->  register
+> register
 
 ```vue
 import Vue from 'vue';
@@ -235,4 +229,3 @@ Vue.use(VueFilterDateParse);
 ```
 
 <br>
-

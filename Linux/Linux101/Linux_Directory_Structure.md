@@ -14,13 +14,11 @@
   - Unix에서는 **system**과 관련된 정보 / **하드웨어** 같은 장치를 모두 파일로 관리한다
     - Linux도 Unix와 마찬가지로 system 과 관련된 정보들을 파일로 관리한다!
 
-
-
 ![Linux Directory Structure Tree](../../images/image-20200801204023894.png)
 
 - Linux는 파일의 효율적인 관리를 위해 directory를 사용하는데, 위와 같이 **Tree 구조**이다
 - 명령어의 **성격** / **내용** / **사용 권한**에 따라 directory로 구분된다
-- 대부분의 Linux는 
+- 대부분의 Linux는
   - **FHF (FIlesystem Hierarchy Standard)** 을 사용하고,
   - 같은 목적의 파일들을 같은 장소에 모아 관리하므로
     - System 자원이나 프로그램들을 쉽게 찾을 수 있다
@@ -112,9 +110,9 @@
 ![image-20200801222628572](../../images/image-20200801222628572.png)
 
 - `/bin` 과 `/sbin` folder의 binary 들이 의존하고 있는 Library file들이 존재하는 directory
-  -  `/usr/bin` 의 binary 들이 의존하고 있는 library는 `/usr/lib` 에 위치한다! 
+  - `/usr/bin` 의 binary 들이 의존하고 있는 library는 `/usr/lib` 에 위치한다!
 
--  `/lib/modules` 에는 커널 모듈 파일들이 존재한다
+- `/lib/modules` 에는 커널 모듈 파일들이 존재한다
 
 - 대부분의 library 들은 링크로 연결되어 있다
 
@@ -206,12 +204,3 @@
 - system 운영중에 발생한 **데이터**와 **로그 (작동 기록)**가 저장되는 directory
 - 시스템에서 사용되는 동적인 파일들이 저장된다
   - **가변 자료 저장 directory**
-
-
-
-
-
-
-
-
-

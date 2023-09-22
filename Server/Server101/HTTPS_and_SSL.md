@@ -24,7 +24,7 @@
 - HTTPS 의 마지막 `S` 는 **Over Secure Socket Layer** 의 약자로 Secure라는 말에서 알 수 있듯이 **보안이 강화된** HTTP 라는 것을 짐작할 수 있다
 - HTTP 는 암호화되지 않은 방법으로 데이터를 전송하기 때문에 Server와 client가 주고 받는 메시지를 감청하는 것이 매우 쉽다
   - 안전하지 않다!
-    -  ex) 로그인을 위해 Server로 비밀번호를 전송하거나 중요한 기밀 문서를 열람하는 과정에서 악의적인 **감청**이나 데이터의 **변조**등이 일어날 수 있다는 것!
+    - ex) 로그인을 위해 Server로 비밀번호를 전송하거나 중요한 기밀 문서를 열람하는 과정에서 악의적인 **감청**이나 데이터의 **변조**등이 일어날 수 있다는 것!
   - 그래서 이를 보완한 것이 **HTTPS** 다!
 
 <br>
@@ -38,7 +38,7 @@
   - 이것은 마치 인터넷과 Web을 같은 의미로 이해하는 것과 같다!
   - `Why?`
     - Web이 인터넷 위에서 돌아가는 서비스 중 하나인 것 처럼
-    -  HTTPS 도 SSL Protocol 위에서 돌아가는 Protocol이다!
+    - HTTPS 도 SSL Protocol 위에서 돌아가는 Protocol이다!
 
   <br>
 
@@ -154,7 +154,7 @@ Using -iter or -pbkdf2 would be better.
 ```
 
 - 명령어 설명
-  - `enc -e -des3` 
+  - `enc -e -des3`
     - **des3** 방식으로 암호화 하기
   - `-in plaintext.txt -out ciphertext.bin`
     - plaintext.txt 파일을 암호화 한 결과를 ciphertext.bin 파일에 저장하기
@@ -182,7 +182,7 @@ Using -iter or -pbkdf2 would be better.
 ```
 
 - 명렁어 설명
-  - `enc -d` 
+  - `enc -d`
     - 위의 옵션으로 ciphertext.bin 파일을 plaintext2.txt 파일로 복호화 하기
 
 <br>
@@ -317,7 +317,7 @@ writing RSA key
 ```
 
 - 명령어 설명
-  - `-in private.pem` 
+  - `-in private.pem`
     - private.pem 이라는 파일을 가져와서
   - `-out public.pem`
     - public.pem 이라는 파일을 만들어라
@@ -386,7 +386,7 @@ $ openssl rsautl -decrypt -inkey private.pem -in file.ssl -out decrypted.txt
 ```
 
 - 명령어 설명
-  - ` openssl`
+  - `openssl`
     - openssl을 사용하여
   - `-decrypt`
     - 암호를 복호화 하겠다
@@ -430,14 +430,3 @@ studying public key
 <br>
 
 *계속 공부중....*
-
-
-
-
-
-
-
-
-
-
-

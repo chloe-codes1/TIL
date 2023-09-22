@@ -59,7 +59,7 @@ http.createServer(function(request, response) {
         // 2) 페이지를 찾았을 때
         // HTTP Status: 200 : OK
         // Content Type: text/plain
-        response.writeHead(200, {'Content-Type': 'text/html'});	
+        response.writeHead(200, {'Content-Type': 'text/html'}); 
     
         // 파일을 읽어와서 responseBody 에 작성
         response.write(data.toString());
@@ -83,7 +83,7 @@ console.log('Server currently running at http://127.0.0.1:8081/ !');
 
 #### Results
 
->  Server 실행
+> Server 실행
 
 ```shell
 $ node server.js
@@ -92,7 +92,7 @@ Server currently running at http://127.0.0.1:8081/ !
 
 <br>
 
->  http://127.0.0.1:8081/ 접속
+> <http://127.0.0.1:8081/> 접속
 
 ![image-20200328135841386](../../images/image-20200328135841386.png)
 
@@ -109,7 +109,7 @@ Request for /favicon.ico received!
 
 <br>
 
-> http://127.0.0.1:8081/showmeerror 접속
+> <http://127.0.0.1:8081/showmeerror> 접속
 
 ![image-20200328143323679](../../images/image-20200328143323679.png)
 
@@ -125,7 +125,7 @@ Request for /showmeerror received!
 
 <br>
 
-> http://127.0.0.1:8081/index.html 접속
+> <http://127.0.0.1:8081/index.html> 접속
 
 ![image-20200328144715931](../../images/image-20200328144715931.png)
 

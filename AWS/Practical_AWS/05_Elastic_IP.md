@@ -54,4 +54,3 @@
 - Private subnet에 존재하는데 Public IP가 없어도 외부로 접근 가능한 이유는 NAT Public IP를 타고 나가기 때문이다
 - Public IP 가 없어도 ssh로 접근이 되는 이유
   - 방화벽 설정이 되어 있어서이다
-

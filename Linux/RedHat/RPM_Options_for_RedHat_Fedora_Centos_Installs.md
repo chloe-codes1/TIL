@@ -8,7 +8,7 @@
 
 ### RPM (RedHat Package Manager)
 
-- RedHat 계열의 linux distro에서 사용하는 package management system 
+- RedHat 계열의 linux distro에서 사용하는 package management system
 - FOSS (Free and open-source software)
 - windows의 `setup.exe` 와 유사한 설치 파일
 - 확장자명은 `*.rpm` 이며, 이를 package라고 부른다
@@ -36,7 +36,7 @@ name-version-release.os.architecture.rpm
     - RMP package의 architecture (CPU)
       - package를 설치할 수 있는 CPU를 의미한다
 
-- ex) 
+- ex)
   - gedit-2.6.1-1.fc11.i586.rpm
   - mysql-connector-java-5.1.25-3.el7.noarch.rpm
 
@@ -100,4 +100,3 @@ rpm -aV --nofiles --nodigest
 ```bash
 rpm -e -vv --allmatches --nodeps --noscripts --notriggers package_name
 ```
-

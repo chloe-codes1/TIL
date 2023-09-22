@@ -21,4 +21,3 @@
 `import` --> `const` --> `var` --> `init()` 순으로 실행된다
 
 ![](../../images/go_init_function.png)
-

@@ -44,7 +44,7 @@ class Reservation(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 ```
 
-* 환자/의사 생성
+- 환자/의사 생성
 
   ```python
   d1 = Doctor.objects.create(name='dr.john')
@@ -54,7 +54,7 @@ class Reservation(models.Model):
   p2 = Patient.objects.create(name='근제')
   ```
 
-* 예약 만들기
+- 예약 만들기
 
   ```python
   Reservation.objects.create(doctor=d1, patient=p1)
@@ -62,19 +62,19 @@ class Reservation(models.Model):
   Reservation.objects.create(doctor=d2, patient=p1)
   ```
 
-* 1번 의사의 예약 목록
+- 1번 의사의 예약 목록
 
   ```python
   d1.reservation_set.all()
   ```
 
-* 1번 환자의 예약 목록
+- 1번 환자의 예약 목록
 
   ```python
   p1.reservation_set.all()
   ```
 
-* 1번 의사의 환자 출력
+- 1번 의사의 환자 출력
 
   ```python
   for reservation in d1.reservation_set.all():
@@ -112,18 +112,18 @@ class Reservation(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 ```
 
-* 마이그레이션 파일을 만들거나, migrate를 할 필요가 없다.
+- 마이그레이션 파일을 만들거나, migrate를 할 필요가 없다.
 
-  * 즉, 데이터베이스에 전혀 변경되는 것은 없고, ORM 조작에서의 차이만 존재한다.
+  - 즉, 데이터베이스에 전혀 변경되는 것은 없고, ORM 조작에서의 차이만 존재한다.
 
-* 의사, 환자 오브젝트 가져오기
+- 의사, 환자 오브젝트 가져오기
 
   ```python
   p1 = Patient.objects.get(pk=1)
   d1 = Doctor.objects.get(pk=1)
   ```
 
-* 1번 환자의 의사 목록
+- 1번 환자의 의사 목록
 
   > `ManyToManyField` 가 정의된 `Patient` 는 직접 참조
 
@@ -131,7 +131,7 @@ class Reservation(models.Model):
   p1.doctors.all()
   ```
 
-* 1번 의사의 환자 목록
+- 1번 의사의 환자 목록
 
   > `Doctor` 는 직접 참조가 아니라 `Patient` 모델의 역참조.
   >
@@ -141,17 +141,17 @@ class Reservation(models.Model):
   d1.patient_set.all()                                                                   
   ```
 
-  * ##### `related_name` : 역참조 옵션
+- ##### `related_name` : 역참조 옵션
 
     <br>
 
-    **기본 값은 `{model 이름}_set` **
+    **기본 값은 `{model 이름}_set`**
 
     ![image-20200428192427702](../images/image-20200428192427702.png)
 
     - 역참조 설정이 반드시 설정되어야 하는 상황이 있다
       - `django`에서 **makemigrations** 하는 경우 직접 오류를 발생시켜 준다
-      - ex) 작성자(User)-게시글(Article), 좋아요누른사람(User)-게시글(Article) 
+      - ex) 작성자(User)-게시글(Article), 좋아요누른사람(User)-게시글(Article)
         - 위의 관계 설정시 모두 Article 클래스에 related_name 없이 정의를 하게 된다면, 역참조 이슈 발생
 
     ```python
@@ -169,7 +169,6 @@ class Reservation(models.Model):
         doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
         patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     ```
-
 
 <br>
 
@@ -207,8 +206,6 @@ class Patient(models.Model):
   p1.doctors.all()
   ```
 
-  
-
 ### 결론
 
 - 중개  model이 필요 없는 경우
@@ -219,7 +216,7 @@ class Patient(models.Model):
 
 `+`
 
-* `ManyToMany` 에서는 반디스 복수형의 표현으로 `related_name`을 선언하자!!
+- `ManyToMany` 에서는 반디스 복수형의 표현으로 `related_name`을 선언하자!!
 
 <br><br>
 
@@ -229,8 +226,6 @@ class Patient(models.Model):
 In [13]: Reservation.objects.filter(doctor_id=3)                                                                   
 Out[13]: <QuerySet [<Reservation: Reservation object (3)>]>
 ```
-
-
 
 <br><br>
 
@@ -306,4 +301,3 @@ posts.Post.users: (fields.E304) Reverse accessor for 'Post.users' clashes with r
 <br>
 
 <br>
-

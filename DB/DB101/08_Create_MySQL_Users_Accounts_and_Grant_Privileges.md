@@ -10,7 +10,7 @@
 mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 ```
 
-- 다른 Host로부터의 접속을 허용하려면 **localhost** 위치에 **IP Address** 적으면 된다 
+- 다른 Host로부터의 접속을 허용하려면 **localhost** 위치에 **IP Address** 적으면 된다
 - 모든 Host로부터의 접속을 허용하려면 **'%'** wildcard를 사용한다
 
 <br>
@@ -37,7 +37,7 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO userID@host IDENTIFIED BY 'password';
 mysql> GRANT ALL PRIVILEGES ON *.* to userID@'%' IDENTIFIED BY 'password';
 ```
 
-#### 설정한 권한 적용 
+#### 설정한 권한 적용
 
 ```
 mysql> FLUSH PRIVILEGES;
@@ -56,4 +56,3 @@ mysql> REVOKE ALL ON dbname.table FROM userID@host
 ```
 mysql> SHOW GRANTS FOR userID@host
 ```
-

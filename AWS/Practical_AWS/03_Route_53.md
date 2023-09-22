@@ -34,9 +34,9 @@
     - reverse dns lookup
     - auth
       - **domain 소유주가 맞는지 인증하는 방법**
-        1.  domain owner에게 메일 보내기
-           - 내 domain에 mail service (MX record type, etc.)를 연결하고 메일을 받는 방법으로 인증한다
-             - 이 방법은 조금 귀찮아서 아래의 `TXT record type`을 사용한다 
+        1. domain owner에게 메일 보내기
+        - 내 domain에 mail service (MX record type, etc.)를 연결하고 메일을 받는 방법으로 인증한다
+          - 이 방법은 조금 귀찮아서 아래의 `TXT record type`을 사용한다
         2. `TXT record` 에 token을 입력하도록 하기
            - 내가 보낸 값 (token)을 입력하게 하여 인증
              - 이 방법을 요즘 더 선호한다
@@ -71,7 +71,7 @@
   - **편리함**
     - `CNAME` 은 여러번 물어보기 때문에 불편한데 `alias`를 사용하면 편안하다
       - how?
-        - AWS service들은 다 자기 자원이니까 **Route 53**이 대신 조회해서 최종 IP를 한번에 조회해준다 
+        - AWS service들은 다 자기 자원이니까 **Route 53**이 대신 조회해서 최종 IP를 한번에 조회해준다
   - **성능**
     - Client 입장에서 성능이 약간 좋아진다
   - **비용**

@@ -22,7 +22,7 @@
 
   - csv 파일에 맞춰 `models.py` 작성 및 migrate
 
-        $ python manage.py sqlmigrate users 0001
+        python manage.py sqlmigrate users 0001
 
 - `db.sqlite3` 활용 및 데이터 반영
 
@@ -127,11 +127,11 @@
    # orm
    
    User.objects.create (
-   	first_name='구름',
+    first_name='구름',
        last_name='김',
        age=100,
        country='제주도',
-      	phone='010-1234-5678',
+       phone='010-1234-5678',
        balance=10000000
    )
    ```
@@ -143,7 +143,7 @@
    VALUES ('주현', '김', 26, '경기도', '010-0000-0000', 100000000000);
    ```
 
-   * 하나의 레코드를 빼고 작성 후 `NOT NULL` constraint 오류를 orm과 sql에서 모두 확인 해보세요.
+   - 하나의 레코드를 빼고 작성 후 `NOT NULL` constraint 오류를 orm과 sql에서 모두 확인 해보세요.
 
      ```python
      # orm
@@ -154,8 +154,6 @@
      -- sql
      Error: NOT NULL constraint failed: users_user.last_name
      ```
-
-     
 
 3. 해당 user 레코드 조회
 
@@ -270,10 +268,10 @@
 
    > 대소관계
    > __gte : >=
-   > 
+   >
    > __gt : >
-   > __lte : <=
-   > 
+>__lte : <=
+   >
    > __lt : <
 
    ```python
@@ -312,7 +310,7 @@
 
 5. 지역번호가 02인 사람의 인원 수
 
-   > https://docs.djangoproject.com/en/2.2/topics/db/queries/#escaping-percent-signs-and-underscores-in-like-statements
+   > <https://docs.djangoproject.com/en/2.2/topics/db/queries/#escaping-percent-signs-and-underscores-in-like-statements>
 
    ```python
    # orm
@@ -473,8 +471,6 @@
    SELECT SUM(balance) FROM users_user;
       ```
 
-
-
 ### Group by
 
 > annotate는 개별 item에 추가 필드를 구성한다.
@@ -509,4 +505,3 @@
    충청남도 | 9
    충청북도 | 14
    ```
-

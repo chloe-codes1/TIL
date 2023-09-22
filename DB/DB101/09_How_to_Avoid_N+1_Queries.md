@@ -18,7 +18,7 @@
 
 ## How to Avoid N+1 Queries?
 
-###  1. Join Fetch
+### 1. Join Fetch
 
 조회 시 바로 가져오고 싶은 Entity Field를 지정 하는 것
 
@@ -85,26 +85,31 @@ ex)
 ## 해결 방안
 
 ### Solution 1
+>
 > 1:N field의 type을 `Set`으로 선언하기
 `Set`은 중복을 허용하지 않는 자료 구조이기 때문에, 중복 등록이 되지 않는다
 
 ex)
+
 ```java
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="school_id")
     private Set<Subject> subjects = new LinkedHashSet<>();
 
 ```
+
 `Set`은 순서가 보장되지 않기 때문에, `LinkedHashSet`을 사용하여 순서를 보장한다
 
 <br>
 
 ### Solution 2
+>
 > `distinct`를 사용하여 **중복을 제거**하기
 
 이 부분은 `@Query`에서 적용하는 것이기 때문에, `join fetch`, `@EntityGraph`는 동일하다
 
 ex)
+
 ```java
 @Query("select DISTINCT a from School a join fetch a.subjects s join fetch s.teacher")
 List<Academy> findAllWithTeacher();

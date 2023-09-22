@@ -53,14 +53,14 @@
 - `longsleep/golang-backports` PPA 를 사용하여 설치
 
   ``` bash
-  $ sudo add-apt-repository ppa:longsleep/golang-backports
-  $ sudo apt update
-  $ sudo apt install golang-go
+  sudo add-apt-repository ppa:longsleep/golang-backports
+  sudo apt update
+  sudo apt install golang-go
   ```
 
 #### MacOS
 
-- [golang.org](https://golang.org/doc/install) 에서 package download & install 
+- [golang.org](https://golang.org/doc/install) 에서 package download & install
 
 <br>
 
@@ -96,13 +96,11 @@ go version go1.15.6 darwin/amd64
   - **src**
     - 작성한 source code 및 open source code들을 저장하는 곳
 
-
-
 <br>
 
 ### 4. environment variable 설정
 
-- Go는 2개의 environment variable을 갖고 있다 - `GOPATH` & `GOROOT` 
+- Go는 2개의 environment variable을 갖고 있다 - `GOPATH` & `GOROOT`
 - `GOROOT`
   - **Go** binaries가 위치한 곳
   - `sudo apt install golang-go`로 설치하면 **Go** 를 default path에 설치하므로 따로 수정할 필요 없다!
@@ -121,13 +119,13 @@ go version go1.15.6 darwin/amd64
 > GOPATH 설정
 
 ``` bash
-$ export GOPATH=$HOME/go
+export GOPATH=$HOME/go
 ```
 
 > PATH 설정
 
 ```bash
-$ export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 ```
 
 <br>
@@ -143,7 +141,7 @@ export PATH="$GOPATH:$PATH"
 
 <br>
 
-`+` 
+`+`
 
 **$GOPATH**설정 후에 `go env` 명령어를 활용하여 제대로 적용되었는지 확인할 수 있다!
 
@@ -152,8 +150,8 @@ export PATH="$GOPATH:$PATH"
 ### 5. `src` in $GOPATH
 
 - Go는 download한 code들을 `$GOPATH/src` 에 download한 **domain**을 기준으로 **분류**해서 저장한다
-  -  ex) github.com, golang.org, google-golang.org, etc.
-    - 내가 작성한 source code는 github.com 내에 github user name으로 directory를 만들어서 추가할 것이다
+  - ex) github.com, golang.org, google-golang.org, etc.
+  - 내가 작성한 source code는 github.com 내에 github user name으로 directory를 만들어서 추가할 것이다
 
 <br>
 
@@ -169,7 +167,7 @@ export PATH="$GOPATH:$PATH"
 
   - 즉, **main.go** 를 제외한 모든 package들은 compile 되지 않는다!
 
-- **main**이 진입점이라서 compiler는 package 이름이 main인 것 부터 찾는다 
+- **main**이 진입점이라서 compiler는 package 이름이 main인 것 부터 찾는다
 
   - ex) `package main`
 
@@ -189,7 +187,7 @@ export PATH="$GOPATH:$PATH"
     import "fmt"
     
     func main() {
-    	fmt.Println("Hello World")
+     fmt.Println("Hello World")
     }
     ```
 
@@ -199,7 +197,7 @@ export PATH="$GOPATH:$PATH"
 
 - Go에서 function을 **export** 하고 싶으면, **upper-case** 로 작성하면 된다
 
-  - ex) 
+  - ex)
 
     > something.go
 
@@ -209,11 +207,11 @@ export PATH="$GOPATH:$PATH"
     import "fmt"
     
     func saySeeya() {
-    	fmt.Println("See ya!")
+     fmt.Println("See ya!")
     }
     
     func SayHello() {
-    	fmt.Println("Hello!")
+     fmt.Println("Hello!")
     }
     ```
 
@@ -223,18 +221,16 @@ export PATH="$GOPATH:$PATH"
     package main
     
     import (
-    	"fmt"
+     "fmt"
     
-    	"github.com/chloe-codes1/go101/something"
+     "github.com/chloe-codes1/go101/something"
     )
     
     func main() {
-    	fmt.Println("Hello World")
-    	something.SayHello()
+     fmt.Println("Hello World")
+     something.SayHello()
     }
     ```
-
-    
 
 <br>
 
@@ -251,7 +247,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("Hello goorm!")
+ fmt.Print("Hello goorm!")
 }
 ```
 
@@ -308,5 +304,5 @@ func main() {
 - tour.golang.org
 - blog.golang.org
 - dave.cheney.net
-- https://golang.org/doc/effective_go.html
+- <https://golang.org/doc/effective_go.html>
   - must read!

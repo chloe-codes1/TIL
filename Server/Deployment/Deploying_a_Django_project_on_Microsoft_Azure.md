@@ -40,7 +40,7 @@
 #### 2-1. Install `Fabric3`
 
 ```bash
-$ pip install fabric3
+pip install fabric3
 ```
 
 <br>
@@ -260,7 +260,7 @@ def _restart_apache2():
 #### 2-3 . Execute new server
 
 ```bash
-$ fab new_server
+fab new_server
 ```
 
 - Install `python3`, `apache2`, and `mod_wsgi` to run django
@@ -270,7 +270,7 @@ $ fab new_server
 #### 2-4. Deploy code through `Fabric3`
 
 ```bash
-$ fab deploy
+fab deploy
 ```
 
 - **Fetch** latest code on your github repo and **migrate** db
@@ -280,13 +280,13 @@ $ fab deploy
 #### 2-5. Create superuser
 
 ```bash
-$ fab create_superuser
+fab create_superuser
 ```
 
 <br>
 
 <br>
 
-### 3. Congrats! Now you are live!
+### 3. Congrats! Now you are live
 
 <br>
