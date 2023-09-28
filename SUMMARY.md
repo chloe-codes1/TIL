@@ -106,6 +106,7 @@
   - [@ConditionalOnClass](/Spring/Spring_Annotations/07_ConditionalOnClass.md)
   - [@Qualifier](/Spring/Spring_Annotations/08_Qualifier.md)
   - [@Valid vs @Validated](/Spring/Spring_Annotations/09_Valid_vs_Validated.md)
+  - [@EnableIntegration](/Spring/Spring_Annotations/10_EnableIntegration.md)
 
 <br>
 

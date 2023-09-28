@@ -1,4 +1,4 @@
-# Valid vs Validated
+# @Valid vs @Validated
 
 > Reference:[Baeldung - Differences in @Valid and @Validated Annotations in Spring](https://www.baeldung.com/spring-valid-vs-validated)
 
