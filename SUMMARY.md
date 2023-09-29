@@ -28,7 +28,7 @@
 
   - [List Based Collections](/Algorithm/Data_Structure&Algorithms_in_Python/notes/01_List-Based_Collections.md)
   - [Searching and Sorting](/Algorithm/Data_Structure&Algorithms_in_Python/notes/02_Searching_and_Sorting.md)
-  
+
 <br/>
 
 ### Java
@@ -107,13 +107,14 @@
   - [@Qualifier](/Spring/Spring_Annotations/08_Qualifier.md)
   - [@Valid vs @Validated](/Spring/Spring_Annotations/09_Valid_vs_Validated.md)
   - [@EnableIntegration](/Spring/Spring_Annotations/10_EnableIntegration.md)
+  - [@IntegrationComponentScan](/Spring/Spring_Annotations/11_IntegrationComponentScan.md)
 
 <br>
 
 ### OS
 
 - #### OS 101
-  
+
   - [What is an OS](/OS/OS101/01_What_is_an_OS.md)
   - [System Structure & Program Execution](/OS/OS101/02_System_Structure_and_Program_Execution.md)
   - [Process](/OS/OS101/03_Process.md)
@@ -150,7 +151,7 @@
 
   - [What is Arch Linux](/Linux/Arch_Linux/What_is_Arch_Linux.md)
   - [SLUG Meetup - Arch Linux](/Linux/Arch_Linux/SLUG_Meetup_Arch_Linux.md)
-  
+
 - #### Ubuntu
 
   - [Using apt-get Commands in Ubuntu](/Linux/Ubuntu/Using_apt-get_Commands_in_Ubuntu.md)
@@ -160,7 +161,7 @@
   - [Settings for XDG user dirs](/Linux/Ubuntu/Settings_for_XDG_user_dirs.md)
   - [Fix AirPods not Working on Ubuntu](/Linux/Ubuntu/Fix_AirPods_not_Working_on_Ubuntu.md)
   - [Setting a JAVA HOME Path in Ubuntu](/Linux/Ubuntu/Setting_a_JAVA_HOME_Path_in_Ubuntu.md)
-  
+
 - #### RedHat
 
   - [RPM Options for RedHat Fedora Centos Installs](/Linux/RedHat/RPM_Options_for_RedHat_Fedora_Centos_Installs.md)
@@ -182,7 +183,7 @@
   - [AWS Serverless Meetup - AppSync](/Server/ServerLess_Computing/AWS_Serverless_Meetup_AppSync.md)
   - [Getting Started with AWS Lambda](/Server/ServerLess_Computing/Getting_Started_with_AWS_Lambda.md)
   - [Serverless Framework Setup for AWS Lambda](/Server/ServerLess_Computing/Serverless_Framework_Setup_for_AWS_Lambda.md)
-  
+
 - #### Deployment
 
   - [Deploying a Django project on PythonAnywhere](/Server/Deployment/Deploying_a_Django_project_on_PythonAnywhere.md)
@@ -220,7 +221,7 @@
   - [Session and Cookies](/Network/Network101/Session_and_Cookies.md)
 
 - #### Http
-  
+
   - [Http Stateless](/Network/Http/01_Http_Stateless.md)
   - [Http Methods](/Network/Http/02_Http_Methods.md)
   - [Cookie, Session, and Token](/Network/Http/03_Cookie_Session_Token.md)
@@ -295,7 +296,7 @@
 - #### Ansible
 
   - [Ansible 101](/Infra/Ansible/Ansible101.md)
-  
+
 - #### Redis
 
   - [Install and config Redis on macOS](/DevOps/Redis/00_Install_and_config_Redis_on_macOS.md)
@@ -326,7 +327,7 @@
   - [Amazon EC2-Creating an AWS EC2 Instance](/AWS/AWS_Services/Amazon_EC2-Creating_an_AWS_EC2_Instance.md)
   - [Amazon S3 - Creating a Bucket](/AWS/AWS_Services/Amazon_S3-Creating_a_Bucket.md)
   - [Amazon RDS for MySQL](/AWS/AWS_Services/Amazon_RDS_for_MySQL.md)
-  - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)  
+  - [AWS CLI](/AWS/AWS_Services/AWS_CLI.md)
   - [Amazon ECR (Elastic Container Registry)](/AWS/AWS_Services/Amazon_ECR.md)
   - [Amazon ElastiCache](/AWS/AWS_Services/Amazon_ElastiCache.md)
   - [Amazon Route 53](/AWS/AWS_Services/Amazon_Route53.md)
@@ -334,7 +335,7 @@
   - [Amazon VPC](/AWS/AWS_Services/Amazon_VPC.md)
 
 - #### AWS Tips
-  
+
   - [AWS Online Cloud Clinic #01](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_01.md)
   - [AWS Online Cloud Clinic #03](/AWS/AWS_Tips/AWS_Online_Cloud_Clinic_03.md)
   - [AWS Data Science Meetup - Amazon Personalize (03/05/2020)](/AWS/AWS_Tips/AWS_Data_Science_Meetup_0305.md)
@@ -357,10 +358,10 @@
   - [AWS 10,000 Foot Overview](/AWS/AWS_cert/01_AWS_10,000_Foot_Overview.md)
 
 - #### AWS Builders Series
-  
+
   - [AWS Cloud기반 나의 첫 web application 만들기](/AWS/AWS_Builders/00_AWS_클라우드_기반_나의_첫_웹_애플리케이션_만들기.md)
   - [DevOps 문화 모범 사례와 구현 도구 살펴보기](/AWS/AWS_Builders/06_DevOps_문화_모범_사례와_구현_도구_살펴보기.md)
-  
+
 - #### Practical AWS
 
   - [VPC](/AWS/Practical_AWS/01_VPC.md)
@@ -424,7 +425,7 @@
 ### Python
 
 - #### Python 101
-  
+
   - [Python Coding Convention](/Python/Python101/Python_Coding_Convention.md)
   - [Python Tips & Tricks](/Python/Python101/Python_Tips_&_Tricks.md)
   - [Python Virtual Environment](/Python/Python101/Python_Virtual_Environment.md)
@@ -507,7 +508,7 @@
   - [Hoisting in JavaScript](/Web/JavaScript/09_Hoisting_in_JavaScript.md)
   - [this keyword](/Web/JavaScript/10_this_keyword.md)
   - [AJAX](/Web/JavaScript/11_AJAX.md)
-  
+
   <br>
 
 ### Vue.js
@@ -544,7 +545,7 @@
   - [Event Loop and EventEmitter](/Node.js/Node.js_101/07_Event_Loop_and_EventEmitter.md)
   - [Buffers](/Node.js/Node.js_101/08_Buffers.md)
   - [Web Module](/Node.js/Node.js_101/13_Web_Module.md)
-  
+
 - #### Express.js
 
   - [Express Basics](/Node.js/Express.js/01_Express_Basics.md)
