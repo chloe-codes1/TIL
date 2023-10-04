@@ -110,6 +110,7 @@
   - [@EnableIntegration](/Spring/Spring_Annotations/10_EnableIntegration.md)
   - [@IntegrationComponentScan](/Spring/Spring_Annotations/11_IntegrationComponentScan.md)
   - [@AfterReturning](/Spring/Spring_Annotations/12_AfterReturning.md)
+  - [@ConfigurationProperties](/Spring/Spring_Annotations/13_ConfigurationProperties.md)
 
 <br>
 
