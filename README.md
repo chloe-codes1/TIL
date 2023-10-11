@@ -117,6 +117,10 @@
   - [@AfterReturning](/Spring/Spring_Annotations/12_AfterReturning.md)
   - [@ConfigurationProperties](/Spring/Spring_Annotations/13_ConfigurationProperties.md)
 
+- #### JPA Annotations
+
+  - [Entity](/Spring/JPA_Annotations/01_Entity.md)
+
 <br>
 
 ### OS
