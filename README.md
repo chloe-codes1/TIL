@@ -119,7 +119,8 @@
 
 - #### JPA Annotations
 
-  - [Entity](/Spring/JPA_Annotations/01_Entity.md)
+  - [@Entity](/Spring/JPA_Annotations/01_Entity.md)
+  - [@Column](/Spring/JPA_Annotations/02_Column.md)
 
 <br>
 

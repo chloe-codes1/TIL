@@ -1,4 +1,4 @@
-# Entity
+# @Entity
 
 - 실제 DB Table과 매칭될 Class
   - Entity Class 라고도 한다
