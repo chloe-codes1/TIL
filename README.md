@@ -121,6 +121,7 @@
 
   - [@Entity](/Spring/JPA_Annotations/01_Entity.md)
   - [@Column](/Spring/JPA_Annotations/02_Column.md)
+  - [@Immutable](/Spring/JPA_Annotations/03_Immutable.md)
 
 <br>
 
