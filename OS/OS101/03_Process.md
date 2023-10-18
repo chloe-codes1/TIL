@@ -418,13 +418,13 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
 - Process는 공유하고, Thread는 작업에 따라 각자 갖는다
 
 <p align="center" width="100%">
-  <img width="956" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/2774cb24-80b7-4b65-8cc0-fd9ef2e97c8e">
+  <img width="956" alt="thread address space" src="https://github.com/chloe-codes1/TIL/assets/53922851/2774cb24-80b7-4b65-8cc0-fd9ef2e97c8e">
 </p>
 
 ### Thread의 구성
 
 <p align="center" width="100%">
- <img width="959" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/779cb0da-ea79-48e8-8200-ef21d04ddc69">
+ <img width="959" alt="component of thread" src="https://github.com/chloe-codes1/TIL/assets/53922851/779cb0da-ea79-48e8-8200-ef21d04ddc69">
 </p>
 
 - program counter
@@ -478,7 +478,7 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
   - parent process와 똑같은 process를 복제하여 child를 생성한다
   - 직접 만들지는 못하고, system call을 통해 OS에 만들어 달라고 요청해서 child 를 생성한다
 
-        → fork()
+      → fork()
 
 - process의 tree (계층 구조) 형성
 - process는 자원을 필요로 한다
@@ -521,7 +521,7 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
 ### Parent process와 Child process 구분
 
 <p align="center" width="100%">
- <img width="938" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/6e44b7db-213b-46b3-95c3-cb9103b1b79d">
+ <img width="938" alt="parent process and child process" src="https://github.com/chloe-codes1/TIL/assets/53922851/6e44b7db-213b-46b3-95c3-cb9103b1b79d">
 </p>
 
 - fork() 를 수행했을 때, parent process는 child process의 pid를 return 값으로 받게 된다
@@ -534,7 +534,7 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
 - 하나의 process 를 완전히 새로운 process로 덮어 씌워서 실행한다
 
 <p align="center" width="100%">
- <img width="932" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/53618845-c495-4da2-854b-9c2509a1e715">
+ <img width="932" alt="exec() system call" src="https://github.com/chloe-codes1/TIL/assets/53922851/53618845-c495-4da2-854b-9c2509a1e715">
 </p>
 
 - execlp()
@@ -571,7 +571,7 @@ child process를 생성하여 다른 program을 돌리고 싶을 때,
   - 부모 process는 자식 process가 종료될 때 까지 wait 상태가 된다
 
 <p align="center" width="100%">
- <img width="667" alt="" src="https://github.com/chloe-codes1/TIL/assets/53922851/e9b14d76-a744-4a10-bf41-5bdfdf2b350c">
+ <img width="667" alt="parent & child process" src="https://github.com/chloe-codes1/TIL/assets/53922851/e9b14d76-a744-4a10-bf41-5bdfdf2b350c">
 </p>
 
 ## exit() system call
@@ -599,3 +599,40 @@ child process를 생성하여 다른 program을 돌리고 싶을 때,
   - sleep util child is done
 - exit()
   - frees all the resources, notify parent
+
+## Process 간 협력
+
+### Independent Process
+
+process는 각자의 주소 공간을 가지고 수행되므로, 원칙적으로 하나의 process 는 다른 process의 수행에 영향을 미치지 못함
+
+→ 독립적이다!
+
+### Cooperating Process
+
+Process 협력 메커니즘을 통해 하나의 process가 다른 process의 수행에 영향을 미칠 수 있음
+
+### IPC: Interprocess Communication
+
+<p align="center" width="100%">
+ <img width="953" alt="message passing vs shared memory" src="https://github.com/chloe-codes1/TIL/assets/53922851/9b8b479e-ece9-418d-8f13-6018f15482b5">
+</p>
+
+- `message passing`
+  - 설명
+    - 메시지를 전달하는 방법
+    - kernel을 통해 메시지를 전달한다
+  - `Message System`
+    - process 사이에 shared variable을 일체 사용하지 않고 통신하는 system
+  - `Direct Communication`
+    - 통신하려는 process의 이름을 명시적으로 표시
+    - 메시지를 누구한테 보낼지를 명시하여 양자간에 합의된 명시적 메시지 전달 방식
+  - `Indirect Communication`
+    - mailbox (or port)를 통해 메시지를 간접 전달
+    - 타겟을 명시하지 않고 전달하면, 협력하는 process 중 하나가 꺼내가도록 하는 방식
+- `shared memory`
+  - 주소 공간을 공유하는 방법
+  - 서로 다른 process 간에도 일부 주소 공간을 공유하게 하는 shared memory 메커니즘이 있음
+  - 단, 서로 신뢰할 수 있을 때만 공유해야 함
+- 참고) `thread`
+  - thread는 사실상 하나의 process 이므로 process 간 협력으로 보기는 어렵지만, 동일한 process를 구성하는 thread들 간에는 `주소 공간을 공유`하므로 협력이 가능하다
