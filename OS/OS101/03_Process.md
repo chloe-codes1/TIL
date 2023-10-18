@@ -408,3 +408,194 @@ CPU를 한 process에서 다른 process로 넘겨주는 과정
           → OS 가 Running 중이라고는 표현하지 않는다
 
           → Interrupt 받기 전 process가 Running 중인 것으로 간주한다
+
+## Thread
+
+> *“A `thread` (or `lightweight process`) is basic unit of CPU utilization”*
+→ CPU 실행의 단위이다
+>
+- Process에서 CPU 수행에 실행에 필요한 부분만 별도로 가지고 있는 것이 Thread이다
+- Process는 공유하고, Thread는 작업에 따라 각자 갖는다
+
+<p align="center" width="100%">
+  <img width="956" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/2774cb24-80b7-4b65-8cc0-fd9ef2e97c8e">
+</p>
+
+### Thread의 구성
+
+<p align="center" width="100%">
+ <img width="959" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/779cb0da-ea79-48e8-8200-ef21d04ddc69">
+</p>
+
+- program counter
+- register set
+- stack space
+  - 주소 공간에서는 thread가 함수 호출과 관련된 stack 만을 갖는다
+  - 그 외에는 process 내에서 다른 thread들과 공유한다
+
+### Thread가 동료 thread와 공유하는 부분 (= `task`)
+
+- code section
+- data section
+- OS resources
+
+→ 전통적인 개념의 heavyweight process는 하나의 thread를 가지고 있는 task로 볼 수 있다
+
+### Thread의 장점
+
+- `Responsiveness`
+  - 다중 thread로 구성된 task 구조에서는, 하나의 server thread가 blocked (waiting) 상태인 동안에도 동일한 task 내의 다른 thread가 실행(running) 되어 `빠른 처리`를 할 수 있다
+- `Resource Sharing`
+  - 여러개의 thread는 process의 binary code, data, resource를 공유할 수 있다
+- `Economy`
+  - creating & CPU switching thread (rather than a process)
+  - solaris의 경우, 위 두 가지 overhead가 각각 30배, 5배이다
+- `Throughput & Performance`
+  - 동일한 일을 수행하는 다중 thread가 협력하여 `높은 처리율(throughput)`과 `성능 향상`을 얻을 수 있다
+- `Utilization of Multi-Programming Architectures`
+  - thread를 사용하면 `병렬성`을 높일 수 있다
+
+### Implementation of Threads
+
+- `Kernel Threads`
+
+    > supported by kernel
+    >
+  - OS가 thread의 존재를 알고 있는 경우
+  - OS가 서로 다른 thread 간의 CPU를 넘기는 작업을 할 수 있다 (like proces)
+- `User Threads`
+
+    > supported by library
+    >
+  - OS가 thread의 존재를 모르는 경우
+    - OS가 보기에는 thread가 없는 하나의 process로 보이는 경우
+  - OS가 thread 간의 CPU를 넘기는 작업을 할 수 없다
+    - process 내부에서 OS에 비동기식 I/O를 요청해서 바로 다시 받아 다른 thread로 CPU를 넘기는 등 사용자 프로그램단에서 관리하는 것을 의미한다
+
+## Process Creation
+
+- Parent process가 child process를 생성
+  - parent process와 똑같은 process를 복제하여 child를 생성한다
+  - 직접 만들지는 못하고, system call을 통해 OS에 만들어 달라고 요청해서 child 를 생성한다
+
+        → fork()
+
+- process의 tree (계층 구조) 형성
+- process는 자원을 필요로 한다
+  - OS로부터 받는다
+  - parent process와 공유할 수 있다
+    - but, 사실은 parent와 child process는 별개의 process이므로 자원을 할당받기 위해 `경쟁` 한다
+- 자원의 공유
+  - parent와 child가 모든 자원을 공유하는 모델
+  - 일부를 공유하는 모델
+  - 전혀 공유하지 않는 모델
+- Execution
+  - parent와 child는 공존하며 수행되는 모델
+  - child가 terminate 될 때 까지 parent가 기다리는 모델
+- Address space
+  - child는 parent의 공간을 복사한다 (binary & OS data)
+  - child는 그 공간에 새로운 프로그램을 올린다
+- Unix의 예
+  - `fork()` system call이 새로운 process를 생성
+    - parent를 그대로 복사 (OS data except for PID + binary)
+    - 주소 공간 할당
+  - fork 다음에 이어지는 `exec()` system call을 통해 새로운 프로그램을 메모리에 올린다
+
+## Process Termination
+
+- process가 마지막 명령을 수행한 후 OS에게 이를 알려줌 → `exit`
+  - child가 parent에게 output data를 보낸다 (via `wait`)
+  - process의 각종 자원들이 OS에게 반납된다
+- parent process가 child 의 수행을 종료시킴 → `abort`
+  - child가 할당된 자원의 한계치를 넘어섬
+  - child에게 할당된 task가 더 이상 필요하지 않음
+  - parent가 exit 하는 경우
+    - OS는 parent process가 종료하는 경우, child가 더 이상 수행되도록 두지 않는다
+    - tree 에서 가장 하위부터 단계적으로 종료한다
+
+## fork() system call
+
+- Process는 fork() system call에 의해 생성된다
+  - caller를 복제해 새로운 address space를 생성한다
+
+### Parent process와 Child process 구분
+
+<p align="center" width="100%">
+ <img width="938" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/6e44b7db-213b-46b3-95c3-cb9103b1b79d">
+</p>
+
+- fork() 를 수행했을 때, parent process는 child process의 pid를 return 값으로 받게 된다
+  - child process는 0을 반환한다
+
+## exec() system call
+
+- process는 exec() system call에 의해 서로 다른 여러개의 program을 실행할 수 있다
+- caller의 memory image를 새로운 program으로 바꾼다
+- 하나의 process 를 완전히 새로운 process로 덮어 씌워서 실행한다
+
+<p align="center" width="100%">
+ <img width="932" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/53618845-c495-4da2-854b-9c2509a1e715">
+</p>
+
+- execlp()
+  - 해당 함수 내에서 exec system call을 호출한다
+  - parameter
+    - 1st: program 이름
+    - 2nd: program에 전달할 argument
+
+### fork() 와 exec()
+
+child process를 생성하여 다른 program을 돌리고 싶을 때,
+
+- fork()를 실행하여 복제한 후
+- child process에는 exec()을 실행하여
+  - parent process는 원래 실행하던 program을 이어서 실행하고
+  - child는 새로운 program을 실행할 수 있게 한다
+
+## wait() system call
+
+- Process A 가 wait() system call을 호출하면,
+  - kernel은 child가 종료될 때 까지 process A를 sleep 시킨다 → `block 상태`
+    - 오래 걸리는 작업을 기다리도록 하는 blocked 외에, 공유 되는 자원에 대해 자식 process
+  - child process 가 종료되면, kernel은 process A 를 깨운다 → `ready 상태`
+
+<p align="center" width="100%">
+  <img width="951" alt="wait() system call" src="https://github.com/chloe-codes1/TIL/assets/53922851/08767a9b-eba3-4d6c-8f1a-7428f3acc143">
+</p>
+
+- linux에서 command를 입력할 때, 입력 받는 한 줄이 하나의 process 다
+  - shell process 가 하나 떠있는 것!
+- command 를 실행하면, 해당 command의 자식 process 형태로 실행된다
+  - 부모 process는 blocked status이므로, sleep 상태가 된다
+    - ex) vi 명령어로 editor를 열었을 때 terminal이 block 상태가 되는 것
+  - 부모 process는 자식 process가 종료될 때 까지 wait 상태가 된다
+
+<p align="center" width="100%">
+ <img width="667" alt="" src="https://github.com/chloe-codes1/TIL/assets/53922851/e9b14d76-a744-4a10-bf41-5bdfdf2b350c">
+</p>
+
+## exit() system call
+
+### Process의 종료
+
+- `자발적 종료`
+  - 마지막 statement 수행 후 exit() system call을 통해서 종료
+  - program에 명시적으로 적어주지 않아도 main 함수가 return되는 위치에 compiler가 넣어줌
+- `비자발적 종료`
+  - 부모 process가 자식 process를 강제 종료시킴
+    - 자식 process가 한계치를 넘어서는 자원 요청
+    - 자식에게 할당된 task가 더 이상 필요하지 않음
+  - 키보드로 kill, break 등을 친 경우 → interrupt
+  - 부모가 종료하는 경우
+    - 부모 process가 종료하기 전에 자식들이 먼저 종료됨
+
+## Process 와 관련한 system call
+
+- fork()
+  - create a child (copy)
+- exec()
+  - overlay new image
+- wait()
+  - sleep util child is done
+- exit()
+  - frees all the resources, notify parent
