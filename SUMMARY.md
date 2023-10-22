@@ -127,6 +127,7 @@
   - [What is an OS](/OS/OS101/01_What_is_an_OS.md)
   - [System Structure & Program Execution](/OS/OS101/02_System_Structure_and_Program_Execution.md)
   - [Process](/OS/OS101/03_Process.md)
+  - [CPU Scheduling](/OS/OS101/04_CPU_Scheduling.md)
 
 - #### OS Basics
 
