@@ -87,3 +87,50 @@ Process에게 다음과 같은 상태 변화가 있는 경우
 
   - CPU를 쓰러 들어와서 처음 쓰기까지의 시간을 뜻함
     - process가 시작해서 처음 CPU를 쓰기 까지의 시간 아님!!
+
+## Scheduling Algorithms
+
+### FCFS (First-Come First-Served)
+
+- 설명
+  - ready queue에 먼저 들어온 process 순으로 실행한다
+- 문제점
+  - `Convoy effect (호위 효과)`
+    - short process behind long process
+    - 오래 걸리는 process가 먼저 도착해서 CPU를 오래 쓰는 탓에 짧게 걸리는 process가 오래 걸리게 되는 것
+
+### SJF (Shortest Job First)
+
+- 설명
+  - 각 process의 다음번 CPU burst time 을 가지고 scheduling에 활용
+  - CPU burst time이 가장 짧은 process를 제일 먼저 schedule
+    - CPU를 가장 짧게 쓰려는 job에게 제일 먼저 CPU를 주는 것
+- 종류
+
+    > Two schemes
+    >
+  - `Non-preemptive (비선점)`
+    - 일단 CPU를 잡으면 CPU burst가 완료될 때까지 CPU를 선점 (preemption) 당하지 않음
+  - `Preemptive (선점)`
+    - 현재 수행중인 process의 남은 burst time 보다 더 짧은 CPU burst time을 가지는 새로운 process가 도착하면 CPU를 빼앗김
+    - 이 방법을 `Shortest-Remaining-Time-First (SRTF)` 라고도 부름
+- 특징
+  - SJF is `optional`
+    - 주어진 process들에 대해 `minimum average waiting time` 을 보장한다
+    - 대기 시간 측면에서 최적이다
+  - A priority number (integer) is associated with each process
+    - high priority를 가진 process에게 CPU 할당
+      - (smallest integer = high priority)
+  - SJF는 일종의 priority scheduling이다
+    - `priority = predicated next CPU burst time`
+- 문제점
+  - `Starvation`
+    - low priority processes may never executed
+  - `Aging`
+    - as time progresses increase the priority of the process
+- 다음 CPU Burst Time 의 예측
+
+    > 다음번 CPU burst time을 어떻게 알 수 있을까? (input data, branch, user …)
+    >
+  - 추정만이 가능하다
+  - 과거의 CPU burst time을 이용해서 추정 (exponential averaging)
