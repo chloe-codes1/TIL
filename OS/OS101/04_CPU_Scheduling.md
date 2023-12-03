@@ -134,3 +134,108 @@ Process에게 다음과 같은 상태 변화가 있는 경우
     >
   - 추정만이 가능하다
   - 과거의 CPU burst time을 이용해서 추정 (exponential averaging)
+
+### Priority Scheduling
+
+> A priority number (integer) is associated with each process
+>
+- 특징
+  - `highest priority` 를 가진 process에게 CPU를 할당
+    - smallest integer == highest priority
+  - SJF는 일종의 priority scheduling이다
+- 문제점
+  - `Starvation` : low priority process may never execute
+- 해결
+  - `Aging` : as time progresses, increase the priority of the process
+
+### Round Robin (RR)
+
+- 특징
+  - 각 process 는 동일한 크기의 할당 시간 (time quantum) 을 가진다
+    - 일반적으로 10 - 100 ms
+  - 할당 시간이 지나면 process는 선점당하고, ready queue의 제일 뒤에 가서 다시 줄을 선다
+  - n개의 process가 ready queue에 있고, 할당 시간이 q time unit인 경우, 각 process는 최대 q time unit 단위로 CPU 시간의 1/n을 얻는다
+
+        → 어떤 process도 (n-1)q time unit 이상 기다리지 않는다
+
+- Performance
+  - q large → FCFS
+  - q small → `context switch` overhead가 커진다
+- 장점
+  - 일반적으로 SJF보다 average turnaround time이 길지만, `response time` 은 더 짧다
+
+### Multilevel Queue
+
+- Ready queue를 여러개로 분할
+  - `foreground`
+    - interactive job
+  - `background`
+    - batch job (no human interaction)
+- 각 queue는 독립적인 scheduling algorithm을 가짐
+  - `foreground`
+    - RR
+  - `background`
+    - FCFS
+- Queue에 대한 scheduling이 필요
+
+    > 각 queue 마다 wait을 주는 것
+    >
+  - **Fixed priority scheduling**
+    - 두 개의 우선 순위 그룹을 나눈다 (foreground, background)
+    - serve all from foreground then from background
+      - foreground에 속한 process들이 먼저 모두 실행되고 나면, 그 다음에 background group에 속한 process들을 실행한다
+    - possibility of starvation
+  - **Time slice**
+    - 각 queue에 CPU time을 적절한 비율로 할당
+    - e.g.
+      - 80% to foreground in RR
+      - 20% to background in FCFS
+- Priority 별 queue 분배
+
+  <img width="939" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/b0d90c74-43d8-4df6-8213-868c5e588afc">
+
+  한번 정해진 queue는 바뀌지 않는다
+
+### Multilevel Feedback Queue
+
+- Process가 다른 queue로 이동 가능
+  - 상위 queue가 우선순위가 높다
+  - 상위 queue가 비어야 하위 queue가 채워진다
+- aging을 이와 같은 방식으로 구현할 수 있다
+  - aged job을 상위 queue로 보내기
+- Multilevel feedback queue scheduler 를 정의하는 Parameters
+    1. Queue의 수
+    2. 각 queue의 scheduling algorithm
+    3. Process를 상위 queue로 보내는 기준
+    4. Process를 하위 queue로 내쫓는 기준
+    5. Process가 CPU 서비스를 받으러 할 때, 들어갈 queue를 결정하는 기준
+- e.g.
+
+  <img width="882" alt="image" src="https://github.com/chloe-codes1/TIL/assets/53922851/bb011162-f164-4187-9a4a-659f51793655">
+
+- Three queues
+  - Q0 - time quantum 8 ms
+  - Q1 - time quantum 16 ms
+  - Q2 - FCFS
+- Scheduling Flow
+  - new job이 queue Q0로 들어감
+  - CPU를 잡아서 할당 시간인 8ms 동안 수행됨
+  - 8ms 동안 다 끝내지 못했으면 Q1으로 내려감
+  - Q1에 줄서서 기다리다가, CPU를 잡아서 16ms 동안 수행됨
+  - 16ms 안에 끝내지 못한 경우 Q2로 쫓겨남
+
+### Multiple-Processor Scheduling
+
+- CPU가 여러 개인 경우 scheduling은 더욱 복잡해짐
+- `Homogeneous process` 인 경우
+
+    > 누구나 처리할 수 있는 역량이 똑같은 CPU
+    >
+  - Queue에 한줄로 세워서 process가 하
+- `Load sharing`
+  - 일부 processor에 job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘 필요
+  - 별개의 queue를 두는 방법 vs 공동 queue를 사용하는 방법
+- `Symmetric Multiprocessing (SMP)`
+  - 각 processor가 각자 알아서 스케줄링 결정
+- `Asymmetric multiprocessing`
+  - 하나의 processor가 system data의 접근과 공유를 책임지고, 나머지 processor는 거기에 따름
