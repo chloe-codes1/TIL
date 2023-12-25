@@ -111,6 +111,7 @@
   - [@IntegrationComponentScan](/Spring/Spring_Annotations/11_IntegrationComponentScan.md)
   - [@AfterReturning](/Spring/Spring_Annotations/12_AfterReturning.md)
   - [@ConfigurationProperties](/Spring/Spring_Annotations/13_ConfigurationProperties.md)
+  - [@AuthenticationPrincipal](/Spring/Spring_Annotations/14_AuthenticationPrincipal.md)
 
 - #### JPA Annotations
 
