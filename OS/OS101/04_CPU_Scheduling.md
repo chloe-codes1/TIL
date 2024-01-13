@@ -231,11 +231,46 @@ Process에게 다음과 같은 상태 변화가 있는 경우
 
     > 누구나 처리할 수 있는 역량이 똑같은 CPU
     >
-  - Queue에 한줄로 세워서 process가 하
-- `Load sharing`
+  - Queue에 한줄로 세워서 processor가 알아서 꺼내가게 할 수 있다
+  - but, 반드시 특정 processor에서 수행되어야 하는 process가 있는 경우에는 문제가 더 복잡해진다
+- `Load sharing` (= Load balancing)
   - 일부 processor에 job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘 필요
   - 별개의 queue를 두는 방법 vs 공동 queue를 사용하는 방법
 - `Symmetric Multiprocessing (SMP)`
   - 각 processor가 각자 알아서 스케줄링 결정
+  - 균일한 작업을 여러곳에서 할 때는 조율하는 processor가 없는게 효율적일 수도 있다
 - `Asymmetric multiprocessing`
   - 하나의 processor가 system data의 접근과 공유를 책임지고, 나머지 processor는 거기에 따름
+
+### Real-Time Scheduling
+
+- `Hard real-time systems`
+  - 정해진 시간 안에 반드시 끝내도록 scheduling 해야 함
+  - 그러기 위해 process들의 CPU 도착 시간을 미리 알고 scheduling 하는 경우도 있다 (off-line scheduling)
+    - ↔ online scheuluing
+      - system이 실행중에 동적으로 process를 scheduling
+      - 작업이 도착하는 시점에서 결정을 내릭 때문에, 실행 시점에 알려진 정보만 사용할 수 있다
+- `Soft real-time computing`
+  - 일반 process에 비해 높은 priority를 갖도록 해야 함
+  - e.g. 동영상이 끊기지 않도록 동영상 재생 process가 먼저 CPU를 얻을 수 있도록 priority를 높이기
+
+### Thread Scheduling
+
+> 하나의 process 안에 CPU 수행 단위가 여러개 있는 것
+>
+- `Local Scheduling`
+  - **User level thread**의 경우 사용자 수준의 thread library에 의해 어떤 thread를 scheduling 할지 결정
+- `Global Scheduling`
+  - **Kernel level thread**의 경우 일반 process와 마찬가지로, kernel의 단기 scheduler가 어떤 thread를 scheduling 할지 결정
+
+## Algorithm Evaluation
+
+- `Queueing models`
+  - 확률 분포로 주어지는 arrival rate와 service rate 등을 통해 각종 performance index 값을 계산
+- `Implementation & Measurement`
+  - 실제 시스템에 알고리즘을 `구현` 하여 실제 작업에 대해서 성능을 `측정` 하여 비교
+- `Simulation`
+  - 알고리즘을 모의 프로그램으로 작성 후 `trace` 를 입력으로 하여 결과 비교
+  - trace 란?
+    - simulation의 input이 되는 data
+    - 신빙성이 있어야함 (실제 프로그램의 동작을 대변할 수 있어야 함)
